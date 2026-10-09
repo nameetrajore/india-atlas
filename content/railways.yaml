@@ -1,0 +1,658 @@
+# Railway stretches, drawn from the date each one opened (D27).
+# Trunk lines and main regional lines only, not every branch. Paths are [lng, lat] through the towns on the route.
+# Where only a year is known, `opened` is the year; a note says when a stretch opened in stages.
+
+# ---- Great Indian Peninsula Railway (broad gauge)
+- id: gipr-bombay-thane
+  line: Great Indian Peninsula Railway
+  opened: "1853-04-16"
+  path: [[72.835, 18.940], [72.833, 18.977], [72.842, 19.017], [72.862, 19.040], [72.879, 19.065], [72.909, 19.086], [72.937, 19.143], [72.975, 19.186]]
+  note: The first passenger train in India, from Bori Bunder to Thane, 34 km.
+  sources: [irfca-history-1, wp-gipr]
+- id: gipr-thane-kalyan
+  line: Great Indian Peninsula Railway
+  opened: "1854-05-01"
+  path: [[72.975, 19.186], [73.020, 19.187], [73.043, 19.188], [73.130, 19.236]]
+  sources: [irfca-history-1, wp-gipr]
+- id: gipr-kalyan-vasind
+  line: Great Indian Peninsula Railway
+  opened: "1855-10-01"
+  path: [[73.130, 19.236], [73.155, 19.244], [73.200, 19.300], [73.222, 19.350], [73.268, 19.410]]
+  sources: [irfca-history-1]
+- id: gipr-kalyan-khopoli
+  line: Great Indian Peninsula Railway
+  opened: "1856-05-12"
+  path: [[73.130, 19.236], [73.190, 19.208], [73.240, 19.166], [73.316, 19.027], [73.327, 18.911], [73.350, 18.790]]
+  note: The line stopped at the foot of the Bhor ghat. Travellers went up the scarp by road.
+  sources: [irfca-history-1]
+- id: gipr-khandala-pune
+  line: Great Indian Peninsula Railway
+  opened: "1858-06-14"
+  path: [[73.383, 18.758], [73.407, 18.751], [73.550, 18.760], [73.675, 18.735], [73.760, 18.680], [73.800, 18.627], [73.874, 18.529]]
+  sources: [irfca-history-1, wp-gipr]
+- id: gipr-pune-solapur
+  line: Great Indian Peninsula Railway
+  opened: "1860"
+  path: [[73.874, 18.529], [74.000, 18.490], [74.130, 18.487], [74.330, 18.450], [74.583, 18.465], [74.765, 18.300], [75.150, 18.270], [75.418, 18.093], [75.640, 17.810], [75.906, 17.664]]
+  note: Opened in stages, 1858–60.
+  sources: [kerr-railways, wp-gipr]
+- id: gipr-vasind-kasara
+  line: Great Indian Peninsula Railway
+  opened: "1861-01-01"
+  path: [[73.268, 19.410], [73.310, 19.440], [73.370, 19.510], [73.400, 19.580], [73.470, 19.640]]
+  note: Asangaon was reached in February 1860, Kasara in January 1861.
+  sources: [irfca-history-1]
+- id: gipr-bhor-incline
+  line: Great Indian Peninsula Railway
+  opened: "1863-04-21"
+  path: [[73.327, 18.911], [73.340, 18.878], [73.360, 18.820], [73.372, 18.790], [73.383, 18.758]]
+  note: The Bhor ghat incline climbs about 550 m with a reversing station. It joined Bombay to Pune by rail; regular traffic began on 14 May 1863.
+  sources: [irfca-history-1, wp-gipr]
+- id: gipr-igatpuri-bhusawal
+  line: Great Indian Peninsula Railway
+  opened: "1863-05-20"
+  path: [[73.560, 19.697], [73.840, 19.950], [74.110, 20.080], [74.230, 20.150], [74.440, 20.250], [74.660, 20.310], [75.010, 20.460], [75.350, 20.670], [75.560, 21.010], [75.780, 21.050]]
+  note: Opened above the Thal ghat before the ghat itself was finished.
+  sources: [irfca-history-1]
+- id: gipr-thal-ghat
+  line: Great Indian Peninsula Railway
+  opened: "1865-01-01"
+  path: [[73.470, 19.640], [73.510, 19.670], [73.560, 19.697]]
+  note: The Thal ghat incline, Kasara to Igatpuri, opened the route north-east from Bombay.
+  sources: [irfca-history-1, wp-gipr]
+- id: gipr-bhusawal-khandwa
+  line: Great Indian Peninsula Railway
+  opened: "1866"
+  path: [[75.780, 21.050], [76.000, 21.180], [76.230, 21.310], [76.390, 21.470], [76.350, 21.820]]
+  sources: [irfca-history-1]
+- id: gipr-bhusawal-nagpur
+  line: Great Indian Peninsula Railway
+  opened: "1867-02-20"
+  path: [[75.780, 21.050], [76.210, 20.880], [76.690, 20.790], [77.000, 20.710], [77.370, 20.730], [77.760, 20.860], [78.130, 20.780], [78.320, 20.720], [78.600, 20.740], [78.880, 20.810], [79.090, 21.150]]
+  note: The cotton line through Berar to Nagpur.
+  sources: [irfca-history-1, wp-gipr]
+- id: gipr-khandwa-jabalpur
+  line: Great Indian Peninsula Railway
+  opened: "1870-03-07"
+  path: [[76.350, 21.820], [76.700, 22.100], [77.090, 22.340], [77.220, 22.370], [77.500, 22.500], [77.760, 22.610], [78.200, 22.700], [78.350, 22.760], [78.790, 22.920], [79.060, 22.920], [79.190, 22.950], [79.550, 23.050], [79.940, 23.170]]
+  note: It met the East Indian line at Jabalpur and completed the Bombay–Calcutta through route.
+  sources: [irfca-history-2, wp-gipr]
+- id: gipr-solapur-raichur
+  line: Great Indian Peninsula Railway
+  opened: "1871"
+  path: [[75.906, 17.664], [76.140, 17.480], [76.370, 17.350], [76.833, 17.330], [76.990, 17.056], [77.137, 16.770], [77.300, 16.450], [77.356, 16.204]]
+  note: It met the Madras Railway at Raichur and joined Bombay to Madras.
+  sources: [irfca-history-2, wp-gipr]
+- id: gipr-delhi-agra-chord
+  line: Great Indian Peninsula Railway
+  opened: "1904"
+  path: [[78.010, 27.160], [77.850, 27.330], [77.670, 27.480], [77.430, 27.790], [77.330, 28.140], [77.310, 28.400], [77.250, 28.590], [77.220, 28.660]]
+  note: The Agra–Delhi chord gave the GIPR its own way into Delhi.
+  sources: [irfca-history-3]
+
+# ---- East Indian Railway (broad gauge)
+- id: eir-howrah-hooghly
+  line: East Indian Railway
+  opened: "1854-08-15"
+  path: [[88.342, 22.584], [88.340, 22.620], [88.340, 22.650], [88.350, 22.670], [88.350, 22.720], [88.340, 22.750], [88.330, 22.790], [88.370, 22.860], [88.395, 22.917]]
+  note: Eastern India's first passenger line, 39 km up the Hooghly.
+  sources: [irfca-history-1, wp-eir]
+- id: eir-hooghly-pandua
+  line: East Indian Railway
+  opened: "1854-09-01"
+  path: [[88.395, 22.917], [88.380, 22.930], [88.380, 23.000], [88.280, 23.080]]
+  sources: [wp-eir]
+- id: eir-pandua-raniganj
+  line: East Indian Railway
+  opened: "1855-02-03"
+  path: [[88.280, 23.080], [88.180, 23.120], [88.110, 23.170], [87.860, 23.250], [87.700, 23.330], [87.430, 23.460], [87.320, 23.490], [87.200, 23.590], [87.120, 23.620]]
+  note: The line was built to reach the Raniganj coalfield.
+  sources: [irfca-history-1, wp-eir]
+- id: eir-khana-rajmahal
+  line: East Indian Railway
+  opened: "1860-07-04"
+  path: [[87.860, 23.330], [87.750, 23.490], [87.680, 23.670], [87.710, 23.830], [87.680, 23.950], [87.780, 24.170], [87.820, 24.300], [87.850, 24.630], [87.780, 24.860], [87.720, 25.000], [87.840, 25.050]]
+  note: The "loop" north from Khana towards the Ganges.
+  sources: [wp-eir]
+- id: eir-tinpahar-bhagalpur
+  line: East Indian Railway
+  opened: "1861-11-01"
+  path: [[87.720, 25.000], [87.630, 25.240], [87.420, 25.300], [87.230, 25.260], [86.980, 25.250]]
+  sources: [irfca-history-1, wp-eir]
+- id: eir-bhagalpur-jamalpur
+  line: East Indian Railway
+  opened: "1862-02-10"
+  path: [[86.980, 25.250], [86.730, 25.250], [86.490, 25.310]]
+  sources: [irfca-history-1, wp-eir]
+- id: eir-jamalpur-dinapore
+  line: East Indian Railway
+  opened: "1862-11-17"
+  path: [[86.490, 25.310], [86.100, 25.170], [85.990, 25.290], [85.920, 25.390], [85.710, 25.480], [85.530, 25.460], [85.300, 25.510], [85.140, 25.600], [85.050, 25.580]]
+  sources: [irfca-history-1]
+- id: eir-dinapore-mughalsarai
+  line: East Indian Railway
+  opened: "1862-12-22"
+  path: [[85.050, 25.580], [84.870, 25.560], [84.800, 25.570], [84.660, 25.560], [84.150, 25.550], [83.980, 25.570], [83.670, 25.430], [83.560, 25.420], [83.120, 25.280]]
+  note: The Son bridge near Arrah opened the same day.
+  sources: [irfca-history-1, wp-eir]
+- id: eir-allahabad-kanpur
+  line: East Indian Railway
+  opened: "1859-03-03"
+  path: [[81.830, 25.440], [81.730, 25.450], [81.480, 25.550], [81.320, 25.650], [81.100, 25.780], [80.810, 25.930], [80.550, 26.170], [80.430, 26.360], [80.350, 26.450]]
+  note: Built first, as an isolated stretch, to serve the Ganges–Yamuna doab.
+  sources: [irfca-history-1, wp-eir]
+- id: eir-kanpur-etawah
+  line: East Indian Railway
+  opened: "1861-07-01"
+  path: [[80.350, 26.450], [80.260, 26.470], [79.900, 26.490], [79.470, 26.600], [79.020, 26.780]]
+  sources: [irfca-history-1]
+- id: eir-mughalsarai-allahabad
+  line: East Indian Railway
+  opened: "1864"
+  path: [[83.120, 25.280], [82.880, 25.130], [82.570, 25.150], [82.500, 25.160], [82.120, 25.180], [81.870, 25.390], [81.830, 25.440]]
+  note: Trains crossed the Yamuna at Allahabad by ferry until the bridge opened in 1865.
+  sources: [wp-eir]
+- id: eir-etawah-shahdara
+  line: East Indian Railway
+  opened: "1864-08-01"
+  path: [[79.020, 26.780], [78.900, 26.880], [78.590, 27.100], [78.390, 27.150], [78.240, 27.210], [78.070, 27.570], [78.080, 27.890], [77.850, 28.250], [77.550, 28.550], [77.430, 28.660], [77.290, 28.670]]
+  note: The first train from Calcutta reached Shahdara, across the Yamuna from Delhi.
+  sources: [irfca-history-1, wp-eir]
+- id: eir-delhi-bridge
+  line: East Indian Railway
+  opened: "1867-01-01"
+  path: [[77.290, 28.670], [77.250, 28.665], [77.220, 28.660]]
+  note: The Yamuna bridge brought trains into Delhi; Howrah–Delhi through service began.
+  sources: [irfca-history-1, wp-eir]
+- id: eir-allahabad-jabalpur
+  line: East Indian Railway
+  opened: "1867-06"
+  path: [[81.830, 25.440], [81.870, 25.390], [81.620, 25.180], [81.100, 25.060], [80.830, 24.580], [80.760, 24.270], [80.390, 23.830], [80.110, 23.490], [79.940, 23.170]]
+  sources: [irfca-history-1, wp-eir]
+- id: eir-chord-line
+  line: East Indian Railway
+  opened: "1871"
+  path: [[87.120, 23.620], [86.980, 23.680], [86.890, 23.730], [86.800, 23.960], [86.650, 24.270], [86.640, 24.510], [86.370, 24.770], [86.220, 24.930], [86.100, 25.170]]
+  note: The chord from Raniganj to Kiul cut out the long loop by the Ganges.
+  sources: [kerr-railways]
+- id: eir-grand-chord
+  line: East Indian Railway
+  opened: "1906-12-06"
+  path: [[86.890, 23.730], [86.820, 23.750], [86.430, 23.790], [86.150, 23.870], [86.020, 23.960], [85.840, 24.110], [85.600, 24.460], [85.250, 24.650], [85.000, 24.800], [84.630, 24.820], [84.180, 24.910], [84.030, 24.950], [83.790, 25.040], [83.610, 25.090], [83.120, 25.280]]
+  note: The Grand Chord via Gaya, finished in stages from 1901, shortened the Calcutta–Delhi run.
+  sources: [irfca-history-3]
+
+# ---- Eastern Bengal Railway and Northern Bengal State Railway (broad gauge)
+- id: ebr-sealdah-ranaghat
+  line: Eastern Bengal Railway
+  opened: "1862-09-29"
+  path: [[88.370, 22.567], [88.400, 22.620], [88.380, 22.760], [88.420, 22.890], [88.440, 22.970], [88.520, 23.080], [88.560, 23.180]]
+  sources: [irfca-history-1]
+- id: ebr-ranaghat-jagati
+  line: Eastern Bengal Railway
+  opened: "1862-11-15"
+  path: [[88.560, 23.180], [88.700, 23.380], [88.790, 23.510], [88.840, 23.640], [88.950, 23.760], [89.050, 23.840], [89.110, 23.880]]
+  sources: [irfca-history-1]
+- id: ebr-jagati-goalundo
+  line: Eastern Bengal Railway
+  opened: "1871"
+  path: [[89.110, 23.880], [89.120, 23.910], [89.240, 23.860], [89.420, 23.790], [89.650, 23.760], [89.760, 23.760]]
+  note: At Goalundo the railway met river steamers for Dacca and Assam.
+  sources: [irfca-history-2]
+- id: nbsr-sara-siliguri
+  line: Northern Bengal State Railway
+  opened: "1878"
+  path: [[89.030, 24.070], [89.070, 24.130], [88.990, 24.420], [88.980, 24.800], [89.030, 25.100], [88.930, 25.650], [88.890, 25.780], [88.830, 26.100], [88.770, 26.330], [88.720, 26.520], [88.430, 26.710]]
+  note: Metre gauge, from the north bank of the Padma to the foot of the Himalaya.
+  sources: [kerr-railways]
+- id: ebr-hardinge-bridge
+  line: Eastern Bengal Railway
+  opened: "1915"
+  path: [[89.050, 23.840], [89.000, 24.020], [89.030, 24.070]]
+  note: The Hardinge Bridge over the Ganges replaced the ferry on the route to Siliguri.
+  sources: [irfca-history-3]
+
+# ---- Darjeeling Himalayan Railway (2 ft gauge)
+- id: dhr-siliguri-kurseong
+  line: Darjeeling Himalayan Railway
+  opened: "1880-08-23"
+  path: [[88.430, 26.710], [88.370, 26.790], [88.330, 26.830], [88.330, 26.850], [88.320, 26.860], [88.280, 26.880]]
+  sources: [wp-dhr]
+- id: dhr-kurseong-darjeeling
+  line: Darjeeling Himalayan Railway
+  opened: "1881-07-04"
+  path: [[88.280, 26.880], [88.300, 26.930], [88.280, 26.960], [88.270, 27.010], [88.260, 27.040]]
+  note: The "toy train" climbs about 2,000 m in loops and zigzags to the summer hill station.
+  sources: [wp-dhr]
+
+# ---- Punjab and Sind (Scinde, Punjab & Delhi Railway; Indus Valley and Punjab Northern State Railways)
+- id: spdr-karachi-kotri
+  line: Scinde Railway
+  opened: "1861-05-13"
+  path: [[67.010, 24.850], [67.040, 24.850], [67.200, 24.840], [67.530, 24.800], [67.760, 24.840], [68.020, 25.030], [68.170, 25.200], [68.310, 25.370]]
+  note: From the port of Karachi to the Indus, where river steamers took over.
+  sources: [wp-spdr, wp-port-karachi]
+- id: spdr-amritsar-lahore
+  line: Punjab Railway
+  opened: "1862-04-10"
+  path: [[74.870, 31.630], [74.800, 31.630], [74.600, 31.600], [74.550, 31.600], [74.340, 31.580]]
+  sources: [irfca-history-1]
+- id: spdr-lahore-multan
+  line: Punjab Railway
+  opened: "1865-04-24"
+  path: [[74.340, 31.580], [74.210, 31.250], [73.850, 31.020], [73.450, 30.810], [73.100, 30.660], [72.690, 30.530], [72.360, 30.440], [71.930, 30.300], [71.470, 30.190]]
+  sources: [irfca-history-1]
+- id: delhi-railway-meerut-ambala
+  line: Delhi Railway
+  opened: "1868-11-14"
+  path: [[77.710, 28.990], [77.710, 29.470], [77.680, 29.690], [77.550, 29.960], [77.300, 30.170], [77.000, 30.300], [76.780, 30.380]]
+  sources: [irfca-history-1]
+- id: delhi-railway-ghaziabad-meerut
+  line: Delhi Railway
+  opened: "1870-10"
+  path: [[77.430, 28.660], [77.580, 28.830], [77.710, 28.990]]
+  note: Completed the Delhi–Lahore through route in October 1870.
+  sources: [irfca-history-2]
+- id: delhi-railway-ambala-amritsar
+  line: Delhi Railway
+  opened: "1870-10"
+  path: [[76.780, 30.380], [76.590, 30.480], [76.390, 30.620], [76.220, 30.700], [75.850, 30.910], [75.780, 31.020], [75.770, 31.220], [75.580, 31.330], [75.500, 31.440], [75.290, 31.510], [74.870, 31.630]]
+  note: Opened in stages; the through route was complete by October 1870.
+  sources: [irfca-history-2]
+- id: ivsr-kotri-sukkur
+  line: Indus Valley State Railway
+  opened: "1878"
+  path: [[68.310, 25.370], [68.230, 25.920], [68.100, 26.150], [67.860, 26.430], [67.730, 26.550], [67.780, 26.730], [67.950, 27.050], [68.100, 27.300], [68.220, 27.560], [68.620, 27.820], [68.860, 27.700]]
+  note: Up the west bank of the Indus. Trains crossed to Rohri by ferry until 1889.
+  sources: [irfca-history-2]
+- id: ivsr-rohri-multan
+  line: Indus Valley State Railway
+  opened: "1878"
+  path: [[68.900, 27.690], [69.110, 27.860], [69.320, 28.010], [69.550, 28.020], [69.800, 28.100], [70.130, 28.310], [70.300, 28.420], [70.660, 28.650], [70.950, 28.930], [71.300, 29.170], [71.680, 29.390], [71.620, 29.480], [71.630, 29.540], [71.550, 29.850], [71.470, 30.190]]
+  note: The Empress Bridge over the Sutlej opened the same year. Karachi was now linked to Lahore.
+  sources: [irfca-history-2]
+- id: nwr-lansdowne-bridge
+  line: North Western Railway
+  opened: "1889"
+  path: [[68.860, 27.700], [68.880, 27.695], [68.900, 27.690]]
+  note: The Lansdowne Bridge over the Indus at Sukkur replaced the ferry.
+  sources: [irfca-history-2]
+- id: pnsr-lahore-jhelum
+  line: Punjab Northern State Railway
+  opened: "1878"
+  path: [[74.340, 31.580], [74.290, 31.630], [74.270, 31.730], [74.220, 31.980], [74.190, 32.160], [74.110, 32.440], [74.080, 32.570], [73.960, 32.700], [73.860, 32.810], [73.730, 32.940]]
+  sources: [irfca-history-2]
+- id: pnsr-jhelum-peshawar
+  line: Punjab Northern State Railway
+  opened: "1883"
+  path: [[73.730, 32.940], [73.600, 33.030], [73.420, 33.110], [73.300, 33.250], [73.240, 33.360], [73.070, 33.600], [72.800, 33.750], [72.690, 33.820], [72.360, 33.770], [72.240, 33.890], [72.000, 33.990], [71.790, 34.010], [71.550, 34.010]]
+  note: The Attock bridge over the Indus opened in 1883 and carried the line to Peshawar, near the Afghan frontier.
+  sources: [irfca-history-2]
+- id: nwr-delhi-ambala
+  line: North Western Railway
+  opened: "1891"
+  path: [[77.220, 28.660], [77.010, 28.990], [76.980, 29.390], [76.980, 29.690], [76.840, 29.970], [76.830, 30.340]]
+  sources: [irfca-history-2]
+- id: nwr-ambala-kalka
+  line: North Western Railway
+  opened: "1891"
+  path: [[76.830, 30.340], [76.800, 30.490], [76.890, 30.730], [76.940, 30.840]]
+  sources: [irfca-history-2]
+- id: kalka-simla
+  line: Kalka–Simla Railway
+  opened: "1903-11-09"
+  path: [[76.940, 30.840], [77.010, 30.900], [77.100, 30.890], [77.100, 30.910], [77.110, 30.970], [77.130, 31.070], [77.160, 31.100]]
+  note: A 2 ft 6 in line up to Simla, the summer capital.
+  sources: [wp-kalka-shimla]
+
+# ---- Baluchistan (Kandahar State Railway, Sind–Pishin State Railway)
+- id: ksr-ruk-sibi
+  line: Kandahar State Railway
+  opened: "1880-01-14"
+  path: [[68.620, 27.820], [68.440, 28.280], [68.310, 28.450], [68.130, 28.550], [68.070, 29.030], [67.880, 29.550]]
+  note: Built across the desert in about 100 days during the Second Afghan War.
+  sources: [wp-sind-pishin, irfca-history-2]
+- id: bolan-sibi-quetta
+  line: Bolan Pass Railway
+  opened: "1886"
+  path: [[67.880, 29.550], [67.650, 29.480], [67.470, 29.530], [67.400, 29.730], [67.330, 29.870], [67.130, 29.940], [66.980, 29.980], [67.000, 30.180]]
+  note: Through the Bolan Pass. At first an emergency route; rebuilt to carry all traffic in 1895.
+  sources: [wp-bolan-pass]
+- id: sps-sibi-harnai-bostan
+  line: Sind–Pishin State Railway
+  opened: "1887"
+  path: [[67.880, 29.550], [67.950, 29.770], [68.100, 29.950], [67.940, 30.100], [67.710, 30.190], [67.550, 30.220], [67.310, 30.420], [67.010, 30.430], [67.000, 30.180]]
+  note: The Harnai route through the Chappar Rift reached Quetta and Bostan.
+  sources: [wp-sind-pishin]
+- id: sps-bostan-chaman
+  line: Sind–Pishin State Railway
+  opened: "1892-01"
+  path: [[67.010, 30.430], [66.800, 30.600], [66.650, 30.730], [66.580, 30.850], [66.450, 30.920]]
+  note: Through the Khojak tunnel to Chaman, at the edge of Afghanistan.
+  sources: [wp-sind-pishin]
+
+# ---- Bombay, Baroda & Central India Railway (broad gauge)
+- id: bbci-bulsar-ahmedabad
+  line: Bombay, Baroda and Central India Railway
+  opened: "1863-01-21"
+  path: [[72.930, 20.610], [72.910, 20.950], [72.840, 21.210], [72.920, 21.400], [73.000, 21.620], [73.080, 21.950], [73.180, 22.310], [72.960, 22.560], [72.860, 22.690], [72.770, 22.830], [72.600, 23.030]]
+  note: Built through the cotton districts of Gujarat.
+  sources: [irfca-history-1]
+- id: bbci-bombay-bulsar
+  line: Bombay, Baroda and Central India Railway
+  opened: "1864"
+  path: [[72.820, 18.960], [72.840, 19.050], [72.860, 19.230], [72.850, 19.310], [72.810, 19.450], [72.770, 19.700], [72.730, 19.990], [72.900, 20.370], [72.930, 20.610]]
+  sources: [irfca-history-1]
+- id: bbci-baroda-mathura
+  line: Bombay, Baroda and Central India Railway
+  opened: "1909"
+  path: [[73.180, 22.310], [73.610, 22.780], [74.260, 22.840], [74.530, 22.910], [75.040, 23.330], [75.420, 23.450], [75.620, 23.550], [75.580, 23.760], [75.630, 24.190], [75.940, 24.650], [75.850, 25.180], [76.170, 25.680], [76.350, 26.010], [76.720, 26.470], [77.030, 26.730], [77.290, 26.910], [77.490, 27.220], [77.670, 27.480]]
+  note: Opened in stages from the 1890s; with the GIPR chord it made the Bombay–Delhi route via Kota.
+  sources: [irfca-history-3]
+
+# ---- Rajputana–Malwa Railway (metre gauge)
+- id: rmr-delhi-rewari
+  line: Rajputana–Malwa Railway
+  opened: "1873"
+  path: [[77.190, 28.660], [77.130, 28.600], [77.010, 28.490], [76.930, 28.440], [76.620, 28.200]]
+  sources: [irfca-history-2, wp-rmr]
+- id: rmr-rewari-bandikui
+  line: Rajputana–Malwa Railway
+  opened: "1874"
+  path: [[76.620, 28.200], [76.640, 27.800], [76.610, 27.560], [76.620, 27.240], [76.570, 27.050]]
+  sources: [irfca-history-2, wp-rmr]
+- id: rmr-agra-bandikui
+  line: Rajputana–Malwa Railway
+  opened: "1874"
+  path: [[78.020, 27.180], [77.760, 27.180], [77.490, 27.220], [77.200, 27.220], [77.030, 27.200], [76.930, 27.050], [76.570, 27.050]]
+  sources: [irfca-history-2, wp-rmr]
+- id: rmr-bandikui-jaipur
+  line: Rajputana–Malwa Railway
+  opened: "1874"
+  path: [[76.570, 27.050], [76.340, 26.890], [76.050, 26.900], [75.790, 26.920]]
+  sources: [wp-rmr]
+- id: rmr-jaipur-ajmer
+  line: Rajputana–Malwa Railway
+  opened: "1875"
+  path: [[75.790, 26.920], [75.500, 26.880], [75.240, 26.870], [74.860, 26.580], [74.630, 26.450]]
+  sources: [irfca-history-2, wp-rmr]
+- id: holkar-khandwa-indore
+  line: Holkar State Railway
+  opened: "1878"
+  path: [[76.350, 21.820], [76.070, 22.180], [76.040, 22.250], [75.800, 22.500], [75.770, 22.550], [75.870, 22.720]]
+  note: Metre gauge up the Vindhya scarp at the Mhow ghat.
+  sources: [irfca-history-2]
+- id: rmr-ajmer-ahmedabad
+  line: Rajputana–Malwa Railway
+  opened: "1881"
+  path: [[74.630, 26.450], [74.320, 26.100], [73.970, 25.950], [73.610, 25.730], [73.310, 25.350], [73.240, 25.230], [73.050, 24.790], [72.780, 24.480], [72.430, 24.170], [72.380, 23.600], [72.500, 23.240], [72.600, 23.030]]
+  sources: [irfca-history-2, wp-rmr]
+- id: rmr-indore-ajmer
+  line: Rajputana–Malwa Railway
+  opened: "1882"
+  path: [[75.870, 22.720], [75.680, 22.970], [75.300, 23.150], [75.040, 23.330], [75.130, 23.640], [75.070, 24.070], [74.870, 24.470], [74.630, 24.890], [74.630, 25.350], [74.640, 25.930], [74.730, 26.300], [74.630, 26.450]]
+  note: Through Malwa, an opium-growing country, by Ratlam, Neemuch and Chittor.
+  sources: [irfca-history-2]
+- id: jodhpur-marwar-jodhpur
+  line: Jodhpur State Railway
+  opened: "1885-03-09"
+  path: [[73.610, 25.730], [73.320, 25.880], [73.000, 26.000], [73.020, 26.290]]
+  sources: [wp-rmr]
+- id: jodhpur-bikaner
+  line: Jodhpur–Bikaner Railway
+  opened: "1891"
+  path: [[73.020, 26.290], [73.550, 26.400], [73.930, 26.680], [73.730, 27.200], [73.470, 27.560], [73.310, 28.020]]
+  sources: [irfca-history-2]
+
+# ---- Central India (Bhopal State Railway, Indian Midland Railway)
+- id: bhopal-itarsi-bhopal
+  line: Bhopal State Railway
+  opened: "1884"
+  path: [[77.760, 22.610], [77.720, 22.750], [77.680, 22.780], [77.580, 23.000], [77.410, 23.270]]
+  note: Built by the Begum of Bhopal, with a ghat section at Budni.
+  sources: [irfca-history-2]
+- id: imr-bhopal-agra
+  line: Indian Midland Railway
+  opened: "1889"
+  path: [[77.410, 23.270], [77.810, 23.530], [77.940, 23.850], [78.200, 24.170], [78.420, 24.690], [78.450, 25.050], [78.570, 25.450], [78.460, 25.670], [78.330, 25.890], [78.180, 26.210], [78.000, 26.500], [77.890, 26.700], [78.010, 27.160]]
+  sources: [irfca-history-2]
+
+# ---- Southern Mahratta and Nizam's Railways
+- id: smr-pune-miraj
+  line: Southern Mahratta Railway
+  opened: "1886"
+  path: [[73.874, 18.529], [74.160, 18.270], [74.110, 18.100], [74.180, 18.040], [74.100, 17.730], [74.180, 17.290], [74.420, 17.070], [74.570, 16.850], [74.650, 16.820]]
+  sources: [irfca-history-2]
+- id: ngsr-wadi-secunderabad
+  line: Nizam's Guaranteed State Railway
+  opened: "1874-10-09"
+  path: [[76.990, 17.056], [77.300, 17.150], [77.580, 17.250], [77.900, 17.340], [78.130, 17.460], [78.320, 17.480], [78.500, 17.430]]
+  note: Linked the Nizam's capital to the GIPR at Wadi.
+  sources: [wp-ngsr]
+- id: ngsr-secunderabad-bezwada
+  line: Nizam's Guaranteed State Railway
+  opened: "1889"
+  path: [[78.500, 17.430], [78.890, 17.510], [79.160, 17.720], [79.500, 17.980], [79.600, 17.970], [80.000, 17.600], [80.150, 17.450], [80.150, 17.250], [80.370, 16.920], [80.540, 16.620], [80.620, 16.520]]
+  sources: [wp-ngsr]
+- id: gt-balharshah-kazipet
+  line: Nizam's State Railway
+  opened: "1929"
+  path: [[79.350, 19.850], [79.470, 19.350], [79.450, 18.870], [79.470, 18.780], [79.380, 18.610], [79.500, 17.980]]
+  note: Joined Delhi to Madras directly; the Grand Trunk Express used it from 1929. Sources differ on the opening, 1924 or 1929.
+  sources: [irfca-history-3, wp-ngsr]
+- id: gipr-wardha-balharshah
+  line: Great Indian Peninsula Railway
+  opened: "1890"
+  path: [[78.600, 20.740], [78.840, 20.550], [79.100, 20.250], [79.300, 19.950], [79.350, 19.850]]
+  note: Built to the Wardha valley coalfield.
+  sources: [kerr-railways]
+
+# ---- Madras Railway (broad gauge)
+- id: mr-madras-arcot
+  line: Madras Railway
+  opened: "1856-07-01"
+  path: [[80.296, 13.112], [80.240, 13.110], [80.210, 13.110], [80.100, 13.120], [79.910, 13.140], [79.670, 13.080], [79.430, 13.060], [79.350, 12.960]]
+  note: Royapuram to Wallajah Road, the station for Arcot, 97 km. South India's first line.
+  sources: [irfca-history-1, wp-madras-railway]
+- id: mr-arcot-gudiyattam
+  line: Madras Railway
+  opened: "1858-05-19"
+  path: [[79.350, 12.960], [79.140, 12.970], [78.870, 12.950]]
+  sources: [irfca-history-1]
+- id: mr-gudiyattam-beypore
+  line: Madras Railway
+  opened: "1862"
+  path: [[78.870, 12.950], [78.720, 12.790], [78.610, 12.680], [78.580, 12.570], [78.370, 12.110], [78.280, 12.000], [78.160, 11.670], [77.870, 11.470], [77.720, 11.340], [77.340, 11.110], [76.980, 10.960], [76.830, 10.850], [76.660, 10.780], [76.380, 10.770], [76.270, 10.760], [76.030, 10.840], [75.920, 10.920], [75.860, 11.050], [75.830, 11.170]]
+  note: Opened in stages across the peninsula to Beypore on the Malabar coast, 1859–62.
+  sources: [wp-madras-railway]
+- id: mr-arakkonam-renigunta
+  line: Madras Railway
+  opened: "1862-09-15"
+  path: [[79.670, 13.080], [79.610, 13.180], [79.550, 13.440], [79.512, 13.636]]
+  sources: [irfca-history-1]
+- id: mr-jolarpettai-bangalore
+  line: Madras Railway
+  opened: "1864-08-01"
+  path: [[78.580, 12.570], [78.340, 12.750], [78.180, 12.990], [77.940, 13.000], [77.750, 12.990], [77.600, 12.990]]
+  sources: [irfca-history-1, wp-madras-railway]
+- id: mr-renigunta-raichur
+  line: Madras Railway
+  opened: "1871"
+  path: [[79.512, 13.636], [79.250, 14.000], [79.160, 14.190], [78.820, 14.470], [78.540, 14.640], [78.010, 14.910], [77.630, 15.110], [77.370, 15.170], [77.280, 15.630], [77.360, 15.950], [77.356, 16.204]]
+  note: Opened in stages to Raichur, where it met the GIPR in 1871.
+  sources: [irfca-history-2, wp-madras-railway]
+- id: mr-madras-bezwada
+  line: Madras Railway
+  opened: "1899-11-01"
+  path: [[80.275, 13.083], [80.110, 13.410], [80.020, 13.700], [79.900, 13.900], [79.850, 14.150], [79.980, 14.440], [79.990, 14.910], [80.050, 15.500], [80.350, 15.820], [80.640, 16.240], [80.620, 16.520]]
+  note: The coast line north from Madras, the last link in the East Coast route.
+  sources: [irfca-history-2]
+
+# ---- Great Southern of India / South Indian Railway
+- id: gsir-negapatam-tiruvarur
+  line: Great Southern of India Railway
+  opened: "1861-07-15"
+  path: [[79.840, 10.770], [79.740, 10.770], [79.640, 10.770]]
+  sources: [irfca-history-1, wp-sir]
+- id: gsir-tiruvarur-tanjore
+  line: Great Southern of India Railway
+  opened: "1861-12-02"
+  path: [[79.640, 10.770], [79.420, 10.770], [79.130, 10.780]]
+  sources: [irfca-history-1]
+- id: gsir-tanjore-trichy
+  line: Great Southern of India Railway
+  opened: "1862-03-11"
+  path: [[79.130, 10.780], [78.980, 10.790], [78.710, 10.790], [78.690, 10.800]]
+  sources: [irfca-history-1]
+- id: gsir-trichy-erode
+  line: Great Southern of India Railway
+  opened: "1868-01-01"
+  path: [[78.690, 10.800], [78.420, 10.940], [78.080, 10.960], [77.880, 11.080], [77.720, 11.340]]
+  note: Met the Madras Railway at Erode.
+  sources: [irfca-history-1]
+- id: sir-trichy-tuticorin
+  line: South Indian Railway
+  opened: "1876"
+  path: [[78.690, 10.800], [78.420, 10.610], [77.970, 10.360], [78.000, 10.100], [78.120, 9.920], [77.960, 9.580], [77.910, 9.360], [77.870, 9.170], [77.900, 8.850], [78.150, 8.800]]
+  note: Metre gauge to the port of Tuticorin, for the boats to Ceylon.
+  sources: [wp-sir]
+- id: sir-madras-tanjore
+  line: South Indian Railway
+  opened: "1880"
+  path: [[80.260, 13.080], [80.120, 12.920], [79.980, 12.690], [79.890, 12.510], [79.650, 12.240], [79.490, 11.940], [79.750, 11.720], [79.690, 11.400], [79.740, 11.240], [79.650, 11.100], [79.380, 10.960], [79.270, 10.920], [79.130, 10.780]]
+  note: The metre-gauge main line down the Coromandel coast and through the Kaveri delta; opened in stages.
+  sources: [wp-sir]
+- id: sir-tinnevelly-quilon
+  line: South Indian Railway
+  opened: "1904"
+  path: [[77.900, 8.850], [77.730, 8.730], [77.310, 8.960], [77.250, 8.970], [76.920, 9.020], [76.590, 8.890]]
+  note: Across the Western Ghats by the Aryankavu pass to Travancore.
+  sources: [wp-sir]
+- id: sir-madura-dhanushkodi
+  line: South Indian Railway
+  opened: "1914-02-24"
+  path: [[78.120, 9.920], [78.480, 9.680], [78.590, 9.540], [78.830, 9.370], [79.130, 9.280], [79.210, 9.280], [79.420, 9.180]]
+  note: Over the Pamban sea bridge to Dhanushkodi, for the ferry to Ceylon.
+  sources: [irfca-history-1, wp-sir]
+
+# ---- East Coast State Railway
+- id: ecsr-cuttack-puri
+  line: East Coast State Railway
+  opened: "1893"
+  path: [[85.880, 20.470], [85.840, 20.270], [85.700, 20.170], [85.830, 19.810]]
+  note: The branch to Puri carried pilgrims to the Jagannath temple.
+  sources: [irfca-history-2, wp-east-coast-state-railway]
+- id: ecsr-bezwada-waltair
+  line: East Coast State Railway
+  opened: "1896"
+  path: [[80.620, 16.520], [81.100, 16.710], [81.530, 16.810], [81.670, 16.910], [81.800, 17.000], [82.170, 17.050], [82.400, 17.280], [82.550, 17.360], [83.010, 17.690], [83.290, 17.720]]
+  note: Built 1893–96. The Godavari was bridged at Rajahmundry in 1900.
+  sources: [wp-east-coast-state-railway]
+- id: ecsr-waltair-cuttack
+  line: East Coast State Railway
+  opened: "1896"
+  path: [[83.290, 17.720], [83.190, 17.890], [83.400, 18.120], [83.830, 18.400], [84.410, 18.770], [84.690, 19.120], [84.790, 19.310], [84.980, 19.360], [85.100, 19.520], [85.210, 19.730], [85.450, 19.950], [85.700, 20.170], [85.840, 20.270], [85.880, 20.470]]
+  note: Built 1893–96 along the coast and round Chilika lake.
+  sources: [wp-east-coast-state-railway]
+
+# ---- Bengal Nagpur Railway (broad gauge)
+- id: bnr-nagpur-rajnandgaon
+  line: Bengal Nagpur Railway
+  opened: "1882"
+  path: [[79.090, 21.150], [79.240, 21.220], [79.580, 21.180], [79.730, 21.370], [80.200, 21.460], [80.370, 21.370], [80.550, 21.300], [80.760, 21.190], [81.030, 21.100]]
+  note: Opened as the metre-gauge Nagpur and Chhattisgarh State Railway; the BNR rebuilt it to broad gauge.
+  sources: [wp-bnr, irfca-history-2]
+- id: bnr-rajnandgaon-bilaspur
+  line: Bengal Nagpur Railway
+  opened: "1887"
+  path: [[81.030, 21.100], [81.280, 21.190], [81.380, 21.210], [81.630, 21.250], [81.790, 21.550], [81.940, 21.740], [82.150, 22.080]]
+  note: Completed 1886–87, through the rice country of Chhattisgarh.
+  sources: [wp-bnr]
+- id: bnr-bilaspur-asansol
+  line: Bengal Nagpur Railway
+  opened: "1891-02-01"
+  path: [[82.150, 22.080], [82.660, 22.030], [83.000, 21.950], [83.390, 21.900], [83.850, 21.830], [84.010, 21.860], [84.400, 22.000], [84.880, 22.230], [85.190, 22.370], [85.630, 22.680], [85.950, 22.790], [86.050, 22.950], [86.360, 23.330], [86.680, 23.500], [86.980, 23.680]]
+  note: The main line through the Chota Nagpur plateau, opened for goods traffic.
+  sources: [wp-bnr]
+- id: bnr-sini-howrah
+  line: Bengal Nagpur Railway
+  opened: "1900"
+  path: [[85.950, 22.790], [86.200, 22.770], [86.480, 22.590], [86.990, 22.450], [87.320, 22.340], [87.740, 22.410], [87.970, 22.470], [88.100, 22.470], [88.290, 22.580], [88.342, 22.584]]
+  note: Gave the BNR its own line into Howrah, by Kharagpur.
+  sources: [wp-bnr, irfca-history-3]
+- id: bnr-kharagpur-cuttack
+  line: Bengal Nagpur Railway
+  opened: "1900"
+  path: [[87.320, 22.340], [87.340, 22.080], [87.220, 21.810], [86.930, 21.500], [86.690, 21.280], [86.500, 21.060], [86.120, 20.950], [85.990, 20.700], [85.880, 20.470]]
+  note: Completed the coast route from Calcutta to Madras.
+  sources: [wp-bnr]
+
+# ---- Assam (Dibru–Sadiya Railway, Assam Bengal Railway; metre gauge)
+- id: dsr-dibrugarh-margherita
+  line: Dibru–Sadiya Railway
+  opened: "1884"
+  path: [[94.910, 27.480], [95.130, 27.490], [95.360, 27.490], [95.620, 27.390], [95.680, 27.280]]
+  note: Built for the tea gardens and the coal at Margherita; opened in stages from 1882.
+  sources: [irfca-history-2]
+- id: abr-chittagong-comilla
+  line: Assam Bengal Railway
+  opened: "1895"
+  path: [[91.820, 22.340], [91.660, 22.620], [91.400, 23.010], [91.120, 23.240], [91.180, 23.460]]
+  note: The Assam Bengal Railway gave the Assam tea gardens an outlet at the port of Chittagong.
+  sources: [wp-assam-bengal-railway]
+- id: abr-comilla-badarpur
+  line: Assam Bengal Railway
+  opened: "1898"
+  path: [[91.180, 23.460], [91.210, 23.870], [91.460, 24.290], [91.730, 24.310], [92.040, 24.520], [92.360, 24.870], [92.600, 24.870]]
+  note: Opened 1896–98 through the Surma valley.
+  sources: [wp-assam-bengal-railway]
+- id: abr-hill-section
+  line: Assam Bengal Railway
+  opened: "1903"
+  path: [[92.600, 24.870], [92.800, 24.950], [92.950, 25.110], [93.020, 25.170], [93.130, 25.190], [93.170, 25.300], [93.150, 25.530], [93.170, 25.750]]
+  note: The hill section through the North Cachar Hills by Haflong to Lumding.
+  sources: [wp-assam-bengal-railway, irfca-history-3]
+- id: abr-lumding-tinsukia
+  line: Assam Bengal Railway
+  opened: "1903"
+  path: [[93.170, 25.750], [93.430, 25.840], [93.730, 25.910], [93.770, 26.020], [93.960, 26.470], [94.310, 26.660], [94.730, 26.900], [95.000, 27.150], [95.340, 27.290], [95.360, 27.490]]
+  note: Joined the Dibru–Sadiya Railway at Tinsukia, completing Chittagong–Assam.
+  sources: [wp-assam-bengal-railway, irfca-history-3]
+- id: abr-lumding-gauhati
+  line: Assam Bengal Railway
+  opened: "1903"
+  path: [[93.170, 25.750], [92.930, 25.930], [92.860, 26.000], [92.700, 26.110], [92.520, 26.210], [92.220, 26.110], [91.990, 26.140], [91.750, 26.180]]
+  note: The Gauhati end of this branch opened in 1900.
+  sources: [wp-assam-bengal-railway]
+
+# ---- Burma (Burma State Railways; metre gauge)
+- id: burma-rangoon-prome
+  line: Burma State Railway
+  opened: "1877-05-02"
+  path: [[96.160, 16.780], [96.100, 16.890], [96.080, 17.100], [95.970, 17.320], [95.790, 17.650], [95.750, 17.790], [95.720, 17.990], [95.650, 18.230], [95.510, 18.490], [95.210, 18.700], [95.220, 18.820]]
+  note: Burma's first railway, up the Irrawaddy valley to Prome.
+  sources: [wp-burma-railways]
+- id: burma-rangoon-toungoo
+  line: Burma State Railway
+  opened: "1884"
+  path: [[96.160, 16.780], [96.300, 17.050], [96.480, 17.330], [96.470, 17.450], [96.680, 17.790], [96.730, 17.950], [96.700, 18.150], [96.450, 18.480], [96.430, 18.940]]
+  note: The Sittang valley line, to the edge of British Burma.
+  sources: [wp-burma-railways]
+- id: burma-toungoo-mandalay
+  line: Burma State Railway
+  opened: "1889"
+  path: [[96.430, 18.940], [96.330, 19.150], [96.210, 19.740], [96.150, 20.430], [96.060, 20.590], [96.060, 20.850], [96.040, 21.100], [96.100, 21.370], [96.130, 21.600], [96.070, 21.850], [96.080, 21.970]]
+  note: Built after the conquest of Upper Burma in 1885.
+  sources: [wp-burma-railways]
+- id: burma-sagaing-myitkyina
+  line: Burma State Railway
+  opened: "1898"
+  path: [[95.980, 21.880], [95.850, 22.050], [95.700, 22.570], [95.520, 23.200], [95.680, 23.790], [95.680, 23.890], [95.900, 24.150], [96.270, 24.380], [96.520, 24.980], [96.930, 25.300], [97.390, 25.380]]
+  note: Opened in stages, 1891–98. Trains crossed from Mandalay by ferry until the Ava bridge of 1934.
+  sources: [wp-burma-railways]
+- id: burma-mandalay-lashio
+  line: Burma State Railway
+  opened: "1903"
+  path: [[96.080, 21.970], [96.100, 21.950], [96.450, 22.030], [96.870, 22.340], [97.030, 22.530], [97.300, 22.620], [97.750, 22.940]]
+  note: Over the Gokteik viaduct (1900) into the Shan hills.
+  sources: [wp-gokteik]

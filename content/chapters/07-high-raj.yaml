@@ -43,9 +43,12 @@ scenes:
 
       The drain theory gave Indians an economic case against British rule that did not depend on religion or
       region.
+    chart: railway-km
     show:
       events: [ suez-canal, drain-theory ]
       places: [ bombay, calcutta, madras, karachi ]
+      trade: [ cotton-suez, jute-calcutta, indigo-bengal, assam-tea, manchester-suez ]
+      railways: true
   - id: ch7-aligarh
     t: "1875-05-24"
     camera: { center: [ 78.1, 27.9 ], zoom: 7.0, pitch: 25 }
@@ -77,6 +80,7 @@ scenes:
     show:
       events: [ durbar-1877, great-famine ]
       places: [ delhi, madras, bombay, hyderabad ]
+      railways: true
     chart: famine-deaths
     image:
       src: media/ch7-famine.jpg

@@ -62,6 +62,7 @@ scenes:
       events: [ cripps-mission, quit-india ]
       people: [ gandhi ]
       places: [ bombay, poona, delhi ]
+      railways: true
   - id: ch10-famine
     t: "1943-07"
     camera: { center: [ 89.0, 23.5 ], zoom: 5.8, pitch: 20 }

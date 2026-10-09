@@ -442,3 +442,88 @@
 - id: wp-bithur
   title: "Wikipedia: Bithoor"
   url: https://en.wikipedia.org/wiki/Bithoor
+# Railways and trade (D27)
+- id: irfca-history-1
+  title: "Indian Railways Fan Club (IRFCA), Chronological History of Railways in India, Part 1: 1832–1869"
+  url: https://irfca.org/faq/faq-hist.html
+- id: irfca-history-2
+  title: "Indian Railways Fan Club (IRFCA), Indian Railways History: 1870–1899"
+  url: https://irfca.org/faq/faq-history2.html
+- id: irfca-history-3
+  title: "Indian Railways Fan Club (IRFCA), Indian Railways History: 1900–1946"
+  url: https://irfca.org/faq/faq-history3.html
+- id: graces-rail-mileage
+  title: "Grace's Guide to British Industrial History: Indian Railways: Mileage Open"
+  url: https://www.gracesguide.co.uk/Indian_Railways:_Mileage_Open
+- id: thorner-railway-pattern
+  title: "Thorner, D., 'The Pattern of Railway Development in India', Far Eastern Quarterly 14 (2), 1955"
+  url: https://www.cambridge.org/core/journals/journal-of-asian-studies/article/pattern-of-railway-development-in-india/26D0EC945DF663D2F93FAF201B46F3EC
+- id: wp-gipr
+  title: "Wikipedia: Great Indian Peninsula Railway"
+  url: https://en.wikipedia.org/wiki/Great_Indian_Peninsula_Railway
+- id: wp-eir
+  title: "Wikipedia: East Indian Railway Company"
+  url: https://en.wikipedia.org/wiki/East_Indian_Railway_Company
+- id: wp-madras-railway
+  title: "Wikipedia: Madras Railway"
+  url: https://en.wikipedia.org/wiki/Madras_Railway
+- id: wp-sir
+  title: "Wikipedia: South Indian Railway Company"
+  url: https://en.wikipedia.org/wiki/South_Indian_Railway_Company
+- id: wp-bnr
+  title: "Wikipedia: Bengal Nagpur Railway"
+  url: https://en.wikipedia.org/wiki/Bengal_Nagpur_Railway
+- id: wp-rmr
+  title: "Wikipedia: Rajputana–Malwa Railway"
+  url: https://en.wikipedia.org/wiki/Rajputana%E2%80%93Malwa_Railway
+- id: wp-assam-bengal-railway
+  title: "Wikipedia: Assam Bengal Railway"
+  url: https://en.wikipedia.org/wiki/Assam_Bengal_Railway
+- id: wp-dhr
+  title: "Wikipedia: Darjeeling Himalayan Railway"
+  url: https://en.wikipedia.org/wiki/Darjeeling_Himalayan_Railway
+- id: wp-sind-pishin
+  title: "Wikipedia: Sind–Pishin State Railway"
+  url: https://en.wikipedia.org/wiki/Sind%E2%80%93Pishin_State_Railway
+- id: wp-bolan-pass
+  title: "Wikipedia: Bolan Pass"
+  url: https://en.wikipedia.org/wiki/Bolan_Pass
+- id: wp-burma-railways
+  title: "Wikipedia: Burma Railways"
+  url: https://en.wikipedia.org/wiki/Burma_Railways
+- id: wp-east-coast-state-railway
+  title: "Wikipedia: East Coast State Railway"
+  url: https://en.wikipedia.org/wiki/East_Coast_State_Railway
+- id: wp-opium-wars
+  title: "Wikipedia: Opium Wars"
+  url: https://en.wikipedia.org/wiki/Opium_Wars
+- id: wp-indenture
+  title: "Wikipedia: Indian indenture system"
+  url: https://en.wikipedia.org/wiki/Indian_indenture_system
+- id: wp-assam-tea
+  title: "Wikipedia: Assam tea"
+  url: https://en.wikipedia.org/wiki/Assam_tea
+- id: wp-cotton-famine
+  title: "Wikipedia: Lancashire Cotton Famine"
+  url: https://en.wikipedia.org/wiki/Lancashire_Cotton_Famine
+- id: wp-indigo-dye
+  title: "Wikipedia: Indigo dye"
+  url: https://en.wikipedia.org/wiki/Indigo_dye
+- id: wp-jute
+  title: "Wikipedia: Jute"
+  url: https://en.wikipedia.org/wiki/Jute
+- id: wp-port-karachi
+  title: "Wikipedia: Port of Karachi"
+  url: https://en.wikipedia.org/wiki/Port_of_Karachi
+- id: wp-kalka-shimla
+  title: "Wikipedia: Kalka–Shimla railway"
+  url: https://en.wikipedia.org/wiki/Kalka%E2%80%93Shimla_railway
+- id: wp-gokteik
+  title: "Wikipedia: Goteik viaduct"
+  url: https://en.wikipedia.org/wiki/Goteik_viaduct
+- id: wp-ngsr
+  title: "Wikipedia: Nizam's Guaranteed State Railway"
+  url: https://en.wikipedia.org/wiki/Nizam%27s_Guaranteed_State_Railway
+- id: wp-spdr
+  title: "Wikipedia: Scinde, Punjab & Delhi Railway"
+  url: https://en.wikipedia.org/wiki/Scinde,_Punjab_%26_Delhi_Railway

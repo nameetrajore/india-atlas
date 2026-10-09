@@ -26,6 +26,7 @@ scenes:
       events: [ ncm ]
       people: [ gandhi ]
       places: [ nagpur, sabarmati, bombay, calcutta, lahore ]
+      trade: [ manchester-suez ]
   - id: ch9-chauri-chaura
     t: "1922-02-04"
     camera: { center: [ 80.0, 21.0 ], zoom: 4.6, pitch: 10 }

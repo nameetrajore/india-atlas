@@ -139,7 +139,7 @@ export function MapView() {
       else if (layer.id === 'people') html = `<div class="tt-title">${esc(object.p.name)}</div><div class="tt-sub">${esc(object.p.role)}</div>`
       else if (layer.id === 'footholds') html = `<div class="tt-title">${esc(object.p.name)}</div><div class="tt-sub">${esc(polityName(content.polities[object.c.power], t))}</div>`
       else if (layer.id === 'railways') html = `<div class="tt-title">${esc(object.line)}</div><div class="tt-sub">Opened ${esc(object.opened.label)}${object.note ? ` · ${esc(object.note)}` : ''}</div>`
-      else if (layer.id === 'trade') html = `<div class="tt-title">${esc(object.name)}</div><div class="tt-sub">${esc(object.goods)} · ${esc(object.from.label)}–${esc(object.to.label)}</div>`
+      else if (layer.id === 'trade') html = `<div class="tt-title">${esc(object.name)}</div><div class="tt-sub">${esc(object.goods)} · ${esc(object.from.label)}–${esc(object.to.label)}</div>${object.beyond ? `<div class="tt-sub">${esc(object.beyond)}</div>` : ''}`
       else if (layer.id === 'place-labels') html = `<div class="tt-title">${esc(object.name)}</div>${object.modern && object.modern !== object.name ? `<div class="tt-sub">now ${esc(object.modern)}</div>` : ''}`
       else return null
       return { html, className: 'map-tooltip', style: { background: 'none', padding: '0' } }

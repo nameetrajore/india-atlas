@@ -42,7 +42,10 @@ export function Journey() {
   }, [auto, step, steps.length, journeyStep])
 
   useEffect(() => {
-    list.current?.querySelector('.on')?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
+    // Scroll only the stop list, never the panel, so the current stop's text stays in view.
+    const ol = list.current
+    const on = ol?.querySelector<HTMLElement>('.on')
+    if (ol && on) ol.scrollTo({ top: on.offsetTop - ol.clientHeight / 2, behavior: 'smooth' })
   }, [step])
 
   if (!content || !p || !steps.length) return null
@@ -86,7 +89,7 @@ export function Journey() {
             return (
               <li key={si}>
                 <button className={i === step ? 'on' : i < step ? 'done' : ''} onClick={() => startJourney(p.id, i)}>
-                  <span className="date">{s.date.label}</span> {s.away ? 'Abroad' : (pl?.name ?? '')}
+                  <span className="date">{s.date.label}</span> {s.away ? 'Abroad' : (pl?.name ?? s.note?.split(/[,.;:]/)[0])}
                 </button>
               </li>
             )

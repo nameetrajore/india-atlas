@@ -27,3 +27,11 @@
   figure: Deaths
   note: Bars span the lowest and highest published estimates, not a single figure.
   sources: [wp-great-famine, wp-bengal-famine]
+- id: railway-km
+  kind: line
+  title: "Railways in India"
+  subtitle: Route kilometres open, by year
+  unit: " km"
+  points: [[1853, 32], [1860, 1349], [1865, 5412], [1870, 7678], [1880, 14478], [1885, 19557], [1890, 26400], [1900, 39835], [1910, 51658], [1920, 59592], [1930, 68044], [1940, 66066], [1947, 65178]]
+  note: Official mileage open, converted to km. Burma's lines are left out from 1937, when it became a separate colony. The 1947 figure is the 1946–47 main-line route length of undivided India.
+  sources: [graces-rail-mileage, thorner-railway-pattern]

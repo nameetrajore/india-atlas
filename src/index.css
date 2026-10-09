@@ -551,13 +551,13 @@ button:disabled { cursor: default; opacity: 0.45; }
 
 /* Follow a person */
 .reader.journey { bottom: calc(var(--tl-h) + 4px); width: 360px; }
-.is-journey .map-key { display: none; }
+.is-journey .map-key, .is-journey .now { display: none; }
 .journey-who { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--ink-2); margin-bottom: 10px; }
 .journey-dot { width: 11px; height: 11px; border-radius: 50%; background: var(--person); box-shadow: 0 0 0 2px var(--paper), 0 0 0 3px var(--person); flex: none; }
 .journey-modern { font: 500 15px var(--sans); color: var(--ink-3); }
 .journey-note { font-size: 15.5px; line-height: 1.55; margin: 6px 0 12px; }
-.journey-stops { list-style: none; margin: 14px 0 0; padding: 10px 0 0; border-top: 1px solid var(--rule); font-size: 12.5px; }
-.journey-stops button { display: block; width: 100%; text-align: left; background: none; border: none; padding: 3px 0 3px 14px; color: var(--ink-3); position: relative; }
+.journey-stops { list-style: none; margin: 14px 0 0; padding: 10px 0 0; max-height: 240px; overflow: auto; position: relative; border-top: 1px solid var(--rule); font-size: 12.5px; }
+.journey-stops button { display: block; width: 100%; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; background: none; border: none; padding: 3px 0 3px 14px; color: var(--ink-3); position: relative; }
 .journey-stops button::before { content: ''; position: absolute; left: 2px; top: 9px; width: 6px; height: 6px; border-radius: 50%; border: 1px solid var(--ink-3); }
 .journey-stops button.done { color: var(--ink-2); }
 .journey-stops button.done::before { background: var(--person); border-color: var(--person); }

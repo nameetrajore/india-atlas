@@ -59,6 +59,7 @@ scenes:
     show:
       events: [ charter-act-1813, charter-act-1833 ]
       places: [ dacca, calcutta, murshidabad ]
+      trade: [ manchester-cape, cotton-cape, indigo-bengal, opium-canton ]
     chart: world-gdp-share
   - id: ch5-english
     t: "1835-02-02"
@@ -146,6 +147,7 @@ scenes:
     show:
       events: [ doctrine-of-lapse, first-railway ]
       places: [ satara, jhansi, nagpur, bombay ]
+      railways: true
   - id: ch5-awadh
     t: "1856-02-07"
     camera: { center: [ 81.0, 26.8 ], zoom: 6.2, pitch: 25 }

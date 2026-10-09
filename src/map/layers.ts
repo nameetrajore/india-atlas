@@ -229,7 +229,7 @@ export function buildLayers(a: LayerArgs): Layer[] {
 
   // ---- labels: one shared declutter pass, people > selected > places > polities
   const cands: LabelCandidate[] = []
-  for (const m of markers)
+  for (const m of markers.filter((x) => x.s.opacity >= 0.5))
     cands.push({ key: `person:${m.p.id}`, position: m.s.position, text: m.p.name, size: 13.5, priority: 1e6, offset: [13, 0], alts: [[13, 18], [13, -18], [26, 0], [26, 20], [26, -20]], anchor: 'start', baseline: 'center' })
   const markerR = new Map<string, number>()
   for (const f of footholds) markerR.set(f.p.id, Math.max(markerR.get(f.p.id) ?? 0, 7))
@@ -322,10 +322,9 @@ export function buildLayers(a: LayerArgs): Layer[] {
     )
   }
 
-  // ---- trade routes: faint route line, end label; cargo dots come from tradeDots()
+  // ---- trade routes: faint route line; cargo dots come from tradeDots(); destinations in tooltip and card
   {
     const routes = visibleTrade(content, t, scene, a.econ)
-    const ends = routes.filter((r) => r.beyond)
     layers.push(
       new PathLayer<TradeRoute>({
         ...FLAT,
@@ -342,20 +341,6 @@ export function buildLayers(a: LayerArgs): Layer[] {
         onClick: (info) => (info.object && a.onPick({ kind: 'trade', id: info.object.id }), true),
       }),
       tradeDots([], 0),
-      ...haloText({
-        ...TEXT_BASE,
-        id: 'trade-ends',
-        data: ends,
-        getPosition: (d: TradeRoute) => d.path[d.path.length - 1],
-        getText: (d: TradeRoute) => `${d.goods} → ${d.beyond}`,
-        getSize: 11.5,
-        getColor: (d: TradeRoute) => [...FLOW_COLORS[d.flow], 255],
-        fontFamily: 'Inter',
-        fontWeight: 600,
-        getTextAnchor: (d: TradeRoute) => (d.path[d.path.length - 1][0] < 70 ? 'start' : 'end'),
-        getAlignmentBaseline: 'bottom',
-        getPixelOffset: [0, -6],
-      }),
     )
   }
 
@@ -495,7 +480,8 @@ export function buildLayers(a: LayerArgs): Layer[] {
       ...haloText({
         ...TEXT_BASE,
         id: 'people-labels',
-        data: markers.filter((m) => shown.has(`person:${m.p.id}`)),
+        // Ghosts (location no longer known) keep a faint marker but no name, so they don't clutter the map.
+        data: markers.filter((m) => m.s.opacity >= 0.5 && shown.has(`person:${m.p.id}`)),
         getPosition: (d: M) => d.s.position,
         getText: (d: M) => d.p.name,
         getSize: 13.5,

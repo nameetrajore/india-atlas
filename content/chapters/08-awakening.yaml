@@ -45,6 +45,7 @@ scenes:
       events: [ swadeshi, muslim-league ]
       places: [ calcutta, dacca ]
       polities: [ eastern-bengal-assam ]
+      trade: [ manchester-suez ]
   - id: ch8-split
     t: "1908-04-30"
     camera: { center: [ 82.0, 22.5 ], zoom: 4.6, pitch: 10 }
