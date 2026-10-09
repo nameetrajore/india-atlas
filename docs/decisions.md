@@ -94,3 +94,16 @@ CC0 1941 district and princely-state layer (India State Story via india-geodata)
 ## D24. Scope narrowed to the British Raj (2026-10-09)
 Supersedes D2 and D13 for now. v1 covers the British Raj only, 1857–1947: the 1857 revolt, Crown rule, provincial reorganisation, princely states, the freedom movement and independence/Partition. The 1740–1765 slice is archived under `content/archive/plassey/` and excluded from the build. `sources.yaml` and `polities.yaml` stay shared.
 - Base map: the 1941 units are a Raj-era layer and fit directly. Areas outside present-day India (Sind, Punjab, NWFP, Baluchistan, East Bengal, Burma) are needed now, because Lahore, Dhaka, Karachi and Partition all happen there.
+
+## D25. Narrative-first, 1600–1947, with present-day comparison (2026-10-09)
+Supersedes D3's sandbox-first default, and D24's start date. Prompted by user feedback that the explorer was too complex and showed what happened without saying why.
+- **One story:** how the British came to India, why, how a trading company became a government, and how the Raj ended. It runs from 1600 (the Company's charter) to 1947. It is told in **chapters**, each made of **scenes**. Every scene sets the time, camera and the few things to show, and carries narrative text that explains causes, not just events.
+- **Causality is data.** Events carry `context` (why it happened), `consequences` (what changed), and `causes` / `led_to` links to other events. Cards show "Because of…" and "Led to…" so the reader can follow the chain.
+- **Cards:** detailed but relevant to the plot. Context, what happened and consequences come first. Disputed figures, perspectives and sources sit behind "More".
+- **Simple by default, detail on demand.**
+  - The map uses blocs: Company/British, Indian rulers, other Europeans, and from 1947 India and Pakistan. Province and state detail is shown by toggle or when a scene highlights it.
+  - The map shows only what the current scene references.
+  - The sandbox ("Explore freely") is secondary, and it shows only the top events near the current date, with a "Now" caption.
+  - Views and layers that have no data are hidden.
+- **Compare with today:** a toggle overlays present-day boundaries (Indian states from the Survey of India-sourced 2024 layer, plus Pakistan, Bangladesh and Burma), and every place card says where it is today.
+- **Territory before 1857:** Company territory year by year comes from the CC0 "Making of British Provinces and Districts 1690–1862" table, which gives the acquisition date and mode for each region. Everything not British is shown as "Indian rulers" unless a scene needs a named power, such as the Mughals or Marathas.
