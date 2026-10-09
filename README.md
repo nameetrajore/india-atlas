@@ -1,6 +1,6 @@
 # India Atlas
 
-Visual-first, game-like explorer of Indian history across time and space. The current build is slice 1: **Plassey to Buxar, 1740–1765**.
+Visual-first, game-like explorer of Indian history across time and space. Current scope: **the British Raj, 1857–1947** (D24). The earlier Plassey slice is archived in `content/archive/plassey/`.
 
 Design decisions: [`docs/decisions.md`](docs/decisions.md). Base-data research: [`docs/research/base-units.md`](docs/research/base-units.md).
 
@@ -11,7 +11,7 @@ npm install
 npm run dev          # validates content, then starts Vite
 ```
 
-Open the URL Vite prints. Every view is a shareable URL, for example `?t=1757.4767&sel=event:plassey&story=plassey-to-buxar:5`.
+Open the URL Vite prints. Every view is a shareable URL, for example `?t=1919.28&sel=event:jallianwala` or `?story=the-raj:7`.
 
 Controls: scroll on the timeline to zoom (centuries down to days), drag the scale to pan, click or drag the track to scrub, Space to play, ←/→ to step. Click anything on the map for its card.
 
@@ -32,6 +32,6 @@ Borders are **sets of 1941 admin units per polity per keyframe** (`content/terri
 
 ## Known gaps
 
-- The 1941 base layer covers only the extent of present-day India. East Bengal, Sind, Punjab west of the 1947 line, NWFP and Baluchistan still need digitising.
+- Outside present-day India (Pakistan, Bangladesh, Burma), units are present-day districts standing in for 1941 ones. Borders there are approximate.
 - Lenses that have data: polities, footholds, events, people, places. Trade, movements, infrastructure, economy, society and Partition are stubbed.
 - "Ask the Atlas" is disabled until cards are reviewed (D12).
