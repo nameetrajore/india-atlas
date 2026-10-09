@@ -40,11 +40,7 @@ export function Legend() {
           ))}
         </div>
       )}
-      {today && (
-        <div className="legend-row">
-          <span className="legend-line" /> Present-day borders
-        </div>
-      )}
+      {today && <div className="legend-note">Right of the divider: today's states. Drag it to compare.</div>}
     </div>
   )
 }
@@ -60,7 +56,7 @@ export function MapToggles() {
         <input type="checkbox" checked={detail} onChange={(e) => setDetail(e.target.checked)} /> Provinces & states
       </label>
       <label>
-        <input type="checkbox" checked={today} onChange={(e) => setToday(e.target.checked)} /> Compare with today
+        <input type="checkbox" checked={today} onChange={(e) => setToday(e.target.checked)} /> Then vs now
       </label>
     </div>
   )

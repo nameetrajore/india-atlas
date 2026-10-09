@@ -12,8 +12,10 @@ interface State {
   scene: number
   /** Province and state detail instead of simple blocs (D25). */
   detail: boolean
-  /** Present-day boundaries overlay. */
+  /** Then-vs-now split view. */
   today: boolean
+  /** Split position, as a fraction of the window width; the present day is drawn to its right. */
+  split: number
   selection: Selection | null
   playing: boolean
   camera: Camera
@@ -33,6 +35,7 @@ interface State {
   goScene: (delta: number) => void
   setDetail: (d: boolean) => void
   setToday: (d: boolean) => void
+  setSplit: (x: number) => void
   select: (s: Selection | null) => void
   setPlaying: (p: boolean) => void
   setCamera: (c: Camera) => void
@@ -52,6 +55,7 @@ export const useStore = create<State>((set, get) => ({
   scene: 0,
   detail: false,
   today: false,
+  split: 0.5,
   selection: null,
   playing: false,
   camera: INITIAL_CAMERA,
@@ -93,7 +97,13 @@ export const useStore = create<State>((set, get) => ({
     enterScene(get, set, delta > 0 ? from : undefined)
   },
   setDetail: (detail) => set({ detail }),
-  setToday: (today) => set({ today }),
+  setToday: (today) => {
+    // Start the divider in the middle of the visible map, not behind the story panel.
+    const w = window.innerWidth
+    const panel = get().mode === 'story' && w > 760 ? (w <= 1280 ? 380 : 440) : 0
+    set(today ? { today, split: (panel + (w - panel) / 2) / w } : { today })
+  },
+  setSplit: (split) => set({ split: Math.min(0.97, Math.max(0.03, split)) }),
   select: (selection) => set({ selection }),
   setPlaying: (playing) => set({ playing }),
   setCamera: (camera) => set({ camera }),

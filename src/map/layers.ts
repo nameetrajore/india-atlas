@@ -3,7 +3,6 @@ import { TripsLayer } from '@deck.gl/geo-layers'
 import { PathStyleExtension } from '@deck.gl/extensions'
 import type { Layer } from '@deck.gl/core'
 import type { Bloc, Content, HistEvent, LngLat, Person, Place, Scene, Selection } from '../types'
-import type { TodayIndex } from './today'
 import {
   controlAt,
   eventOpacity,
@@ -20,8 +19,8 @@ import { placeUnit, polityAnchors, type UnitFeature, type UnitIndex } from './un
 import { declutter, type LabelCandidate } from './declutter'
 
 type RGB = [number, number, number]
-const INK: RGB = [36, 27, 20]
-const PAPER: RGB = [246, 239, 222]
+export const INK: RGB = [36, 27, 20]
+export const PAPER: RGB = [246, 239, 222]
 /** Trail timestamps are stored relative to this, to keep float32 precision on the GPU. */
 export const T0 = 1800
 /** Ripple duration for events the playhead just crossed (ms). */
@@ -62,7 +61,6 @@ export interface LayerArgs {
   /** Story scene: when set, only what it references is drawn. */
   scene: Scene | null
   detail: boolean
-  today: TodayIndex | null
   selection: Selection | null
   zoom: number
   project: (p: LngLat) => [number, number]
@@ -76,9 +74,9 @@ const darken = (c: RGB, f: number, a: number) => [c[0] * f, c[1] * f, c[2] * f, 
 const badgeSize = (sig: number) => 16 + sig * 4
 
 /** Overlays draw in order, never depth-tested against each other (interleaved mode z-fights otherwise). */
-const FLAT = { parameters: { depthCompare: 'always', depthWriteEnabled: false } } as const
+export const FLAT = { parameters: { depthCompare: 'always', depthWriteEnabled: false } } as const
 
-const TEXT_BASE = {
+export const TEXT_BASE = {
   ...FLAT,
   sizeUnits: 'pixels',
   // Bitmap glyphs, not SDF: deck.gl's SDF path renders this serif jagged and the outline smears it.
@@ -86,7 +84,7 @@ const TEXT_BASE = {
   fontSettings: { sdf: false, fontSize: 64, buffer: 4 },
   characterSet: 'auto',
 } as const
-const LABEL_FONT = '"Source Serif 4"'
+export const LABEL_FONT = '"Source Serif 4"'
 
 /** Eight offsets (px) for a crisp halo around bitmap text. */
 const HALO = [[1.5, 0], [-1.5, 0], [0, 1.5], [0, -1.5], [1.1, 1.1], [-1.1, 1.1], [1.1, -1.1], [-1.1, -1.1]]
@@ -96,7 +94,7 @@ const HALO = [[1.5, 0], [-1.5, 0], [0, 1.5], [0, -1.5], [1.1, 1.1], [-1.1, 1.1],
  * the paper colour at small offsets underneath. It hides lines and borders behind the label and keeps edges crisp.
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- props are TextLayer props for varied data types
-function haloText(props: any, haloAlpha = 235): Layer[] {
+export function haloText(props: any, haloAlpha = 235): Layer[] {
   const off = props.getPixelOffset ?? [0, 0]
   const offAt = (d: unknown): number[] => (typeof off === 'function' ? off(d) : off)
   const halos = HALO.map(
@@ -182,9 +180,6 @@ export function buildLayers(a: LayerArgs): Layer[] {
       const bonus = isSel(selection, 'place', p.id) || selEvent?.place === p.id ? 2e6 : 0
       cands.push({ key: `place:${p.id}`, position: p.coords, text: p.name, size: placeSize(p.id), priority: 1000 + (sig.get(p.id) ?? 0) * 10 + bonus, offset: placeOffset(p.id), alts: [[0, (markerR.get(p.id) ?? 3) + 3 + placeSize(p.id) * 1.1]], anchor: 'middle', baseline: 'bottom', force: bonus > 0 })
     }
-  if (a.today)
-    for (const an of a.today.anchors)
-      cands.push({ key: `today:${an.name}`, position: an.position, text: an.name, size: 11.5, priority: 100 + an.area, offset: [0, 0], anchor: 'middle', baseline: 'center' })
   const politySize = (area: number) => Math.min(16, 10 + Math.sqrt(area) * 1.1) * Math.min(1.25, Math.max(0.85, a.zoom / 5))
   for (const an of anchors)
     cands.push({ key: `polity:${an.polity}`, position: an.position, text: nameOf(an.polity).toUpperCase(), size: politySize(an.area), priority: an.area, offset: [0, 0], anchor: 'middle', baseline: 'center', wrap: 16 })
@@ -241,40 +236,6 @@ export function buildLayers(a: LayerArgs): Layer[] {
         getTextAnchor: 'middle',
         getAlignmentBaseline: 'center',
         updateTriggers: { getText: [ki, Math.floor(t)], getColor: [ki, a.detail, scene], getSize: [a.zoom] },
-      } as never),
-    )
-  }
-
-  // ---- present-day boundaries (compare with today)
-  // Every layer is always created, with empty data when hidden: in interleaved mode a layer added later is
-  // stacked above all existing ones, which would put it over the labels.
-  {
-    layers.push(
-      new GeoJsonLayer({
-        ...FLAT,
-        id: 'today',
-        data: (a.today?.features ?? []) as never,
-        filled: false,
-        stroked: true,
-        getLineColor: [30, 55, 95, 210],
-        getLineWidth: 1.4,
-        lineWidthUnits: 'pixels',
-        getDashArray: [5, 3],
-        dashJustified: true,
-        extensions: [new PathStyleExtension({ dash: true })],
-      } as never),
-      ...haloText({
-        ...TEXT_BASE,
-        id: 'today-labels',
-        data: (a.today?.anchors ?? []).filter((an) => shown.has(`today:${an.name}`)),
-        getPosition: (d: { position: LngLat }) => d.position,
-        getText: (d: { name: string }) => d.name,
-        getSize: 11.5,
-        getColor: [30, 55, 95, 255],
-        fontFamily: 'Inter',
-        fontWeight: 600,
-        getTextAnchor: 'middle',
-        getAlignmentBaseline: 'center',
       } as never),
     )
   }

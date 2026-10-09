@@ -351,7 +351,7 @@ button:disabled { cursor: default; opacity: 0.45; }
 .toggles input { accent-color: var(--accent); margin: 0; }
 .legend-row { display: flex; align-items: center; gap: 8px; font-size: 12.5px; padding: 2px 0; }
 .legend-detail { margin-top: 6px; padding-top: 6px; border-top: 1px dotted var(--rule); }
-.legend-line { width: 16px; height: 0; border-top: 2px dashed rgb(30, 55, 95); }
+.legend-note { font-size: 11.5px; color: var(--ink-3); margin-top: 6px; max-width: 200px; line-height: 1.35; }
 
 /* Now caption (explore) */
 .now {
@@ -519,3 +519,14 @@ button:disabled { cursor: default; opacity: 0.45; }
   .search-btn { padding: 6px 9px; }
   .search-backdrop { padding-top: 56px; }
 }
+
+/* Then vs now: present-day map clipped right of a draggable divider. */
+.now-map { position: absolute; inset: 0; pointer-events: none; }
+.split { position: absolute; top: 0; bottom: 0; width: 28px; margin-left: -14px; cursor: ew-resize; touch-action: none; display: flex; justify-content: center; outline: none; }
+.split::before { content: ''; position: absolute; top: 0; bottom: 0; left: 13px; width: 2px; background: var(--ink, #241b14); box-shadow: 0 0 0 1px rgba(246, 239, 222, 0.7); }
+.split-knob { position: absolute; top: 50%; transform: translateY(-50%); width: 30px; height: 30px; border-radius: 50%; background: var(--paper, #f6efde); border: 2px solid var(--ink, #241b14); display: grid; place-items: center; font-size: 15px; font-weight: 700; letter-spacing: -1px; line-height: 1; color: var(--ink, #241b14); box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25); }
+.split:focus-visible .split-knob, .split.dragging .split-knob { background: var(--accent, #9c3d25); color: #fff; border-color: var(--accent, #9c3d25); }
+.split-tag { position: absolute; top: 64px; width: max-content; white-space: nowrap; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: var(--ink, #241b14); color: var(--paper, #f6efde); padding: 3px 8px; border-radius: 2px; }
+.split-tag.tag-then { right: 18px; }
+.split-tag.tag-now { left: 18px; }
+@media (max-width: 760px) { .split-tag { top: 56px; } }

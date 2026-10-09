@@ -9,11 +9,13 @@ import { formatT } from '../lib/time'
 import { BLOC_NAMES } from './layers'
 import { baseStyle } from './style'
 import { buildLayers, PULSE_MS } from './layers'
+import { NowMap } from './NowMap'
 import { loadUnits, type UnitIndex } from './units'
 
 export function MapView() {
   const el = useRef<HTMLDivElement>(null)
   const map = useRef<maplibregl.Map | null>(null)
+  const [main, setMain] = useState<maplibregl.Map | null>(null)
   const overlay = useRef<MapboxOverlay | null>(null)
   const [units, setUnits] = useState<UnitIndex | null>(null)
   const [zoom, setZoom] = useState(useStore.getState().camera.zoom)
@@ -77,6 +79,7 @@ export function MapView() {
     })
     m.on('zoomend', () => setZoom(m.getZoom()))
     map.current = m
+    setMain(m)
     overlay.current = o
     return () => m.remove()
   }, [])
@@ -135,7 +138,6 @@ export function MapView() {
         t,
         scene,
         detail,
-        today: showToday ? todayIdx : null,
         selection,
         zoom,
         pulses: crossed.map((c) => ({ id: c.id, age: now - c.at })).filter((p) => p.age >= 0 && p.age < PULSE_MS),
@@ -146,11 +148,12 @@ export function MapView() {
         onPick: (s) => useStore.getState().select(s),
       }),
     })
-  }, [content, units, t, scene, detail, showToday, todayIdx, selection, zoom, camera, crossed, now])
+  }, [content, units, t, scene, detail, todayIdx, selection, zoom, camera, crossed, now])
 
   return (
     <div className="map">
       <div ref={el} className="map-canvas" />
+      {showToday && main && <NowMap main={main} />}
     </div>
   )
 }
