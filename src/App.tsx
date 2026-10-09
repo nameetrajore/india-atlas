@@ -6,12 +6,27 @@ import { ChapterBar, ChapterIndex, Reader, StoryClock } from './ui/Story'
 import { Legend, MapToggles } from './ui/Legend'
 import { NowCaption } from './ui/NowCaption'
 import { Toasts } from './ui/Toasts'
+import { Search } from './ui/Search'
 import { useStore } from './store'
 import { readUrl, syncUrl } from './lib/url'
 import type { Content } from './types'
 
 export default function App() {
   const [ready, setReady] = useState(false)
+  const [searching, setSearching] = useState(false)
+
+  // ⌘K / Ctrl+K or / opens search.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const typing = (e.target as HTMLElement).closest('input, textarea')
+      if ((e.key === 'k' && (e.metaKey || e.ctrlKey)) || (e.key === '/' && !typing)) {
+        e.preventDefault()
+        setSearching(true)
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [])
   const content = useStore((s) => s.content)
   const mode = useStore((s) => s.mode)
   const chapter = useStore((s) => s.chapter)
@@ -41,6 +56,14 @@ export default function App() {
           <span className="brand-sub">{content?.subtitle}</span>
         </button>
         <div className="topbar-actions">
+          <button className="btn search-btn" onClick={() => setSearching(true)} aria-label="Search">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+              <circle cx="10.5" cy="10.5" r="6.5" />
+              <path d="M15.5 15.5L21 21" />
+            </svg>
+            <span className="search-btn-label">Search</span>
+            <kbd>⌘K</kbd>
+          </button>
           <div className="segmented">
             <button className={story ? 'on' : ''} onClick={() => (story ? openChapter(null) : setMode('story'))}>
               Story
@@ -73,6 +96,7 @@ export default function App() {
         </>
       )}
       {ready && <InfoCard />}
+      {ready && searching && <Search onClose={() => setSearching(false)} />}
       {!ready && <div className="loading">Unrolling the map…</div>}
     </div>
   )
