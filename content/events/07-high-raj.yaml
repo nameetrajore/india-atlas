@@ -1,29 +1,93 @@
-# Events: The high Raj. Each event explains why (context), what (summary) and what changed (consequences).
+# Events: The high Raj (1858–1905). Each explains why (context), what (summary) and what changed (consequences).
 - id: indigo-revolt
   name: Indigo revolt
-  alt_names:
-    - Nil Bidroho
+  alt_names: [Nil Bidroho]
   date: "1859"
   end: "1860"
   place: krishnanagar
   kind: revolt
   significance: 2
-  summary: Bengal ryots (cultivators) refuse to grow indigo for European planters. The play Nil Darpan
-    publicises their cause.
-  sources:
-    - wp-indigo-revolt
+  summary: >-
+    Across Bengal, ryots (cultivators) refuse to grow indigo for European planters and resist the planters'
+    hired strongmen. The play Nil Darpan (1860) carries their case to Calcutta's educated public.
+  context: >-
+    Planters advanced money and forced peasants to sow indigo on their best land at prices that kept
+    them in debt. Planters' courts and violence backed up the contracts.
+  consequences: >-
+    A commission found against the planters, and indigo planting in Bengal declined. It was an early
+    case of peasants, the press and educated Bengalis acting together.
+  sources: [wp-indigo-revolt]
+- id: army-reorganised
+  name: Army rebuilt after the revolt
+  date: "1859"
+  kind: law
+  significance: 3
+  causes: [revolt-1857]
+  summary: >-
+    A royal commission (the Peel Commission) recommends reshaping the army. The ratio of British to Indian
+    troops is raised to about one to two, artillery is kept in British hands, and regiments are mixed by
+    caste and region.
+  context: >-
+    The Bengal Army, recruited largely from upper-caste Hindus of Awadh and Bihar, had led the revolt.
+    The British wanted an army that could not unite against them.
+  consequences: >-
+    Recruitment shifted to groups that had stayed loyal: Sikhs, Gurkhas, Pathans and Punjabi Muslims, now
+    labelled "martial races". By the First World War Punjab supplied a large share of the Indian Army's soldiers. This shaped the Punjab's
+    politics up to Partition.
+  sources: [wp-martial-race, metcalf-concise]
+- id: suez-canal
+  name: Suez Canal opens
+  date: "1869-11-17"
+  kind: founding
+  significance: 2
+  summary: >-
+    The canal across Egypt opens. The voyage from Britain to Bombay falls from about three months round
+    Africa to a few weeks.
+  context: >-
+    Steamships and the telegraph were already shrinking distances. India was Britain's largest overseas
+    market and its most important strategic asset.
+  consequences: >-
+    India's raw cotton, jute, wheat and indigo flowed out faster, and British manufactures and officials
+    flowed in. Protecting the route to India became a fixed aim of British foreign policy.
+  sources: [wp-suez, metcalf-concise]
+- id: drain-theory
+  name: Naoroji's "drain" argument
+  date: "1867-05"
+  place: bombay
+  kind: political
+  significance: 4
+  participants: [dadabhai-naoroji]
+  causes: [first-railway]
+  summary: >-
+    In a paper in London, Dadabhai Naoroji argues that British rule is draining India's wealth. His later
+    book, Poverty and Un-British Rule in India (1901), makes the case at length.
+  context: >-
+    India paid for its own conquest and government: the salaries and pensions of British officials, interest
+    on railway and war loans, and the "Home Charges" paid in London. Naoroji estimated India's income per head
+    and found it pitifully low.
+  consequences: >-
+    The drain theory gave early nationalists an economic case against British rule that did not depend on
+    religion or region. It became a core idea of the Congress, and historians still debate its size.
+  sources: [wp-drain-theory, wp-naoroji, naoroji-poverty]
 - id: aligarh-college
   name: Muhammadan Anglo-Oriental College founded
-  date: 1875-05-24
+  date: "1875-05-24"
   place: aligarh
   kind: founding
   significance: 2
-  participants:
-    - syed-ahmad-khan
-  summary: Sir Syed Ahmad Khan founds a college to give Muslims Western education. It later becomes Aligarh
-    Muslim University.
-  sources:
-    - wp-amu
+  participants: [syed-ahmad-khan]
+  causes: [revolt-1857, macaulay-minute]
+  summary: >-
+    Sir Syed Ahmad Khan founds a college at Aligarh to give Muslims an English-medium, modern education
+    within an Islamic setting. It later becomes Aligarh Muslim University.
+  context: >-
+    After 1857 the British blamed Muslims in particular for the revolt, and the old Mughal service elite
+    had lost its place. Sir Syed argued that Muslims must embrace Western learning and loyalty to the
+    Crown to recover.
+  consequences: >-
+    Aligarh trained a new Muslim elite. Many of its graduates later led Muslim politics, including the
+    Muslim League.
+  sources: [wp-amu, metcalf-concise]
 - id: great-famine
   name: Great Famine of 1876–78
   date: "1876"
@@ -31,67 +95,137 @@
   place: madras
   kind: famine
   significance: 4
-  summary: Drought across the Deccan and south. Grain exports continued, and relief was kept deliberately limited.
-  why: The famine became central to nationalist critiques of the economics of British rule.
+  participants: [lytton]
+  summary: >-
+    Drought hits the Deccan and the south. Grain continues to be exported, and relief is kept deliberately
+    minimal: Richard Temple's relief works pay a grain ration, the "Temple wage", that critics showed was below
+    subsistence.
+  context: >-
+    Monsoon failure turned into mass death because people could not afford food, not because there was
+    none. Officials, believing in free markets and fearing "dependence", refused to control prices or
+    stop exports.
+  consequences: >-
+    A Famine Commission (1880) produced famine codes for relief. The famine became central to
+    nationalist critiques of British economic policy.
+  why: Policy, not just drought, decided how many died.
   figures:
     - label: Deaths
       min: 5500000
       max: 10300000
       note: Estimates vary by method and region.
-      sources:
-        - wp-great-famine
-  sources:
-    - wp-great-famine
-    - bose-jalal
+      sources: [wp-great-famine]
+  sources: [wp-great-famine, davis-holocausts, bose-jalal]
 - id: durbar-1877
   name: Delhi Durbar of 1877
-  date: 1877-01-01
+  date: "1877-01-01"
   place: delhi
   kind: political
   significance: 3
-  summary: Lytton proclaims Queen Victoria Empress of India in a vast imperial assembly, during the famine.
-  sources:
-    - wp-delhi-durbar
+  participants: [lytton]
+  causes: [crown-rule]
+  summary: >-
+    Lytton proclaims Queen Victoria "Kaisar-i-Hind", Empress of India, before princes and officials at a
+    vast imperial assembly. It takes place while the famine is under way in the south.
+  context: >-
+    After 1857 the British presented themselves as the heirs of the Mughals and the princes as their loyal
+    feudatories. Disraeli's Royal Titles Act (1876) gave the Queen her new title.
+  consequences: >-
+    The ceremony fixed the Raj's image of hierarchy and pageantry. To critics, the contrast with the famine
+    summed up the regime's priorities.
+  sources: [wp-delhi-durbar, metcalf-concise]
 - id: ilbert-bill
   name: Ilbert Bill controversy
   date: "1883"
   place: calcutta
   kind: law
   significance: 2
-  summary: A bill to let Indian judges try Europeans provokes a furious European backlash and is diluted.
-  why: The affair showed educated Indians how far racial privilege went, and fed the push for an all-India body.
-  sources:
-    - wp-ilbert-bill
-- id: inc-founded
-  name: Indian National Congress founded
-  date: 1885-12-28
-  place: bombay
-  kind: founding
-  significance: 4
-  summary: Seventy-two delegates meet in Bombay for the first session of the Indian National Congress.
-  sources:
-    - wp-inc
-    - chandra-struggle
+  participants: [ripon]
+  summary: >-
+    Ripon's government proposes letting senior Indian judges try Europeans in rural courts. Europeans in
+    India campaign furiously against it, and it is watered down in 1884.
+  context: >-
+    Educated Indians were entering the civil service and courts. Many Europeans found the idea of being
+    judged by an Indian intolerable.
+  consequences: >-
+    The affair showed educated Indians how far racial privilege went, and that organised agitation worked.
+    They drew the lesson two years later.
+  why: Indians saw that a well-organised lobby could force the government to back down.
+  sources: [wp-ilbert-bill, sarkar-modern]
 - id: burma-annexed
   name: Mandalay taken
-  date: 1885-11-28
+  date: "1885-11-28"
   place: mandalay
   kind: battle
   significance: 3
-  summary: The Third Anglo-Burmese War ends in days. King Thibaw is deposed and exiled to India.
-  sources:
-    - wp-third-burmese-war
+  participants: [thibaw]
+  summary: >-
+    In the Third Anglo-Burmese War, a British-Indian force steams up the Irrawaddy and takes Mandalay in
+    about two weeks. King Thibaw is deposed and exiled to Ratnagiri in India. Upper Burma is annexed on
+    1 January 1886, though guerrilla resistance lasts years.
+  context: >-
+    British timber and trading interests complained of Thibaw's government, and London feared French
+    influence at his court.
+  consequences: Burma became a province of British India until 1937.
+  sources: [wp-third-burmese-war, wp-thibaw]
+- id: inc-founded
+  name: Indian National Congress founded
+  date: "1885-12-28"
+  place: bombay
+  kind: founding
+  significance: 4
+  causes: [ilbert-bill, drain-theory, macaulay-minute]
+  summary: >-
+    Seventy-two delegates, mostly English-educated lawyers, journalists and teachers, meet in Bombay for the
+    first session of the Indian National Congress. A retired British civil servant, A. O. Hume, helped
+    organise it.
+  context: >-
+    English education had created a class that read the same newspapers, used the same language, and
+    shared grievances: exclusion from high office, the cost of the army, the drain of wealth.
+  consequences: >-
+    For twenty years the Congress was moderate, loyal and petitioning, asking for reforms rather than
+    independence. It gave India a national platform, and the arguments it made would turn into demands.
+  sources: [wp-inc, chandra-struggle, sarkar-modern]
+- id: famine-1899
+  name: Famine of 1899–1900
+  date: "1899-09"
+  end: "1900-12"
+  place: nagpur
+  kind: famine
+  significance: 3
+  participants: [curzon]
+  causes: [great-famine]
+  summary: >-
+    A failed monsoon brings famine across western and central India. It strikes Bombay, the Central
+    Provinces, Rajputana and Gujarat, hard on the heels of the 1896–97 famine and an outbreak of plague.
+  context: >-
+    The famine codes promised relief works, but relief was rationed tightly and many princely states had
+    little capacity to help.
+  consequences: >-
+    Mortality was high enough to bring a second Famine Commission (1901). It strengthened the nationalist
+    view that British rule was impoverishing India.
+  figures:
+    - label: Deaths
+      min: 1000000
+      max: 4500000
+      note: Official figures were around 1 million in British India alone. Later estimates, including princely states, run much higher.
+      sources: [wp-famine-1899, davis-holocausts]
+  sources: [wp-famine-1899, davis-holocausts]
 - id: ulgulan
   name: Birsa Munda's Ulgulan
-  date: 1899-12
-  end: 1900-06
+  date: "1899-12"
+  end: "1900-06"
   place: ranchi
   kind: revolt
   significance: 2
-  participants:
-    - birsa-munda
-  summary: Munda adivasis rise against landlords, moneylenders and colonial land law. Birsa dies in Ranchi jail
-    in June 1900.
-  why: The rising led to the Chotanagpur Tenancy Act of 1908, which protected adivasi land.
-  sources:
-    - wp-birsa
+  participants: [birsa-munda]
+  summary: >-
+    Munda adivasis (indigenous people) in Chotanagpur rise against landlords, moneylenders, missionaries
+    and the colonial state, attacking police stations and churches. Birsa is captured and dies in Ranchi
+    jail in June 1900, aged 25.
+  context: >-
+    Colonial land law had turned the Mundas' collective land rights into private titles that outsiders
+    could buy or seize. Birsa, a religious leader, promised the return of the land and a Munda raj.
+  consequences: >-
+    The rising led to the Chotanagpur Tenancy Act of 1908, which protected adivasi land. Birsa is
+    remembered as "Dharti Aaba", father of the earth.
+  sources: [wp-birsa]

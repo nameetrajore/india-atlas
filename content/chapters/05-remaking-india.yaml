@@ -1,0 +1,167 @@
+id: remaking-india
+number: 5
+title: Remaking India
+period: 1818–1857
+summary: >-
+  The Company stops being a trader and becomes a government. It sets out to remake India's land,
+  economy, laws and beliefs, and to finish its conquests. Along the way it creates the grievances that
+  explode in 1857.
+scenes:
+  - id: ch5-paramount
+    t: "1818-06"
+    camera: { center: [79.0, 21.5], zoom: 4.2, pitch: 0 }
+    title: The paramount power
+    text: >-
+      By 1818 the Marathas were beaten and the Company was the paramount power in India. Pink is the land
+      it ruled directly. Most of the yellow is now princely states that had signed treaties accepting
+      British "protection", with a Resident at court and Company troops paid for by the prince.
+
+      What kind of state was this? Above all, a tax collector. Land revenue paid for the army and the
+      officials, and it was far larger than any trading profit. In Bengal the Permanent Settlement of 1793
+      had fixed the tax for ever on zamindars (landlords). In Madras, Governor Thomas Munro chose to tax
+      each cultivator directly under the [ryotwari](event:ryotwari) system.
+
+      Either way, demands were high and collected in cash, whatever the harvest. Debt and lost land would
+      be a running grievance for the next century.
+    show:
+      events: [ryotwari]
+      places: [calcutta, madras, bombay, poona]
+  - id: ch5-sati
+    t: "1829-12-04"
+    camera: { center: [88.3, 22.6], zoom: 6.6, pitch: 25 }
+    title: Improving India
+    text: >-
+      A new mood reached Calcutta from Britain. Evangelical Christians and Utilitarian reformers believed
+      British rule should not just govern India but change it. Governor-General [Bentinck](person:bentinck)
+      acted on that belief.
+
+      In 1829 he [banned sati](event:sati-abolished), the burning of widows on their husbands' pyres.
+      Indian reformers such as [Rammohun Roy](person:rammohun-roy) had campaigned for it, and to them
+      it was progress. To many others, the Company was now interfering in religion, something it had
+      always promised not to do. That fear would grow.
+    show:
+      events: [sati-abolished]
+      places: [calcutta]
+  - id: ch5-cloth
+    t: "1833-08-28"
+    camera: { center: [86.5, 23.0], zoom: 5.2, pitch: 15 }
+    title: The cloth comes back
+    text: >-
+      Remember the [Calico Act](event:calico-act) of 1700, when England banned Indian cloth to protect its
+      weavers. A century later the position was reversed. Britain's new cotton mills could make cloth by
+      machine more cheaply than any handloom.
+
+      In 1813 Parliament [ended the Company's trade monopoly](event:charter-act-1813) and British cloth poured
+      into India. Dacca's muslin, once famous across the world, collapsed, and hundreds of thousands of
+      weavers lost their living. India now exported raw cotton, indigo and opium, and imported
+      manufactures.
+
+      In 1833 the Company [stopped trading altogether](event:charter-act-1833). The merchants who had come
+      for pepper and cloth were now only rulers.
+    show:
+      events: [charter-act-1813, charter-act-1833]
+      places: [dacca, calcutta, murshidabad]
+  - id: ch5-english
+    t: "1835-02-02"
+    camera: { center: [82.0, 22.5], zoom: 4.6, pitch: 0 }
+    title: English education
+    text: >-
+      What should Indians be taught, and in what language? [Macaulay](person:macaulay) answered with
+      contempt for Indian learning. His [Minute on Education](event:macaulay-minute) argued for English, to
+      create "a class of persons, Indian in blood and colour, but English in taste".
+
+      The government agreed. English became the language of administration, the higher courts and the new
+      universities founded in Calcutta, Bombay and Madras in 1857.
+
+      It did create a new class, but not the obedient one Macaulay imagined. These English-educated Indians
+      would read Mill and Burke and turn British ideas of liberty against British rule.
+    show:
+      events: [macaulay-minute]
+      places: [calcutta, bombay, madras]
+  - id: ch5-afghanistan
+    t: "1842-01-06"
+    camera: { center: [71.0, 31.5], zoom: 4.8, pitch: 20 }
+    title: Disaster in Afghanistan
+    text: >-
+      Fearing that Russia would advance through Central Asia towards India, Governor-General Auckland
+      invaded Afghanistan in 1839 to put a friendly ruler on the throne in [Kabul](place:kabul).
+
+      The occupation provoked a national rising. In January 1842 the army [retreated through the winter
+      passes](event:afghan-retreat) and was destroyed, with some 16,000 soldiers and camp followers
+      killed, frozen or captured.
+
+      The myth that the Company could not be beaten died in those passes. Sepoys noticed, and they also
+      noticed that they had been sent beyond India's borders to fight.
+    show:
+      events: [afghan-retreat]
+      places: [kabul, peshawar, lahore, quetta]
+      polities: [afghanistan, sikh-empire]
+  - id: ch5-sind
+    t: "1843-03"
+    camera: { center: [68.5, 26.0], zoom: 5.6, pitch: 20 }
+    title: Sind
+    text: >-
+      Looking for a victory after Kabul, Charles Napier provoked the Amirs of Sind into war, defeated them at
+      Miani, and [annexed their country](event:sind-conquered). He had no clear orders to do it.
+
+      Many in Britain called it unjust, but the Company kept Sind. Watch the pink spread along the Indus.
+      Men on the spot were pushing the empire forward faster than London wanted.
+    show:
+      events: [sind-conquered]
+      places: [hyderabad-sind, karachi]
+  - id: ch5-punjab
+    t: "1845-12"
+    play_to: "1849-04"
+    camera: { center: [73.5, 31.0], zoom: 5.4, pitch: 20 }
+    title: The fall of the Sikh kingdom
+    text: >-
+      North of Sind lay the last great independent Indian state, the Sikh kingdom of Punjab. While its
+      founder [Ranjit Singh](person:ranjit-singh) lived, the British treated him as an equal. After his
+      [death in 1839](event:ranjit-singh-dies) the court fell into murder and intrigue, and its army, the
+      Khalsa, became the real power.
+
+      Watch the map as time runs. The [first war](event:first-sikh-war) (1845–46) cost the Sikhs the
+      Jullundur Doab, and Kashmir was sold to the ruler of Jammu. A second war ended with [Punjab
+      annexed](event:punjab-annexed) in 1849 and the Koh-i-Noor diamond sent to Queen Victoria.
+
+      Newly conquered Punjab would stay loyal in 1857 and supply the troops that retook Delhi.
+    show:
+      events: [ranjit-singh-dies, first-sikh-war, punjab-annexed]
+      places: [lahore, amritsar, srinagar]
+      polities: [sikh-empire, jammu-kashmir]
+  - id: ch5-dalhousie
+    t: "1853-04-16"
+    camera: { center: [77.5, 21.5], zoom: 4.6, pitch: 10 }
+    title: Dalhousie's India
+    text: >-
+      [Lord Dalhousie](person:dalhousie) was the most aggressive Governor-General of all. He believed
+      British rule was simply better, and he took territory wherever he could. Under his [doctrine of
+      lapse](event:doctrine-of-lapse), a state whose ruler died without a natural son passed to the Company,
+      whatever Hindu law said about adopted heirs. Satara went in 1848, Nagpur and Jhansi in 1853–54.
+
+      He also built. In April 1853 the [first passenger train](event:first-railway) ran from Bombay to
+      Thane, and telegraph lines and a cheap postal service followed.
+
+      Railways and annexation went together: both expressed a confident, modernising, impatient state. Every
+      princely family in India now wondered if it was next.
+    show:
+      events: [doctrine-of-lapse, first-railway]
+      places: [satara, jhansi, nagpur, bombay]
+  - id: ch5-awadh
+    t: "1856-02-07"
+    camera: { center: [81.0, 26.8], zoom: 6.2, pitch: 25 }
+    title: Awadh, and the cartridges
+    text: >-
+      Dalhousie's last act was the biggest. In February 1856 he [annexed Awadh](event:awadh-annexed), the
+      Company's oldest ally, for "misgovernment", and exiled its Nawab, [Wajid Ali Shah](person:wajid-ali-shah).
+
+      Awadh was where much of the Bengal Army came from. Tens of thousands of sepoys saw their home taken
+      over and their families' landlords stripped of estates. A new law required recruits to serve
+      overseas, which many high-caste men believed would break their caste.
+
+      Then came the [rumour](event:cartridges) that the new rifle cartridges were greased with cow and pig
+      fat. The rumour was only the spark. The revolt that followed had been building for twenty years.
+    show:
+      events: [awadh-annexed, cartridges]
+      places: [lucknow, faizabad, barrackpore, cawnpore]
+      polities: [eic]

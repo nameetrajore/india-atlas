@@ -1,0 +1,268 @@
+# Events: Remaking India (1818–1857). Each explains why (context), what (summary) and what changed (consequences).
+- id: charter-act-1813
+  name: Charter Act of 1813
+  date: "1813-07-21"
+  kind: law
+  significance: 3
+  summary: >-
+    Parliament renews the Company's charter but ends its monopoly on trade with India. Private British
+    merchants, and their goods, can now come in freely.
+  context: >-
+    Britain's industrial revolution was under way, and Lancashire's new cotton mills wanted markets.
+    Manufacturers and free-trade campaigners argued that the Company's monopoly was keeping British goods
+    out of India.
+  consequences: >-
+    Cheap machine-made British cloth poured in. By contemporary returns cited by R. C. Dutt, British
+    cotton exports to India grew from about a million yards in 1814 to over 50 million by 1830. India's
+    handloom weavers, the world's leading cloth makers in 1700, lost their markets at home and abroad.
+    Dacca's famous muslin trade collapsed and the town shrank.
+  why: The Calico Act in reverse. Now Britain sold the cloth and India bought it.
+  causes: [calico-act]
+  sources: [wp-charter-act-1813, dutt-economic-history, roy-eic, bayly-indian-society]
+- id: ryotwari
+  name: Ryotwari settlement in Madras
+  date: "1820"
+  place: madras
+  kind: law
+  significance: 2
+  summary: >-
+    Under Governor Thomas Munro, Madras assesses land revenue directly on each cultivator (ryot) rather
+    than through a landlord. Variants spread to Bombay, and the village-based mahalwari system to the
+    north-west.
+  context: >-
+    Land revenue was the Company's main income, far larger than trade. In Bengal the Permanent
+    Settlement of 1793 had fixed the revenue for ever on zamindars (landlords), and the Company now
+    regretted giving away future growth. Munro wanted the state to deal with the peasant directly and
+    to reassess regularly.
+  consequences: >-
+    Revenue demands were often set high and collected rigidly, in cash, whatever the harvest. Many
+    peasants fell into debt to moneylenders, and land changed hands through courts. Grievances over land
+    revenue fed the risings of 1857 in the north.
+  sources: [wp-ryotwari, wp-permanent-settlement, bose-jalal, metcalf-concise]
+- id: sati-abolished
+  name: Sati banned
+  date: "1829-12-04"
+  place: calcutta
+  kind: law
+  significance: 3
+  participants: [bentinck, rammohun-roy]
+  summary: >-
+    Bentinck's Bengal Sati Regulation makes the burning of widows on their husbands' funeral pyres a
+    crime. Bombay and Madras follow in 1830.
+  context: >-
+    The Company had long avoided interfering in religious custom for fear of unrest. Evangelical
+    Christians in Britain and Indian reformers such as Rammohun Roy campaigned against sati, citing
+    hundreds of recorded cases each year in Bengal.
+  consequences: >-
+    The ban marked a new confidence in the Company's state: it would now "improve" Indian society. To
+    reformers this was progress. To many others it was a sign that the British meant to change religion
+    and custom, a fear that grew in the following decades.
+  sources: [wp-sati-regulation, wp-rammohun-roy, metcalf-concise]
+- id: charter-act-1833
+  name: Company stops trading
+  alt_names: [Charter Act of 1833]
+  date: "1833-08-28"
+  kind: law
+  significance: 3
+  causes: [charter-act-1813]
+  summary: >-
+    Parliament ends the Company's remaining trade, including the China tea monopoly. It becomes a purely
+    governing body, and its Governor-General of Bengal becomes Governor-General of India.
+  context: >-
+    By now the Company's profits came from taxing India, not from trade, and free-traders wanted its last
+    monopolies gone.
+  consequences: >-
+    The company that came to India to buy pepper and cloth was now a government that no longer traded at
+    all. India was administered by a corporation answerable to Parliament.
+  why: The merchants of 1600 had become rulers, and stopped being merchants.
+  sources: [wp-charter-act-1833, keay-honourable]
+- id: macaulay-minute
+  name: Macaulay's Minute on Education
+  date: "1835-02-02"
+  place: calcutta
+  kind: law
+  significance: 3
+  participants: [macaulay, bentinck]
+  summary: >-
+    Macaulay argues that government money should fund education in English and Western learning, not in
+    Sanskrit and Persian. Bentinck's government adopts the policy in March 1835, and English replaces
+    Persian as the language of the courts in 1837.
+  context: >-
+    The Company needed clerks and intermediaries. Macaulay, sure of European superiority, wanted to
+    create "a class of persons, Indian in blood and colour, but English in taste, in opinions, in
+    morals, and in intellect".
+  consequences: >-
+    English became the language of government, law and higher education. It created a new educated
+    class, and, ironically, the people who would later demand self-rule in the language of British
+    liberalism.
+  sources: [wp-english-education-act, wp-macaulay, metcalf-concise]
+- id: ranjit-singh-dies
+  name: Death of Ranjit Singh
+  date: "1839-06-27"
+  place: lahore
+  kind: political
+  significance: 3
+  participants: [ranjit-singh]
+  summary: >-
+    The founder of the Sikh Empire dies at Lahore. In six years four rulers follow him, and the army,
+    the Khalsa, becomes the real power.
+  context: >-
+    Ranjit Singh had built the last strong independent state in India, with a European-trained army. He
+    kept peace with the British, who held back from Punjab while he lived.
+  consequences: Court murders and a restless army made Punjab unstable. That gave the Company its opening.
+  sources: [wp-ranjit-singh, bose-jalal]
+- id: afghan-retreat
+  name: Retreat from Kabul
+  date: "1842-01-06"
+  end: "1842-01-13"
+  place: kabul
+  kind: battle
+  significance: 4
+  summary: >-
+    The British-Indian army that occupied Kabul in 1839 retreats through the winter passes and is
+    destroyed by Afghan fighters. Almost no one reaches Jalalabad.
+  context: >-
+    Fearing Russian influence, Governor-General Auckland invaded Afghanistan in 1839 to replace Dost
+    Mohammad with a puppet, Shah Shuja. The occupation provoked a national rising.
+  consequences: >-
+    It was the worst British disaster in Asia of the century, and it shattered the idea that the
+    Company's armies could not be beaten. An "Army of Retribution" burned parts of Kabul in 1842 and then
+    withdrew. Sepoys noticed both the defeat and that they had been sent beyond India to fight.
+  figures:
+    - label: Soldiers and camp followers in the retreating column
+      min: 16000
+      max: 16500
+      note: About 4,500 soldiers and 12,000 followers. Most were killed, died of cold, or were captured.
+      sources: [wp-1842-retreat]
+  sources: [wp-first-afghan-war, wp-1842-retreat, dalrymple-return-king]
+- id: sind-conquered
+  name: Conquest of Sind
+  date: "1843-02-17"
+  place: hyderabad-sind
+  kind: battle
+  significance: 3
+  causes: [afghan-retreat]
+  summary: >-
+    Charles Napier, provoking the Amirs of Sind into war, defeats them at Miani and annexes their
+    country. It is attached to the Bombay Presidency.
+  context: >-
+    The British had used Sind as a route for the Afghan war. With prestige badly damaged, Napier was
+    eager for a victory. He had no clear orders to conquer.
+  consequences: >-
+    The Company kept Sind even though many in Britain called the conquest unjust. It showed how far
+    men on the spot could push expansion forward.
+  sources: [wp-miani, wp-sind-province]
+- id: first-sikh-war
+  name: First Anglo-Sikh War
+  date: "1845-12"
+  end: "1846-03"
+  place: lahore
+  kind: battle
+  significance: 3
+  causes: [ranjit-singh-dies]
+  summary: >-
+    The Khalsa army crosses the Sutlej, and four hard-fought battles follow. The Sikhs lose, partly
+    because some of their own commanders betray them. Under the Treaty of Lahore the Company takes the
+    Jullundur Doab and a large indemnity.
+  context: >-
+    After Ranjit Singh's death the Lahore court feared its own army, and the British were massing troops
+    on the border. Each side saw the other as the threat.
+  consequences: >-
+    Kashmir was sold to Gulab Singh of Jammu, creating the princely state of Jammu and Kashmir. A
+    British Resident effectively ran what was left of Punjab.
+  sources: [wp-first-sikh-war, bose-jalal]
+- id: punjab-annexed
+  name: Punjab annexed
+  date: "1849-03-29"
+  place: lahore
+  kind: political
+  significance: 4
+  participants: [dalhousie]
+  causes: [first-sikh-war]
+  summary: >-
+    After the Second Anglo-Sikh War, Dalhousie annexes the whole of Punjab. The boy Maharaja Duleep Singh
+    is deposed and the Koh-i-Noor diamond is shipped to Queen Victoria.
+  context: >-
+    A revolt at Multan in 1848 grew into a second war, which the British won at Gujrat in February 1849.
+  consequences: >-
+    The last major independent Indian power was gone, and the Company's territory now reached the Afghan
+    hills. Punjab, newly conquered, stayed loyal in 1857 and later became the army's main recruiting
+    ground.
+  sources: [wp-second-sikh-war, wp-punjab-province]
+- id: doctrine-of-lapse
+  name: Doctrine of lapse
+  date: "1848"
+  end: "1854"
+  place: satara
+  kind: law
+  significance: 4
+  participants: [dalhousie]
+  summary: >-
+    Dalhousie annexes dependent states whose rulers die without a natural male heir, refusing to recognise
+    adopted sons: Satara (1848), Jhansi (1853–54), Nagpur (1853) and others.
+  context: >-
+    In Hindu custom an adopted son was a full heir. The Company had often accepted this, but Dalhousie saw
+    Indian rule as backward and British rule as an improvement worth extending wherever the law allowed.
+  consequences: >-
+    Every ruling family in India felt threatened. Dispossessed heirs, among them Nana Sahib, refused a
+    pension as the last Peshwa's adopted son, and Lakshmibai of Jhansi, became leaders in 1857.
+  why: The policy turned princes who had been allies into enemies.
+  sources: [wp-doctrine-of-lapse, wp-dalhousie, bose-jalal]
+- id: first-railway
+  name: First passenger railway
+  date: "1853-04-16"
+  place: bombay
+  kind: founding
+  significance: 3
+  participants: [dalhousie]
+  summary: >-
+    A train runs 34 km from Bori Bunder in Bombay to Thane. Telegraph lines and a uniform postal service
+    follow within a few years.
+  context: >-
+    Dalhousie's railway minute of 1853 argued that railways would move troops, carry raw cotton to the ports, and
+    open India to British manufactures. British investors were guaranteed a 5% return, paid from Indian
+    taxes.
+  consequences: >-
+    The railways bound India together and to the world economy, but on terms set for British interests.
+    The telegraph quickly showed its worth: in 1857 it carried news of the revolt, and the British used
+    it to coordinate their response.
+  sources: [wp-rail-history, kerr-railways, wp-dalhousie]
+- id: awadh-annexed
+  name: Awadh annexed
+  date: "1856-02-07"
+  place: lucknow
+  kind: political
+  significance: 4
+  participants: [wajid-ali-shah, dalhousie]
+  causes: [doctrine-of-lapse]
+  summary: >-
+    Citing "misgovernment", the Company deposes Nawab Wajid Ali Shah and annexes Awadh, a loyal ally for
+    half a century. The talukdars (great landholders) lose many of their estates in the new revenue
+    settlement.
+  context: >-
+    The British Resident had long reported on the court's extravagance, and the Company wanted Awadh's
+    rich revenue. Unlike the lapse cases, this was annexation without even a legal pretext of failed
+    succession.
+  consequences: >-
+    Awadh was home to tens of thousands of the Bengal Army's sepoys. Their families now faced a new and
+    harsher revenue regime. In 1857 Awadh rose almost as one, sepoys, talukdars and peasants together.
+  why: The Company had annexed the sepoys' own homeland.
+  sources: [wp-wajid-ali-shah, wp-oudh-province, stokes-peasant-armed]
+- id: cartridges
+  name: The greased-cartridge rumour
+  date: "1857-01"
+  place: barrackpore
+  kind: political
+  significance: 3
+  causes: [awadh-annexed]
+  summary: >-
+    Sepoys near Calcutta hear that the paper cartridges for the new Enfield rifle are greased with cow
+    and pig fat. To load, a soldier had to bite the cartridge, which would defile both Hindus and Muslims.
+  context: >-
+    Fears of forced conversion were already widespread: the sati ban, missionaries, the 1856 General
+    Service Enlistment Act requiring new recruits to serve overseas (crossing the sea broke caste for many),
+    and the annexations. The army was also short of British officers who knew their men.
+  consequences: >-
+    The Company withdrew the greased cartridges and let men grease their own, but the denial was not
+    believed. The cartridge became the spark for a revolt whose causes ran much deeper.
+  sources: [wp-enfield, wp-1857, bose-jalal]

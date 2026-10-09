@@ -1,134 +1,235 @@
-# Events: The revolt of 1857. Each event explains why (context), what (summary) and what changed (consequences).
+# Events: The revolt of 1857. Each explains why (context), what (summary) and what changed (consequences).
 - id: mangal-pandey
   name: Mangal Pandey's attack at Barrackpore
-  date: 1857-03-29
+  date: "1857-03-29"
   place: barrackpore
   kind: revolt
   significance: 2
-  participants:
-    - mangal-pandey
-  summary: A sepoy of the 34th Bengal Native Infantry attacks his officers. Unrest had been growing over
-    cartridges rumoured to be greased with cow and pig fat. He is hanged on 8 April.
-  sources:
-    - wp-mangal-pandey
-    - wp-1857
+  participants: [mangal-pandey]
+  causes: [cartridges]
+  summary: >-
+    Mangal Pandey, a sepoy of the 34th Bengal Native Infantry, attacks his officers on the parade ground
+    and calls on his comrades to rise. They do not. He is hanged on 8 April and his regiment is
+    disbanded.
+  context: >-
+    For weeks regiments around Calcutta had been refusing the new cartridges, and the army's response
+    was to disband the units that refused.
+  consequences: >-
+    "Pandy" became the British slang for any rebel sepoy. News of the hanging and the disbandments spread
+    along the Ganges cantonments.
+  sources: [wp-mangal-pandey, wp-1857]
 - id: meerut
   name: Meerut uprising
-  date: 1857-05-10
+  date: "1857-05-10"
   place: meerut
   kind: revolt
   significance: 4
-  summary: Sepoys mutiny, free 85 comrades jailed for refusing the cartridges, kill British officers and
-    civilians, and ride for Delhi.
-  why: The revolt of 1857 begins here.
-  sources:
-    - wp-1857
-    - bose-jalal
+  causes: [cartridges, mangal-pandey]
+  summary: >-
+    On a Sunday evening, sepoys at Meerut break open the jail, free 85 comrades, kill British officers and
+    civilians, and ride through the night for Delhi, 60 km away.
+  context: >-
+    The 85 troopers of the 3rd Light Cavalry had refused the cartridges. The day before, they had been
+    stripped of their uniforms in front of the whole garrison, shackled and given ten years' hard labour.
+  consequences: The revolt of 1857 begins.
+  why: A public humiliation lit the fuse.
+  sources: [wp-1857, bose-jalal, dalrymple-last-mughal]
 - id: delhi-seized
   name: Rebels take Delhi
-  date: 1857-05-11
+  date: "1857-05-11"
   place: delhi
   kind: revolt
   significance: 4
-  participants:
-    - bahadur-shah-zafar
-  summary: The Meerut sepoys reach Delhi and proclaim the aged Mughal emperor Bahadur Shah Zafar leader of the revolt.
-  why: The revolt gains a symbol of legitimacy, the Mughal crown.
-  sources:
-    - wp-1857
-    - wp-siege-delhi
+  participants: [bahadur-shah-zafar]
+  causes: [meerut]
+  summary: >-
+    The Meerut sepoys reach Delhi, the city's garrison joins them, and Europeans are killed. The rebels
+    ask the 82-year-old Mughal emperor Bahadur Shah Zafar to lead them, and he reluctantly agrees.
+  context: >-
+    The Mughal emperor was a British pensioner with no power outside the Red Fort, but his name still
+    meant sovereignty across north India.
+  consequences: >-
+    By rallying to the emperor, the sepoys turned a mutiny into a war for the restoration of the old
+    order. Rebel regiments from across the north marched to Delhi.
+  why: The revolt gained a symbol of legitimacy, the Mughal crown.
+  sources: [wp-1857, wp-siege-delhi, dalrymple-last-mughal]
 - id: revolt-1857
   name: Revolt of 1857
-  alt_names:
-    - Indian Mutiny
-    - Sepoy Mutiny
-    - First War of Independence
-  date: 1857-05-10
-  end: 1858-07
+  alt_names: [Indian Mutiny, Sepoy Mutiny, First War of Independence]
+  date: "1857-05-10"
+  end: "1858-07"
   place: lucknow
   kind: campaign
   significance: 5
-  summary: A rising of sepoys across the Bengal Army, joined by dispossessed rulers, landholders and peasants
-    across the Ganges plain and central India. It is crushed with mass reprisals by mid-1858.
-  why: "It ended Company rule and the Mughal dynasty. After it the Raj stopped annexing princely states and
-    reorganised the army on \"martial race\" lines. Its name is still contested: \"Mutiny\" in colonial
-    accounts, the \"First War of Independence\" in V. D. Savarkar's 1909 book and in later nationalist usage."
-  sources:
-    - wp-1857
-    - bose-jalal
-    - metcalf-concise
+  causes: [doctrine-of-lapse, awadh-annexed, cartridges, meerut]
+  summary: >-
+    Most of the Bengal Army rebels, and across the Ganges plain and central India dispossessed rulers,
+    talukdars and peasants join them. Punjab, Bengal proper and the south stay largely quiet, and most
+    princes stay loyal. It is crushed by mid-1858.
+  context: >-
+    It had many causes: annexations under the doctrine of lapse and in Awadh, harsh revenue settlements,
+    fears for religion and caste, and grievances over army pay and overseas service. The cartridge was
+    only the spark.
+  consequences: >-
+    The revolt ended Company rule and the Mughal dynasty. Afterwards the British stopped annexing
+    princely states, made the princes their allies, raised the proportion of British troops, and
+    recruited from "loyal" groups such as Sikhs, Gurkhas and Punjabi Muslims. Fear and racial distance
+    marked the Raj from then on.
+  perspectives:
+    - view: Colonial historiography
+      text: A "Mutiny" of soldiers, provoked by misunderstanding and put down by heroism.
+    - view: Nationalist historiography
+      text: >-
+        The "First War of Indian Independence", a name popularised by V. D. Savarkar's 1909 book, and
+        a common cause of Hindus and Muslims against foreign rule.
+    - view: Recent scholarship
+      text: >-
+        A set of overlapping risings, by soldiers, deposed rulers, landholders and peasants, each with
+        local grievances. It was widespread but not national.
+  sources: [wp-1857, bose-jalal, metcalf-concise, stokes-peasant-armed]
 - id: cawnpore-siege
-  name: Siege of Cawnpore
-  date: 1857-06-05
-  end: 1857-07-15
+  name: Siege and massacres at Cawnpore
+  date: "1857-06-05"
+  end: "1857-07-15"
   place: cawnpore
   kind: battle
   significance: 3
-  participants:
-    - nana-sahib
-  summary: Nana Sahib's forces besiege the British entrenchment, which surrenders on 25 June. The evacuees are
-    massacred at Satichaura Ghat, and in July the women and children held at the Bibighar are killed. British
-    reprisals follow.
-  sources:
-    - wp-cawnpore
+  participants: [nana-sahib]
+  causes: [doctrine-of-lapse, delhi-seized]
+  summary: >-
+    Nana Sahib's forces besiege the British entrenchment, which surrenders on 25 June on a promise of safe
+    passage. At the Satichaura Ghat the boats are fired on and most of the men are killed. On 15 July,
+    as a British relief force approaches, about 200 women and children held at the Bibighar are killed.
+  context: >-
+    Nana Sahib was the adopted son of the last Peshwa. The Company had refused to continue his father's
+    pension, and he had been nursing the grievance for years.
+  consequences: >-
+    Cawnpore became the British rallying cry for vengeance. Relief columns under Neill and Havelock had
+    already been hanging villagers along the route from Allahabad, and after the Bibighar the reprisals
+    became more savage.
+  sources: [wp-cawnpore, bose-jalal]
 - id: lucknow-siege
   name: Siege of the Lucknow Residency
-  date: 1857-06-30
-  end: 1857-11-22
+  date: "1857-06-30"
+  end: "1857-11-22"
   place: lucknow
   kind: battle
   significance: 3
-  participants:
-    - begum-hazrat-mahal
-  summary: The British Residency is besieged for nearly five months. It is relieved, then evacuated in November.
-    Begum Hazrat Mahal leads the resistance in Oudh until Lucknow falls in March 1858.
-  sources:
-    - wp-lucknow-siege
+  participants: [begum-hazrat-mahal]
+  causes: [awadh-annexed]
+  summary: >-
+    About 1,700 British troops and loyal sepoys, with civilians, hold the Residency against the rebels for
+    nearly five months. A first relief in September is itself trapped, and the Residency is evacuated in
+    November.
+  context: >-
+    In Awadh, annexed only a year earlier, the revolt was a popular rising. Begum Hazrat Mahal, one of the
+    deposed Nawab's wives, ruled in her young son's name.
+  consequences: >-
+    Lucknow was retaken only in March 1858, and the countryside of Awadh fought on for months after.
+  sources: [wp-lucknow-siege, stokes-peasant-armed]
 - id: delhi-recaptured
   name: Delhi recaptured
-  date: 1857-09-20
+  date: "1857-09-20"
   place: delhi
   kind: battle
   significance: 4
-  participants:
-    - bahadur-shah-zafar
-  summary: After a long siege, British forces storm the city. The emperor surrenders and his sons are shot. The
-    city is sacked and many residents are killed or expelled.
-  sources:
-    - wp-siege-delhi
+  participants: [bahadur-shah-zafar]
+  causes: [delhi-seized]
+  summary: >-
+    After a three-month siege from the Ridge, British, Sikh and Gurkha troops storm the city in six days
+    of street fighting. The emperor surrenders and his sons are shot. The city is sacked, and much of its
+    population killed or driven out.
+  context: >-
+    The British force was small and sickly, but reinforced from newly conquered Punjab. Inside the city,
+    the rebels lacked a unified command, pay and supplies.
+  consequences: >-
+    The fall of Delhi broke the revolt's symbolic centre. Mughal Delhi, its court culture and many of its
+    buildings, was largely destroyed.
+  sources: [wp-siege-delhi, dalrymple-last-mughal]
 - id: jhansi-stormed
   name: Storming of Jhansi
-  date: 1858-04-03
+  date: "1858-04-03"
   place: jhansi
   kind: battle
   significance: 3
-  participants:
-    - lakshmibai
-  summary: Hugh Rose takes Jhansi. Rani Lakshmibai escapes by night to Kalpi.
-  sources:
-    - wp-lakshmibai
+  participants: [lakshmibai]
+  causes: [doctrine-of-lapse]
+  summary: >-
+    Hugh Rose's Central India Field Force storms Jhansi after a siege. Rani Lakshmibai escapes by night
+    with a small escort and rides to Kalpi.
+  context: >-
+    Jhansi had been annexed in 1854 when the Company refused to accept the Rani's adopted son as heir.
+    After its garrison revolted in June 1857 she took control, at first cautiously, then as an open
+    rebel leader.
+  consequences: The fall of Jhansi was followed by a heavy massacre of its inhabitants. The Rani joined Tatya Tope.
+  sources: [wp-lakshmibai]
 - id: lakshmibai-killed
   name: Death of Rani Lakshmibai
-  date: 1858-06-18
+  date: "1858-06-18"
   place: gwalior
   kind: battle
   significance: 3
-  participants:
-    - lakshmibai
-  summary: The Rani of Jhansi is killed fighting British cavalry near Gwalior.
+  participants: [lakshmibai, tatya-tope]
+  causes: [jhansi-stormed]
+  summary: >-
+    After she and Tatya Tope seize Gwalior's fortress, British cavalry attack at Kotah-ki-Serai. The Rani
+    is killed fighting.
+  context: The rebel leaders had taken Gwalior on 1 June, when the Sindhia's army went over to them.
+  consequences: >-
+    Gwalior was retaken days later. Tatya Tope fought a guerrilla war until his betrayal and hanging in
+    1859. Lakshmibai became the revolt's most enduring figure.
   why: She became the best-remembered figure of 1857, both as a symbol and in later nationalist memory.
-  sources:
-    - wp-lakshmibai
+  sources: [wp-lakshmibai, wp-tatya-tope]
+- id: british-reprisals
+  name: British reprisals
+  date: "1857-06"
+  end: "1858-07"
+  place: allahabad
+  kind: atrocity
+  significance: 4
+  causes: [cawnpore-siege]
+  summary: >-
+    British columns hang suspected rebels in large numbers along the Ganges, burn villages, and "blow
+    from guns" captured sepoys. Courts and summary tribunals execute thousands.
+  context: >-
+    Reports of the killing of British women and children, often exaggerated, provoked calls for
+    vengeance in India and in Britain. Some officers, including Canning, urged restraint and were mocked
+    for it.
+  consequences: >-
+    The reprisals killed far more people than the rebels had, and left lasting bitterness. No reliable
+    total exists.
+  sources: [bose-jalal, dalrymple-last-mughal, stokes-peasant-armed]
+- id: zafar-exiled
+  name: Last Mughal emperor exiled
+  date: "1858-10-07"
+  place: delhi
+  kind: political
+  significance: 3
+  participants: [bahadur-shah-zafar]
+  causes: [delhi-recaptured]
+  summary: >-
+    Tried by a British military commission and convicted of rebellion, Bahadur Shah Zafar is sent into
+    exile in Rangoon, where he dies in 1862.
+  context: The British held him responsible for the revolt, although he had been more its figurehead than its leader.
+  consequences: The Mughal dynasty, which had ruled since 1526, was ended.
+  sources: [dalrymple-last-mughal, wp-siege-delhi]
 - id: crown-rule
   name: "Queen's Proclamation: Crown takes over"
-  date: 1858-11-01
+  date: "1858-11-01"
   place: allahabad
   kind: law
   significance: 5
-  summary: Under the Government of India Act 1858, the Company's rule passes to the Crown. Canning, now the
-    first Viceroy, reads the Queen's proclamation at Allahabad. It promises religious non-interference and an
-    end to annexation.
+  participants: [canning]
+  causes: [revolt-1857]
+  summary: >-
+    Under the Government of India Act 1858, the Company's rule passes to the Crown. Canning, now the
+    first Viceroy, reads Queen Victoria's proclamation at Allahabad.
+  context: >-
+    Parliament blamed the Company for the revolt. Abolishing it let the British state take direct
+    responsibility while signalling a change of course.
+  consequences: >-
+    The proclamation promised to respect Indian religions and customs, to honour the princes' rights and
+    treaties, and to end annexations. A Secretary of State in London and a Viceroy in India now governed.
+    The Company was wound up in 1874.
   why: The Raj, direct British Crown rule, begins.
-  sources:
-    - wp-goi-act-1858
-    - metcalf-concise
+  sources: [wp-goi-act-1858, metcalf-concise]

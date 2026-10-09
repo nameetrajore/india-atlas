@@ -1,0 +1,26 @@
+# Places for chapters 5–7
+- id: kabul
+  name: Kabul
+  modern: Kabul
+  coords: [69.1723, 34.5281]
+  tags: [capital, city]
+  why: >-
+    The Afghan capital, occupied by a British-Indian army in 1839 to install a friendly ruler. The army
+    was destroyed when it retreated in January 1842.
+  sources: [wp-first-afghan-war]
+- id: hyderabad-sind
+  name: Hyderabad (Sind)
+  modern: Hyderabad, Sindh
+  coords: [68.3578, 25.3960]
+  tags: [capital, city]
+  why: Capital of the Talpur Amirs of Sind. Napier defeated them at nearby Miani in February 1843.
+  sources: [wp-miani]
+- id: satara
+  name: Satara
+  modern: Satara
+  coords: [74.0183, 17.6805]
+  tags: [capital, fort]
+  why: >-
+    The seat of the Maratha royal house. In 1848 it became the first state annexed under Dalhousie's
+    doctrine of lapse.
+  sources: [wp-doctrine-of-lapse]
