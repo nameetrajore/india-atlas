@@ -90,3 +90,7 @@ India Atlas. Repo: `india-atlas`.
 
 ## D23. Base data (resolved 2026-10-09)
 CC0 1941 district and princely-state layer (India State Story via india-geodata) for the extent of present-day India. Digitise the missing regions from the 1931 Imperial Gazetteer atlas. See `docs/research/base-units.md`.
+
+## D24. Scope narrowed to the British Raj (2026-10-09)
+Supersedes D2 and D13 for now. v1 covers the British Raj only, 1857–1947: the 1857 revolt, Crown rule, provincial reorganisation, princely states, the freedom movement and independence/Partition. The 1740–1765 slice is archived under `content/archive/plassey/` and excluded from the build. `sources.yaml` and `polities.yaml` stay shared.
+- Base map: the 1941 units are a Raj-era layer and fit directly. Areas outside present-day India (Sind, Punjab, NWFP, Baluchistan, East Bengal, Burma) are needed now, because Lahore, Dhaka, Karachi and Partition all happen there.
