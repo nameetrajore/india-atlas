@@ -1,0 +1,97 @@
+# Events: The high Raj. Each event explains why (context), what (summary) and what changed (consequences).
+- id: indigo-revolt
+  name: Indigo revolt
+  alt_names:
+    - Nil Bidroho
+  date: "1859"
+  end: "1860"
+  place: krishnanagar
+  kind: revolt
+  significance: 2
+  summary: Bengal ryots (cultivators) refuse to grow indigo for European planters. The play Nil Darpan
+    publicises their cause.
+  sources:
+    - wp-indigo-revolt
+- id: aligarh-college
+  name: Muhammadan Anglo-Oriental College founded
+  date: 1875-05-24
+  place: aligarh
+  kind: founding
+  significance: 2
+  participants:
+    - syed-ahmad-khan
+  summary: Sir Syed Ahmad Khan founds a college to give Muslims Western education. It later becomes Aligarh
+    Muslim University.
+  sources:
+    - wp-amu
+- id: great-famine
+  name: Great Famine of 1876–78
+  date: "1876"
+  end: "1878"
+  place: madras
+  kind: famine
+  significance: 4
+  summary: Drought across the Deccan and south. Grain exports continued, and relief was kept deliberately limited.
+  why: The famine became central to nationalist critiques of the economics of British rule.
+  figures:
+    - label: Deaths
+      min: 5500000
+      max: 10300000
+      note: Estimates vary by method and region.
+      sources:
+        - wp-great-famine
+  sources:
+    - wp-great-famine
+    - bose-jalal
+- id: durbar-1877
+  name: Delhi Durbar of 1877
+  date: 1877-01-01
+  place: delhi
+  kind: political
+  significance: 3
+  summary: Lytton proclaims Queen Victoria Empress of India in a vast imperial assembly, during the famine.
+  sources:
+    - wp-delhi-durbar
+- id: ilbert-bill
+  name: Ilbert Bill controversy
+  date: "1883"
+  place: calcutta
+  kind: law
+  significance: 2
+  summary: A bill to let Indian judges try Europeans provokes a furious European backlash and is diluted.
+  why: The affair showed educated Indians how far racial privilege went, and fed the push for an all-India body.
+  sources:
+    - wp-ilbert-bill
+- id: inc-founded
+  name: Indian National Congress founded
+  date: 1885-12-28
+  place: bombay
+  kind: founding
+  significance: 4
+  summary: Seventy-two delegates meet in Bombay for the first session of the Indian National Congress.
+  sources:
+    - wp-inc
+    - chandra-struggle
+- id: burma-annexed
+  name: Mandalay taken
+  date: 1885-11-28
+  place: mandalay
+  kind: battle
+  significance: 3
+  summary: The Third Anglo-Burmese War ends in days. King Thibaw is deposed and exiled to India.
+  sources:
+    - wp-third-burmese-war
+- id: ulgulan
+  name: Birsa Munda's Ulgulan
+  date: 1899-12
+  end: 1900-06
+  place: ranchi
+  kind: revolt
+  significance: 2
+  participants:
+    - birsa-munda
+  summary: Munda adivasis rise against landlords, moneylenders and colonial land law. Birsa dies in Ranchi jail
+    in June 1900.
+  why: The rising led to the Chotanagpur Tenancy Act of 1908, which protected adivasi land.
+  sources:
+    - wp-birsa

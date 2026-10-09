@@ -1,0 +1,134 @@
+# Events: The revolt of 1857. Each event explains why (context), what (summary) and what changed (consequences).
+- id: mangal-pandey
+  name: Mangal Pandey's attack at Barrackpore
+  date: 1857-03-29
+  place: barrackpore
+  kind: revolt
+  significance: 2
+  participants:
+    - mangal-pandey
+  summary: A sepoy of the 34th Bengal Native Infantry attacks his officers. Unrest had been growing over
+    cartridges rumoured to be greased with cow and pig fat. He is hanged on 8 April.
+  sources:
+    - wp-mangal-pandey
+    - wp-1857
+- id: meerut
+  name: Meerut uprising
+  date: 1857-05-10
+  place: meerut
+  kind: revolt
+  significance: 4
+  summary: Sepoys mutiny, free 85 comrades jailed for refusing the cartridges, kill British officers and
+    civilians, and ride for Delhi.
+  why: The revolt of 1857 begins here.
+  sources:
+    - wp-1857
+    - bose-jalal
+- id: delhi-seized
+  name: Rebels take Delhi
+  date: 1857-05-11
+  place: delhi
+  kind: revolt
+  significance: 4
+  participants:
+    - bahadur-shah-zafar
+  summary: The Meerut sepoys reach Delhi and proclaim the aged Mughal emperor Bahadur Shah Zafar leader of the revolt.
+  why: The revolt gains a symbol of legitimacy, the Mughal crown.
+  sources:
+    - wp-1857
+    - wp-siege-delhi
+- id: revolt-1857
+  name: Revolt of 1857
+  alt_names:
+    - Indian Mutiny
+    - Sepoy Mutiny
+    - First War of Independence
+  date: 1857-05-10
+  end: 1858-07
+  place: lucknow
+  kind: campaign
+  significance: 5
+  summary: A rising of sepoys across the Bengal Army, joined by dispossessed rulers, landholders and peasants
+    across the Ganges plain and central India. It is crushed with mass reprisals by mid-1858.
+  why: "It ended Company rule and the Mughal dynasty. After it the Raj stopped annexing princely states and
+    reorganised the army on \"martial race\" lines. Its name is still contested: \"Mutiny\" in colonial
+    accounts, the \"First War of Independence\" in V. D. Savarkar's 1909 book and in later nationalist usage."
+  sources:
+    - wp-1857
+    - bose-jalal
+    - metcalf-concise
+- id: cawnpore-siege
+  name: Siege of Cawnpore
+  date: 1857-06-05
+  end: 1857-07-15
+  place: cawnpore
+  kind: battle
+  significance: 3
+  participants:
+    - nana-sahib
+  summary: Nana Sahib's forces besiege the British entrenchment, which surrenders on 25 June. The evacuees are
+    massacred at Satichaura Ghat, and in July the women and children held at the Bibighar are killed. British
+    reprisals follow.
+  sources:
+    - wp-cawnpore
+- id: lucknow-siege
+  name: Siege of the Lucknow Residency
+  date: 1857-06-30
+  end: 1857-11-22
+  place: lucknow
+  kind: battle
+  significance: 3
+  participants:
+    - begum-hazrat-mahal
+  summary: The British Residency is besieged for nearly five months. It is relieved, then evacuated in November.
+    Begum Hazrat Mahal leads the resistance in Oudh until Lucknow falls in March 1858.
+  sources:
+    - wp-lucknow-siege
+- id: delhi-recaptured
+  name: Delhi recaptured
+  date: 1857-09-20
+  place: delhi
+  kind: battle
+  significance: 4
+  participants:
+    - bahadur-shah-zafar
+  summary: After a long siege, British forces storm the city. The emperor surrenders and his sons are shot. The
+    city is sacked and many residents are killed or expelled.
+  sources:
+    - wp-siege-delhi
+- id: jhansi-stormed
+  name: Storming of Jhansi
+  date: 1858-04-03
+  place: jhansi
+  kind: battle
+  significance: 3
+  participants:
+    - lakshmibai
+  summary: Hugh Rose takes Jhansi. Rani Lakshmibai escapes by night to Kalpi.
+  sources:
+    - wp-lakshmibai
+- id: lakshmibai-killed
+  name: Death of Rani Lakshmibai
+  date: 1858-06-18
+  place: gwalior
+  kind: battle
+  significance: 3
+  participants:
+    - lakshmibai
+  summary: The Rani of Jhansi is killed fighting British cavalry near Gwalior.
+  why: She became the best-remembered figure of 1857, both as a symbol and in later nationalist memory.
+  sources:
+    - wp-lakshmibai
+- id: crown-rule
+  name: "Queen's Proclamation: Crown takes over"
+  date: 1858-11-01
+  place: allahabad
+  kind: law
+  significance: 5
+  summary: Under the Government of India Act 1858, the Company's rule passes to the Crown. Canning, now the
+    first Viceroy, reads the Queen's proclamation at Allahabad. It promises religious non-interference and an
+    end to annexation.
+  why: The Raj, direct British Crown rule, begins.
+  sources:
+    - wp-goi-act-1858
+    - metcalf-concise

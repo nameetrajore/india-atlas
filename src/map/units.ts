@@ -93,3 +93,18 @@ function contains(f: UnitFeature | undefined, p: LngLat) {
   const polys = f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates
   return polys.some((poly) => inRing(poly[0], p) && !poly.slice(1).some((h) => inRing(h, p)))
 }
+
+/** The base unit containing a point, if any. */
+export function unitAt(units: UnitIndex, p: LngLat): string | undefined {
+  for (const f of units.features) if (contains(f, p)) return f.properties.id
+  return undefined
+}
+
+const placeUnitCache = new WeakMap<UnitIndex, Map<string, string | undefined>>()
+/** Memoised place → unit lookup. */
+export function placeUnit(units: UnitIndex, id: string, p: LngLat) {
+  let m = placeUnitCache.get(units)
+  if (!m) placeUnitCache.set(units, (m = new Map()))
+  if (!m.has(id)) m.set(id, unitAt(units, p))
+  return m.get(id)
+}

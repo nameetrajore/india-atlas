@@ -73,8 +73,8 @@ export interface HistEvent {
   altNames: string[]
   date: CDate
   end?: CDate
-  place: string
-  coords: LngLat
+  place?: string
+  coords?: LngLat
   kind: string
   significance: number
   participants: string[]

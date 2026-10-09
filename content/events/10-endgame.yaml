@@ -1,0 +1,153 @@
+# Events: Endgame. Each event explains why (context), what (summary) and what changed (consequences).
+- id: lahore-resolution
+  name: Lahore Resolution
+  alt_names:
+    - Pakistan Resolution
+  date: 1940-03-23
+  place: lahore
+  kind: political
+  significance: 4
+  participants:
+    - jinnah
+  summary: The Muslim League calls for "independent states" in the Muslim-majority regions.
+  sources:
+    - wp-lahore-resolution
+- id: quit-india
+  name: Quit India movement
+  date: 1942-08-08
+  end: 1943-12
+  place: bombay
+  kind: movement
+  significance: 5
+  participants:
+    - gandhi
+    - nehru
+    - patel
+  summary: 'At Gowalia Tank, Gandhi calls on the British to "Quit India": "Do or die". The leadership is jailed
+    within hours, and a leaderless mass rising follows. It is crushed by force.'
+  sources:
+    - wp-quit-india
+    - chandra-struggle
+- id: bengal-famine
+  name: Bengal famine of 1943
+  date: "1943"
+  end: "1944"
+  place: calcutta
+  kind: famine
+  significance: 5
+  summary: Wartime policy, the loss of Burmese rice, hoarding and administrative failure produce famine in Bengal.
+  why: The share of blame between wartime policy and other causes is still argued over.
+  figures:
+    - label: Deaths
+      min: 2100000
+      max: 3000000
+      note: Estimates range from about 2.1 million to about 3 million.
+      sources:
+        - wp-bengal-famine
+  sources:
+    - wp-bengal-famine
+- id: imphal-kohima
+  name: Imphal and Kohima
+  date: 1944-03
+  end: 1944-07
+  place: imphal
+  kind: battle
+  significance: 3
+  participants:
+    - subhas-bose
+  summary: The Japanese invasion of India, with units of Subhas Chandra Bose's Indian National Army, is defeated.
+  sources:
+    - wp-imphal
+- id: ina-trials
+  name: INA trials at the Red Fort
+  date: 1945-11
+  end: 1946-05
+  place: delhi
+  kind: political
+  significance: 3
+  summary: Courts-martial of INA officers spark mass sympathy across India. Sentences are commuted.
+  sources:
+    - wp-ina-trials
+- id: rin-mutiny
+  name: Royal Indian Navy mutiny
+  date: 1946-02-18
+  end: 1946-02-23
+  place: bombay
+  kind: revolt
+  significance: 3
+  summary: Ratings strike and mutiny in Bombay and Karachi. The episode shook British confidence in the armed forces.
+  sources:
+    - wp-rin-mutiny
+- id: direct-action
+  name: Direct Action Day
+  alt_names:
+    - Great Calcutta Killings
+  date: 1946-08-16
+  place: calcutta
+  kind: atrocity
+  significance: 4
+  participants:
+    - jinnah
+  summary: The Muslim League's call for "direct action" is followed by days of communal killing in Calcutta.
+  figures:
+    - label: Killed
+      min: 4000
+      max: 10000
+      note: At least 4,000 dead. Some estimates are much higher.
+      sources:
+        - wp-direct-action
+  sources:
+    - wp-direct-action
+- id: noakhali
+  name: Noakhali riots and Gandhi's walk
+  date: 1946-10-10
+  end: 1947-03
+  place: noakhali
+  kind: atrocity
+  significance: 3
+  participants:
+    - gandhi
+  summary: Organised attacks on Hindus in Noakhali. Gandhi spends four months walking through the district.
+  sources:
+    - wp-noakhali
+- id: mountbatten-plan
+  name: Mountbatten Plan
+  date: 1947-06-03
+  place: delhi
+  kind: political
+  significance: 3
+  participants:
+    - nehru
+    - jinnah
+    - patel
+  summary: Partition and early independence are announced. The date is brought forward to August 1947.
+  sources:
+    - wp-partition-1947
+- id: independence
+  name: Independence and Partition
+  date: 1947-08-15
+  place: delhi
+  kind: political
+  significance: 5
+  participants:
+    - nehru
+    - jinnah
+    - gandhi
+  summary: India and Pakistan become independent dominions. Nehru speaks of a "tryst with destiny". Gandhi is in
+    Calcutta, fasting against the violence. The Radcliffe boundaries are published on 17 August.
+  why: The end of the Raj, and one of the largest forced migrations in history.
+  figures:
+    - label: Deaths in Partition violence
+      min: 200000
+      max: 2000000
+      note: Estimates vary by an order of magnitude.
+      sources:
+        - wp-partition-1947
+    - label: People displaced
+      min: 10000000
+      max: 20000000
+      sources:
+        - wp-partition-1947
+  sources:
+    - wp-partition-1947
+    - wp-indian-independence-act

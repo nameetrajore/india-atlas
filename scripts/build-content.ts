@@ -79,7 +79,8 @@ const Event = z
     date: dateStr,
     end: dateStr.optional(),
     approx: z.boolean().optional(),
-    place: id,
+    /** Omit for events outside the map (London, the Spice Islands): they appear in cards and the story only. */
+    place: id.optional(),
     kind: z.enum(['battle', 'treaty', 'political', 'campaign', 'atrocity', 'movement', 'famine', 'founding', 'revolt', 'law']),
     significance: z.number().int().min(1).max(5),
     participants: z.array(id).default([]),
@@ -203,14 +204,14 @@ const hexToRgb = (h: string): [number, number, number] => [1, 3, 5].map((i) => p
 
 // ---- load
 const meta = load('meta.yaml', Meta)[0]
-const sources = load('sources.yaml', Source)
+const sources = loadDir('sources', Source)
 const polities = load('polities.yaml', Polity)
 const keyframesRaw = load('territory.yaml', KeyframeRaw)
-const places = load('places.yaml', Place)
+const places = loadDir('places', Place)
 const events = loadDir('events', Event)
 const people = loadDir('people', Person)
 const chapters = loadDir('chapters', Chapter).sort((a, b) => a.number - b.number)
-const eras = load('eras.yaml', Era)
+const eras = loadDir('eras', Era)
 
 for (const [k, v] of Object.entries({ sources, polities, places, events, people, chapters })) uniqueIds(k, v)
 uniqueIds('scenes', chapters.flatMap((c) => c.scenes))
@@ -320,8 +321,8 @@ const compiledEvents = events
       checkCites(where, f.sources)
       if (f.min > f.max) fail(where, `figure "${f.label}" min > max`)
     })
-    const place = placeById.get(e.place)
-    if (!place) fail(where, `unknown place "${e.place}"`)
+    const place = e.place ? placeById.get(e.place) : undefined
+    if (e.place && !place) fail(where, `unknown place "${e.place}"`)
     for (const p of e.participants) if (!personIds.has(p)) fail(where, `unknown participant "${p}"`)
     for (const c of e.causes) if (!eventIds.has(c)) fail(where, `unknown cause "${c}"`)
     return {
@@ -331,7 +332,7 @@ const compiledEvents = events
       date: parseDate(e.date, e.approx),
       end: e.end ? parseDate(e.end) : undefined,
       place: e.place,
-      coords: (place?.coords ?? [0, 0]) as LngLat,
+      coords: place?.coords as LngLat | undefined,
       kind: e.kind,
       significance: e.significance,
       participants: e.participants,

@@ -1,0 +1,124 @@
+# Events: From traders to rulers. Each event explains why (context), what (summary) and what changed (consequences).
+- id: siraj-killed
+  name: Siraj-ud-Daulah killed
+  date: 1757-07-02
+  place: murshidabad
+  kind: political
+  significance: 3
+  participants:
+    - siraj-ud-daulah
+  summary: Siraj-ud-Daulah is captured while fleeing and executed on the orders of Mir Jafar's son, Miran.
+  sources:
+    - wp-siraj
+- id: 24-parganas
+  name: 24 Parganas granted to the Company
+  date: 1757-12
+  place: calcutta
+  kind: treaty
+  significance: 2
+  participants:
+    - mir-jafar
+  summary: "The Company receives the zamindari of the lands south of Calcutta: its first territory in Bengal."
+  sources:
+    - wp-24-parganas
+- id: chinsurah
+  name: Battle of Chinsurah
+  alt_names:
+    - Battle of Bedara
+  date: 1759-11-25
+  place: chinsurah
+  kind: battle
+  significance: 2
+  summary: A Dutch force sent from Batavia is defeated near Chinsurah. This ends Dutch ambitions in Bengal.
+  sources:
+    - wp-chinsurah
+- id: wandiwash
+  name: Battle of Wandiwash
+  date: 1760-01-22
+  place: wandiwash
+  kind: battle
+  significance: 4
+  summary: Eyre Coote defeats Lally's French army in the Carnatic. Pondicherry is besieged soon after.
+  why: This was the decisive battle in the struggle between the British and the French in India.
+  sources:
+    - wp-wandiwash
+- id: mir-qasim-installed
+  name: Mir Qasim replaces Mir Jafar
+  date: 1760-10
+  place: murshidabad
+  kind: political
+  significance: 3
+  participants:
+    - mir-qasim
+    - mir-jafar
+  summary: The Company replaces the bankrupt Mir Jafar with his son-in-law Mir Qasim, who cedes Burdwan,
+    Midnapore and Chittagong.
+  sources:
+    - wp-mir-qasim
+- id: panipat
+  name: Third Battle of Panipat
+  date: 1761-01-14
+  place: panipat
+  kind: battle
+  significance: 5
+  summary: Ahmad Shah Durrani destroys the Maratha army north of Delhi. It was one of the largest battles of the
+    18th century.
+  why: It checked Maratha expansion in the north for a decade, just as the Company was rising in the east.
+  sources:
+    - wp-panipat
+- id: pondicherry-falls
+  name: Fall of Pondicherry
+  date: 1761-01-15
+  place: pondicherry
+  kind: battle
+  significance: 3
+  summary: The French capital surrenders after a long siege.
+  sources:
+    - wp-french-india
+- id: udhwa-nala
+  name: Battle of Udhwa Nala
+  date: 1763-09-05
+  place: udhwa-nala
+  kind: battle
+  significance: 2
+  participants:
+    - mir-qasim
+  summary: Mir Qasim had tried to end the Company's tax-free private trade, and war followed. The Company storms
+    his fortified line, and he flees west to Awadh.
+  sources:
+    - wp-udhwa-nala
+    - wp-mir-qasim
+- id: buxar
+  name: Battle of Buxar
+  date: 1764-10-22
+  place: buxar
+  kind: battle
+  significance: 5
+  participants:
+    - hector-munro
+    - mir-qasim
+    - shuja-ud-daula
+    - shah-alam-ii
+  summary: Hector Munro's Company army defeats the combined forces of Mir Qasim, Shuja-ud-Daula of Awadh and the
+    Mughal emperor Shah Alam II.
+  why: Unlike Plassey, this was a hard-fought battle against the leading powers of the north. It was won on the
+    field, and it settled who ruled eastern India.
+  sources:
+    - wp-buxar
+- id: allahabad
+  name: Treaty of Allahabad
+  date: 1765-08-12
+  place: allahabad
+  kind: treaty
+  significance: 5
+  participants:
+    - clive
+    - shah-alam-ii
+    - shuja-ud-daula
+  summary: Shah Alam II grants the Company the diwani of Bengal, Bihar and Orissa, in return for a pension and
+    the districts of Allahabad and Kora. Awadh is restored to Shuja-ud-Daula for an indemnity.
+  why: The trading company became the legal revenue authority of tens of millions of people. Many historians
+    date the start of British rule in India to this treaty.
+  sources:
+    - wp-allahabad
+    - dalrymple-anarchy

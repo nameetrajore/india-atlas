@@ -16,7 +16,7 @@ import {
   type Segment,
 } from '../lib/derive'
 import { badgeUrl, hexToRgb, kindDef } from '../ui/icons'
-import { polityAnchors, type UnitFeature, type UnitIndex } from './units'
+import { placeUnit, polityAnchors, type UnitFeature, type UnitIndex } from './units'
 import { declutter, type LabelCandidate } from './declutter'
 
 type RGB = [number, number, number]
@@ -104,13 +104,19 @@ export function buildLayers(a: LayerArgs): Layer[] {
   const footholds = content.places.flatMap((p) => {
     if (scene && !scenePlaces.has(p.id)) return []
     const c = controlAt(p, t)
-    return c && content.polities[c.power].bloc !== 'british' ? [{ p, c }] : []
+    if (!c) return []
+    // A British post is a foothold only while the land around it is not yet British.
+    const unit = placeUnit(units, p.id, p.coords)
+    const around = unit ? assignment[unit] : undefined
+    const surrounded = around && content.polities[around].bloc === content.polities[c.power].bloc
+    return surrounded ? [] : [{ p, c }]
   })
   const sig = placeSignificance(content, t)
+  const mapped = content.events.filter((e) => e.coords)
   const selEventId = selection?.kind === 'event' ? selection.id : undefined
   const events = scene
-    ? content.events.filter((e) => scene.show.events.includes(e.id) || e.id === selEventId).map((e) => ({ e, o: e.date.t <= t + 0.01 ? 1 : 0.45 }))
-    : content.events
+    ? mapped.filter((e) => scene.show.events.includes(e.id) || e.id === selEventId).map((e) => ({ e, o: e.date.t <= t + 0.01 ? 1 : 0.45 }))
+    : mapped
         .flatMap((e) => {
           const o = eventOpacity(e, t)
           return o > 0.05 || e.id === selEventId ? [{ e, o: Math.max(o, e.id === selEventId ? 1 : 0) }] : []
@@ -136,7 +142,7 @@ export function buildLayers(a: LayerArgs): Layer[] {
     cands.push({ key: `person:${m.p.id}`, position: m.s.position, text: m.p.name, size: 13.5, priority: 1e6, offset: [13, 0], alts: [[13, 18], [13, -18], [26, 0], [26, 20], [26, -20]], anchor: 'start', baseline: 'center' })
   const markerR = new Map<string, number>()
   for (const f of footholds) markerR.set(f.p.id, Math.max(markerR.get(f.p.id) ?? 0, 7))
-  for (const d of events) markerR.set(d.e.place, Math.max(markerR.get(d.e.place) ?? 0, badgeSize(d.e.significance) / 2))
+  for (const d of events) markerR.set(d.e.place!, Math.max(markerR.get(d.e.place!) ?? 0, badgeSize(d.e.significance) / 2))
   const placeOffset = (id: string): [number, number] => [0, -((markerR.get(id) ?? 3) + 3)]
   const placeSize = (id: string) => Math.max(13, Math.min(22, 12 + 2.8 * Math.sqrt(sig.get(id) ?? 0)))
   const selEvent = selection?.kind === 'event' ? content.events.find((e) => e.id === selection.id) : undefined
@@ -154,7 +160,7 @@ export function buildLayers(a: LayerArgs): Layer[] {
   const obstacles: [LngLat, number][] = [
     ...markers.map((m): [LngLat, number] => [m.s.position, 8]),
     ...footholds.map((f): [LngLat, number] => [f.p.coords, 7]),
-    ...events.map((d): [LngLat, number] => [d.e.coords, badgeSize(d.e.significance) / 2]),
+    ...events.map((d): [LngLat, number] => [d.e.coords!, badgeSize(d.e.significance) / 2]),
   ]
   const shown = declutter(cands, a.project, obstacles)
 
@@ -268,7 +274,7 @@ export function buildLayers(a: LayerArgs): Layer[] {
   // ---- events: icon badges by kind; ripples for ones just crossed
   {
     type EV = { e: HistEvent; o: number }
-    const byId = new Map(content.events.map((e) => [e.id, e]))
+    const byId = new Map(mapped.map((e) => [e.id, e]))
     const pulses = a.pulses.flatMap((p) => {
       const e = byId.get(p.id)
       return e ? [{ e, f: p.age / PULSE_MS }] : []
@@ -278,7 +284,7 @@ export function buildLayers(a: LayerArgs): Layer[] {
         ...FLAT,
         id: 'event-pulses',
         data: pulses,
-        getPosition: (d) => d.e.coords,
+        getPosition: (d) => d.e.coords!,
         getRadius: (d) => badgeSize(d.e.significance) / 2 + d.f * (40 + d.e.significance * 14),
         radiusUnits: 'pixels',
         filled: false,
@@ -293,7 +299,7 @@ export function buildLayers(a: LayerArgs): Layer[] {
         id: 'events',
         data: events,
         pickable: true,
-        getPosition: (d) => d.e.coords,
+        getPosition: (d) => d.e.coords!,
         getIcon: (d) => ({ url: badgeUrl(d.e.kind), id: d.e.kind, width: 64, height: 64 }),
         getSize: (d) => badgeSize(d.e.significance) * (isSel(selection, 'event', d.e.id) ? 1.3 : 1),
         sizeUnits: 'pixels',

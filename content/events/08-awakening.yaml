@@ -1,0 +1,161 @@
+# Events: Awakening. Each event explains why (context), what (summary) and what changed (consequences).
+- id: bengal-partition
+  name: Partition of Bengal
+  date: 1905-10-16
+  place: dacca
+  kind: law
+  significance: 4
+  summary: Curzon splits Bengal. The stated reason is administrative efficiency, but it was widely seen as a way
+    to divide Bengali Hindus and Muslims.
+  why: It triggered the Swadeshi movement, the first mass nationalist campaign, and was annulled in 1911.
+  sources:
+    - wp-partition-bengal-1905
+    - sarkar-modern
+- id: swadeshi
+  name: Swadeshi movement
+  date: 1905-08-07
+  end: 1911-12
+  place: calcutta
+  kind: movement
+  significance: 4
+  summary: Boycott of British goods, bonfires of foreign cloth, national schools, and "Bande Mataram" as a
+    rallying cry.
+  sources:
+    - wp-swadeshi
+    - sarkar-modern
+- id: muslim-league
+  name: All-India Muslim League founded
+  date: 1906-12-30
+  place: dacca
+  kind: founding
+  significance: 4
+  summary: Founded at Dacca by Muslim notables to represent Muslim political interests.
+  sources:
+    - wp-muslim-league
+- id: surat-split
+  name: Surat split
+  date: 1907-12-27
+  place: surat
+  kind: political
+  significance: 2
+  participants:
+    - tilak
+  summary: The Congress splits between Moderates (Gokhale) and Extremists (Tilak, Lajpat Rai, Bipin Chandra Pal).
+  sources:
+    - wp-surat-split
+- id: morley-minto
+  name: Morley–Minto reforms
+  alt_names:
+    - Indian Councils Act 1909
+  date: "1909"
+  place: calcutta
+  kind: law
+  significance: 2
+  summary: Expanded legislative councils with separate electorates for Muslims.
+  why: Separate electorates became a lasting and contested feature of Indian politics.
+  sources:
+    - wp-morley-minto
+- id: durbar-1911
+  name: Delhi Durbar of 1911
+  date: 1911-12-12
+  place: delhi
+  kind: political
+  significance: 4
+  summary: George V announces that the capital will move from Calcutta to Delhi and that Bengal's partition is
+    annulled.
+  sources:
+    - wp-delhi-durbar
+    - wp-delhi-province
+- id: gandhi-returns
+  name: Gandhi returns to India
+  date: 1915-01-09
+  place: bombay
+  kind: political
+  significance: 3
+  participants:
+    - gandhi
+  summary: After 21 years in South Africa, Gandhi lands at Bombay.
+  sources:
+    - wp-gandhi
+- id: lucknow-pact
+  name: Lucknow Pact
+  date: 1916-12
+  place: lucknow
+  kind: treaty
+  significance: 3
+  participants:
+    - tilak
+    - jinnah
+  summary: The Congress and the Muslim League agree on joint demands, accepting separate electorates.
+  sources:
+    - wp-lucknow-pact
+- id: champaran
+  name: Champaran Satyagraha
+  date: 1917-04-15
+  place: motihari
+  kind: movement
+  significance: 3
+  participants:
+    - gandhi
+  summary: Gandhi goes to Champaran on behalf of tenants forced to grow indigo, defies an order to leave, and
+    wins an inquiry.
+  why: His first satyagraha in India.
+  sources:
+    - wp-champaran
+- id: kheda
+  name: Kheda Satyagraha
+  date: 1918-03-22
+  place: nadiad
+  kind: movement
+  significance: 2
+  participants:
+    - gandhi
+    - patel
+  summary: Peasants refuse to pay land revenue after crop failure. Patel joins Gandhi.
+  sources:
+    - wp-kheda
+- id: rowlatt
+  name: Rowlatt Act and satyagraha
+  date: 1919-03
+  end: 1919-04
+  place: bombay
+  kind: law
+  significance: 3
+  participants:
+    - gandhi
+  summary: Wartime powers of detention without trial are extended into peacetime. Gandhi calls a nationwide
+    hartal (general strike), the first all-India protest.
+  sources:
+    - wp-rowlatt
+- id: jallianwala
+  name: Jallianwala Bagh massacre
+  alt_names:
+    - Amritsar massacre
+  date: 1919-04-13
+  place: amritsar
+  kind: atrocity
+  significance: 5
+  summary: Brigadier-General Dyer's troops fire without warning on an unarmed crowd in a walled garden on
+    Baisakhi, until their ammunition runs low.
+  why: It turned moderates against the Raj. Tagore returned his knighthood, and Gandhi moved to non-cooperation.
+  figures:
+    - label: Killed
+      min: 379
+      max: 1000
+      note: The official Hunter Committee figure is 379. The Congress inquiry estimated about 1,000.
+      sources:
+        - wp-jallianwala
+  sources:
+    - wp-jallianwala
+    - chandra-struggle
+- id: goi-act-1919
+  name: Government of India Act 1919
+  alt_names:
+    - Montagu–Chelmsford reforms
+  date: 1919-12-23
+  place: delhi
+  kind: law
+  significance: 2
+  summary: Introduces "dyarchy", under which some provincial subjects are handed to elected Indian ministers.
+  sources:
+    - wp-goi-act-1919

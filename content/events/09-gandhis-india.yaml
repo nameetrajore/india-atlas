@@ -1,0 +1,218 @@
+# Events: Gandhi's India. Each event explains why (context), what (summary) and what changed (consequences).
+- id: ncm
+  name: Non-Cooperation and Khilafat movements
+  date: 1920-08-01
+  end: 1922-02-12
+  place: nagpur
+  kind: movement
+  significance: 4
+  participants:
+    - gandhi
+  summary: Boycott of councils, courts, schools and foreign cloth, joined with the Khilafat cause. It was the
+    first mass movement under Gandhi.
+  sources:
+    - wp-ncm
+    - chandra-struggle
+- id: malabar
+  name: Malabar rebellion
+  alt_names:
+    - Mappila rebellion
+    - Moplah rebellion
+  date: 1921-08-20
+  end: 1922-02
+  place: tirurangadi
+  kind: revolt
+  significance: 3
+  summary: "A Mappila rising against the British and landlords, rooted in Khilafat and agrarian grievances. It
+    was crushed by martial law. Its character is still contested: agrarian revolt, anti-colonial war, or
+    communal violence."
+  sources:
+    - wp-malabar
+- id: chauri-chaura
+  name: Chauri Chaura
+  date: 1922-02-04
+  place: chauri-chaura
+  kind: atrocity
+  significance: 3
+  summary: After police fire on protesters, a crowd burns the police station, killing 22 policemen. Gandhi
+    suspends non-cooperation.
+  sources:
+    - wp-chauri-chaura
+- id: kakori
+  name: Kakori train action
+  date: 1925-08-09
+  place: kakori
+  kind: revolt
+  significance: 2
+  participants:
+    - ram-prasad-bismil
+  summary: Hindustan Republican Association revolutionaries seize government money from a train. Bismil,
+    Ashfaqulla Khan and others are later hanged.
+  sources:
+    - wp-kakori
+- id: bardoli
+  name: Bardoli Satyagraha
+  date: 1928-02
+  end: 1928-08
+  place: bardoli
+  kind: movement
+  significance: 2
+  participants:
+    - patel
+  summary: A successful no-tax campaign against a revenue increase, led by Vallabhbhai Patel.
+  sources:
+    - wp-bardoli
+- id: simon-commission
+  name: Simon Commission protests
+  date: 1928-02-03
+  end: 1928-11-17
+  place: lahore
+  kind: movement
+  significance: 2
+  participants:
+    - lajpat-rai
+  summary: An all-white commission on constitutional reform is met with "Simon Go Back". Lala Lajpat Rai is
+    beaten by police at Lahore and dies weeks later.
+  sources:
+    - wp-simon
+- id: assembly-bomb
+  name: Central Assembly bombing
+  date: 1929-04-08
+  place: delhi
+  kind: revolt
+  significance: 2
+  participants:
+    - bhagat-singh
+  summary: Bhagat Singh and Batukeshwar Dutt throw harmless bombs and leaflets in the Assembly and court arrest.
+  sources:
+    - wp-bhagat-singh
+- id: purna-swaraj
+  name: Purna Swaraj resolution
+  date: 1929-12-31
+  place: lahore
+  kind: political
+  significance: 4
+  participants:
+    - nehru
+    - gandhi
+  summary: At Lahore, under Nehru's presidency, the Congress declares complete independence its goal, and the
+    flag is raised on the banks of the Ravi. 26 January 1930 is marked as Independence Day.
+  sources:
+    - wp-purna-swaraj
+- id: salt-march
+  name: Salt March
+  alt_names:
+    - Dandi March
+  date: 1930-03-12
+  end: 1930-04-06
+  place: dandi
+  kind: movement
+  significance: 5
+  participants:
+    - gandhi
+  summary: Gandhi and 78 followers walk about 385 km from Sabarmati to Dandi and break the salt law. Civil
+    disobedience spreads across India.
+  why: A tax on something everyone needed made the injustice of the Raj easy to grasp everywhere, and the march
+    was covered by the world's press.
+  sources:
+    - wp-salt-march
+    - chandra-struggle
+- id: chittagong-raid
+  name: Chittagong armoury raid
+  date: 1930-04-18
+  place: chittagong
+  kind: revolt
+  significance: 2
+  participants:
+    - surya-sen
+  summary: Surya Sen's Indian Republican Army seizes the police and auxiliary armouries.
+  sources:
+    - wp-chittagong-raid
+- id: qissa-khwani
+  name: Qissa Khwani Bazaar massacre
+  date: 1930-04-23
+  place: peshawar
+  kind: atrocity
+  significance: 3
+  participants:
+    - ghaffar-khan
+  summary: Troops fire on non-violent Khudai Khidmatgar protesters. Garhwali soldiers refuse orders to shoot.
+  figures:
+    - label: Killed
+      min: 20
+      max: 400
+      note: The official figure was about 20. Nationalist estimates ran to several hundred.
+      sources:
+        - wp-qissa-khwani
+  sources:
+    - wp-qissa-khwani
+- id: dharasana
+  name: Dharasana Satyagraha
+  date: 1930-05-21
+  place: dharasana
+  kind: movement
+  significance: 2
+  participants:
+    - sarojini-naidu
+  summary: Volunteers led by Sarojini Naidu march on the salt works and are beaten by police, column by column.
+  sources:
+    - wp-dharasana
+- id: gandhi-irwin
+  name: Gandhi–Irwin Pact
+  date: 1931-03-05
+  place: delhi
+  kind: treaty
+  significance: 3
+  participants:
+    - gandhi
+  summary: Civil disobedience is suspended in return for the release of prisoners. Gandhi attends the Second
+    Round Table Conference.
+  sources:
+    - wp-gandhi-irwin
+- id: bhagat-singh-hanged
+  name: Bhagat Singh, Rajguru and Sukhdev hanged
+  date: 1931-03-23
+  place: lahore
+  kind: political
+  significance: 3
+  participants:
+    - bhagat-singh
+  summary: The three are executed at Lahore jail for the 1928 killing of police officer J. P. Saunders.
+  sources:
+    - wp-bhagat-singh
+- id: poona-pact
+  name: Poona Pact
+  date: 1932-09-24
+  place: poona
+  kind: treaty
+  significance: 3
+  participants:
+    - gandhi
+    - ambedkar
+  summary: Gandhi fasts against separate electorates for the Depressed Classes. Ambedkar agrees to reserved
+    seats within joint electorates.
+  why: "The pact is still debated: a coerced bargain, or an act of unity?"
+  sources:
+    - wp-poona-pact
+- id: goi-act-1935
+  name: Government of India Act 1935
+  date: 1935-08-02
+  place: delhi
+  kind: law
+  significance: 3
+  summary: Grants provincial autonomy and plans a federation including the princely states. The federation never
+    comes into being.
+  sources:
+    - wp-goi-act-1935
+- id: elections-1937
+  name: Provincial elections of 1937
+  date: 1937-02
+  place: delhi
+  kind: political
+  significance: 3
+  participants:
+    - nehru
+    - jinnah
+  summary: The Congress wins majorities in most provinces and forms ministries. The Muslim League does poorly.
+  sources:
+    - wp-elections-1937

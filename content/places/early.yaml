@@ -1,0 +1,289 @@
+# Places from the Company period (1600–1765).
+- id: murshidabad
+  name: Murshidabad
+  modern: Murshidabad
+  coords:
+    - 88.27
+    - 24.18
+  tags:
+    - capital
+  why: Capital of the Nawabs of Bengal. Siraj-ud-Daulah was executed here, and Clive installed Mir Jafar here.
+  sources:
+    - marshall-bengal
+- id: plassey
+  name: Plassey
+  modern: Palashi
+  coords:
+    - 88.25
+    - 23.8
+  tags:
+    - battle
+  why: The site of the 1757 battle that gave the Company control over the Nawab of Bengal. It was decided more
+    by defection than by fighting.
+  sources:
+    - wp-plassey
+- id: kasimbazar
+  name: Kasimbazar
+  modern: Cossimbazar
+  coords:
+    - 88.28
+    - 24.12
+  tags:
+    - factory
+  why: A silk-trade centre beside Murshidabad, with Company, Dutch and French factories. Siraj-ud-Daulah seized
+    the English factory in June 1756.
+  control:
+    - from: "1658"
+      power: eic
+    - from: 1756-06
+      power: bengal-nawabs
+      note: Seized by Siraj-ud-Daulah
+    - from: 1757-02
+      power: eic
+      note: Restored under the Treaty of Alinagar
+  sources:
+    - marshall-bengal
+    - wp-siraj
+- id: chinsurah
+  name: Chinsurah
+  modern: Chinsurah
+  coords:
+    - 88.39
+    - 22.9
+  tags:
+    - port
+    - factory
+  why: The Dutch base in Bengal. The British defeated a Dutch force nearby at Chinsurah (Bedara) in 1759.
+  control:
+    - from: "1656"
+      power: dutch
+  sources:
+    - wp-chinsurah-town
+    - wp-chinsurah
+- id: serampore
+  name: Frederiksnagore
+  modern: Serampore
+  coords:
+    - 88.34
+    - 22.75
+  tags:
+    - port
+    - factory
+  why: A Danish settlement on the Hooghly, founded in 1755.
+  control:
+    - from: "1755"
+      power: danish
+  sources:
+    - wp-serampore
+- id: fulta
+  name: Fulta
+  modern: Falta
+  coords:
+    - 88.11
+    - 22.3
+  tags:
+    - port
+  approx: true
+  why: Where Company refugees from Calcutta sheltered on ships in 1756, until Clive arrived.
+  sources:
+    - wp-siege-calcutta
+- id: patna
+  name: Patna
+  modern: Patna
+  coords:
+    - 85.14
+    - 25.59
+  tags:
+    - factory
+  why: The main city of Bihar and a centre of the saltpetre trade. Fighting between Mir Qasim and the Company
+    began here in 1763.
+  sources:
+    - wp-mir-qasim
+- id: giria
+  name: Giria
+  modern: Giria
+  coords:
+    - 88.07
+    - 24.47
+  tags:
+    - battle
+  approx: true
+  why: Where Alivardi Khan defeated Nawab Sarfaraz Khan and took Bengal in 1740.
+  sources:
+    - wp-giria
+- id: udhwa-nala
+  name: Udhwa Nala
+  modern: Udhwa
+  coords:
+    - 87.75
+    - 25
+  tags:
+    - battle
+  approx: true
+  why: Where the Company defeated Mir Qasim in 1763.
+  sources:
+    - wp-udhwa-nala
+- id: manihari
+  name: Manihari
+  modern: Manihari
+  coords:
+    - 87.62
+    - 25.34
+  tags:
+    - battle
+  approx: true
+  why: Where Siraj-ud-Daulah defeated his rival cousin Shaukat Jang of Purnea in 1756.
+  sources:
+    - wp-siraj
+- id: buxar
+  name: Buxar
+  modern: Buxar
+  coords:
+    - 83.98
+    - 25.56
+  tags:
+    - battle
+  why: Site of the 1764 battle in which the Company defeated the combined armies of Mir Qasim, Awadh and the
+    Mughal emperor. Many historians rank it as more decisive than Plassey.
+  sources:
+    - wp-buxar
+- id: faizabad
+  name: Faizabad
+  modern: Ayodhya district
+  coords:
+    - 82.13
+    - 26.78
+  tags:
+    - capital
+  why: The capital of Awadh under Shuja-ud-Daula.
+  sources:
+    - wp-shuja
+- id: panipat
+  name: Panipat
+  modern: Panipat
+  coords:
+    - 76.97
+    - 29.39
+  tags:
+    - battle
+  why: In 1761 Ahmad Shah Durrani crushed the Marathas here. The defeat left a power vacuum in the north that
+    the Company would later fill.
+  sources:
+    - wp-panipat
+- id: fort-st-david
+  name: Fort St David
+  modern: Cuddalore
+  coords:
+    - 79.77
+    - 11.75
+  tags:
+    - fort
+  why: The Company's southern fort. Clive served here in the 1740s.
+  control:
+    - from: "1690"
+      power: eic
+    - from: 1758-06
+      power: french
+      note: Captured and razed by Lally
+  sources:
+    - wp-clive
+- id: tranquebar
+  name: Tranquebar
+  modern: Tharangambadi
+  coords:
+    - 79.85
+    - 11.03
+  tags:
+    - port
+    - fort
+  control:
+    - from: "1620"
+      power: danish
+  sources:
+    - wp-serampore
+- id: negapatam
+  name: Negapatam
+  modern: Nagapattinam
+  coords:
+    - 79.84
+    - 10.77
+  tags:
+    - port
+  control:
+    - from: "1658"
+      power: dutch
+  sources:
+    - wp-dutch-india
+- id: pulicat
+  name: Pulicat
+  modern: Pulicat
+  coords:
+    - 80.32
+    - 13.42
+  tags:
+    - port
+    - fort
+  control:
+    - from: "1610"
+      power: dutch
+  sources:
+    - wp-dutch-india
+- id: cochin
+  name: Cochin
+  modern: Kochi
+  coords:
+    - 76.24
+    - 9.96
+  tags:
+    - port
+  control:
+    - from: "1663"
+      power: dutch
+      note: Taken from the Portuguese
+  sources:
+    - wp-dutch-india
+- id: masulipatnam
+  name: Masulipatnam
+  modern: Machilipatnam
+  coords:
+    - 81.13
+    - 16.18
+  tags:
+    - port
+    - factory
+  why: A textile port on the Coromandel coast. The French held it in the 1750s, and Forde took it in 1759.
+  control:
+    - from: "1611"
+      power: eic
+      note: English factory (trading post)
+    - from: "1750"
+      power: french
+      approx: true
+    - from: 1759-04
+      power: eic
+      note: Taken by Colonel Forde
+  sources:
+    - wp-french-india
+- id: arcot
+  name: Arcot
+  modern: Arcot
+  coords:
+    - 79.32
+    - 12.9
+  tags:
+    - capital
+    - fort
+  why: Capital of the Nawabs of the Carnatic. Clive's defence of the fort in 1751 made his name.
+  sources:
+    - wp-arcot
+- id: wandiwash
+  name: Wandiwash
+  modern: Vandavasi
+  coords:
+    - 79.62
+    - 12.5
+  tags:
+    - battle
+  why: Site of the 1760 battle that ended serious French hopes of an empire in India.
+  sources:
+    - wp-wandiwash

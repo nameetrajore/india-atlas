@@ -155,7 +155,13 @@ export function InfoCard() {
         sub={
           <>
             {e.date.label}
-            {e.end ? ` – ${e.end.label}` : ''} · <Link to={{ kind: 'place', id: e.place }}>{place?.name}</Link>
+            {e.end ? ` – ${e.end.label}` : ''}
+            {place && (
+              <>
+                {' · '}
+                <Link to={{ kind: 'place', id: place.id }}>{place.name}</Link>
+              </>
+            )}
           </>
         }
       >

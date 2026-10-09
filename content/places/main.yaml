@@ -1,0 +1,700 @@
+# Places (D20). name = period name; modern = present-day name. control = foothold history.
+- id: calcutta
+  name: Calcutta
+  modern: Kolkata
+  coords:
+    - 88.3639
+    - 22.5726
+  tags:
+    - capital
+    - port
+    - city
+  why: Capital of British India until 1911 and the centre of the Bengal Renaissance and early nationalism. It
+    saw the Great Calcutta Killings of 1946.
+  sources:
+    - wp-bengal-presidency
+    - metcalf-concise
+    - wp-fort-william
+    - wp-siege-calcutta
+  control:
+    - from: "1690"
+      power: eic
+    - from: 1756-06-20
+      power: bengal-nawabs
+      note: Captured by Siraj-ud-Daulah, renamed Alinagar
+    - from: 1757-01-02
+      power: eic
+      note: Retaken by Clive and Watson
+- id: delhi
+  name: Delhi
+  modern: Delhi
+  coords:
+    - 77.241
+    - 28.6562
+  tags:
+    - capital
+    - city
+  why: The Mughal capital, seized by the rebels in 1857 and retaken by siege. It hosted the imperial durbars and
+    became the capital in 1911 (New Delhi was inaugurated in 1931).
+  sources:
+    - wp-delhi-province
+    - metcalf-concise
+    - wp-mughal
+- id: simla
+  name: Simla
+  modern: Shimla
+  coords:
+    - 77.1734
+    - 31.1048
+  tags:
+    - capital
+    - hill-station
+  why: The summer capital of the Raj, where the government moved each year to escape the heat of the plains.
+  sources:
+    - metcalf-concise
+- id: bombay
+  name: Bombay
+  modern: Mumbai
+  coords:
+    - 72.835
+    - 18.94
+  tags:
+    - port
+    - city
+    - capital
+  why: The commercial capital, where the Congress was founded in 1885, Quit India was launched in 1942 and the
+    Navy mutinied in 1946.
+  sources:
+    - wp-bombay-presidency
+  control:
+    - from: "1668"
+      power: eic
+- id: madras
+  name: Madras
+  modern: Chennai
+  coords:
+    - 80.2707
+    - 13.0827
+  tags:
+    - port
+    - city
+    - capital
+  sources:
+    - wp-madras-presidency
+    - wp-fort-st-george
+  control:
+    - from: "1639"
+      power: eic
+    - from: 1746-09
+      power: french
+      note: Captured by La Bourdonnais
+    - from: 1749-08
+      power: eic
+      note: Returned under the Treaty of Aix-la-Chapelle
+  why: Fort St George, the Company's Coromandel base. The French held it from 1746 to 1749.
+- id: lahore
+  name: Lahore
+  modern: Lahore
+  coords:
+    - 74.3436
+    - 31.5497
+  tags:
+    - capital
+    - city
+  why: Capital of Punjab. It saw the 1929 Purna Swaraj resolution, the 1931 hanging of Bhagat Singh and the 1940
+    Lahore Resolution.
+  sources:
+    - wp-punjab-province
+- id: karachi
+  name: Karachi
+  modern: Karachi
+  coords:
+    - 67.01
+    - 24.86
+  tags:
+    - port
+    - city
+  why: Sind's port and Pakistan's first capital.
+  sources:
+    - wp-sind-province
+- id: dacca
+  name: Dacca
+  modern: Dhaka
+  coords:
+    - 90.4074
+    - 23.7104
+  tags:
+    - capital
+    - city
+  why: Capital of Eastern Bengal and Assam (1905–1912), where the Muslim League was founded in 1906.
+  sources:
+    - wp-ebna
+- id: rangoon
+  name: Rangoon
+  modern: Yangon
+  coords:
+    - 96.1735
+    - 16.8409
+  tags:
+    - capital
+    - port
+    - city
+  why: Capital of British Burma. Bahadur Shah Zafar, the last Mughal emperor, died in exile here in 1862.
+  sources:
+    - wp-british-burma
+- id: mandalay
+  name: Mandalay
+  modern: Mandalay
+  coords:
+    - 96.0891
+    - 21.9588
+  tags:
+    - capital
+    - prison
+  why: The royal capital of Burma, taken in 1885. Tilak and Bose were later imprisoned here.
+  sources:
+    - wp-third-burmese-war
+- id: barrackpore
+  name: Barrackpore
+  modern: Barrackpore
+  coords:
+    - 88.3768
+    - 22.7633
+  tags:
+    - fort
+  why: The cantonment where Mangal Pandey attacked his officers in March 1857.
+  sources:
+    - wp-1857
+- id: meerut
+  name: Meerut
+  modern: Meerut
+  coords:
+    - 77.706
+    - 28.9845
+  tags:
+    - fort
+  why: The 1857 revolt began here on 10 May, when sepoys freed their jailed comrades and marched on Delhi.
+  sources:
+    - wp-1857
+- id: cawnpore
+  name: Cawnpore
+  modern: Kanpur
+  coords:
+    - 80.3319
+    - 26.4499
+  tags:
+    - fort
+    - city
+  why: Nana Sahib's siege of the British entrenchment here in 1857 ended in the Satichaura and Bibighar
+    massacres, followed by savage British reprisals.
+  sources:
+    - wp-cawnpore
+- id: lucknow
+  name: Lucknow
+  modern: Lucknow
+  coords:
+    - 80.9462
+    - 26.8467
+  tags:
+    - capital
+    - city
+  why: The capital of Oudh. Its Residency was besieged for months in 1857. The Congress and League concluded the
+    Lucknow Pact here in 1916.
+  sources:
+    - wp-lucknow-siege
+- id: jhansi
+  name: Jhansi
+  modern: Jhansi
+  coords:
+    - 78.5685
+    - 25.4484
+  tags:
+    - fort
+  why: The state of Rani Lakshmibai, annexed by lapse in 1854 and stormed by Hugh Rose in April 1858.
+  sources:
+    - wp-lakshmibai
+- id: kalpi
+  name: Kalpi
+  modern: Kalpi
+  coords:
+    - 79.73
+    - 26.12
+  tags:
+    - fort
+  approx: true
+  why: The rebel base on the Yamuna where Lakshmibai and Tatya Tope regrouped in May 1858.
+  sources:
+    - wp-lakshmibai
+- id: gwalior
+  name: Gwalior
+  modern: Gwalior
+  coords:
+    - 78.1828
+    - 26.2183
+  tags:
+    - fort
+    - capital
+  why: Rebels seized the fort in June 1858, and Lakshmibai died in battle nearby.
+  sources:
+    - wp-lakshmibai
+- id: allahabad
+  name: Allahabad
+  modern: Prayagraj
+  coords:
+    - 81.8463
+    - 25.4358
+  tags:
+    - city
+    - capital
+  why: Where Queen Victoria's proclamation transferring India to the Crown was read in 1858. It was also the
+    Nehru family home, Anand Bhavan.
+  sources:
+    - wp-goi-act-1858
+    - wp-allahabad
+- id: aligarh
+  name: Aligarh
+  modern: Aligarh
+  coords:
+    - 78.088
+    - 27.8974
+  tags:
+    - city
+  why: Sir Syed Ahmad Khan founded the Muhammadan Anglo-Oriental College here in 1875.
+  sources:
+    - wp-amu
+- id: krishnanagar
+  name: Krishnanagar
+  modern: Krishnanagar
+  coords:
+    - 88.5
+    - 23.4
+  tags:
+    - city
+  approx: true
+  why: A centre of the 1859–60 indigo revolt in Nadia.
+  sources:
+    - wp-indigo-revolt
+- id: ranchi
+  name: Ranchi
+  modern: Ranchi
+  coords:
+    - 85.3096
+    - 23.3441
+  tags:
+    - city
+    - prison
+  why: Birsa Munda's Ulgulan (the great tumult) in the Munda country around Ranchi, 1899–1900. He died in Ranchi
+    jail.
+  sources:
+    - wp-birsa
+- id: surat
+  name: Surat
+  modern: Surat
+  coords:
+    - 72.8311
+    - 21.1702
+  tags:
+    - city
+    - port
+  why: Where the Congress split into Moderates and Extremists in 1907.
+  sources:
+    - wp-surat-split
+    - wp-bombay-presidency
+  control:
+    - from: "1612"
+      power: eic
+      note: English factory (trading post)
+- id: poona
+  name: Poona
+  modern: Pune
+  coords:
+    - 73.8567
+    - 18.5204
+  tags:
+    - city
+    - prison
+  why: Tilak's city. Gandhi was held in its Yeravda prison, where the Poona Pact was signed in 1932.
+  sources:
+    - wp-poona-pact
+- id: porbandar
+  name: Porbandar
+  modern: Porbandar
+  coords:
+    - 69.6293
+    - 21.6417
+  tags:
+    - port
+  why: Gandhi's birthplace (1869), a small Kathiawar princely state.
+  sources:
+    - wp-gandhi
+- id: motihari
+  name: Motihari (Champaran)
+  modern: Motihari
+  coords:
+    - 84.92
+    - 26.65
+  tags:
+    - movement
+  why: Gandhi's first satyagraha in India (1917), on behalf of indigo cultivators.
+  sources:
+    - wp-champaran
+- id: nadiad
+  name: Nadiad (Kheda)
+  modern: Nadiad
+  coords:
+    - 72.86
+    - 22.69
+  tags:
+    - movement
+  why: Centre of the 1918 Kheda satyagraha against revenue collection after crop failure.
+  sources:
+    - wp-kheda
+- id: sabarmati
+  name: Sabarmati Ashram
+  modern: Ahmedabad
+  coords:
+    - 72.5809
+    - 23.0607
+  tags:
+    - movement
+  why: Gandhi's base from 1917, and the starting point of the Salt March.
+  sources:
+    - wp-salt-march
+- id: amritsar
+  name: Amritsar
+  modern: Amritsar
+  coords:
+    - 74.88
+    - 31.6206
+  tags:
+    - city
+  why: Jallianwala Bagh, where Dyer's troops fired on a crowd in April 1919.
+  sources:
+    - wp-jallianwala
+- id: nagpur
+  name: Nagpur
+  modern: Nagpur
+  coords:
+    - 79.0882
+    - 21.1458
+  tags:
+    - city
+    - capital
+  why: Capital of the Central Provinces. The 1920 Congress session here adopted non-cooperation.
+  sources:
+    - wp-ncm
+- id: tirurangadi
+  name: Tirurangadi
+  modern: Tirurangadi
+  coords:
+    - 75.93
+    - 11.04
+  tags:
+    - movement
+  approx: true
+  why: A centre of the 1921 Malabar (Mappila) rebellion.
+  sources:
+    - wp-malabar
+- id: chauri-chaura
+  name: Chauri Chaura
+  modern: Chauri Chaura
+  coords:
+    - 83.58
+    - 26.64
+  tags:
+    - movement
+  why: Where a crowd burned a police station in 1922, after which Gandhi called off non-cooperation.
+  sources:
+    - wp-chauri-chaura
+- id: bardoli
+  name: Bardoli
+  modern: Bardoli
+  coords:
+    - 73.11
+    - 21.12
+  tags:
+    - movement
+  why: Vallabhbhai Patel's 1928 no-tax campaign here earned him the title "Sardar".
+  sources:
+    - wp-bardoli
+- id: kakori
+  name: Kakori
+  modern: Kakori
+  coords:
+    - 80.79
+    - 26.87
+  tags:
+    - movement
+  why: Where HRA revolutionaries robbed a government train in 1925.
+  sources:
+    - wp-kakori
+- id: dandi
+  name: Dandi
+  modern: Dandi
+  coords:
+    - 72.802
+    - 20.888
+  tags:
+    - movement
+  why: The end of the Salt March, where Gandhi picked up salt on 6 April 1930.
+  sources:
+    - wp-salt-march
+- id: dharasana
+  name: Dharasana
+  modern: Dharasana
+  coords:
+    - 72.93
+    - 20.83
+  tags:
+    - movement
+  approx: true
+  why: Salt works where non-violent volunteers were beaten in May 1930. Webb Miller's report reached the world.
+  sources:
+    - wp-dharasana
+- id: chittagong
+  name: Chittagong
+  modern: Chattogram
+  coords:
+    - 91.7832
+    - 22.3569
+  tags:
+    - port
+    - movement
+  why: Surya Sen's revolutionaries raided the armouries here in April 1930.
+  sources:
+    - wp-chittagong-raid
+- id: peshawar
+  name: Peshawar
+  modern: Peshawar
+  coords:
+    - 71.5249
+    - 34.0151
+  tags:
+    - city
+    - capital
+  why: Capital of the NWFP. Troops fired on Khudai Khidmatgar protesters at the Qissa Khwani Bazaar in 1930.
+  sources:
+    - wp-qissa-khwani
+- id: wardha
+  name: Sevagram (Wardha)
+  modern: Sevagram
+  coords:
+    - 78.66
+    - 20.735
+  tags:
+    - movement
+  why: Gandhi's ashram from 1936, and the de facto headquarters of the Congress in the late 1930s.
+  sources:
+    - wp-gandhi
+- id: imphal
+  name: Imphal
+  modern: Imphal
+  coords:
+    - 93.9368
+    - 24.817
+  tags:
+    - battle
+    - capital
+  why: Capital of Manipur state. Japanese and INA forces besieged it in 1944 and were defeated, alongside Kohima.
+  sources:
+    - wp-imphal
+- id: noakhali
+  name: Noakhali
+  modern: Noakhali
+  coords:
+    - 91.1
+    - 22.87
+  tags:
+    - movement
+  why: Scene of communal violence in October 1946. Gandhi walked village to village here for four months.
+  sources:
+    - wp-noakhali
+- id: port-blair
+  name: Port Blair
+  modern: Sri Vijaya Puram
+  coords:
+    - 92.7265
+    - 11.6234
+  tags:
+    - prison
+  why: The penal settlement on the Andamans, set up after 1857. Its Cellular Jail held revolutionaries.
+  sources:
+    - metcalf-concise
+- id: quetta
+  name: Quetta
+  modern: Quetta
+  coords:
+    - 67
+    - 30.18
+  tags:
+    - fort
+    - capital
+  why: A frontier garrison and capital of British Baluchistan. It was destroyed by an earthquake in 1935.
+  sources:
+    - wp-baluchistan
+- id: hyderabad
+  name: Hyderabad
+  modern: Hyderabad
+  coords:
+    - 78.4867
+    - 17.385
+  tags:
+    - capital
+    - city
+  sources:
+    - wp-hyderabad
+- id: srinagar
+  name: Srinagar
+  modern: Srinagar
+  coords:
+    - 74.7973
+    - 34.0837
+  tags:
+    - capital
+    - city
+  sources:
+    - wp-princely-states
+- id: pondicherry
+  name: Pondicherry
+  modern: Puducherry
+  coords:
+    - 79.83
+    - 11.93
+  tags:
+    - port
+    - capital
+  why: Capital of French India throughout the Raj. It was transferred to India in 1954.
+  control:
+    - from: "1674"
+      power: french
+    - from: 1761-01-15
+      power: eic
+      note: Surrendered after siege
+    - from: "1765"
+      power: french
+      approx: true
+      note: Returned after the Treaty of Paris (1763)
+    - from: 1778-10
+      power: eic
+      approx: true
+      note: Taken again in the Anglo-French war
+    - from: "1785"
+      power: french
+      approx: true
+      note: Returned after the Treaty of Versailles
+    - from: 1793-08
+      power: eic
+      note: Taken during the French Revolutionary Wars
+    - from: "1816"
+      power: french
+      note: Restored after the Napoleonic Wars
+  sources:
+    - wp-french-india
+- id: chandernagore
+  name: Chandernagore
+  modern: Chandannagar
+  coords:
+    - 88.37
+    - 22.87
+  tags:
+    - port
+  why: A French enclave beside Calcutta, sometimes a refuge for Bengali revolutionaries.
+  control:
+    - from: "1688"
+      power: french
+    - from: 1757-03-23
+      power: eic
+      note: Captured by the British
+    - from: "1765"
+      power: french
+      approx: true
+      note: Restored after the Treaty of Paris (1763)
+    - from: "1778"
+      power: eic
+      approx: true
+    - from: "1816"
+      power: french
+  sources:
+    - wp-french-india
+    - wp-chandannagar-town
+    - wp-chandannagar
+- id: karikal
+  name: Karikal
+  modern: Karaikal
+  coords:
+    - 79.84
+    - 10.92
+  tags:
+    - port
+  control:
+    - from: "1739"
+      power: french
+  sources:
+    - wp-french-india
+- id: mahe
+  name: Mahé
+  modern: Mahe
+  coords:
+    - 75.54
+    - 11.7
+  tags:
+    - port
+  control:
+    - from: "1721"
+      power: french
+  sources:
+    - wp-french-india
+- id: yanam
+  name: Yanaon
+  modern: Yanam
+  coords:
+    - 82.21
+    - 16.73
+  tags:
+    - port
+  control:
+    - from: "1816"
+      power: french
+  sources:
+    - wp-french-india
+- id: goa
+  name: Goa
+  modern: Goa
+  coords:
+    - 73.8278
+    - 15.4909
+  tags:
+    - port
+    - capital
+  why: Capital of Portuguese India. It stayed Portuguese until India took it in 1961.
+  control:
+    - from: "1510"
+      power: portuguese
+  sources:
+    - wp-portuguese-india
+- id: daman
+  name: Daman
+  modern: Daman
+  coords:
+    - 72.83
+    - 20.41
+  tags:
+    - port
+  control:
+    - from: "1559"
+      power: portuguese
+  sources:
+    - wp-portuguese-india
+- id: diu
+  name: Diu
+  modern: Diu
+  coords:
+    - 70.98
+    - 20.71
+  tags:
+    - port
+  control:
+    - from: "1535"
+      power: portuguese
+  sources:
+    - wp-portuguese-india

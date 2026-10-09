@@ -1,0 +1,219 @@
+# Events: The Mughal collapse and the Company at war. Each event explains why (context), what (summary) and what changed (consequences).
+- id: giria
+  name: Battle of Giria
+  date: 1740-04
+  place: giria
+  kind: battle
+  significance: 3
+  participants:
+    - alivardi-khan
+  summary: Alivardi Khan, deputy governor of Bihar, kills Nawab Sarfaraz Khan and takes the throne of Bengal.
+  why: It starts the reign that Siraj-ud-Daulah would inherit. It is also a usurpation, so the Mughal emperor's
+    approval was something bought rather than something that mattered.
+  sources:
+    - wp-giria
+    - wp-alivardi
+- id: maratha-raids
+  name: Maratha raids on Bengal
+  alt_names:
+    - Bargi raids
+  date: "1741"
+  end: "1751"
+  place: murshidabad
+  kind: campaign
+  significance: 3
+  summary: Bhonsle cavalry, known as bargis, raid western Bengal again and again for a decade. Bengali poetry
+    remembers widespread killing, plunder and refugees fleeing east across the Bhagirathi.
+  why: The raids weakened Bengal's countryside and finances. They also pushed merchants and weavers to move
+    under the protection of Company-held Calcutta.
+  sources:
+    - wp-maratha-bengal
+    - marshall-bengal
+- id: orissa-ceded
+  name: Orissa ceded to the Marathas
+  date: "1751"
+  place: murshidabad
+  kind: treaty
+  significance: 2
+  participants:
+    - alivardi-khan
+  summary: Alivardi Khan buys peace by ceding Orissa and promising annual chauth (a tribute) for Bengal.
+  sources:
+    - wp-maratha-bengal
+- id: siege-arcot
+  name: Siege of Arcot
+  date: 1751-09
+  end: 1751-11
+  place: arcot
+  kind: battle
+  significance: 3
+  participants:
+    - clive
+  summary: Clive takes Arcot with a small force and holds it through a 50-day siege. The aim was to draw
+    pressure away from the British-backed claimant, Muhammad Ali, at Trichinopoly.
+  why: The siege made Clive famous and showed that small, well-drilled forces could decide Indian wars.
+  sources:
+    - wp-arcot
+    - wp-clive
+- id: siraj-accession
+  name: Siraj-ud-Daulah becomes Nawab
+  date: 1756-04
+  place: murshidabad
+  kind: political
+  significance: 3
+  participants:
+    - siraj-ud-daulah
+    - alivardi-khan
+  summary: Alivardi Khan dies, and his grandson Siraj-ud-Daulah, about 23 years old, succeeds him.
+  sources:
+    - wp-siraj
+    - wp-alivardi
+- id: kasimbazar-seized
+  name: Kasimbazar factory seized
+  date: 1756-06
+  place: kasimbazar
+  kind: political
+  significance: 2
+  participants:
+    - siraj-ud-daulah
+  summary: Angry that the Company was fortifying Calcutta without permission and sheltering his enemies,
+    Siraj-ud-Daulah seizes the English factory at Kasimbazar.
+  sources:
+    - wp-siraj
+    - marshall-bengal
+- id: fall-of-calcutta
+  name: Fall of Calcutta
+  alt_names:
+    - Siege of Calcutta
+  date: 1756-06-20
+  place: calcutta
+  kind: battle
+  significance: 4
+  participants:
+    - siraj-ud-daulah
+  summary: The Nawab's army takes Fort William. The governor and most of the Council escape downriver to Fulta.
+    The city is renamed Alinagar.
+  sources:
+    - wp-siege-calcutta
+- id: black-hole
+  name: Black Hole of Calcutta
+  date: 1756-06-20
+  place: calcutta
+  kind: atrocity
+  significance: 3
+  summary: British prisoners are held overnight in the fort's small lock-up, and many die. The main account is
+    by survivor J. Z. Holwell.
+  why: The numbers are disputed. Holwell's figures were later used as justification for empire, and modern
+    historians treat them with caution.
+  figures:
+    - label: Prisoners confined
+      min: 64
+      max: 146
+      note: Holwell gave 146. Later research estimates about 64.
+      sources:
+        - wp-black-hole
+    - label: Deaths
+      min: 43
+      max: 123
+      note: Holwell gave 123. Later research estimates about 43.
+      sources:
+        - wp-black-hole
+  sources:
+    - wp-black-hole
+- id: manihari
+  name: Battle of Manihari
+  date: 1756-10
+  place: manihari
+  kind: battle
+  significance: 2
+  participants:
+    - siraj-ud-daulah
+  summary: Siraj-ud-Daulah defeats and kills his cousin and rival Shaukat Jang of Purnea.
+  sources:
+    - wp-siraj
+- id: calcutta-retaken
+  name: Calcutta retaken
+  date: 1757-01-02
+  place: calcutta
+  kind: battle
+  significance: 3
+  participants:
+    - clive
+  summary: A relief force from Madras under Clive and Admiral Watson retakes Fort William with little resistance.
+  sources:
+    - wp-clive
+    - wp-battle-calcutta
+- id: alinagar
+  name: Treaty of Alinagar
+  date: 1757-02-09
+  place: calcutta
+  kind: treaty
+  significance: 2
+  participants:
+    - clive
+    - siraj-ud-daulah
+  summary: After an indecisive clash at Calcutta, the Nawab restores the Company's privileges and allows it to
+    fortify Calcutta.
+  sources:
+    - wp-alinagar
+    - wp-battle-calcutta
+- id: chandernagore-captured
+  name: Capture of Chandernagore
+  date: 1757-03-23
+  place: chandernagore
+  kind: battle
+  significance: 3
+  participants:
+    - clive
+  summary: With the Seven Years' War under way in Europe, the British attack and capture the French settlement
+    upriver.
+  why: It removed the Nawab's only possible European ally in Bengal.
+  sources:
+    - wp-chandannagar
+- id: plassey
+  name: Battle of Plassey
+  alt_names:
+    - Battle of Palashi
+  date: 1757-06-23
+  place: plassey
+  kind: battle
+  significance: 5
+  participants:
+    - clive
+    - siraj-ud-daulah
+    - mir-jafar
+  summary: About 3,000 Company troops face the Nawab's army of about 50,000. Before the battle, Clive had agreed
+    with the Nawab's commander Mir Jafar and the Jagat Seth bankers that Mir Jafar would replace
+    Siraj-ud-Daulah. Mir Jafar's large division stays out of the fight. A rainstorm soaks the Nawab's
+    gunpowder, and the Nawab's army breaks.
+  why: Plassey was a battle decided by bribery and a coup. It made the Company the power behind the throne of
+    the richest province in India.
+  figures:
+    - label: Company force
+      min: 2800
+      max: 3100
+      note: About a third European, two-thirds Indian sepoys
+      sources:
+        - wp-plassey
+    - label: Nawab's force
+      min: 35000
+      max: 62000
+      note: Estimates vary widely, and a large part never engaged
+      sources:
+        - wp-plassey
+  sources:
+    - wp-plassey
+    - dalrymple-anarchy
+- id: mir-jafar-installed
+  name: Mir Jafar made Nawab
+  date: 1757-06-29
+  place: murshidabad
+  kind: political
+  significance: 3
+  participants:
+    - mir-jafar
+    - clive
+  summary: Clive installs Mir Jafar at Murshidabad. Mir Jafar pays the Company and its officers vast sums, which
+    empties the treasury.
+  sources:
+    - wp-mir-jafar

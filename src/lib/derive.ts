@@ -111,7 +111,7 @@ export function placeSignificance(content: Content, t: number): Map<string, numb
   for (const e of content.events) {
     const dt = Math.abs(t - e.date.t)
     const w = e.significance * Math.exp(-dt / 12)
-    score.set(e.place, (score.get(e.place) ?? 0) + w)
+    if (e.place) score.set(e.place, (score.get(e.place) ?? 0) + w)
   }
   return score
 }
