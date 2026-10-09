@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { MapView } from './map/MapView'
 import { Timeline } from './ui/Timeline'
 import { InfoCard } from './ui/InfoCard'
-import { ChapterBar, ChapterIndex, Reader } from './ui/Story'
+import { ChapterBar, ChapterIndex, Reader, StoryClock } from './ui/Story'
 import { Legend, MapToggles } from './ui/Legend'
 import { NowCaption } from './ui/NowCaption'
 import { Toasts } from './ui/Toasts'
@@ -55,6 +55,7 @@ export default function App() {
       {ready && story && chapter !== null && (
         <>
           <Reader />
+          <StoryClock />
           <ChapterBar />
         </>
       )}

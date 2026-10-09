@@ -388,3 +388,13 @@ button:disabled { cursor: default; opacity: 0.45; }
   .cb-name { display: none; }
   .now { max-width: calc(100% - 32px); }
 }
+
+/* Story clock: the year, large and quiet; bolder while time is moving. */
+.story-clock {
+  position: absolute; left: calc(var(--gutter) + 452px); top: 58px; pointer-events: none;
+  font: 700 54px/1 var(--map-label); font-variant-numeric: lining-nums tabular-nums; color: rgba(43, 33, 24, 0.28);
+  text-shadow: 0 0 12px var(--paper); transition: color 0.3s;
+}
+.story-clock.moving { color: rgba(156, 61, 37, 0.85); }
+@media (max-width: 1280px) { .story-clock { left: calc(var(--gutter) + 392px); font-size: 44px; } }
+@media (max-width: 760px) { .story-clock { left: var(--gutter); top: 52px; font-size: 32px; } }

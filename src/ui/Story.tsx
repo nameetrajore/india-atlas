@@ -141,3 +141,12 @@ export function ChapterBar() {
     </nav>
   )
 }
+
+/** Big year on the map, so time visibly runs while a scene transition plays. */
+export function StoryClock() {
+  const t = useStore((s) => s.t)
+  const scene = useStore((s) => currentScene(s))
+  if (!scene) return null
+  const moving = Math.abs(t - scene.date.t) > 0.05
+  return <div className={`story-clock${moving ? ' moving' : ''}`}>{Math.floor(t)}</div>
+}

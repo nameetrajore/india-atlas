@@ -75,12 +75,14 @@ export const useStore = create<State>((set, get) => ({
     const { content, chapter, scene } = get()
     if (!content || chapter === null) return
     const ch = content.chapters[chapter]
+    const from = get().t
     const next = scene + delta
     if (next >= 0 && next < ch.scenes.length) set({ scene: next })
     else if (next >= ch.scenes.length && chapter + 1 < content.chapters.length) set({ chapter: chapter + 1, scene: 0 })
     else if (next < 0 && chapter > 0) set({ chapter: chapter - 1, scene: content.chapters[chapter - 1].scenes.length - 1 })
     else return
-    enterScene(get, set)
+    // Moving forward plays time from the last scene to this one, so the map visibly changes (D25).
+    enterScene(get, set, delta > 0 ? from : undefined)
   },
   setDetail: (detail) => set({ detail }),
   setToday: (today) => set({ today }),
@@ -96,26 +98,37 @@ export function currentScene(s: Pick<State, 'content' | 'chapter' | 'scene' | 'm
   return s.content.chapters[s.chapter]?.scenes[s.scene] ?? null
 }
 
-/** Move the map to a scene: time, camera, selection; animate time if the scene plays forward. */
+/** Ease in and out, so time accelerates away from one scene and settles on the next. */
+const ease = (f: number) => (f < 0.5 ? 2 * f * f : 1 - (-2 * f + 2) ** 2 / 2)
+
+/** Animate t between two dates, starting after `delay` ms; aborts if the scene changes. */
+function tween(get: () => State, sc: Scene, from: number, to: number, delay: number, dur: number, then?: () => void) {
+  const start = performance.now() + delay
+  const step = (now: number) => {
+    if (currentScene(get()) !== sc) return
+    const f = Math.min(1, Math.max(0, (now - start) / dur))
+    get().setT(from + (to - from) * ease(f), { announce: false })
+    if (f < 1) sceneAnim = requestAnimationFrame(step)
+    else then?.()
+  }
+  sceneAnim = requestAnimationFrame(step)
+}
+
+/** Move the map to a scene: camera, selection, and time (played forward from `fromT` when given). */
 let sceneAnim = 0
-function enterScene(get: () => State, set: (p: Partial<State>) => void) {
+function enterScene(get: () => State, set: (p: Partial<State>) => void, fromT?: number) {
   const sc = currentScene(get())
   cancelAnimationFrame(sceneAnim)
   if (!sc) return
   set({ selection: sc.select ?? null })
-  get().setT(sc.date.t, { announce: false })
   get().requestFly(sc.camera)
-  if (sc.playTo) {
-    const from = sc.date.t
-    const to = sc.playTo.t
-    const start = performance.now() + 1800 // after the camera settles
-    const dur = 9000
-    const step = (now: number) => {
-      const f = Math.min(1, Math.max(0, (now - start) / dur))
-      if (currentScene(get()) !== sc) return
-      get().setT(from + (to - from) * f, { announce: false })
-      if (f < 1) sceneAnim = requestAnimationFrame(step)
-    }
-    sceneAnim = requestAnimationFrame(step)
+  const playScene = () => sc.playTo && tween(get, sc, sc.date.t, sc.playTo.t, 600, 9000)
+  if (fromT !== undefined && sc.date.t > fromT) {
+    // Longer gaps take longer, within limits: a decade ≈ 2.5 s.
+    const dur = Math.min(4500, Math.max(1200, (sc.date.t - fromT) * 250))
+    tween(get, sc, fromT, sc.date.t, 0, dur, playScene)
+  } else {
+    get().setT(sc.date.t, { announce: false })
+    if (sc.playTo) tween(get, sc, sc.date.t, sc.playTo.t, 1800, 9000)
   }
 }
