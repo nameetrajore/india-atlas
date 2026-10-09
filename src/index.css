@@ -472,3 +472,9 @@ button:disabled { cursor: default; opacity: 0.45; }
   .now > *:nth-child(n + 3) { display: none; }
   .term-def { width: min(260px, 70vw); }
 }
+
+.share { margin-left: 8px; flex: none; }
+.tip { display: flex; gap: 10px; align-items: flex-start; font-size: 12.5px; line-height: 1.45; color: var(--ink-2); background: var(--paper-2); border: 1px dashed var(--rule); border-radius: 2px; padding: 8px 10px; margin-bottom: 12px; }
+.tip button { flex: none; background: var(--ink); color: var(--paper); border: none; border-radius: 2px; padding: 3px 8px; font-size: 11.5px; font-weight: 600; }
+.term-sample { text-decoration: underline dotted rgba(156, 61, 37, 0.7); text-underline-offset: 3px; }
+.link-sample { color: var(--accent-2); text-decoration: underline; text-decoration-color: rgba(36, 64, 110, 0.35); }

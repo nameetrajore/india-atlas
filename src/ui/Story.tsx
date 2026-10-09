@@ -39,6 +39,39 @@ export function ChapterIndex() {
   )
 }
 
+const TIP_KEY = 'india-atlas:tip-dismissed'
+const readTip = () => {
+  try {
+    return localStorage.getItem(TIP_KEY) === '1'
+  } catch {
+    return false
+  }
+}
+
+/** Share this scene: native share sheet on phones, otherwise copy the link. Chapter pages carry link previews. */
+function ShareButton({ chapterNumber, chapterIdx, sceneIdx, title }: { chapterNumber: number; chapterIdx: number; sceneIdx: number; title: string }) {
+  const [copied, setCopied] = useState(false)
+  const base = `${location.origin}${import.meta.env.BASE_URL}`
+  const url = import.meta.env.DEV ? `${base}?ch=${chapterIdx}&sc=${sceneIdx}` : `${base}ch/${chapterNumber}/?sc=${sceneIdx}`
+  const share = async () => {
+    try {
+      if (navigator.share) await navigator.share({ title, url })
+      else {
+        await navigator.clipboard.writeText(url)
+        setCopied(true)
+        setTimeout(() => setCopied(false), 1800)
+      }
+    } catch {
+      // The user cancelled the share sheet, or the clipboard is blocked: nothing to do.
+    }
+  }
+  return (
+    <button className="link-btn small share" onClick={share}>
+      {copied ? 'Link copied' : 'Share'}
+    </button>
+  )
+}
+
 /** The reading panel: narrative for the current scene. */
 export function Reader() {
   const content = useStore((s) => s.content)
@@ -47,6 +80,15 @@ export function Reader() {
   const scene = useStore((s) => currentScene(s))
   const sheetDown = useStore((s) => s.sheetDown)
   const { goScene, openChapter, select, setSheetDown } = useStore.getState()
+  const [tipGone, setTipGone] = useState(readTip)
+  const dismissTip = () => {
+    setTipGone(true)
+    try {
+      localStorage.setItem(TIP_KEY, '1')
+    } catch {
+      // Storage blocked (private window): the tip just returns next visit.
+    }
+  }
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -77,8 +119,20 @@ export function Reader() {
         <span className="reader-chapter">
           Chapter {ch.number} · {ch.title}
         </span>
+        <ShareButton chapterNumber={ch.number} chapterIdx={chapterIdx} sceneIdx={sceneIdx} title={`${scene.title} · India Atlas`} />
       </div>
       <div className="reader-body">
+        {!tipGone && (
+          <div className="tip">
+            <span>
+              <span className="term-sample">Dotted words</span> explain themselves. <span className="link-sample">Blue names</span> open a card. Use
+              ← → or the buttons below to move through the story; the map follows.
+            </span>
+            <button onClick={dismissTip} aria-label="Dismiss tip">
+              Got it
+            </button>
+          </div>
+        )}
         <div className="scene-date">{scene.date.label}</div>
         <h2 className="scene-title">{scene.title}</h2>
         {scene.image && <SceneImage image={scene.image} />}
