@@ -6,6 +6,7 @@ import { ChapterBar, ChapterIndex, Reader, StoryClock } from './ui/Story'
 import { Legend, MapToggles } from './ui/Legend'
 import { NowCaption } from './ui/NowCaption'
 import { Toasts } from './ui/Toasts'
+import { Methods } from './ui/Methods'
 import { Search } from './ui/Search'
 import { useStore } from './store'
 import { readUrl, syncUrl } from './lib/url'
@@ -14,6 +15,7 @@ import type { Content } from './types'
 export default function App() {
   const [ready, setReady] = useState(false)
   const [searching, setSearching] = useState(false)
+  const methods = useStore((s) => s.methods)
 
   // ⌘K / Ctrl+K or / opens search.
   useEffect(() => {
@@ -64,6 +66,9 @@ export default function App() {
             <span className="search-btn-label">Search</span>
             <kbd>⌘K</kbd>
           </button>
+          <button className="btn methods-btn" onClick={() => useStore.getState().setMethods(true)}>
+            Sources
+          </button>
           <div className="segmented">
             <button className={story ? 'on' : ''} onClick={() => (story ? openChapter(null) : setMode('story'))}>
               Story
@@ -96,6 +101,7 @@ export default function App() {
         </>
       )}
       {ready && <InfoCard />}
+      {ready && methods && <Methods />}
       {ready && searching && <Search onClose={() => setSearching(false)} />}
       {!ready && <div className="loading">Unrolling the map…</div>}
     </div>

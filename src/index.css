@@ -143,9 +143,6 @@ button:disabled { cursor: default; opacity: 0.45; }
   font: 600 10px var(--sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent);
   display: flex; align-items: center; gap: 8px;
 }
-.draft {
-  color: var(--ink-3); border: 1px dashed var(--ink-3); padding: 0 5px; border-radius: 2px; letter-spacing: 0.1em;
-}
 .card h2 { font: 700 26px/1.1 var(--map-label); overflow-wrap: anywhere; margin: 6px 0 4px; }
 .card-sub { font: italic 500 17px var(--serif); color: var(--ink-2); margin-bottom: 10px; }
 .card-body p { margin: 0 0 10px; }
@@ -530,3 +527,24 @@ button:disabled { cursor: default; opacity: 0.45; }
 .split-tag.tag-then { right: 18px; }
 .split-tag.tag-now { left: 18px; }
 @media (max-width: 760px) { .split-tag { top: 56px; } }
+
+/* Sources & methods */
+.methods { z-index: 120; background: var(--paper); backdrop-filter: none; }
+.methods-inner { max-width: 760px; padding-top: 88px; }
+.methods-inner > .link-btn { margin-bottom: 18px; display: inline-block; }
+.methods-stats { list-style: none; padding: 0; margin: 0 0 26px; display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 13px; color: var(--ink-2); }
+.methods-stats strong { font: 700 20px var(--map-label); color: var(--ink); margin-right: 3px; }
+.methods-section { border-top: 1px solid var(--rule); padding-top: 18px; margin-top: 22px; font-size: 15.5px; line-height: 1.6; }
+.methods-section h2 { font: 700 22px/1.2 var(--map-label); margin: 0 0 10px; }
+.methods-section h3 { font: 600 11px var(--sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin: 18px 0 8px; }
+.methods-section p { margin: 0 0 12px; }
+.methods-section ul { margin: 0; padding-left: 20px; }
+.methods-section li { margin-bottom: 6px; }
+.methods-section a { color: var(--accent-2); }
+.biblio { font-size: 13.5px; line-height: 1.45; padding-left: 22px; }
+.index-methods { display: block; margin-top: 10px; font-size: 13px; }
+.sources .link-btn { margin-top: 6px; }
+@media (max-width: 760px) {
+  .methods-btn { display: none; }
+  .methods-inner { padding-top: 72px; }
+}

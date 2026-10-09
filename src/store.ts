@@ -27,6 +27,8 @@ interface State {
   sheetDown: boolean
   /** Documentary mode: scenes advance by themselves. */
   autoplay: boolean
+  /** The Sources & methods page is open. */
+  methods: boolean
 
   setContent: (c: Content) => void
   setT: (t: number, opts?: { announce?: boolean }) => void
@@ -43,6 +45,7 @@ interface State {
   dismiss: (id: string) => void
   setSheetDown: (d: boolean) => void
   setAutoplay: (a: boolean) => void
+  setMethods: (m: boolean) => void
 }
 
 export const INITIAL_CAMERA: Camera = { center: [80.5, 22.5], zoom: 4.2, pitch: 0, bearing: 0 }
@@ -62,6 +65,7 @@ export const useStore = create<State>((set, get) => ({
   flyTo: null,
   crossed: [],
   sheetDown: false,
+  methods: false,
   autoplay: false,
 
   setContent: (content) => set({ content, t: content.range[0] }),
@@ -111,6 +115,7 @@ export const useStore = create<State>((set, get) => ({
   dismiss: (id) => set((s) => ({ crossed: s.crossed.filter((c) => c.id !== id) })),
   setSheetDown: (sheetDown) => set({ sheetDown }),
   setAutoplay: (autoplay) => set({ autoplay }),
+  setMethods: (methods) => set({ methods }),
 }))
 
 export function currentScene(s: Pick<State, 'content' | 'chapter' | 'scene' | 'mode'>): Scene | null {

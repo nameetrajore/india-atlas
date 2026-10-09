@@ -7,6 +7,7 @@ export function readUrl() {
   const s = useStore.getState()
   if (q.get('detail') === '1') s.setDetail(true)
   if (q.get('today') === '1') s.setToday(true)
+  if (q.get('page') === 'methods') s.setMethods(true)
   if (q.get('mode') === 'explore') {
     s.setMode('explore')
     const t = Number(q.get('t'))
@@ -42,6 +43,7 @@ export function syncUrl() {
       }
       if (s.detail) q.set('detail', '1')
       if (s.today) q.set('today', '1')
+      if (s.methods) q.set('page', 'methods')
       if (s.selection) q.set('sel', `${s.selection.kind}:${s.selection.id}`)
       const qs = q.toString().replace(/%2C/g, ',').replace(/%3A/g, ':')
       history.replaceState(null, '', qs ? `?${qs}` : location.pathname)

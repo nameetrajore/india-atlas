@@ -67,6 +67,9 @@ function Sources({ ids, content }: { ids: string[]; content: Content }) {
           )
         })}
       </ol>
+      <button className="link-btn small" onClick={() => useStore.getState().setMethods(true)}>
+        How this atlas is made and checked →
+      </button>
     </section>
   )
 }
@@ -116,7 +119,7 @@ function Card({ kicker, title, sub, children }: { kicker: ReactNode; title: stri
         ×
       </button>
       <div className="kicker">
-        {kicker} <span className="draft" title="Agent-drafted, awaiting human review (D6)">Draft</span>
+        {kicker}
       </div>
       <h2>{title}</h2>
       {sub && <div className="card-sub">{sub}</div>}

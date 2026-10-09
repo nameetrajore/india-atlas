@@ -1,0 +1,62 @@
+# The Sources & methods page. Text uses the same markup as scenes: **bold**, [label](kind:id).
+sections:
+  - title: Who wrote this
+    text: >-
+      An AI model (Claude, made by Anthropic) wrote the story, the cards and the map data. It worked from the books
+      and articles listed below.
+
+      A second AI pass then checked every date, number, name and quote in the content against those sources and
+      the open web. It made about 75 corrections, for example ages, the days between two events, and quotes
+      that were reworded.
+
+      **A historian has not yet reviewed this atlas.** Use it as a well-sourced introduction, not as a scholarly
+      reference. Each card lists its own sources, so you can check any claim.
+  - title: How the borders are drawn
+    text: >-
+      The map is built from about 600 **units**: the districts and princely states of 1941. For each date, each
+      unit belongs to one power. A border change is a set of units that changes hands. This keeps every
+      border on the map consistent with every other.
+
+      Units cannot split, so a frontier that ran through the middle of a 1941 district moves to the nearest
+      district edge. The further back in time, the less a frontier matches a 1941 district. Each border change
+      is marked **confident** or **approximate**. Most changes before 1850 are approximate.
+
+      Inside present-day India the units come from India State Story (CC0). For present-day Pakistan,
+      Bangladesh and Myanmar the atlas uses modern provinces as stand-ins, from geoBoundaries (CC BY 4.0).
+      The dates of Company conquests come from the table "Making of British Provinces and Districts,
+      1690–1862" (Harvard Dataverse, doi:10.7910/DVN/ZVPZAN, CC0).
+
+      The simple map groups powers into a few colours: British, Indian rulers and other Europeans. Turn on
+      **Provinces & states** to see each power by name.
+  - title: The present-day map
+    text: >-
+      "Then vs now" draws today's states and provinces to the right of the divider. Indian states come from
+      the Local Government Directory, via the india-geodata project. Other countries come from geoBoundaries.
+      Present-day borders are shown as each government draws them. Disputed areas, Kashmir among them, are not
+      marked as disputed.
+  - title: Numbers
+    text: >-
+      Where historians disagree on a number, such as famine deaths or the size of an army, the atlas gives a
+      range with a source for each end. Shares of world economic output come from Angus Maddison's estimates.
+      These are reconstructions, not measurements, and are least certain before 1800.
+  - title: Pictures
+    text: >-
+      All pictures are in the public domain or CC0, and come from Wikimedia Commons. Each caption links to its
+      source page.
+doubts:
+  - Whether Mir Jafar invited the Dutch to Bengal in 1759. The atlas says he was suspected of it.
+  - "The day of the Amboyna executions: 27 February 1623 in the old calendar, 9 March in the new."
+  - When the Great Revolt ended. The atlas says mid-1858, but fighting went on until 1859, and peace was declared on 8 July 1859.
+  - The total killed in the British reprisals of 1857–58. Most historians think it was far more than the rebels killed, but no reliable count exists.
+  - "Amartya Sen's finding that Bengal had about as much food in 1943 as in years without famine. Other historians dispute it."
+  - Whether the date 15 August 1947 was made public on 3 June or 4 June.
+  - "Gandhi's \"post-dated cheque\" line about the Cripps offer. The words \"on a failing bank\" may have been added by journalists."
+  - "Tipu Sultan's date of birth: sources give 20 November 1750 or 1 December 1751."
+  - "Maddison's 1913 share for India: some editions give 7.5%, others 7.6%."
+gaps:
+  - "The Sikh Empire takes all of Punjab in 1799. In fact Multan fell only in 1818, and Dera Ismail Khan and Bannu in the 1830s."
+  - "The Company takes all of the Brahmaputra valley in 1826. In fact Upper Assam stayed a protected Ahom state until 1838."
+  - "Some border changes are not yet on the map: the Cis-Sutlej states (1809), Sambalpur (1849), Tanjore (1855), and the Naga, Lushai and Chittagong hill tracts (1860s–1890s)."
+  - "The Maratha states of Holkar, Scindia and the Bhonsles change little after 1803, and Haidar Ali's Mysore is not drawn before 1799."
+  - "Delhi becomes its own province in April 1912 on the map. In fact that took effect in October 1912."
+  - The map stops at 15 August 1947. It does not yet show the princely states joining India or Pakistan.

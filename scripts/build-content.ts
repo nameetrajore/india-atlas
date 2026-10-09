@@ -189,6 +189,14 @@ const Chapter = z
   })
   .strict()
 
+const Methods = z
+  .object({
+    sections: z.array(z.object({ title: z.string(), text: z.string() }).strict()),
+    doubts: z.array(z.string()),
+    gaps: z.array(z.string()),
+  })
+  .strict()
+
 const errors: string[] = []
 const fail = (where: string, msg: string) => errors.push(`${where}: ${msg}`)
 
@@ -238,6 +246,7 @@ const events = loadDir('events', Event)
 const people = loadDir('people', Person)
 const chapters = loadDir('chapters', Chapter).sort((a, b) => a.number - b.number)
 const eras = loadDir('eras', Era)
+const methods = load('methods.yaml', Methods)[0]
 const glossary = load('glossary.yaml', Term)
 const charts = load('charts.yaml', Chart)
 
@@ -531,6 +540,7 @@ const content: Content = {
   unitNames: Object.fromEntries(units.map((u) => [u.id, u.name])),
   eras: compiledEras,
   charts: compiledCharts,
+  methods,
   glossary: glossary.map((g) => ({ id: g.id, term: g.term, aliases: g.aliases, definition: g.definition })),
 }
 mkdirSync(OUT, { recursive: true })

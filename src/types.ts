@@ -162,6 +162,7 @@ export interface Content {
   eras: Era[]
   glossary: Term[]
   charts: ChartData[]
+  methods: { sections: { title: string; text: string }[]; doubts: string[]; gaps: string[] }
 }
 
 export interface ChartData {

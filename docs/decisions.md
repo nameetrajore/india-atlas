@@ -107,3 +107,8 @@ Supersedes D3's sandbox-first default, and D24's start date. Prompted by user fe
   - Views and layers that have no data are hidden.
 - **Compare with today:** a toggle overlays present-day boundaries (Indian states from the Survey of India-sourced 2024 layer, plus Pakistan, Bangladesh and Burma), and every place card says where it is today.
 - **Territory before 1857:** Company territory year by year comes from the CC0 "Making of British Provinces and Districts 1690–1862" table, which gives the acquisition date and mode for each region. Everything not British is shown as "Indian rulers" unless a scene needs a named power, such as the Mughals or Marathas.
+
+## D26. Then vs now, and Sources & methods (2026-10-09)
+- **Then vs now** replaces the dashed present-day overlay. A second, non-interactive MapLibre map draws today's states, clipped right of a draggable divider and locked to the main camera (including padding, pitch and bearing). Toggle and URL key unchanged (`today=1`).
+- **Fact-check pass.** Six AI agents checked all content against cited sources and the web, about 75 corrections. Open doubts and map gaps are listed in `content/methods.yaml`.
+- **Draft badge removed.** The Sources & methods page (`?page=methods`) states that the content is AI-written and AI-checked, not yet reviewed by a historian, and lists the full bibliography with citation counts. This replaces the per-card badge for D6's disclosure.

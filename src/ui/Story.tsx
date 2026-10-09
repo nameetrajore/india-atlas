@@ -34,6 +34,9 @@ export function ChapterIndex() {
         <button className="link-btn" onClick={() => setMode('explore')}>
           Or explore the map freely →
         </button>
+        <button className="link-btn index-methods" onClick={() => useStore.getState().setMethods(true)}>
+          Sources & methods: who wrote this and how sure it is
+        </button>
       </div>
     </div>
   )
