@@ -81,7 +81,24 @@ export function MapView() {
   useEffect(() => {
     if (!flyTo || !map.current) return
     const c = flyTo.camera
-    map.current.flyTo({ center: c.center, zoom: c.zoom, pitch: c.pitch ?? 0, bearing: c.bearing ?? 0, duration: 2200, essential: true })
+    // Frame the scene in the part of the map the reader can see, not behind the panels.
+    const phone = window.innerWidth <= 760
+    const story = useStore.getState().mode === 'story'
+    const padding = !story
+      ? { top: 0, bottom: 0, left: 0, right: 0 }
+      : phone
+        ? { top: 40, bottom: Math.round(window.innerHeight * 0.42), left: 0, right: 0 }
+        : { top: 40, bottom: 60, left: window.innerWidth <= 1280 ? 380 : 440, right: 0 }
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    map.current.flyTo({
+      center: c.center,
+      zoom: c.zoom - (phone ? 0.6 : 0),
+      pitch: c.pitch ?? 0,
+      bearing: c.bearing ?? 0,
+      padding,
+      duration: reduce ? 0 : 2200,
+      essential: true,
+    })
   }, [flyTo])
 
   useEffect(() => {

@@ -436,3 +436,39 @@ button:disabled { cursor: default; opacity: 0.45; }
 .lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(28, 22, 16, 0.88); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px; cursor: zoom-out; }
 .lightbox img { max-width: 100%; max-height: calc(100% - 60px); box-shadow: 0 10px 40px rgba(0,0,0,.5); }
 .lightbox-cap { color: #f3ead7; font-size: 14px; margin-top: 12px; max-width: 720px; text-align: center; }
+
+/* ===== Phone story layout: map on top, reader as a bottom sheet, cards full-screen ===== */
+.sheet-handle { display: none; }
+@media (max-width: 760px) {
+  .reader {
+    left: 0; right: 0; width: auto; top: auto; bottom: 0; height: 52%; max-height: none;
+    border-radius: 12px 12px 0 0; outline: none; padding-bottom: 54px; transition: height 0.25s ease;
+  }
+  .reader.down { height: 104px; }
+  .reader.down .reader-head, .reader.down .reader-body { display: none; }
+  .sheet-handle {
+    display: flex; flex-direction: column; align-items: center; gap: 4px; width: 100%; padding: 6px 12px 4px;
+    background: none; border: none; border-bottom: 1px solid var(--rule);
+  }
+  .sheet-grip { width: 40px; height: 4px; border-radius: 2px; background: var(--rule); }
+  .sheet-label { font-size: 12px; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+  .reader-head { padding: 8px 16px 6px; }
+  .reader-chapter { font-size: 9.5px; }
+  .reader-body { padding: 10px 16px; }
+  .scene-title { font-size: 22px; }
+  .scene-text p { font-size: 15px; }
+  .scene-image img { max-height: 160px; }
+  .reader-nav { padding: 8px 16px; }
+  .chapter-bar { left: 0; right: 0; bottom: 0; border-radius: 0; height: 50px; z-index: 6; box-shadow: none; }
+  .is-story .card {
+    left: 0; right: 0; top: 48px; bottom: 0; width: auto; max-height: none; z-index: 8;
+    border-radius: 12px 12px 0 0; outline: none; padding: 18px 18px 70px;
+  }
+  .story-clock { left: auto; right: var(--gutter); top: 54px; font-size: 26px; }
+  .topbar { left: 12px; right: 12px; top: 10px; }
+  .brand-name { font-size: 22px; }
+  .segmented button { padding: 5px 10px; font-size: 11px; }
+  .now { bottom: calc(var(--tl-h) + 6px); font-size: 11.5px; padding: 4px 10px; }
+  .now > *:nth-child(n + 3) { display: none; }
+  .term-def { width: min(260px, 70vw); }
+}

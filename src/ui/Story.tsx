@@ -45,7 +45,8 @@ export function Reader() {
   const chapterIdx = useStore((s) => s.chapter)
   const sceneIdx = useStore((s) => s.scene)
   const scene = useStore((s) => currentScene(s))
-  const { goScene, openChapter, select } = useStore.getState()
+  const sheetDown = useStore((s) => s.sheetDown)
+  const { goScene, openChapter, select, setSheetDown } = useStore.getState()
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -64,7 +65,11 @@ export function Reader() {
   const ppl = scene.show.people.map((id) => content.people.find((p) => p.id === id)!).filter(Boolean)
 
   return (
-    <aside className="reader" key={`${chapterIdx}-${sceneIdx}`}>
+    <aside className={`reader${sheetDown ? ' down' : ''}`} key={`${chapterIdx}-${sceneIdx}`}>
+      <button className="sheet-handle" onClick={() => setSheetDown(!sheetDown)} aria-label={sheetDown ? 'Show the story' : 'Show the map'}>
+        <span className="sheet-grip" />
+        <span className="sheet-label">{sheetDown ? `${scene.date.label} · ${scene.title} ▲` : 'Show map ▼'}</span>
+      </button>
       <div className="reader-head">
         <button className="link-btn small" onClick={() => openChapter(null)}>
           ← All chapters

@@ -21,6 +21,8 @@ interface State {
   flyTo: { camera: Camera; nonce: number } | null
   /** Events the playhead just crossed (explore mode): ripple + toast. */
   crossed: { id: string; at: number }[]
+  /** Phone: reader sheet collapsed to show the map. */
+  sheetDown: boolean
 
   setContent: (c: Content) => void
   setT: (t: number, opts?: { announce?: boolean }) => void
@@ -34,6 +36,7 @@ interface State {
   setCamera: (c: Camera) => void
   requestFly: (c: Camera) => void
   dismiss: (id: string) => void
+  setSheetDown: (d: boolean) => void
 }
 
 export const INITIAL_CAMERA: Camera = { center: [80.5, 22.5], zoom: 4.2, pitch: 0, bearing: 0 }
@@ -51,6 +54,7 @@ export const useStore = create<State>((set, get) => ({
   camera: INITIAL_CAMERA,
   flyTo: null,
   crossed: [],
+  sheetDown: false,
 
   setContent: (content) => set({ content, t: content.range[0] }),
   setT: (t, opts) => {
@@ -91,6 +95,7 @@ export const useStore = create<State>((set, get) => ({
   setCamera: (camera) => set({ camera }),
   requestFly: (camera) => set({ flyTo: { camera, nonce: Math.random() } }),
   dismiss: (id) => set((s) => ({ crossed: s.crossed.filter((c) => c.id !== id) })),
+  setSheetDown: (sheetDown) => set({ sheetDown }),
 }))
 
 export function currentScene(s: Pick<State, 'content' | 'chapter' | 'scene' | 'mode'>): Scene | null {
@@ -120,7 +125,9 @@ function enterScene(get: () => State, set: (p: Partial<State>) => void, fromT?: 
   const sc = currentScene(get())
   cancelAnimationFrame(sceneAnim)
   if (!sc) return
-  set({ selection: sc.select ?? null })
+  // On phones a card covers the screen, so scenes don't open one by themselves.
+  const phone = typeof window !== 'undefined' && window.innerWidth <= 760
+  set({ selection: phone ? null : (sc.select ?? null) })
   get().requestFly(sc.camera)
   const playScene = () => sc.playTo && tween(get, sc, sc.date.t, sc.playTo.t, 600, 9000)
   if (fromT !== undefined && sc.date.t > fromT) {
