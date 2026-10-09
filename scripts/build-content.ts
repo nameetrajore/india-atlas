@@ -41,6 +41,9 @@ const Polity = z
 const Era = z
   .object({ id, kind: z.enum(['phase', 'viceroy']), name: z.string(), from: dateStr, to: dateStr, sources: cites })
   .strict()
+const Term = z
+  .object({ id, term: z.string(), aliases: z.array(z.string()).default([]), definition: z.string(), sources: cites })
+  .strict()
 const Meta = z.object({ title: z.string(), subtitle: z.string(), range: z.tuple([z.number(), z.number()]) }).strict()
 const KeyframeRaw = z
   .object({
@@ -212,6 +215,7 @@ const events = loadDir('events', Event)
 const people = loadDir('people', Person)
 const chapters = loadDir('chapters', Chapter).sort((a, b) => a.number - b.number)
 const eras = loadDir('eras', Era)
+const glossary = load('glossary.yaml', Term)
 
 for (const [k, v] of Object.entries({ sources, polities, places, events, people, chapters })) uniqueIds(k, v)
 uniqueIds('scenes', chapters.flatMap((c) => c.scenes))
@@ -414,6 +418,7 @@ const compiledChapters = chapters.map((c) => {
   }
 })
 
+for (const g of glossary) checkCites(`glossary.yaml[${g.id}]`, g.sources)
 const compiledEras = eras.map((e) => {
   checkCites(`eras.yaml[${e.id}]`, e.sources)
   return { id: e.id, kind: e.kind, name: e.name, from: parseDate(e.from), to: parseDate(e.to), sources: e.sources }
@@ -453,6 +458,7 @@ const content: Content = {
   chapters: compiledChapters,
   unitNames: Object.fromEntries(units.map((u) => [u.id, u.name])),
   eras: compiledEras,
+  glossary: glossary.map((g) => ({ id: g.id, term: g.term, aliases: g.aliases, definition: g.definition })),
 }
 mkdirSync(OUT, { recursive: true })
 writeFileSync(join(OUT, 'content.json'), JSON.stringify(content))

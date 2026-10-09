@@ -1,0 +1,35 @@
+# Terms the reader meets in the story. The first use in each scene or card gets a hover definition.
+- { id: diwani, term: diwani, aliases: [diwan], definition: "The right to collect a Mughal province's land revenue and run its civil courts. The Company won it for Bengal, Bihar and Orissa in 1765.", sources: [wp-allahabad] }
+- { id: nizamat, term: nizamat, definition: "A Mughal governor's powers over the army, police and criminal justice. After 1765 the Nawab of Bengal kept these in name while the Company took the revenue.", sources: [marshall-bengal] }
+- { id: nawab, term: nawab, aliases: [nawabs], definition: "A Mughal provincial governor. In the 18th century nawabs became hereditary rulers who were kings in all but name.", sources: [bose-jalal] }
+- { id: farman, term: farman, definition: "An imperial order issued by the Mughal emperor.", sources: [keay-honourable] }
+- { id: dastak, term: dastak, aliases: [dastaks], definition: "A pass exempting goods from internal customs duties. Company servants abused the Company's dastaks to trade privately tax-free.", sources: [marshall-bengal] }
+- { id: factory, term: factory, aliases: [factories], definition: "A trading post: a warehouse and office for a company's agents (factors). Nothing was manufactured there.", sources: [keay-honourable] }
+- { id: sepoy, term: sepoy, aliases: [sepoys], definition: "An Indian soldier trained and armed in the European style (from Persian sipahi, soldier). Sepoys made up most of the Company's armies.", sources: [bose-jalal] }
+- { id: zamindar, term: zamindar, aliases: [zamindars, zamindari], definition: "A landholder with the hereditary right to collect revenue from cultivators, paying a fixed share to the state.", sources: [bose-jalal] }
+- { id: ryot, term: ryot, aliases: [ryots], definition: "A cultivator or peasant.", sources: [bose-jalal] }
+- { id: ryotwari, term: ryotwari, definition: "A revenue system in which the state assessed and taxed each cultivator directly, used in most of Madras and Bombay.", sources: [bose-jalal] }
+- { id: permanent-settlement, term: Permanent Settlement, definition: "Cornwallis's 1793 settlement fixing Bengal's land revenue for ever with the zamindars, who became landowners.", sources: [bose-jalal] }
+- { id: jagir, term: jagir, definition: "A grant of the revenue of a piece of land, usually in return for service.", sources: [bose-jalal] }
+- { id: chauth, term: chauth, definition: "A Maratha levy of a quarter of a region's revenue, demanded in return for not raiding it.", sources: [wp-maratha] }
+- { id: peshwa, term: Peshwa, definition: "Chief minister of the Maratha kingdom. From the 1710s the Peshwas at Pune were its real rulers.", sources: [wp-maratha] }
+- { id: subsidiary-alliance, term: subsidiary alliance, aliases: [subsidiary alliances], definition: "A treaty under which an Indian ruler paid for British troops stationed in his state and handed over his foreign policy. Wellesley used it to turn rivals into dependants.", sources: [bose-jalal] }
+- { id: doctrine-of-lapse, term: doctrine of lapse, definition: "Dalhousie's policy of annexing a dependent state when its ruler died without a natural heir, refusing to recognise adopted sons.", sources: [isd-provinces] }
+- { id: paramountcy, term: paramountcy, definition: "British supremacy over the princely states, which kept their own rulers but not their independence.", sources: [wp-princely-states] }
+- { id: princely-state, term: princely state, aliases: [princely states], definition: "A state ruled by an Indian prince under British paramountcy. In 1947 there were more than 560 of them, covering about two-fifths of the subcontinent.", sources: [wp-princely-states] }
+- { id: presidency, term: presidency, aliases: [presidencies], definition: "One of the Company's three original administrations, Bengal, Madras and Bombay, each under a president, later a governor.", sources: [wp-presidencies] }
+- { id: raj, term: Raj, definition: "Rule. 'The British Raj' usually means direct rule by the British Crown, 1858–1947.", sources: [metcalf-concise] }
+- { id: viceroy, term: Viceroy, definition: "The Crown's representative in India after 1858. He was also the Governor-General, the head of the government.", sources: [wp-viceroys] }
+- { id: drain, term: drain of wealth, aliases: [drain], definition: "Dadabhai Naoroji's argument that British rule transferred India's wealth to Britain through salaries, pensions, 'home charges' and trade, with no return.", sources: [bose-jalal] }
+- { id: swadeshi, term: Swadeshi, aliases: [swadeshi], definition: "Of one's own country: buying Indian-made goods and boycotting British ones, as a political weapon.", sources: [sarkar-modern] }
+- { id: swaraj, term: swaraj, aliases: [Swaraj], definition: "Self-rule. Its meaning ranged from self-government within the Empire to complete independence (purna swaraj).", sources: [chandra-struggle] }
+- { id: satyagraha, term: satyagraha, aliases: [Satyagraha], definition: "Gandhi's term for non-violent resistance, literally 'holding to truth': openly breaking unjust laws and accepting the punishment.", sources: [wp-gandhi] }
+- { id: hartal, term: hartal, definition: "A general strike or shutdown: shops, offices and markets close in protest.", sources: [chandra-struggle] }
+- { id: khilafat, term: Khilafat, definition: "A movement of Indian Muslims (1919–24) to defend the Ottoman sultan as caliph after the First World War.", sources: [chandra-struggle] }
+- { id: dyarchy, term: dyarchy, definition: "The 1919 system that split provincial government between British officials (police, revenue) and elected Indian ministers (education, health).", sources: [chandra-struggle] }
+- { id: separate-electorates, term: separate electorates, definition: "Seats where only voters of one community elect candidates of that community. Introduced for Muslims in 1909 and long debated.", sources: [sarkar-modern] }
+- { id: dominion, term: dominion, aliases: [dominions], definition: "A self-governing country within the British Commonwealth, with the British monarch as head of state. India and Pakistan began as dominions in 1947.", sources: [wp-indian-independence-act] }
+- { id: calico, term: calico, aliases: [calicoes, chintz], definition: "Indian cotton cloth. Calico was plain cloth, named after Calicut; chintz was painted or printed.", sources: [roy-eic] }
+- { id: martial-races, term: martial races, definition: "A British theory after 1857 that some communities (Sikhs, Gurkhas, Pathans, Punjabi Muslims) made better soldiers. It shaped army recruitment.", sources: [metcalf-concise] }
+- { id: joint-stock, term: joint-stock company, definition: "A company owned by many investors who share profits and risk in proportion to their shares.", sources: [wp-eic] }
+- { id: lakh, term: lakh, aliases: [lakhs, crore, crores], definition: "Indian numbering: a lakh is 100,000 and a crore is 10 million.", sources: [bose-jalal] }

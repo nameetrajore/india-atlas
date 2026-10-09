@@ -158,6 +158,14 @@ export interface Content {
   /** Display names of base units, by id. */
   unitNames: Record<string, string>
   eras: Era[]
+  glossary: Term[]
+}
+
+export interface Term {
+  id: string
+  term: string
+  aliases: string[]
+  definition: string
 }
 
 export interface Era {
