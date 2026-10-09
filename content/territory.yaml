@@ -3,7 +3,399 @@
 # division name are written as "_".
 # Units outside present-day India are present-day district proxies (geoboundaries), so borders there
 # are approximate.
-- date: "1857"
+# ---- Before the Crown: Company expansion, 1600–1857 (D25). Company gains follow the CC0 table
+# isd-provinces (acquisition date and mode per region). Land not assigned is "Indian rulers" on the simple map.
+- date: "1600"
+  certainty: approximate
+  note: >-
+    The year the East India Company is chartered in London. Akbar's Mughal Empire rules the north from
+    Kabul to Bengal. The Deccan sultanates and southern kingdoms lie beyond it. There is no English
+    presence in India yet; the Portuguese hold Goa.
+  sources: [schwartzberg, wp-mughal]
+  assign:
+    mughal:
+      - division:United_Province division:Bihar division:Bengal orissa--balasore orissa--cuttack orissa--puri
+      - division:BGD:Barisal division:BGD:Dhaka division:BGD:Khulna division:BGD:Mymensingh division:BGD:Noakhali division:BGD:Rajshani division:BGD:Rangpur division:BGD:Sylhet
+      - division:Punjab himachal--shimla delhi--delhi division:PAK:Punjab division:PAK:Sindh division:PAK:Islamabad_Capital_Territory
+      - pak--peshawar pak--kohat pak--mardan pak--charsadda pak--nowshera pak--swabi pak--abbottabad pak--haripur
+      - division:Rajputana_Agency division:Gwalior division:Central_India_Agency almer-marwara--ajmer-merwara
+      - division:Western_India_State_Agency division:Rann_of_Kutch division:Baroda
+      - bombay--ahmedabad bombay--kaira bombay--broach-and-panch-mahals bombay--surat
+      - division:Jammu_and_kashmir bombay--east-khandesh bombay--west-khandesh
+      - central-province-and-berar--akola central-province-and-berar--amraoti central-province-and-berar--buldana central-province-and-berar--yeotmal
+    portuguese: [goa--goa, daman--daman, daman--daman-2]
+- date: "1639"
+  certainty: confident
+  note: The Company gets land at Madras from a local Nayaka ruler and builds Fort St George.
+  sources: [wp-fort-st-george, isd-provinces]
+  changes:
+    eic: [madras--madras]
+- date: "1668"
+  certainty: approximate
+  note: >-
+    Charles II receives Bombay as part of Catherine of Braganza's dowry (1661) and rents it to the
+    Company for £10 a year.
+  sources: [wp-bombay-presidency, isd-provinces]
+  changes:
+    eic: [bombay--bombay-suburban]
+- date: "1690"
+  certainty: confident
+  note: Job Charnock settles at Sutanuti on the Hooghly, the start of Calcutta.
+  sources: [wp-fort-william, isd-provinces]
+  changes:
+    eic: [bengal--calcutta]
+- date: "1707-03"
+  certainty: approximate
+  note: >-
+    Aurangzeb dies. The empire is at its greatest extent after the conquest of Bijapur and Golconda, but
+    it is exhausted by 25 years of war against the Marathas.
+  sources: [schwartzberg, wp-mughal]
+  changes:
+    mughal:
+      - division:Hyderabad bombay--bijapur bombay--belgaum bombay--dharwar bombay--sholapur bombay--ahmednagar bombay--nasik
+      - madras--north-arcot madras--south-arcot madras--nellore madras--cuddapah madras--kurnool madras--anantapur madras--bellary madras--chittoor
+      - division:Central_Province_and_Berar|british -central-province-and-berar--akola -central-province-and-berar--amraoti -central-province-and-berar--buldana -central-province-and-berar--yeotmal
+    maratha-peshwa: [bombay--poona, bombay--satara, bombay--ratnagiri, bombay--kolaba, bombay--thana]
+- date: "1740"
+  certainty: approximate
+  note: >-
+    Starting state. Alivardi Khan takes Bengal after Giria. The Bhonsles of Nagpur hold Nagpur and are
+    advancing into Chhattisgarh.
+  sources: [schwartzberg, marshall-bengal, isd-1941]
+  assign:
+    bengal-nawabs:
+      - bengal--24-parganas
+      - bengal--bankura
+      - bengal--birbhum
+      - bengal--burdwan
+      - bengal--dinajpur
+      - bengal--hooghly
+      - bengal--howrah
+      - bengal--jalpaiguri
+      - bengal--malda
+      - bengal--midnapore
+      - bengal--murshidabad
+      - bengal--nadia
+      - division:Bihar
+      - division:BGD:Barisal division:BGD:Dhaka division:BGD:Khulna division:BGD:Mymensingh division:BGD:Noakhali division:BGD:Rajshani division:BGD:Rangpur division:BGD:Sylhet division:BGD:Chittagong
+      - orissa--balasore
+      - orissa--cuttack
+      - orissa--puri
+    eic: [bengal--calcutta, madras--madras, bombay--bombay-suburban]
+    kingdom-of-burma: [division:MMR:Rakhine, division:MMR:Tanitharyi, division:MMR:Bago, division:MMR:Yangon, division:MMR:Ayeyarwady, division:MMR:Mon, division:MMR:Kayin, division:MMR:Mandalay, division:MMR:Saigang, division:MMR:Magway, division:MMR:Chin, division:MMR:Kachin, division:MMR:Kayah]
+    shan-states: [division:MMR:Shan]
+    awadh:
+      - united-province--lucknow
+      - united-province--unao
+      - united-province--rae-bareli
+      - united-province--sitapur
+      - united-province--hardoi
+      - united-province--kheri
+      - united-province--fyzabad
+      - united-province--gonda
+      - united-province--bahraich
+      - united-province--sultanpur
+      - united-province--partabgarh
+      - united-province--bara-banki
+      - united-province--allahabad
+      - united-province--fatehpur
+      - united-province--jaunpur
+      - united-province--benares
+      - united-province--ghazipur
+      - united-province--ballia
+      - united-province--mirzapur
+      - united-province--gorakhpur
+      - united-province--basti
+      - united-province--azamgarh
+      - united-province--cawnpore
+    rohillas:
+      - united-province--bareilly
+      - united-province--moradabad
+      - united-province--budaun
+      - united-province--shahjahanpur
+      - united-province--pilibhit
+      - united-province--bijnor
+    mughal: [delhi--delhi, united-province--meerut, united-province--bulandshahr]
+    marathas-nagpur:
+      - central-province-and-berar--nagpur
+      - central-province-and-berar--wardha
+      - central-province-and-berar--bhandara
+      - central-province-and-berar--chanda
+      - central-province-and-berar--raipur
+      - central-province-and-berar--bilaspur
+      - central-province-and-berar--drug
+    maratha-peshwa:
+      - bombay--poona
+      - bombay--satara
+      - bombay--ahmednagar
+      - bombay--nasik
+      - bombay--sholapur
+      - bombay--east-khandesh
+      - bombay--west-khandesh
+      - bombay--thana
+      - bombay--ratnagiri
+    hyderabad: [division:Hyderabad]
+    mysore: [division:Mysore]
+    carnatic:
+      - madras--north-arcot
+      - madras--south-arcot
+      - madras--chingleput
+      - madras--chittoor
+      - madras--nellore
+      - madras--trichinopoly
+    travancore: [madras--travancore]
+    portuguese: [goa--goa, daman--daman, daman--daman-2]
+    french: [pondicherry--pondicherry, karikal--karikal, mahe--mahe]
+- date: "1751"
+  certainty: approximate
+  note: >-
+    After ten years of Maratha raids, Alivardi Khan cedes Orissa to the Bhonsles and agrees to pay
+    chauth (a tribute) for Bengal. Midnapore stays with Bengal.
+  sources: [wp-maratha-bengal, marshall-bengal]
+  changes:
+    marathas-nagpur: [orissa--balasore, orissa--cuttack, orissa--puri]
+- date: "1757-12"
+  certainty: approximate
+  note: >-
+    After Plassey, Mir Jafar grants the Company the zamindari (the right to hold land and collect its
+    revenue) of the 24 Parganas, south of Calcutta.
+  sources: [wp-24-parganas, wp-plassey]
+  changes:
+    eic: [bengal--24-parganas]
+- date: "1760-10"
+  certainty: approximate
+  note: >-
+    Mir Qasim takes the throne and pays the Company with Burdwan, Midnapore and Chittagong. Chittagong
+    is in present-day Bangladesh, and it is not yet in the base map.
+  sources: [wp-mir-qasim, marshall-bengal]
+  changes:
+    eic: [bengal--burdwan, bengal--midnapore, division:BGD:Chittagong]
+- date: "1765-08"
+  certainty: approximate
+  note: >-
+    Treaty of Allahabad. Shah Alam II grants the Company the diwani of Bengal, Bihar and Orissa. Awadh
+    gives Allahabad and Kora to the emperor. The Chingleput jagir is also shown, granted to the Company
+    by the Nawab of Arcot in 1763.
+  sources: [wp-allahabad, marshall-bengal]
+  changes:
+    eic-diwani:
+      - bengal--bankura
+      - bengal--birbhum
+      - bengal--murshidabad
+      - bengal--hooghly
+      - bengal--howrah
+      - bengal--nadia
+      - bengal--dinajpur
+      - bengal--malda
+      - bengal--jalpaiguri
+      - division:Bihar
+      - division:BGD:Barisal division:BGD:Dhaka division:BGD:Khulna division:BGD:Mymensingh division:BGD:Noakhali division:BGD:Rajshani division:BGD:Rangpur division:BGD:Sylhet
+    mughal: [united-province--allahabad, united-province--fatehpur]
+    eic: [madras--chingleput]
+- date: "1766"
+  certainty: approximate
+  note: The Northern Circars on the Coromandel coast are granted by the emperor (1765) and confirmed by the Nizam (1768).
+  sources: [isd-provinces]
+  changes:
+    eic: [madras--vizagapatam, madras--godavari-east, madras--godavari-west, madras--kistna, orissa--ganjam]
+- date: "1772"
+  certainty: approximate
+  note: >-
+    Warren Hastings ends "dual government": the Company "stands forth as Diwan" and runs Bengal's
+    revenue directly. The Nawab's government becomes a shell.
+  sources: [marshall-bengal, isd-provinces]
+  changes:
+    eic:
+      - bengal--bankura bengal--birbhum bengal--murshidabad bengal--hooghly bengal--howrah bengal--nadia
+      - bengal--dinajpur bengal--malda bengal--jalpaiguri division:Bihar assam--goalpara
+      - division:BGD:Barisal division:BGD:Dhaka division:BGD:Khulna division:BGD:Mymensingh division:BGD:Noakhali division:BGD:Rajshani division:BGD:Rangpur division:BGD:Sylhet
+- date: "1774"
+  certainty: approximate
+  note: In the Rohilla War, Company troops help the Nawab of Awadh conquer Rohilkhand.
+  sources: [wp-rohilkhand]
+  changes:
+    awadh: [united-province--bareilly, united-province--moradabad, united-province--budaun, united-province--shahjahanpur, united-province--pilibhit, united-province--bijnor]
+- date: "1775"
+  certainty: confident
+  note: Awadh cedes Benares and its districts to the Company.
+  sources: [isd-provinces]
+  changes:
+    eic: [united-province--benares, united-province--mirzapur, united-province--jaunpur, united-province--ghazipur, united-province--ballia]
+- date: "1788"
+  certainty: approximate
+  note: Guntur, the last of the Northern Circars, is handed over by the Nizam.
+  sources: [isd-provinces]
+  changes:
+    eic: [madras--guntur]
+- date: "1792-03"
+  certainty: confident
+  note: Treaty of Seringapatam. Tipu Sultan loses half his kingdom, including Malabar and Salem, after the Third Anglo-Mysore War.
+  sources: [isd-provinces]
+  changes:
+    eic: [madras--salem, madras--malabar]
+- date: "1799-05"
+  certainty: confident
+  note: >-
+    Tipu is killed at Seringapatam. Kanara, Coimbatore and Tanjore pass to the Company, and a Wodeyar
+    boy is installed in a reduced Mysore under British protection.
+  sources: [isd-provinces]
+  changes:
+    eic: [madras--south-kanara, bombay--kanara, madras--coimbatore, madras--nilgiris, madras--tanjore]
+    sikh-empire: [division:PAK:Punjab, punjab--amritsar, punjab--gurdaspur]
+- date: "1800"
+  certainty: confident
+  note: The Nizam cedes the "Ceded Districts" to pay for British troops, and Surat is taken over.
+  sources: [isd-provinces]
+  changes:
+    eic: [madras--anantapur, madras--bellary, madras--cuddapah, bombay--surat]
+- date: "1801"
+  certainty: confident
+  note: >-
+    The Carnatic is annexed from its Nawab. Awadh is forced to cede half its territory, including Rohilkhand,
+    Allahabad and the lower Doab, under its subsidiary treaty.
+  sources: [isd-provinces]
+  changes:
+    eic:
+      - madras--nellore madras--north-arcot madras--south-arcot madras--chittoor madras--madura madras--trichinopoly madras--tinnevelly madras--ramnad
+      - united-province--azamgarh united-province--gorakhpur united-province--basti united-province--allahabad united-province--fatehpur
+      - united-province--cawnpore united-province--farrukhabad united-province--etawah united-province--mainpuri united-province--etah
+      - united-province--shahjahanpur united-province--budaun united-province--bareilly united-province--pilibhit united-province--moradabad
+      - united-province--bijnor united-province--nainital
+- date: "1803"
+  certainty: approximate
+  note: >-
+    In the Second Anglo-Maratha War, Wellesley's armies take Orissa, Delhi, Agra and the upper Doab. The
+    Mughal emperor becomes a British pensioner in the Red Fort.
+  sources: [isd-provinces]
+  changes:
+    eic:
+      - orissa--balasore orissa--cuttack orissa--puri
+      - united-province--agra united-province--muttra united-province--aligarh united-province--bulandshahr
+      - united-province--meerut united-province--muzaffarnagar united-province--saharanpur
+      - delhi--delhi punjab--gurgaon punjab--hissar punjab--karnal punjab--rohtak
+      - bombay--broach-and-panch-mahals bombay--kaira
+- date: "1805"
+  certainty: approximate
+  note: Bundelkhand districts are taken in stages (1803–17).
+  sources: [isd-provinces]
+  changes:
+    eic: [united-province--banda, united-province--hamirpur]
+- date: "1816-03"
+  certainty: confident
+  note: Treaty of Sugauli after the Anglo-Nepalese War. Kumaon, Garhwal, Dehra Dun and the Simla hills are ceded.
+  sources: [isd-provinces]
+  changes:
+    eic: [united-province--almora, united-province--garhwal, united-province--dehra-dun, himachal--shimla]
+- date: "1818-06"
+  certainty: confident
+  note: >-
+    The Third Anglo-Maratha War ends the Peshwa's rule. His lands become the core of the Bombay
+    Presidency, the Saugor and Nerbudda territories are taken, and the Rajput and central Indian states
+    accept British paramountcy.
+  sources: [isd-provinces, bose-jalal]
+  changes:
+    eic:
+      - bombay--thana bombay--east-khandesh bombay--west-khandesh bombay--nasik bombay--ahmednagar bombay--poona
+      - bombay--sholapur bombay--kolaba bombay--ratnagiri bombay--belgaum bombay--bijapur bombay--dharwar bombay--ahmedabad
+      - central-province-and-berar--saugor central-province-and-berar--jubbulpore central-province-and-berar--hoshangabad
+      - central-province-and-berar--mandla central-province-and-berar--betul almer-marwara--ajmer-merwara
+    deccan-states: [bombay--satara]
+- date: "1819"
+  certainty: approximate
+  note: Ranjit Singh takes Kashmir from the Afghans.
+  sources: [bose-jalal]
+  changes:
+    sikh-empire: [division:Jammu_and_kashmir]
+- date: "1826-02"
+  certainty: confident
+  note: Treaty of Yandabo after the First Anglo-Burmese War. Assam, Arakan and Tenasserim are ceded.
+  sources: [isd-provinces]
+  changes:
+    eic: [assam--darrang, assam--kamrup, assam--lakhimpur, assam--nowgong, assam--sibsagar, mmr--rakhine, mmr--tanitharyi]
+- date: "1831"
+  certainty: confident
+  note: The Company takes over the administration of Mysore, citing misrule.
+  sources: [isd-provinces, wp-mysore-rendition]
+  changes:
+    mysore-commission: [division:Mysore]
+- date: "1834"
+  certainty: approximate
+  note: Coorg is annexed and Peshawar falls to the Sikhs. Cachar and the Khasi-Jaintia hills follow in 1832–35.
+  sources: [isd-provinces]
+  changes:
+    eic: [coorg--coorg, assam--cachar, assam--khasi-and-jaintia-hills, bengal--darjeeling]
+    sikh-empire: [pak--peshawar, pak--kohat, pak--mardan, pak--charsadda, pak--nowshera, pak--swabi, pak--abbottabad, pak--haripur, pak--mansehra, pak--bannu, pak--dera-ismail-khan, pak--tank, pak--lakki-marwat, pak--karak, pak--hangu]
+- date: "1839"
+  certainty: confident
+  note: Kurnool is annexed.
+  sources: [isd-provinces]
+  changes:
+    eic: [madras--kurnool]
+- date: "1843-03"
+  certainty: confident
+  note: >-
+    Charles Napier conquers Sind without authorisation. The Company keeps it anyway, and it is attached
+    to Bombay.
+  sources: [isd-provinces]
+  changes:
+    eic: [division:PAK:Sindh -pak--khairpur]
+- date: "1846-03"
+  certainty: confident
+  note: >-
+    After the First Anglo-Sikh War the Jullundur Doab is taken. Kashmir is sold to Gulab Singh of Jammu
+    for 7.5 million rupees (Treaty of Amritsar).
+  sources: [isd-provinces]
+  changes:
+    eic: [punjab--jullundur, punjab--hoshiarpur, punjab--kangra, punjab--ambala, punjab--ferozepur, punjab--ludhiana]
+    jammu-kashmir: [division:Jammu_and_kashmir]
+- date: "1848"
+  certainty: confident
+  note: Dalhousie applies the "doctrine of lapse" for the first time, annexing Satara when its ruler dies without a natural heir.
+  sources: [isd-provinces]
+  changes:
+    eic: [bombay--satara]
+- date: "1849-03"
+  certainty: confident
+  note: After the Second Anglo-Sikh War, Punjab is annexed. The Koh-i-Noor is taken.
+  sources: [isd-provinces, wp-punjab-province]
+  changes:
+    eic:
+      - division:PAK:Punjab -pak--bahawalpur -pak--bahawalnagar -pak--rahim-yar-khan
+      - punjab--amritsar punjab--gurdaspur division:PAK:Islamabad_Capital_Territory
+      - pak--peshawar pak--kohat pak--mardan pak--charsadda pak--nowshera pak--swabi pak--abbottabad pak--haripur
+      - pak--mansehra pak--bannu pak--dera-ismail-khan pak--tank pak--lakki-marwat pak--karak pak--hangu
+    bahawalpur: [pak--bahawalpur, pak--bahawalnagar, pak--rahim-yar-khan]
+- date: "1852-12"
+  certainty: confident
+  note: Pegu (Lower Burma) is annexed after the Second Anglo-Burmese War.
+  sources: [isd-provinces, wp-british-burma]
+  changes:
+    eic: [mmr--bago, mmr--yangon, mmr--ayeyarwady, mmr--mon, mmr--kayin]
+- date: "1853"
+  certainty: confident
+  note: >-
+    Nagpur and Jhansi are annexed by lapse (1853–54), and Berar is "assigned" by the Nizam to pay for
+    troops.
+  sources: [isd-provinces, wp-lakshmibai]
+  changes:
+    eic:
+      - central-province-and-berar--nagpur central-province-and-berar--wardha central-province-and-berar--bhandara
+      - central-province-and-berar--chanda central-province-and-berar--balaghat central-province-and-berar--raipur
+      - central-province-and-berar--bilaspur central-province-and-berar--drug central-province-and-berar--chhindwara
+      - central-province-and-berar--akola central-province-and-berar--amraoti central-province-and-berar--buldana central-province-and-berar--yeotmal
+      - united-province--jhansi united-province--jalaun
+- date: "1856-02"
+  certainty: confident
+  note: >-
+    Awadh is annexed for "misgovernment". The Nawab, Wajid Ali Shah, is exiled to Calcutta. Many of the
+    Bengal Army's sepoys come from Awadh.
+  sources: [isd-provinces, wp-oudh-province]
+  changes:
+    eic:
+      - united-province--lucknow united-province--unao united-province--rae-bareli united-province--sitapur
+      - united-province--hardoi united-province--kheri united-province--fyzabad united-province--gonda
+      - united-province--bahraich united-province--sultanpur united-province--partabgarh united-province--bara-banki
+- date: "1857-05"
   certainty: approximate
   note: >-
     On the eve of the revolt. Company territory has reached its greatest extent: Dalhousie has annexed

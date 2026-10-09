@@ -3,6 +3,7 @@
   name: English East India Company
   alt_names: [The Company, John Company, EIC]
   kind: power
+  bloc: british
   color: "#b5452f"
   summary: >-
     A London joint-stock company chartered in 1600 to trade in Asia. By 1765 it collected the land revenue
@@ -12,6 +13,7 @@
   name: Bengal under Company diwani
   alt_names: [Dual government]
   kind: polity
+  bloc: british
   color: "#d98a6c"
   summary: >-
     After 1765 the Company held the diwani (the right to collect revenue) for Bengal, Bihar and Orissa.
@@ -301,6 +303,7 @@
 - id: mysore-commission
   name: Mysore (British commission)
   kind: province
+  bloc: british
   color: "#e9bf9a"
   summary: >-
     The British took over Mysore's administration in 1831 and returned it to the Wodeyar dynasty in
@@ -492,6 +495,7 @@
 - id: dominion-india
   name: Dominion of India
   kind: dominion
+  bloc: india
   color: "#e3a35f"
   summary: >-
     Independent from 15 August 1947 under the Indian Independence Act. Most princely states acceded to
@@ -500,8 +504,19 @@
 - id: dominion-pakistan
   name: Dominion of Pakistan
   kind: dominion
+  bloc: pakistan
   color: "#7fa57a"
   summary: >-
     Created on 14–15 August 1947 in two wings, West and East (East Bengal), separated by about 1,600 km
     of India.
   sources: [wp-indian-independence-act, wp-partition-1947]
+- id: sikh-empire
+  name: Sikh Empire
+  alt_names: [Khalsa Raj, Kingdom of Lahore]
+  kind: polity
+  color: "#d9a441"
+  summary: >-
+    Ranjit Singh's kingdom, ruled from Lahore from 1799. It grew to include Multan, Kashmir and Peshawar,
+    and was the last major Indian power the Company fought. It was annexed after two Anglo-Sikh wars
+    (1845–46 and 1848–49).
+  sources: [isd-provinces, bose-jalal]

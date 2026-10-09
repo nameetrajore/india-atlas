@@ -31,6 +31,8 @@ const Polity = z
     /** Official names over time; `name` is the fallback. */
     names: z.array(z.object({ from: dateStr, name: z.string() }).strict()).default([]),
     kind: z.enum(['polity', 'power', 'province', 'state', 'tribal', 'foreign', 'dominion']),
+    /** Simple-map grouping (D25); defaults from kind. */
+    bloc: z.enum(['british', 'indian', 'european', 'india', 'pakistan', 'other']).optional(),
     color: hex,
     summary: z.string(),
     sources: cites,
@@ -81,9 +83,18 @@ const Event = z
     kind: z.enum(['battle', 'treaty', 'political', 'campaign', 'atrocity', 'movement', 'famine', 'founding', 'revolt', 'law']),
     significance: z.number().int().min(1).max(5),
     participants: z.array(id).default([]),
+    /** What happened. */
     summary: z.string(),
+    /** Why it happened: the background a reader needs (D25). */
+    context: z.string().optional(),
+    /** What it changed. */
+    consequences: z.string().optional(),
+    /** Why it matters, in one line. */
     why: z.string().optional(),
+    /** Events that led to this one; the reverse links ("led to") are derived. */
+    causes: z.array(id).default([]),
     figures: z.array(Figure).default([]),
+    perspectives: z.array(z.object({ view: z.string(), text: z.string() }).strict()).default([]),
     sources: cites,
   })
   .strict()
@@ -115,23 +126,39 @@ const Person = z
 const Camera = z
   .object({ center: lngLat, zoom: z.number(), pitch: z.number().optional(), bearing: z.number().optional() })
   .strict()
-const Story = z
+const Show = z
+  .object({
+    events: z.array(id).default([]),
+    people: z.array(id).default([]),
+    places: z.array(id).default([]),
+    polities: z.array(id).default([]),
+  })
+  .strict()
+const Scene = z
   .object({
     id,
+    t: dateStr,
+    camera: Camera,
     title: z.string(),
-    subtitle: z.string(),
-    view: z.enum(['geopolitics', 'trade', 'freedom', 'economy', 'society']),
-    steps: z.array(
-      z
-        .object({
-          t: dateStr,
-          camera: Camera,
-          select: z.object({ kind: z.enum(['event', 'place', 'person', 'polity', 'unit']), id }).optional(),
-          title: z.string(),
-          text: z.string(),
-        })
-        .strict(),
-    ),
+    /** Narrative, paragraphs separated by blank lines. Explains why, not just what. */
+    text: z.string(),
+    /** What the map shows in this scene; everything else is hidden (D25). */
+    show: Show.default({}),
+    /** Highlighted polities keep their own colour; the rest of the map shows blocs. */
+    select: z.object({ kind: z.enum(['event', 'place', 'person', 'polity', 'unit']), id }).optional(),
+    /** Play time forward to this date while the scene is open (e.g. a march). */
+    play_to: dateStr.optional(),
+  })
+  .strict()
+const Chapter = z
+  .object({
+    id,
+    number: z.number().int(),
+    title: z.string(),
+    period: z.string(),
+    /** Why this chapter matters to the whole story. */
+    summary: z.string(),
+    scenes: z.array(Scene).min(1),
   })
   .strict()
 
@@ -162,6 +189,16 @@ function uniqueIds(kind: string, items: { id: string }[]) {
   }
 }
 
+const BLOC_BY_KIND: Record<string, 'british' | 'indian' | 'european' | 'other'> = {
+  province: 'british',
+  state: 'indian',
+  polity: 'indian',
+  power: 'european',
+  tribal: 'other',
+  foreign: 'other',
+  dominion: 'other',
+}
+const defaultBloc = (k: string) => BLOC_BY_KIND[k]
 const hexToRgb = (h: string): [number, number, number] => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16)) as never
 
 // ---- load
@@ -170,12 +207,13 @@ const sources = load('sources.yaml', Source)
 const polities = load('polities.yaml', Polity)
 const keyframesRaw = load('territory.yaml', KeyframeRaw)
 const places = load('places.yaml', Place)
-const events = load('events.yaml', Event)
+const events = loadDir('events', Event)
 const people = loadDir('people', Person)
-const stories = loadDir('stories', Story)
+const chapters = loadDir('chapters', Chapter).sort((a, b) => a.number - b.number)
 const eras = load('eras.yaml', Era)
 
-for (const [k, v] of Object.entries({ sources, polities, places, events, people, stories })) uniqueIds(k, v)
+for (const [k, v] of Object.entries({ sources, polities, places, events, people, chapters })) uniqueIds(k, v)
+uniqueIds('scenes', chapters.flatMap((c) => c.scenes))
 
 const sourceIds = new Set(sources.map((s) => s.id))
 const polityIds = new Set(polities.map((p) => p.id))
@@ -235,12 +273,13 @@ let lastT = -Infinity
 keyframesRaw.forEach((k, i) => {
   const where = `territory.yaml[${k.date}]`
   checkCites(where, k.sources)
-  if (i === 0 ? !k.assign || k.changes : !k.changes || k.assign)
-    fail(where, i === 0 ? 'first keyframe must use assign' : 'later keyframes must use changes')
+  // assign = full reset of the map; changes = incremental. The first keyframe must assign.
+  if (!!k.assign === !!k.changes) fail(where, 'use exactly one of assign or changes')
+  if (i === 0 && !k.assign) fail(where, 'first keyframe must use assign')
   const date = parseDate(k.date)
   if (date.t <= lastT) fail(where, 'keyframes must be in chronological order')
   lastT = date.t
-  const next: Record<string, string> = i === 0 ? {} : { ...state }
+  const next: Record<string, string> = k.assign ? {} : { ...state }
   const touched = new Set<string>()
   for (const [polity, sels] of Object.entries(k.assign ?? k.changes ?? {})) {
     if (!polityIds.has(polity)) fail(where, `unknown polity "${polity}"`)
@@ -284,6 +323,7 @@ const compiledEvents = events
     const place = placeById.get(e.place)
     if (!place) fail(where, `unknown place "${e.place}"`)
     for (const p of e.participants) if (!personIds.has(p)) fail(where, `unknown participant "${p}"`)
+    for (const c of e.causes) if (!eventIds.has(c)) fail(where, `unknown cause "${c}"`)
     return {
       id: e.id,
       name: e.name,
@@ -296,8 +336,13 @@ const compiledEvents = events
       significance: e.significance,
       participants: e.participants,
       summary: e.summary,
+      context: e.context,
+      consequences: e.consequences,
       why: e.why,
+      causes: e.causes,
+      ledTo: events.filter((x) => x.causes.includes(e.id)).map((x) => x.id),
       figures: e.figures,
+      perspectives: e.perspectives,
       sources: e.sources,
     }
   })
@@ -338,17 +383,35 @@ const selectable: Record<string, Set<string>> = {
   polity: polityIds,
   unit: unitIds,
 }
-const compiledStories = stories.map((s) => ({
-  id: s.id,
-  title: s.title,
-  subtitle: s.subtitle,
-  view: s.view,
-  steps: s.steps.map((st, i) => {
-    if (st.select && !selectable[st.select.kind].has(st.select.id))
-      fail(`stories[${s.id}].steps[${i}]`, `unknown ${st.select.kind} "${st.select.id}"`)
-    return { date: parseDate(st.t), camera: st.camera as never, select: st.select, title: st.title, text: st.text }
-  }),
-}))
+const compiledChapters = chapters.map((c) => {
+  let prev = -Infinity
+  return {
+    id: c.id,
+    number: c.number,
+    title: c.title,
+    period: c.period,
+    summary: c.summary,
+    scenes: c.scenes.map((sc) => {
+      const where = `chapters[${c.id}].${sc.id}`
+      if (sc.select && !selectable[sc.select.kind].has(sc.select.id)) fail(where, `unknown ${sc.select.kind} "${sc.select.id}"`)
+      for (const [kind, ids] of [['event', sc.show.events], ['person', sc.show.people], ['place', sc.show.places], ['polity', sc.show.polities]] as const)
+        for (const x of ids) if (!selectable[kind].has(x)) fail(where, `unknown ${kind} "${x}"`)
+      const date = parseDate(sc.t)
+      if (date.t < prev) fail(where, 'scenes must be in chronological order')
+      prev = date.t
+      return {
+        id: sc.id,
+        date,
+        camera: sc.camera as never,
+        title: sc.title,
+        text: sc.text,
+        show: sc.show,
+        select: sc.select,
+        playTo: sc.play_to ? parseDate(sc.play_to) : undefined,
+      }
+    }),
+  }
+})
 
 const compiledEras = eras.map((e) => {
   checkCites(`eras.yaml[${e.id}]`, e.sources)
@@ -375,6 +438,7 @@ const content: Content = {
         altNames: p.alt_names,
         names: p.names.map((n) => ({ date: parseDate(n.from), name: n.name })),
         kind: p.kind,
+        bloc: p.bloc ?? defaultBloc(p.kind),
         color: hexToRgb(p.color),
         summary: p.summary,
         sources: p.sources,
@@ -385,7 +449,7 @@ const content: Content = {
   places: compiledPlaces,
   events: compiledEvents,
   people: compiledPeople,
-  stories: compiledStories,
+  chapters: compiledChapters,
   unitNames: Object.fromEntries(units.map((u) => [u.id, u.name])),
   eras: compiledEras,
 }
@@ -393,5 +457,5 @@ mkdirSync(OUT, { recursive: true })
 writeFileSync(join(OUT, 'content.json'), JSON.stringify(content))
 console.log(
   `content.json: ${polities.length} polities, ${keyframes.length} keyframes, ${places.length} places, ` +
-    `${events.length} events, ${people.length} people, ${stories.length} stories`,
+    `${events.length} events, ${people.length} people, ${chapters.length} chapters (${chapters.reduce((n, c) => n + c.scenes.length, 0)} scenes)`,
 )

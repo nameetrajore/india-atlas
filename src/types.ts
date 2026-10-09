@@ -24,10 +24,13 @@ export interface Polity {
   /** Official names over time, oldest first. */
   names: { date: CDate; name: string }[]
   kind: 'polity' | 'power' | 'province' | 'state' | 'tribal' | 'foreign' | 'dominion'
+  bloc: Bloc
   color: [number, number, number]
   summary: string
   sources: string[]
 }
+
+export type Bloc = 'british' | 'indian' | 'european' | 'india' | 'pakistan' | 'other'
 
 export interface Keyframe {
   date: CDate
@@ -76,8 +79,13 @@ export interface HistEvent {
   significance: number
   participants: string[]
   summary: string
+  context?: string
+  consequences?: string
   why?: string
+  causes: string[]
+  ledTo: string[]
   figures: Figure[]
+  perspectives: Perspective[]
   sources: string[]
 }
 
@@ -114,20 +122,24 @@ export interface Camera {
   bearing?: number
 }
 
-export interface StoryStep {
+export interface Scene {
+  id: string
   date: CDate
   camera: Camera
-  select?: Selection
   title: string
   text: string
+  show: { events: string[]; people: string[]; places: string[]; polities: string[] }
+  select?: Selection
+  playTo?: CDate
 }
 
-export interface Story {
+export interface Chapter {
   id: string
+  number: number
   title: string
-  subtitle: string
-  view: ViewId
-  steps: StoryStep[]
+  period: string
+  summary: string
+  scenes: Scene[]
 }
 
 export interface Content {
@@ -142,7 +154,7 @@ export interface Content {
   places: Place[]
   events: HistEvent[]
   people: Person[]
-  stories: Story[]
+  chapters: Chapter[]
   /** Display names of base units, by id. */
   unitNames: Record<string, string>
   eras: Era[]

@@ -55,6 +55,9 @@ def write(name, features):
 
 # Present-day units that sit inside the 1941 Jammu & Kashmir polygon are dropped, not proxied.
 PROXY_SKIP_ADM1 = {"Gilgit-Baltistan", "Azad Kashmir"}
+# Spelling fixes for source names.
+NAME_FIX = {"Tamil nadu": "Tamil Nadu", "Rajshani": "Rajshahi", "Saigang": "Sagaing", "Tanitharyi": "Tanintharyi",
+            "Dadra,Nagar Haveli,Daman & Diu": "Dadra & Nagar Haveli and Daman & Diu"}
 PROXIES = [("PAK", "PAK-ADM2", "PAK-ADM1"), ("BGD", "BGD-ADM2", "BGD-ADM1"), ("MMR", "MMR-ADM1", None)]
 
 
@@ -133,6 +136,7 @@ def today():
         g = make_valid(wkb.loads(r["geometry"]))
         india.append(g)
         name = (r.get("Remarks") or r["STNAME"].title()).strip()
+        name = NAME_FIX.get(name, name)
         feats.append({"type": "Feature", "properties": {"name": name, "country": "India"},
                       "geometry": rounded(g.simplify(0.01, preserve_topology=True))})
     covered = unary_union(india).buffer(0.002)
@@ -144,7 +148,7 @@ def today():
             g = make_valid(shape(f["geometry"])).difference(covered)
             if g.is_empty or g.area < 0.01:
                 continue
-            feats.append({"type": "Feature", "properties": {"name": name, "country": country},
+            feats.append({"type": "Feature", "properties": {"name": NAME_FIX.get(name, name), "country": country},
                           "geometry": rounded(g.simplify(0.01, preserve_topology=True))})
     write("today.geojson", feats)
 
