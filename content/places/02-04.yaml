@@ -1,0 +1,75 @@
+# Places introduced in chapters 2–4 (1707–1818).
+- id: trichinopoly
+  name: Trichinopoly
+  modern: Tiruchirappalli
+  coords: [78.6869, 10.8050]
+  tags: [fort, city]
+  why: >-
+    The rock fortress where the British-backed claimant Muhammad Ali held out in 1751–52. Clive's raid on
+    Arcot was meant to relieve the pressure on it.
+  sources: [wp-carnatic-wars]
+- id: monghyr
+  name: Monghyr
+  modern: Munger
+  coords: [86.4734, 25.3748]
+  tags: [capital, fort]
+  why: Mir Qasim moved his capital here, away from the Company at Calcutta, and built a modern army.
+  sources: [wp-mir-qasim]
+- id: seringapatam
+  name: Seringapatam
+  modern: Srirangapatna
+  coords: [76.6842, 12.4216]
+  tags: [capital, fort]
+  why: >-
+    Tipu Sultan's island capital in the Kaveri. It was besieged in 1792 and stormed in 1799, when Tipu
+    died at the breach.
+  sources: [wp-seringapatam-1799]
+- id: pollilur
+  name: Pollilur
+  modern: Pullalur
+  coords: [79.6400, 12.9500]
+  approx: true
+  tags: [battle]
+  why: Where Haidar Ali and Tipu destroyed a British column in 1780, one of the Company's worst defeats in India.
+  sources: [wp-pollilur]
+- id: benares
+  name: Benares
+  modern: Varanasi
+  coords: [83.0100, 25.3176]
+  tags: [city]
+  why: >-
+    Holy city of the Ganges, ceded to the Company in 1775. Hastings' harsh demands on its Raja,
+    Chait Singh, became a charge at his impeachment.
+  sources: [wp-hastings-impeachment]
+- id: bassein
+  name: Bassein
+  modern: Vasai
+  coords: [72.8397, 19.3467]
+  tags: [port, fort]
+  why: Where the fugitive Peshwa signed away his independence to the British in 1802.
+  sources: [wp-bassein]
+- id: assaye
+  name: Assaye
+  modern: Assaye
+  coords: [75.8900, 20.2500]
+  approx: true
+  tags: [battle]
+  why: Arthur Wellesley, later Duke of Wellington, beat the Scindia's army here in 1803. He called it his hardest victory.
+  sources: [wp-assaye]
+- id: vellore
+  name: Vellore
+  modern: Vellore
+  coords: [79.1325, 12.9165]
+  tags: [fort]
+  why: The 1806 sepoy mutiny here, over new dress rules, foreshadowed 1857.
+  sources: [wp-vellore-mutiny]
+- id: koregaon
+  name: Koregaon
+  modern: Bhima Koregaon
+  coords: [74.0600, 18.6460]
+  approx: true
+  tags: [battle]
+  why: >-
+    A small Company force, mostly Mahar soldiers, held off the Peshwa's army here on 1 January 1818. The
+    battle is commemorated today as a symbol of Dalit resistance to caste oppression.
+  sources: [wp-koregaon]

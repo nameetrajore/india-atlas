@@ -1,219 +1,414 @@
-# Events: The Mughal collapse and the Company at war. Each event explains why (context), what (summary) and what changed (consequences).
+# Events: The empire breaks (1707–1757). Each explains why (context), what (summary), and what changed (consequences).
+- id: farrukhsiyar-farman
+  name: Farrukhsiyar's farman
+  date: "1717"
+  place: delhi
+  kind: law
+  significance: 3
+  participants: [farrukhsiyar]
+  causes: [calcutta-founded]
+  summary: >-
+    Emperor Farrukhsiyar grants the Company the right to trade in Bengal free of customs duties for a
+    flat payment of 3,000 rupees a year. Company passes, called dastaks, exempt its goods.
+  context: >-
+    A Company embassy had spent two years at Delhi. The emperor was weak and dependent on his nobles,
+    and a Company surgeon reportedly helped treat him. The order cost him little; it cost the Bengal
+    governors their customs revenue.
+  consequences: >-
+    Company servants soon used dastaks for their own private trade too, and sold them to Indian
+    merchants. The Nawabs of Bengal saw this as tax evasion. The quarrel over dastaks lasted 50 years
+    and led to two wars.
+  why: A trade privilege granted by a weak emperor became a long-running cause of war in Bengal.
+  sources: [wp-farrukhsiyar, marshall-bengal, keay-honourable]
+- id: awadh-autonomous
+  name: Saadat Khan governs Awadh
+  date: "1722"
+  place: faizabad
+  kind: political
+  significance: 2
+  causes: [aurangzeb-dies]
+  summary: >-
+    A Persian noble, Saadat Khan, is appointed Mughal governor of Awadh. He makes the post hereditary.
+    His successors rule as nawabs in all but name.
+  context: >-
+    After 1707 emperors came and went quickly (seven in twelve years). Governors who could collect
+    revenue and pay soldiers stopped sending money to Delhi, but kept Mughal titles for legitimacy.
+  consequences: >-
+    Awadh became a rich, stable successor state in the Ganges plain. That made it a prize, and later
+    a buffer, for the Company.
+  sources: [wp-saadat-khan, alam-crisis]
+- id: hyderabad-independent
+  name: The Nizam makes the Deccan his own
+  date: "1724-10"
+  place: hyderabad
+  kind: battle
+  significance: 3
+  participants: [asaf-jah]
+  causes: [aurangzeb-dies]
+  summary: >-
+    Nizam-ul-Mulk (Asaf Jah) defeats the governor sent by Delhi to replace him, at Shakar Kheda, and
+    rules the Deccan himself. He never formally breaks with the emperor.
+  context: >-
+    Bengal (under Murshid Quli Khan), Awadh and the Deccan were all following the same path. Powerful
+    governors kept the Mughal name but ran their own states. Historians call them "successor states".
+  consequences: >-
+    By the 1740s the Mughal Empire was a patchwork of autonomous provinces. Each had its own court,
+    army and rivals, and each could be dealt with, or played off, one at a time.
+  why: The empire did not fall so much as come apart from the inside, province by province.
+  sources: [wp-asaf-jah, bayly-indian-society]
+- id: marathas-north
+  name: The Marathas reach Delhi
+  date: "1737-03"
+  place: delhi
+  kind: campaign
+  significance: 3
+  participants: [baji-rao-i]
+  causes: [aurangzeb-dies]
+  summary: >-
+    Peshwa Baji Rao I's cavalry, having taken Malwa and Gujarat, raid the outskirts of Delhi and then
+    withdraw.
+  context: >-
+    After Aurangzeb's death the Marathas expanded fast under the Peshwas of Pune. They collected chauth
+    (a quarter of revenue) from lands they did not directly rule.
+  consequences: >-
+    The Marathas became the largest power in India. Their raids and tribute demands, as far as Bengal,
+    showed how little the emperor could protect his provinces.
+  sources: [wp-baji-rao-i, gordon-marathas]
+- id: nadir-shah-sack
+  name: Nadir Shah sacks Delhi
+  date: "1739-03-22"
+  place: delhi
+  kind: atrocity
+  significance: 4
+  participants: [nadir-shah]
+  causes: [marathas-north]
+  summary: >-
+    The Persian ruler Nadir Shah routs the Mughal army at Karnal, enters Delhi, and after a riot orders
+    a massacre. He leaves with the Peacock Throne, the Koh-i-Noor and the treasury.
+  context: >-
+    Nadir Shah had seized power in Persia and taken Kandahar. Mughal Delhi, rich and badly defended,
+    lay open behind the passes.
+  consequences: >-
+    The treasury was gone, and with it the means to pay armies. After 1739 no one feared the emperor.
+    Every governor, and every European company on the coast, now acted for itself.
+  why: After 1739 the emperor in Delhi was a symbol, not a power.
+  figures:
+    - label: Killed in Delhi
+      min: 20000
+      max: 30000
+      note: Contemporary and later estimates vary.
+      sources: [wp-nadir-shah-india]
+  sources: [wp-nadir-shah-india, dalrymple-anarchy]
 - id: giria
   name: Battle of Giria
-  date: 1740-04
+  date: "1740-04"
   place: giria
   kind: battle
   significance: 3
-  participants:
-    - alivardi-khan
-  summary: Alivardi Khan, deputy governor of Bihar, kills Nawab Sarfaraz Khan and takes the throne of Bengal.
-  why: It starts the reign that Siraj-ud-Daulah would inherit. It is also a usurpation, so the Mughal emperor's
-    approval was something bought rather than something that mattered.
-  sources:
-    - wp-giria
-    - wp-alivardi
+  participants: [alivardi-khan]
+  causes: [nadir-shah-sack]
+  summary: >-
+    Alivardi Khan, deputy governor of Bihar, kills Nawab Sarfaraz Khan in battle and takes Bengal. The
+    emperor's approval is bought afterwards.
+  context: >-
+    In Bengal, as everywhere after 1739, power went to whoever could take it. The great banking house
+    of the Jagat Seths backed Alivardi.
+  consequences: >-
+    Alivardi gave Bengal 16 years of firm rule, but he spent most of them fighting Maratha raiders.
+    His grandson Siraj-ud-Daulah inherited a rich province with an anxious court.
+  why: Bengal's nawabs owed their throne to the sword and the bankers, not to Delhi.
+  sources: [wp-giria, wp-alivardi]
 - id: maratha-raids
   name: Maratha raids on Bengal
-  alt_names:
-    - Bargi raids
+  alt_names: [Bargi raids]
   date: "1741"
   end: "1751"
   place: murshidabad
   kind: campaign
   significance: 3
-  summary: Bhonsle cavalry, known as bargis, raid western Bengal again and again for a decade. Bengali poetry
-    remembers widespread killing, plunder and refugees fleeing east across the Bhagirathi.
-  why: The raids weakened Bengal's countryside and finances. They also pushed merchants and weavers to move
-    under the protection of Company-held Calcutta.
-  sources:
-    - wp-maratha-bengal
-    - marshall-bengal
+  causes: [marathas-north]
+  summary: >-
+    Cavalry of the Bhonsles of Nagpur, called bargis, raid western Bengal year after year. Bengali
+    poetry remembers villages burned and refugees fleeing east of the Bhagirathi.
+  context: >-
+    The Marathas claimed chauth from Bengal. Alivardi refused to pay, and the Bhonsles sent raiders to
+    collect it by force.
+  consequences: >-
+    The countryside and the Nawab's finances suffered. Merchants and weavers moved under the walls of
+    Company Calcutta for safety, and the Company dug a defensive "Maratha Ditch". Calcutta grew richer
+    as Bengal grew poorer.
+  sources: [wp-maratha-bengal, marshall-bengal]
 - id: orissa-ceded
   name: Orissa ceded to the Marathas
   date: "1751"
   place: murshidabad
   kind: treaty
   significance: 2
-  participants:
-    - alivardi-khan
-  summary: Alivardi Khan buys peace by ceding Orissa and promising annual chauth (a tribute) for Bengal.
-  sources:
-    - wp-maratha-bengal
+  participants: [alivardi-khan]
+  causes: [maratha-raids]
+  summary: Alivardi Khan buys peace by ceding Orissa and promising annual chauth for Bengal.
+  context: Ten years of raids had exhausted Bengal.
+  consequences: The raids stopped, but Bengal's south-west frontier now ran against Maratha territory.
+  sources: [wp-maratha-bengal]
+- id: madras-falls-1746
+  name: The French take Madras
+  date: "1746-09"
+  place: madras
+  kind: battle
+  significance: 3
+  causes: [madras-founded]
+  summary: >-
+    When Britain and France go to war in Europe, a French fleet under La Bourdonnais captures Madras.
+    It is handed back in 1749 under the peace treaty.
+  context: >-
+    The French East India Company, based at Pondicherry, was the Company's main European rival.
+    European wars now came to India's coasts.
+  consequences: >-
+    It began the Carnatic Wars, a 20-year Anglo-French struggle in south India. It also showed Indian
+    rulers that the companies could fight.
+  sources: [wp-carnatic-wars, wp-french-india]
+- id: adyar
+  name: Battle of Adyar
+  date: "1746-11"
+  place: madras
+  kind: battle
+  significance: 4
+  causes: [madras-falls-1746]
+  summary: >-
+    The Nawab of the Carnatic sends a large army to recover Madras from the French. A few hundred
+    French troops and drilled sepoys rout it at the Adyar river.
+  context: >-
+    Indian armies of the time relied on cavalry and large, loosely organised forces. European infantry
+    fought in tight ranks, firing volleys on command, with mobile artillery.
+  consequences: >-
+    It was a revelation. A small, disciplined, regularly paid force could beat an Indian army many
+    times its size. Both companies began recruiting Indian soldiers, sepoys, and training them in the
+    European way.
+  why: This small battle explains why the Company could later win where it lost in 1690.
+  sources: [wp-adyar, bayly-indian-society]
+- id: second-carnatic-war
+  name: Second Carnatic War
+  date: "1749"
+  end: "1754"
+  place: arcot
+  kind: campaign
+  significance: 3
+  participants: [dupleix, clive]
+  causes: [adyar]
+  summary: >-
+    The French and British each back a rival claimant to the thrones of the Carnatic and Hyderabad: the
+    French back Chanda Sahib, the British Muhammad Ali. The companies' sepoy armies do most of the fighting.
+  context: >-
+    Dupleix, the French governor, saw that a company could make money by lending its army to an Indian
+    prince in return for land revenue and influence. A friendly nawab would pay the costs.
+  consequences: >-
+    The model of sepoy armies plus a puppet ruler worked. The British copied it, beat the French with
+    it, and later used it in Bengal.
+  sources: [wp-carnatic-wars, wp-dupleix]
 - id: siege-arcot
   name: Siege of Arcot
-  date: 1751-09
-  end: 1751-11
+  date: "1751-09"
+  end: "1751-11"
   place: arcot
   kind: battle
   significance: 3
-  participants:
-    - clive
-  summary: Clive takes Arcot with a small force and holds it through a 50-day siege. The aim was to draw
-    pressure away from the British-backed claimant, Muhammad Ali, at Trichinopoly.
-  why: The siege made Clive famous and showed that small, well-drilled forces could decide Indian wars.
-  sources:
-    - wp-arcot
-    - wp-clive
+  participants: [clive]
+  causes: [second-carnatic-war]
+  summary: >-
+    Robert Clive, a 26-year-old former clerk, seizes Arcot with about 500 men and holds it through a
+    50-day siege.
+  context: >-
+    The British candidate, Muhammad Ali, was trapped at Trichinopoly. Taking his rival's capital was
+    meant to draw the besiegers away.
+  consequences: >-
+    It worked, and Clive became famous. The French cause in the Carnatic began to fail, and Dupleix
+    was recalled in 1754.
+  why: The siege made Clive, and it showed what bold use of a small force could do.
+  sources: [wp-arcot, wp-clive]
+- id: dupleix-recalled
+  name: Dupleix recalled
+  date: "1754-08"
+  place: pondicherry
+  kind: political
+  significance: 2
+  participants: [dupleix]
+  causes: [siege-arcot]
+  summary: >-
+    The French company, alarmed at the cost of war, recalls Dupleix and makes peace. Muhammad Ali
+    becomes Nawab of the Carnatic as a British client.
+  context: Shareholders in Paris wanted profits, not wars. The British company's directors felt the same, but their men in India often did not wait for orders.
+  consequences: The British held the stronger hand in the south, and their client Nawab ran up huge debts to Company servants.
+  sources: [wp-dupleix, wp-carnatic]
 - id: siraj-accession
   name: Siraj-ud-Daulah becomes Nawab
-  date: 1756-04
+  date: "1756-04"
   place: murshidabad
   kind: political
   significance: 3
-  participants:
-    - siraj-ud-daulah
-    - alivardi-khan
-  summary: Alivardi Khan dies, and his grandson Siraj-ud-Daulah, about 23 years old, succeeds him.
-  sources:
-    - wp-siraj
-    - wp-alivardi
+  participants: [siraj-ud-daulah, alivardi-khan]
+  causes: [giria]
+  summary: Alivardi Khan dies, and his grandson Siraj-ud-Daulah, about 23 years old, becomes Nawab of Bengal.
+  context: >-
+    Siraj had rivals in his own family and enemies at court, including the general Mir Jafar and the
+    Jagat Seth bankers, who disliked his temper and his favourites.
+  consequences: He moved quickly to assert his authority, and the Company was his first target.
+  sources: [wp-siraj, wp-alivardi]
 - id: kasimbazar-seized
   name: Kasimbazar factory seized
-  date: 1756-06
+  date: "1756-06"
   place: kasimbazar
   kind: political
   significance: 2
-  participants:
-    - siraj-ud-daulah
-  summary: Angry that the Company was fortifying Calcutta without permission and sheltering his enemies,
-    Siraj-ud-Daulah seizes the English factory at Kasimbazar.
-  sources:
-    - wp-siraj
-    - marshall-bengal
+  participants: [siraj-ud-daulah]
+  causes: [siraj-accession, farrukhsiyar-farman]
+  summary: Siraj-ud-Daulah seizes the English factory at Kasimbazar, next to his capital.
+  context: >-
+    He had three grievances. The Company was fortifying Calcutta, fearing a new war with France,
+    without his permission. It was sheltering a fugitive he wanted. And its servants were abusing their
+    dastaks.
+  consequences: The Company refused his terms, and he marched on Calcutta.
+  sources: [wp-siraj, marshall-bengal]
 - id: fall-of-calcutta
   name: Fall of Calcutta
-  alt_names:
-    - Siege of Calcutta
-  date: 1756-06-20
+  alt_names: [Siege of Calcutta]
+  date: "1756-06-20"
   place: calcutta
   kind: battle
   significance: 4
-  participants:
-    - siraj-ud-daulah
-  summary: The Nawab's army takes Fort William. The governor and most of the Council escape downriver to Fulta.
-    The city is renamed Alinagar.
-  sources:
-    - wp-siege-calcutta
+  participants: [siraj-ud-daulah]
+  causes: [kasimbazar-seized]
+  summary: >-
+    The Nawab's army takes Fort William after a few days. The governor and most of the Council flee
+    downriver to Fulta. The city is renamed Alinagar.
+  context: The fort was weak and badly commanded. The Nawab's force was many times larger.
+  consequences: >-
+    News reached Madras in August. The Company there decided to send its army, under Clive, to retake
+    Calcutta and to "revenge" it.
+  sources: [wp-siege-calcutta]
 - id: black-hole
   name: Black Hole of Calcutta
-  date: 1756-06-20
+  date: "1756-06-20"
   place: calcutta
   kind: atrocity
   significance: 3
-  summary: British prisoners are held overnight in the fort's small lock-up, and many die. The main account is
-    by survivor J. Z. Holwell.
-  why: The numbers are disputed. Holwell's figures were later used as justification for empire, and modern
-    historians treat them with caution.
+  causes: [fall-of-calcutta]
+  summary: >-
+    British prisoners are locked overnight in the fort's small punishment cell, and many die in the
+    heat. The main account is by survivor J. Z. Holwell.
+  context: The Nawab probably did not order the deaths. The cell was used by the British themselves as a lock-up.
+  consequences: >-
+    In Britain, Holwell's story became a founding myth of empire, used for 150 years to cast Indian
+    rule as cruel and British conquest as justified.
+  why: The numbers are disputed, and the story mattered more than the facts.
   figures:
     - label: Prisoners confined
       min: 64
       max: 146
       note: Holwell gave 146. Later research estimates about 64.
-      sources:
-        - wp-black-hole
+      sources: [wp-black-hole]
     - label: Deaths
       min: 43
       max: 123
       note: Holwell gave 123. Later research estimates about 43.
-      sources:
-        - wp-black-hole
-  sources:
-    - wp-black-hole
+      sources: [wp-black-hole]
+  sources: [wp-black-hole]
 - id: manihari
   name: Battle of Manihari
-  date: 1756-10
+  date: "1756-10"
   place: manihari
   kind: battle
   significance: 2
-  participants:
-    - siraj-ud-daulah
-  summary: Siraj-ud-Daulah defeats and kills his cousin and rival Shaukat Jang of Purnea.
-  sources:
-    - wp-siraj
+  participants: [siraj-ud-daulah]
+  causes: [siraj-accession]
+  summary: Siraj-ud-Daulah defeats and kills his cousin and rival, Shaukat Jang of Purnea.
+  context: Rival princes were common after a succession, and Shaukat Jang had courtiers' backing.
+  consequences: Siraj was secure on his throne for now, but the courtiers who had backed his rival remained.
+  sources: [wp-siraj]
 - id: calcutta-retaken
   name: Calcutta retaken
-  date: 1757-01-02
+  date: "1757-01-02"
   place: calcutta
   kind: battle
   significance: 3
-  participants:
-    - clive
+  participants: [clive]
+  causes: [fall-of-calcutta]
   summary: A relief force from Madras under Clive and Admiral Watson retakes Fort William with little resistance.
-  sources:
-    - wp-clive
-    - wp-battle-calcutta
+  context: The Madras army was the most experienced European-style force in India after the Carnatic Wars.
+  consequences: Clive went on the offensive, first against the Nawab's army near Calcutta, then against the French.
+  sources: [wp-clive, wp-battle-calcutta]
 - id: alinagar
   name: Treaty of Alinagar
-  date: 1757-02-09
+  date: "1757-02-09"
   place: calcutta
   kind: treaty
   significance: 2
-  participants:
-    - clive
-    - siraj-ud-daulah
-  summary: After an indecisive clash at Calcutta, the Nawab restores the Company's privileges and allows it to
-    fortify Calcutta.
-  sources:
-    - wp-alinagar
-    - wp-battle-calcutta
+  participants: [clive, siraj-ud-daulah]
+  causes: [calcutta-retaken]
+  summary: After an indecisive clash outside Calcutta, the Nawab restores the Company's privileges and lets it fortify Calcutta.
+  context: Siraj was worried about an Afghan invasion from the north-west and wanted peace in the south.
+  consequences: The peace did not last. Neither side trusted the other, and Clive was already in contact with the Nawab's enemies.
+  sources: [wp-alinagar, wp-battle-calcutta]
 - id: chandernagore-captured
   name: Capture of Chandernagore
-  date: 1757-03-23
+  date: "1757-03-23"
   place: chandernagore
   kind: battle
   significance: 3
-  participants:
-    - clive
-  summary: With the Seven Years' War under way in Europe, the British attack and capture the French settlement
-    upriver.
-  why: It removed the Nawab's only possible European ally in Bengal.
-  sources:
-    - wp-chandannagar
+  participants: [clive]
+  causes: [alinagar]
+  summary: With the Seven Years' War under way in Europe, Clive and Watson attack and take the French settlement upriver.
+  context: The French were the Nawab's only possible European ally. Siraj had forbidden the attack, but he did not act on it.
+  consequences: Siraj was isolated. The plot to replace him could now go ahead.
+  sources: [wp-chandannagar]
 - id: plassey
   name: Battle of Plassey
-  alt_names:
-    - Battle of Palashi
-  date: 1757-06-23
+  alt_names: [Battle of Palashi]
+  date: "1757-06-23"
   place: plassey
   kind: battle
   significance: 5
-  participants:
-    - clive
-    - siraj-ud-daulah
-    - mir-jafar
-  summary: About 3,000 Company troops face the Nawab's army of about 50,000. Before the battle, Clive had agreed
-    with the Nawab's commander Mir Jafar and the Jagat Seth bankers that Mir Jafar would replace
-    Siraj-ud-Daulah. Mir Jafar's large division stays out of the fight. A rainstorm soaks the Nawab's
-    gunpowder, and the Nawab's army breaks.
-  why: Plassey was a battle decided by bribery and a coup. It made the Company the power behind the throne of
-    the richest province in India.
+  participants: [clive, siraj-ud-daulah, mir-jafar]
+  causes: [chandernagore-captured, kasimbazar-seized]
+  summary: >-
+    About 3,000 Company troops face the Nawab's army of about 50,000 in a mango grove on the
+    Bhagirathi. Mir Jafar's large division stands aside. A rainstorm soaks the Nawab's powder, a
+    loyal general is killed, and the army breaks. Siraj flees.
+  context: >-
+    The battle had been settled in advance. Clive had made a secret deal with Mir Jafar, the
+    Nawab's commander, and with the Jagat Seth bankers, who wanted a ruler better for business. Mir
+    Jafar would become Nawab and pay the Company handsomely.
+  consequences: >-
+    Mir Jafar became Nawab with the Company behind him. Bengal's treasury was emptied to pay the
+    Company and its officers, and from now on the Company decided who ruled Bengal.
+  why: Plassey was won by a coup, not by force of arms, and it made the Company the power behind the throne of India's richest province.
   figures:
     - label: Company force
       min: 2800
       max: 3100
       note: About a third European, two-thirds Indian sepoys
-      sources:
-        - wp-plassey
+      sources: [wp-plassey]
     - label: Nawab's force
       min: 35000
       max: 62000
-      note: Estimates vary widely, and a large part never engaged
-      sources:
-        - wp-plassey
-  sources:
-    - wp-plassey
-    - dalrymple-anarchy
+      note: Estimates vary widely, and much of it never engaged
+      sources: [wp-plassey]
+  perspectives:
+    - view: Imperial history
+      text: Clive's great victory, the foundation of British India.
+    - view: Bengali and nationalist memory
+      text: A betrayal. "Mir Jafar" became a byword for traitor.
+  sources: [wp-plassey, dalrymple-anarchy, marshall-bengal]
 - id: mir-jafar-installed
   name: Mir Jafar made Nawab
-  date: 1757-06-29
+  date: "1757-06-29"
   place: murshidabad
   kind: political
   significance: 3
-  participants:
-    - mir-jafar
-    - clive
-  summary: Clive installs Mir Jafar at Murshidabad. Mir Jafar pays the Company and its officers vast sums, which
-    empties the treasury.
-  sources:
-    - wp-mir-jafar
+  participants: [mir-jafar, clive]
+  causes: [plassey]
+  summary: Clive leads Mir Jafar to the throne at Murshidabad.
+  context: Mir Jafar had promised the Company, and Clive personally, enormous sums for their support.
+  consequences: >-
+    The payments emptied the treasury. Mir Jafar needed Company troops to stay in power and could not
+    pay for them, a trap that would close on him within three years.
+  sources: [wp-mir-jafar, dalrymple-anarchy]

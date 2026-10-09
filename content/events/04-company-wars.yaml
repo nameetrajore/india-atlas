@@ -1,0 +1,298 @@
+# Events: The Company's wars (1772–1818). Each explains why (context), what (summary), and what changed (consequences).
+- id: haidar-takes-power
+  name: Haidar Ali takes power in Mysore
+  date: "1761"
+  place: seringapatam
+  kind: political
+  significance: 3
+  participants: [haidar-ali]
+  causes: [panipat]
+  summary: >-
+    Haidar Ali, a cavalry commander, sidelines the Wodeyar king and becomes the real ruler of Mysore.
+  context: >-
+    Mysore was threatened by the Marathas and the Nizam. Haidar had learned European methods from the
+    French in the Carnatic Wars and built an army of drilled infantry and artillery.
+  consequences: >-
+    Mysore became a centralised military state and the Company's most dangerous rival in the south for
+    40 years.
+  sources: [wp-haidar-ali, wp-anglo-mysore]
+- id: first-mysore-war
+  name: First Anglo-Mysore War
+  date: "1767"
+  end: "1769-04"
+  place: madras
+  kind: campaign
+  significance: 3
+  participants: [haidar-ali]
+  causes: [haidar-takes-power]
+  summary: >-
+    The Company and the Nizam attack Mysore. Haidar outmanoeuvres them, and in 1769 his cavalry
+    appear outside Madras. He dictates a peace of mutual defence.
+  context: The Company in Madras feared Mysore's growing power on the borders of its client, the Nawab of the Carnatic.
+  consequences: >-
+    The war showed that an Indian state with a modern army could beat the Company. It cost the Company
+    dearly at the moment its Bengal revenue was failing.
+  sources: [wp-anglo-mysore, wp-haidar-ali]
+- id: regulating-act
+  name: Regulating Act and the Company bailout
+  date: "1773-06"
+  kind: law
+  significance: 4
+  participants: [warren-hastings]
+  causes: [bengal-famine-1770, first-mysore-war]
+  summary: >-
+    Near bankruptcy, the Company asks the British government for a loan. Parliament grants it, but
+    passes the Regulating Act. Warren Hastings becomes the first Governor-General, with a council, and
+    a Supreme Court is set up in Calcutta.
+  context: >-
+    Famine, war costs and its servants' private fortunes had wrecked the Company's finances just as
+    its shares crashed in the 1772 credit crisis. It was "too big to fail": the government needed its
+    taxes and its tea. The Boston Tea Party of 1773 was a protest against an act passed to help it sell
+    tea.
+  consequences: >-
+    The British state began to supervise the Company. Pitt's India Act of 1784 went further, setting up
+    a Board of Control in London. The Company kept ruling, but now on the state's behalf.
+  why: Once the Company ruled millions, Parliament could no longer leave it to its shareholders.
+  sources: [wp-regulating-act, dalrymple-anarchy, wp-pitts-india-act]
+- id: rohilla-war
+  name: Rohilla War
+  date: "1774-04"
+  kind: battle
+  significance: 2
+  participants: [warren-hastings, shuja-ud-daula]
+  causes: [allahabad]
+  summary: Hastings rents a Company brigade to the Nawab of Awadh, who uses it to conquer Rohilkhand.
+  context: The Company needed cash, and Awadh was a paying ally and a buffer against the Marathas.
+  consequences: Awadh grew, but it also grew dependent on Company troops it had to pay for. Critics in London called it a war for hire.
+  sources: [wp-rohilla-war]
+- id: first-maratha-war
+  name: First Anglo-Maratha War
+  date: "1775"
+  end: "1782-05-17"
+  place: gwalior
+  kind: campaign
+  significance: 3
+  causes: [panipat]
+  summary: >-
+    Bombay backs a claimant to the office of Peshwa and is humiliated at Wadgaon (1779). The war ends in
+    stalemate with the Treaty of Salbai.
+  context: The Marathas had recovered from Panipat. The Company tried to exploit a succession quarrel in Pune.
+  consequences: Twenty years of peace with the Marathas followed. The Company could not yet defeat them, but it had learned how divided they were.
+  sources: [wp-anglo-maratha, wp-salbai]
+- id: pollilur
+  name: Battle of Pollilur
+  date: "1780-09-10"
+  place: pollilur
+  kind: battle
+  significance: 3
+  participants: [haidar-ali, tipu-sultan]
+  causes: [first-mysore-war]
+  summary: >-
+    In the Second Anglo-Mysore War, Haidar and his son Tipu destroy a British column under Colonel
+    Baillie near Kanchipuram. It is one of the worst defeats the Company ever suffered in India.
+  context: Haidar invaded the Carnatic in 1780 while Britain was also at war with France and the American colonies.
+  consequences: >-
+    The Company in Madras was nearly overwhelmed. Hastings poured Bengal's money and troops south to
+    save it. The war ended in 1784 with neither side winning.
+  sources: [wp-pollilur, wp-anglo-mysore]
+- id: hastings-impeachment
+  name: Impeachment of Warren Hastings
+  date: "1788-02-13"
+  end: "1795-04-23"
+  kind: political
+  significance: 3
+  participants: [warren-hastings, edmund-burke]
+  causes: [regulating-act]
+  summary: >-
+    Back in Britain, Hastings is impeached by Parliament, led by Edmund Burke, for corruption and
+    oppression, including squeezing the Raja of Benares and the Begums of Awadh. The trial lasts seven
+    years. He is acquitted.
+  context: >-
+    "Nabobs" returning with Indian fortunes were resented in Britain. Burke argued that Britain was
+    responsible for how India was governed in its name.
+  consequences: >-
+    Hastings was acquitted, but the trial established that British rule in India would be judged in
+    Britain. The next Governors-General were aristocrats sent from London, not Company men.
+  perspectives:
+    - view: Burke
+      text: Company rule was "a government of plunder", and Hastings its chief.
+    - view: Hastings' defenders
+      text: He saved British India in a crisis and governed with skill and some respect for Indian learning.
+  sources: [wp-hastings-impeachment, wp-warren-hastings]
+- id: treaty-seringapatam
+  name: Treaty of Seringapatam
+  date: "1792-03-18"
+  place: seringapatam
+  kind: treaty
+  significance: 3
+  participants: [tipu-sultan, cornwallis]
+  causes: [pollilur]
+  summary: >-
+    After Cornwallis, allied with the Marathas and the Nizam, besieges Tipu's capital, Tipu gives up
+    half his kingdom and hands over two sons as hostages.
+  context: Tipu had attacked Travancore, a British ally. Cornwallis wanted to cut Mysore down for good.
+  consequences: The Company took Malabar and Salem. Mysore was weakened but still independent, and Tipu looked to France for revenge.
+  sources: [wp-treaty-seringapatam, wp-anglo-mysore]
+- id: permanent-settlement
+  name: Permanent Settlement of Bengal
+  date: "1793-03-22"
+  place: calcutta
+  kind: law
+  significance: 5
+  participants: [cornwallis]
+  causes: [dual-government-ends]
+  summary: >-
+    Cornwallis fixes Bengal's land revenue forever. Zamindars become the legal owners of the land, as
+    long as they pay a fixed sum each year. Estates that fall into arrears are auctioned.
+  context: >-
+    Revenue collection after 1772 had been chaotic. The Company wanted a predictable income, and
+    Cornwallis hoped that secure landowners would invest in the land, as English landlords supposedly
+    did.
+  consequences: >-
+    Many old zamindar families lost their estates at auction to Calcutta speculators within years.
+    The cultivators below them lost customary rights and faced rising rents. Fixed in 1793, the
+    revenue also lost value over time. It shaped rural Bengal into the 20th century.
+  why: A British theory of property was imposed on Bengal, and it reshaped who owned the land.
+  sources: [wp-permanent-settlement, guha-permanent-settlement, bose-jalal]
+- id: subsidiary-alliance
+  name: The subsidiary alliance
+  date: "1798-09-01"
+  place: hyderabad
+  kind: treaty
+  significance: 4
+  participants: [richard-wellesley]
+  causes: [treaty-seringapatam]
+  summary: >-
+    Richard Wellesley signs the first of his subsidiary treaties with the Nizam of Hyderabad. The
+    Nizam disbands his French-trained troops and pays for a Company force stationed in his state,
+    usually by ceding land. A British Resident sits at his court.
+  context: >-
+    Wellesley arrived in 1798 fearing Napoleon, who had just invaded Egypt and was courting Tipu. He
+    wanted every Indian state either defeated or tied to the Company.
+  consequences: >-
+    The system made allies into dependents. States that signed (Hyderabad, Awadh, later the Peshwa)
+    lost control of their own defence and foreign policy, and often territory. It was conquest without
+    war, and it set the pattern for the princely states.
+  why: Wellesley's alliances let the Company control states it never annexed.
+  sources: [wp-subsidiary-alliance, wp-richard-wellesley, bayly-indian-society]
+- id: seringapatam-1799
+  name: Fall of Seringapatam
+  date: "1799-05-04"
+  place: seringapatam
+  kind: battle
+  significance: 4
+  participants: [tipu-sultan, richard-wellesley, arthur-wellesley]
+  causes: [subsidiary-alliance, treaty-seringapatam]
+  summary: >-
+    In the Fourth Anglo-Mysore War, Company troops storm Tipu's capital. Tipu is killed fighting at
+    the breach, and the city is sacked.
+  context: Wellesley used Tipu's letters to the French as the reason for war.
+  consequences: >-
+    The Company annexed Kanara and Coimbatore and restored a five-year-old Wodeyar prince to a reduced
+    Mysore under a subsidiary treaty. The last great power of the south was gone.
+  sources: [wp-seringapatam-1799, wp-tipu]
+- id: annexations-1801
+  name: The annexations of 1801
+  date: "1801"
+  place: lucknow
+  kind: treaty
+  significance: 3
+  participants: [richard-wellesley]
+  causes: [subsidiary-alliance]
+  summary: >-
+    Wellesley forces Awadh to cede half its territory, including Rohilkhand and the lower Doab, to pay
+    for the troops it has been obliged to accept. The Carnatic is annexed outright from its Nawab.
+  context: Subsidiary allies fell behind on payments for "their" Company troops, and territory was taken instead.
+  consequences: The Company now held a continuous belt from Bengal up the Ganges, and almost all of the eastern coast.
+  sources: [wp-subsidiary-alliance, isd-provinces]
+- id: bassein
+  name: Treaty of Bassein
+  date: "1802-12-31"
+  place: bassein
+  kind: treaty
+  significance: 3
+  participants: [baji-rao-ii]
+  causes: [subsidiary-alliance]
+  summary: Driven from Pune by a rival Maratha chief, Peshwa Baji Rao II accepts a subsidiary alliance to get his throne back.
+  context: "The Maratha confederacy had split into rival houses: Scindia, Holkar, Bhonsle, Gaekwad and the Peshwa."
+  consequences: The other Maratha chiefs saw it as a surrender of Maratha independence. Scindia and the Bhonsle went to war.
+  sources: [wp-bassein, gordon-marathas]
+- id: assaye
+  name: Battle of Assaye
+  date: "1803-09-23"
+  place: assaye
+  kind: battle
+  significance: 3
+  participants: [arthur-wellesley]
+  causes: [bassein]
+  summary: Arthur Wellesley defeats a much larger army of Scindia and the Bhonsle in the Deccan, at heavy cost.
+  context: The Maratha armies were partly European-trained, with excellent artillery. This was a hard fight, not a rout.
+  consequences: Together with Lake's campaign in the north, it broke Scindia's and the Bhonsle's power in the Second Anglo-Maratha War.
+  sources: [wp-assaye, wp-anglo-maratha]
+- id: delhi-1803
+  name: The British enter Delhi
+  date: "1803-09-11"
+  place: delhi
+  kind: battle
+  significance: 4
+  participants: [shah-alam-ii]
+  causes: [bassein]
+  summary: >-
+    General Lake defeats Scindia's army outside Delhi and takes the city. The blind emperor Shah Alam
+    II passes from Maratha to British "protection".
+  context: Scindia had controlled the emperor since the 1780s. Whoever held Delhi held the Mughal name.
+  consequences: >-
+    The Mughal emperor became a British pensioner in the Red Fort. The Company ruled the upper Ganges
+    and Delhi in his name, and the Mughal crown waited for 1857.
+  sources: [wp-battle-delhi-1803, wp-anglo-maratha]
+- id: vellore-mutiny
+  name: Vellore mutiny
+  date: "1806-07-10"
+  place: vellore
+  kind: revolt
+  significance: 2
+  causes: [seringapatam-1799]
+  summary: >-
+    Sepoys at Vellore, where Tipu's family is held, rise and kill over a hundred British officers and
+    soldiers before the revolt is crushed.
+  context: New regulations banned caste marks and beards and imposed a new turban. Sepoys feared an attack on their religion.
+  consequences: The rules were withdrawn. The warning that sepoys would revolt over religion was not fully learned, and it came back in 1857.
+  sources: [wp-vellore-mutiny]
+- id: koregaon
+  name: Battle of Koregaon
+  date: "1818-01-01"
+  place: koregaon
+  kind: battle
+  significance: 2
+  participants: [baji-rao-ii]
+  causes: [bassein]
+  summary: >-
+    About 800 Company troops, many of them Mahars, hold a village for a day against a much larger
+    Peshwa army.
+  context: In 1817 the Peshwa had risen against the British, who were also campaigning against Pindari raiders.
+  consequences: The Peshwa withdrew. Within months his cause collapsed.
+  perspectives:
+    - view: British memory
+      text: A heroic defence, marked by an obelisk listing the dead.
+    - view: Dalit memory
+      text: A victory of Mahar soldiers over a Brahmin regime that treated them as untouchable. Since B. R. Ambedkar visited in 1927 it has been an annual commemoration, and a flashpoint.
+  sources: [wp-koregaon]
+- id: end-of-peshwa
+  name: End of the Peshwa
+  date: "1818-06-03"
+  kind: political
+  significance: 4
+  participants: [baji-rao-ii]
+  causes: [koregaon, bassein]
+  summary: >-
+    Baji Rao II surrenders to John Malcolm. The office of Peshwa is abolished, and he is pensioned off
+    to Bithur near Cawnpore.
+  context: >-
+    The Third Anglo-Maratha War (1817–18) was the last attempt by the Maratha powers to throw off
+    British control.
+  consequences: >-
+    The Peshwa's lands became the core of the Bombay Presidency. The remaining Indian states accepted
+    British paramountcy. In 60 years the Company had gone from tenants in Bengal to overlords of
+    India.
+  why: After 1818 no Indian power could challenge the Company in the field.
+  sources: [wp-third-anglo-maratha, wp-baji-rao-ii, bayly-indian-society]

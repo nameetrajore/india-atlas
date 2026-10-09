@@ -1,0 +1,176 @@
+id: company-wars
+number: 4
+title: The Company's wars
+period: 1772–1818
+summary: >-
+  Parliament takes hold of a bankrupt Company. Mysore and the Marathas fight it for 45 years.
+  Revenue, debt and fear of France drive it on until, in 1818, no Indian power can stand against it.
+scenes:
+  - id: ch4-bailout
+    t: "1773-06"
+    camera: { center: [82.0, 18.5], zoom: 4.3, pitch: 0 }
+    title: Too big to fail
+    text: >-
+      By 1772 the Company was close to bankruptcy. The famine had cut its revenue, and its armies were
+      expensive: in the south, [Haidar Ali](person:haidar-ali) of Mysore had just
+      [beaten it](event:first-mysore-war) and dictated peace outside Madras. Then its shares crashed in a
+      credit crisis.
+
+      The British government could not let it fail. It collected vast customs duties on the Company's tea,
+      and the economy depended on it. Parliament lent it money, and with the loan came the
+      [Regulating Act](event:regulating-act): a Governor-General in Calcutta with a council, and a
+      Supreme Court.
+
+      The first Governor-General was [Warren Hastings](person:warren-hastings). From now on the Company
+      ruled India, but the British state watched over it. In 1784 Pitt's India Act set up a Board of Control
+      in London.
+    show:
+      events: [regulating-act, first-mysore-war]
+      places: [calcutta, madras, seringapatam]
+      polities: [eic, mysore]
+  - id: ch4-mysore
+    t: "1780-09-10"
+    camera: { center: [78.2, 12.6], zoom: 6.4, pitch: 30 }
+    select: { kind: event, id: pollilur }
+    title: The tiger of the south
+    text: >-
+      Mysore was the Company's most dangerous enemy. [Haidar Ali](event:haidar-takes-power), a soldier
+      who had taken power in 1761, built a centralised state with drilled infantry, rockets and French
+      advisers. He had learned from the same Carnatic Wars as the British.
+
+      In 1780, while Britain was also fighting France and the rebels in America, Haidar invaded the
+      Carnatic. At [Pollilur](event:pollilur) he and his son [Tipu](person:tipu-sultan) destroyed a British
+      column, one of the Company's worst defeats in India.
+
+      Hastings saved Madras by sending Bengal's money and troops south. That is the logic of this chapter:
+      revenue paid for armies, armies won territory, and territory produced revenue. Historians call it
+      **military fiscalism**.
+    show:
+      events: [haidar-takes-power, pollilur]
+      places: [seringapatam, pollilur, madras, arcot]
+      polities: [mysore]
+  - id: ch4-stalemates
+    t: "1782-05-17"
+    camera: { center: [77.0, 23.0], zoom: 4.6, pitch: 10 }
+    title: Wars it could not win
+    text: >-
+      The Company was not yet unbeatable. The Marathas had recovered from Panipat. When Bombay meddled in a
+      dispute over who should be Peshwa, the [First Anglo-Maratha War](event:first-maratha-war) followed.
+      A Bombay army was forced to surrender at Wadgaon in 1779, and the war ended in a draw at Salbai in 1782.
+
+      Elsewhere Hastings hired out Company troops. In the [Rohilla War](event:rohilla-war) a Company brigade
+      conquered Rohilkhand for the Nawab of Awadh, who paid for it. Awadh grew larger, and more dependent.
+    show:
+      events: [first-maratha-war, rohilla-war]
+      places: [poona, gwalior, bombay, faizabad]
+      polities: [maratha-peshwa, awadh]
+  - id: ch4-impeachment
+    t: "1788-02-13"
+    camera: { center: [84.0, 25.0], zoom: 5.4, pitch: 15 }
+    title: Empire on trial
+    text: >-
+      In Britain, the "nabobs" coming home with Indian fortunes were resented and mocked. In 1788
+      Parliament [impeached Hastings](event:hastings-impeachment). [Edmund Burke](person:edmund-burke)
+      accused him of extorting money from the Raja of [Benares](place:benares) and from the Begums of Awadh
+      at [Faizabad](place:faizabad).
+
+      The trial dragged on for seven years, and Hastings was acquitted. But it settled a principle: British
+      rule in India would be judged in Britain. From now on Governors-General were aristocrats sent from
+      London, not Company men who had come out as clerks.
+    show:
+      events: [hastings-impeachment]
+      places: [benares, faizabad, calcutta]
+      polities: [awadh]
+  - id: ch4-cornwallis
+    t: "1793-03-22"
+    camera: { center: [83.5, 17.5], zoom: 4.6, pitch: 0 }
+    title: Land as property
+    text: >-
+      The first of the new men was [Lord Cornwallis](person:cornwallis), who had just lost America. He went
+      to war with Tipu, allied with the Marathas and the Nizam, and at the
+      [Treaty of Seringapatam](event:treaty-seringapatam) in 1792 took half of Mysore.
+
+      In Bengal he made a change that lasted longer than any battle. The
+      [Permanent Settlement](event:permanent-settlement) of 1793 fixed the land revenue forever and made the
+      zamindars, who collected it, owners of the land.
+
+      The idea was English: secure landlords would improve their estates. In practice many old zamindar
+      families lost their land at auction when they fell behind, and the peasants below them lost
+      customary rights. A British theory of property had been laid over Bengal.
+    show:
+      events: [treaty-seringapatam, permanent-settlement]
+      places: [seringapatam, calcutta]
+      polities: [mysore]
+  - id: ch4-wellesley
+    t: "1799-05-04"
+    camera: { center: [77.5, 15.0], zoom: 5.4, pitch: 20 }
+    select: { kind: event, id: seringapatam-1799 }
+    title: Napoleon's shadow
+    text: >-
+      In 1798 Napoleon invaded Egypt and wrote to Tipu. The new Governor-General,
+      [Richard Wellesley](person:richard-wellesley), used the threat of France to justify a programme of
+      conquest.
+
+      His tool was the [subsidiary alliance](event:subsidiary-alliance). An Indian ruler disbanded his own
+      French-trained troops, paid for a Company force stationed in his state (usually by giving up land),
+      and accepted a British Resident at court. The Nizam of Hyderabad signed first.
+
+      Tipu refused, and in May 1799 Company troops [stormed Seringapatam](event:seringapatam-1799). Tipu died
+      at the breach. A five-year-old Wodeyar prince was put on a reduced throne, under a subsidiary treaty.
+    show:
+      events: [subsidiary-alliance, seringapatam-1799]
+      places: [seringapatam, hyderabad, madras]
+      polities: [mysore, hyderabad]
+  - id: ch4-1801
+    t: "1801-11"
+    camera: { center: [81.5, 22.5], zoom: 4.6, pitch: 0 }
+    title: The price of protection
+    text: >-
+      A subsidiary alliance was a trap. Allies fell behind on paying for the Company troops they were
+      obliged to keep, and land was taken instead.
+
+      In [1801](event:annexations-1801) Wellesley made Awadh give up half its territory, including
+      Rohilkhand and the lower Doab, and annexed the Carnatic outright. Watch the pink spread up the Ganges
+      and along the whole eastern coast.
+    show:
+      events: [annexations-1801]
+      places: [lucknow, allahabad, madras]
+      polities: [awadh]
+  - id: ch4-marathas
+    t: "1803-09-23"
+    camera: { center: [76.5, 23.0], zoom: 4.8, pitch: 15 }
+    title: The Marathas divided
+    text: >-
+      The Maratha confederacy had split into rival houses: the Peshwa at Pune, Scindia, Holkar, the Bhonsle
+      of Nagpur and the Gaekwad. In 1802 the Peshwa [Baji Rao II](person:baji-rao-ii), driven out of Pune
+      by Holkar, signed a subsidiary alliance at [Bassein](event:bassein) to get it back.
+
+      Scindia and the Bhonsle went to war. Arthur Wellesley, the future Duke of Wellington, beat them at
+      [Assaye](event:assaye), and General Lake [took Delhi](event:delhi-1803). The blind Mughal emperor
+      became a British pensioner in the Red Fort, still the symbol of sovereignty, and he would be again in
+      1857.
+    show:
+      events: [bassein, assaye, delhi-1803]
+      places: [bassein, assaye, delhi, poona]
+      polities: [maratha-peshwa, marathas-nagpur]
+  - id: ch4-1818
+    t: "1818-06-03"
+    camera: { center: [79.5, 21.5], zoom: 4.3, pitch: 0 }
+    title: Paramount
+    text: >-
+      In 1817 the Peshwa made a last attempt to throw off British control. At [Koregaon](event:koregaon) on
+      1 January 1818, a small Company force, many of them Mahar soldiers, held off his army. Dalits still
+      commemorate it as a victory over a caste-bound regime.
+
+      In June 1818 Baji Rao [surrendered](event:end-of-peshwa). The office of Peshwa was abolished, his
+      lands became the core of the Bombay Presidency, and he was pensioned off to Bithur near Cawnpore. His
+      adopted son, Nana Sahib, grew up there.
+
+      Look at the map. Pink is ruled by the Company; most of the yellow is states bound to it by treaty. No
+      Indian power could challenge it in the field. But there were warnings: in 1806 sepoys at Vellore had
+      [mutinied](event:vellore-mutiny) over rules they saw as an attack on their religion. The Company now
+      had to govern what it had won.
+    show:
+      events: [koregaon, end-of-peshwa, vellore-mutiny]
+      places: [koregaon, poona, vellore, bombay]
+      polities: [eic]

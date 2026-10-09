@@ -1,124 +1,229 @@
-# Events: From traders to rulers. Each event explains why (context), what (summary) and what changed (consequences).
+# Events: From traders to rulers (1757–1772). Each explains why (context), what (summary), and what changed (consequences).
 - id: siraj-killed
   name: Siraj-ud-Daulah killed
-  date: 1757-07-02
+  date: "1757-07-02"
   place: murshidabad
   kind: political
   significance: 3
-  participants:
-    - siraj-ud-daulah
-  summary: Siraj-ud-Daulah is captured while fleeing and executed on the orders of Mir Jafar's son, Miran.
-  sources:
-    - wp-siraj
+  participants: [siraj-ud-daulah]
+  causes: [plassey]
+  summary: Siraj-ud-Daulah is captured while fleeing and killed on the orders of Mir Jafar's son, Miran.
+  context: A living Siraj was a rallying point for anyone who resented the new regime.
+  consequences: The last independent Nawab of Bengal was gone. Mir Jafar's rule depended entirely on the Company.
+  sources: [wp-siraj]
+- id: plassey-plunder
+  name: The plunder of Bengal
+  date: "1757"
+  end: "1765"
+  place: murshidabad
+  kind: political
+  significance: 4
+  participants: [clive, mir-jafar]
+  causes: [mir-jafar-installed]
+  summary: >-
+    Mir Jafar pays the Company, its army and its officers millions of pounds in "presents" and
+    compensation. Clive alone receives a fortune and an estate (jagir) worth about £27,000 a year.
+    Company servants also expand private trade, using dastaks to avoid duties.
+  context: >-
+    Company servants were badly paid and went to India to get rich. With the Nawab dependent on them,
+    nothing stopped them.
+  consequences: >-
+    Silver had flowed into Bengal for a century to buy its goods. Now Bengal's own wealth paid for its
+    exports and flowed out. Historians later called this the beginning of the "drain".
+  why: Conquest turned out to be far more profitable than trade.
+  sources: [dalrymple-anarchy, marshall-bengal, wp-clive]
 - id: 24-parganas
   name: 24 Parganas granted to the Company
-  date: 1757-12
+  date: "1757-12"
   place: calcutta
   kind: treaty
   significance: 2
-  participants:
-    - mir-jafar
-  summary: "The Company receives the zamindari of the lands south of Calcutta: its first territory in Bengal."
-  sources:
-    - wp-24-parganas
+  participants: [mir-jafar]
+  causes: [mir-jafar-installed]
+  summary: "Mir Jafar grants the Company the zamindari of the lands south of Calcutta: its first territory in Bengal."
+  context: It was part of the price agreed before Plassey.
+  consequences: The Company now collected rent from land as well as profit from trade.
+  sources: [wp-24-parganas]
 - id: chinsurah
   name: Battle of Chinsurah
-  alt_names:
-    - Battle of Bedara
-  date: 1759-11-25
+  alt_names: [Battle of Bedara]
+  date: "1759-11-25"
   place: chinsurah
   kind: battle
   significance: 2
-  summary: A Dutch force sent from Batavia is defeated near Chinsurah. This ends Dutch ambitions in Bengal.
-  sources:
-    - wp-chinsurah
+  causes: [plassey]
+  summary: A Dutch force sent from Batavia, perhaps invited by Mir Jafar, is defeated near Chinsurah.
+  context: Mir Jafar hoped the Dutch might balance the British.
+  consequences: The Dutch never again challenged the British in Bengal. No European rival was left there.
+  sources: [wp-chinsurah]
 - id: wandiwash
   name: Battle of Wandiwash
-  date: 1760-01-22
+  date: "1760-01-22"
   place: wandiwash
   kind: battle
   significance: 4
+  causes: [dupleix-recalled]
   summary: Eyre Coote defeats Lally's French army in the Carnatic. Pondicherry is besieged soon after.
-  why: This was the decisive battle in the struggle between the British and the French in India.
-  sources:
-    - wp-wandiwash
+  context: >-
+    The Seven Years' War brought a last French attempt in south India. Bengal's revenue paid for
+    British reinforcements, and the French had no Bengal of their own.
+  consequences: France's hopes of an Indian empire ended. From now on the British faced only Indian rivals.
+  why: Wandiwash ended the Anglo-French contest for India.
+  sources: [wp-wandiwash]
 - id: mir-qasim-installed
   name: Mir Qasim replaces Mir Jafar
-  date: 1760-10
+  date: "1760-10"
   place: murshidabad
   kind: political
   significance: 3
-  participants:
-    - mir-qasim
-    - mir-jafar
-  summary: The Company replaces the bankrupt Mir Jafar with his son-in-law Mir Qasim, who cedes Burdwan,
-    Midnapore and Chittagong.
-  sources:
-    - wp-mir-qasim
+  participants: [mir-qasim, mir-jafar]
+  causes: [plassey-plunder]
+  summary: >-
+    The Company replaces the bankrupt Mir Jafar with his son-in-law Mir Qasim. He pays with the
+    districts of Burdwan, Midnapore and Chittagong, and more presents.
+  context: >-
+    Mir Jafar could not pay what he owed, and the Company's army in Bengal had to be paid somehow. A
+    new Nawab meant new presents and new land.
+  consequences: >-
+    Mir Qasim was able and determined. He moved his capital to Monghyr, reformed the revenue, and built
+    a modern army. He did not intend to be a puppet.
+  sources: [wp-mir-qasim, marshall-bengal]
 - id: panipat
   name: Third Battle of Panipat
-  date: 1761-01-14
+  date: "1761-01-14"
   place: panipat
   kind: battle
   significance: 5
-  summary: Ahmad Shah Durrani destroys the Maratha army north of Delhi. It was one of the largest battles of the
-    18th century.
-  why: It checked Maratha expansion in the north for a decade, just as the Company was rising in the east.
-  sources:
-    - wp-panipat
+  causes: [marathas-north]
+  summary: >-
+    The Afghan ruler Ahmad Shah Durrani destroys the main Maratha army north of Delhi. It is one of
+    the largest battles of the century.
+  context: >-
+    The Marathas had pushed into the Punjab, which the Afghans claimed. Both sides wanted to be the
+    power behind the Mughal throne.
+  consequences: >-
+    The Marathas lost a generation of leaders. For a decade the north had no dominant power, just as
+    the Company was rising in the east.
+  why: India's strongest power was crippled by an outsider at exactly the wrong moment.
+  sources: [wp-panipat, gordon-marathas]
 - id: pondicherry-falls
   name: Fall of Pondicherry
-  date: 1761-01-15
+  date: "1761-01-15"
   place: pondicherry
   kind: battle
   significance: 3
-  summary: The French capital surrenders after a long siege.
-  sources:
-    - wp-french-india
+  causes: [wandiwash]
+  summary: The French capital surrenders after a long siege. The British demolish its fortifications.
+  context: After Wandiwash, Lally could not be relieved.
+  consequences: France got Pondicherry back in 1763–65, but only as an unfortified trading post.
+  sources: [wp-french-india]
+- id: patna-massacre
+  name: Patna massacre
+  date: "1763-10"
+  place: patna
+  kind: atrocity
+  significance: 2
+  participants: [mir-qasim]
+  causes: [udhwa-nala]
+  summary: Losing the war, Mir Qasim has his English prisoners at Patna killed.
+  context: Company forces were advancing up the Ganges after a run of victories.
+  consequences: The Company was set on removing him completely. Mir Qasim fled to Awadh to raise an alliance.
+  sources: [wp-patna-massacre]
 - id: udhwa-nala
   name: Battle of Udhwa Nala
-  date: 1763-09-05
+  date: "1763-09-05"
   place: udhwa-nala
   kind: battle
   significance: 2
-  participants:
-    - mir-qasim
-  summary: Mir Qasim had tried to end the Company's tax-free private trade, and war followed. The Company storms
-    his fortified line, and he flees west to Awadh.
-  sources:
-    - wp-udhwa-nala
-    - wp-mir-qasim
+  participants: [mir-qasim]
+  causes: [mir-qasim-installed, farrukhsiyar-farman]
+  summary: The Company storms Mir Qasim's fortified line in the Rajmahal hills.
+  context: >-
+    Mir Qasim had found an answer to the dastak problem: he abolished internal duties for everyone, so
+    Indian merchants could compete with the Company's. Company servants saw this as an attack on their
+    profits, and war broke out in 1763.
+  consequences: Mir Qasim's army broke. Mir Jafar was put back on the throne.
+  why: The war of 1763 was fought over the Company's servants' right to trade tax-free.
+  sources: [wp-udhwa-nala, wp-mir-qasim]
 - id: buxar
   name: Battle of Buxar
-  date: 1764-10-22
+  date: "1764-10-22"
   place: buxar
   kind: battle
   significance: 5
-  participants:
-    - hector-munro
-    - mir-qasim
-    - shuja-ud-daula
-    - shah-alam-ii
-  summary: Hector Munro's Company army defeats the combined forces of Mir Qasim, Shuja-ud-Daula of Awadh and the
-    Mughal emperor Shah Alam II.
-  why: Unlike Plassey, this was a hard-fought battle against the leading powers of the north. It was won on the
-    field, and it settled who ruled eastern India.
-  sources:
-    - wp-buxar
+  participants: [hector-munro, mir-qasim, shuja-ud-daula, shah-alam-ii]
+  causes: [udhwa-nala, patna-massacre]
+  summary: >-
+    Hector Munro's Company army of about 7,000 defeats the combined forces of Mir Qasim, Shuja-ud-Daula
+    of Awadh and the Mughal emperor Shah Alam II.
+  context: >-
+    Mir Qasim had persuaded the Nawab of Awadh and the wandering emperor to join him. They were the
+    leading powers of north India.
+  consequences: >-
+    The emperor came over to the British camp, and Awadh lay open. The Company was now the strongest
+    military power in north India.
+  why: Unlike Plassey, Buxar was won on the field, and it settled who ruled eastern India.
+  sources: [wp-buxar, dalrymple-anarchy]
 - id: allahabad
   name: Treaty of Allahabad
-  date: 1765-08-12
+  date: "1765-08-12"
   place: allahabad
   kind: treaty
   significance: 5
-  participants:
-    - clive
-    - shah-alam-ii
-    - shuja-ud-daula
-  summary: Shah Alam II grants the Company the diwani of Bengal, Bihar and Orissa, in return for a pension and
-    the districts of Allahabad and Kora. Awadh is restored to Shuja-ud-Daula for an indemnity.
-  why: The trading company became the legal revenue authority of tens of millions of people. Many historians
-    date the start of British rule in India to this treaty.
-  sources:
-    - wp-allahabad
-    - dalrymple-anarchy
+  participants: [clive, shah-alam-ii, shuja-ud-daula]
+  causes: [buxar]
+  summary: >-
+    Shah Alam II grants the Company the diwani of Bengal, Bihar and Orissa: the right to collect their
+    land revenue. In return he gets an annual pension and the districts of Allahabad and Kora.
+    Awadh is returned to Shuja-ud-Daula for an indemnity.
+  context: >-
+    Clive, back as governor, decided not to annex Awadh but to make it a buffer state. He also chose
+    to rule Bengal behind a Mughal grant, which kept up appearances with Indian rulers and with other
+    European powers.
+  consequences: >-
+    A trading company became the legal revenue authority for perhaps 20 million people. Bengal's
+    revenue would now pay for the Company's purchases and its armies.
+  why: Many historians date the start of British rule in India to this treaty.
+  sources: [wp-allahabad, dalrymple-anarchy, marshall-bengal]
+- id: bengal-famine-1770
+  name: Bengal famine of 1770
+  date: "1769"
+  end: "1771"
+  place: murshidabad
+  kind: famine
+  significance: 5
+  causes: [allahabad]
+  summary: >-
+    After the rains fail in 1769, famine sweeps Bengal and Bihar. Contemporaries describe the dead
+    lying in the streets of Murshidabad.
+  context: >-
+    Under "dual government" the Company took the revenue, but the Nawab's officials ran the
+    administration. Revenue demands stayed high, and some Company servants were accused of hoarding
+    and speculating in rice.
+  consequences: >-
+    The famine destroyed much of Bengal's population and cultivation. In London it fed outrage at the
+    "nabobs" and, as revenue collapsed, pushed the Company towards bankruptcy.
+  why: The Company's first years as Bengal's revenue authority ended in catastrophe.
+  figures:
+    - label: Deaths
+      min: 1000000
+      max: 10000000
+      note: Warren Hastings estimated a third of the population, about 10 million. Some modern historians argue for a much lower figure.
+      sources: [wp-bengal-famine-1770, dalrymple-anarchy]
+  sources: [wp-bengal-famine-1770, dalrymple-anarchy, marshall-bengal]
+- id: dual-government-ends
+  name: The Company "stands forth as Diwan"
+  date: "1772-05"
+  place: calcutta
+  kind: law
+  significance: 4
+  participants: [warren-hastings]
+  causes: [bengal-famine-1770]
+  summary: >-
+    The new governor, Warren Hastings, ends dual government. The Company takes over revenue collection
+    directly and moves the treasury from Murshidabad to Calcutta.
+  context: The famine and the Company's debts had shown that ruling through the Nawab's officials did not work.
+  consequences: >-
+    The Company was now openly the government of Bengal. Murshidabad faded, and Calcutta became the
+    capital.
+  sources: [marshall-bengal, wp-warren-hastings]
