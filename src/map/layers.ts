@@ -81,11 +81,40 @@ const FLAT = { parameters: { depthCompare: 'always', depthWriteEnabled: false } 
 const TEXT_BASE = {
   ...FLAT,
   sizeUnits: 'pixels',
-  fontSettings: { sdf: true, fontSize: 96, buffer: 12, radius: 18, cutoff: 0.2, smoothing: 0.1 },
+  // Bitmap glyphs, not SDF: deck.gl's SDF path renders this serif jagged and the outline smears it.
+  // Labels sit in dark ink on light fills, so they read without a halo, like a printed atlas.
+  fontSettings: { sdf: false, fontSize: 64, buffer: 4 },
   characterSet: 'auto',
-  outlineColor: [...PAPER, 255],
 } as const
 const LABEL_FONT = '"Source Serif 4"'
+
+/** Eight offsets (px) for a crisp halo around bitmap text. */
+const HALO = [[1.5, 0], [-1.5, 0], [0, 1.5], [0, -1.5], [1.1, 1.1], [-1.1, 1.1], [1.1, -1.1], [-1.1, -1.1]]
+
+/**
+ * A text layer with a halo. Bitmap glyphs can't carry an SDF outline, so the halo is the same text drawn in
+ * the paper colour at small offsets underneath. It hides lines and borders behind the label and keeps edges crisp.
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any -- props are TextLayer props for varied data types
+function haloText(props: any, haloAlpha = 235): Layer[] {
+  const off = props.getPixelOffset ?? [0, 0]
+  const offAt = (d: unknown): number[] => (typeof off === 'function' ? off(d) : off)
+  const halos = HALO.map(
+    ([dx, dy], i) =>
+      new TextLayer({
+        ...props,
+        id: `${props.id}-halo${i}`,
+        pickable: false,
+        getColor: [...PAPER, haloAlpha],
+        getPixelOffset: (d: unknown) => {
+          const o = offAt(d)
+          return [o[0] + dx, o[1] + dy]
+        },
+        updateTriggers: { ...props.updateTriggers, getColor: [haloAlpha], getPixelOffset: [props.updateTriggers?.getPixelOffset, dx, dy] },
+      }),
+  )
+  return [...halos, new TextLayer(props)]
+}
 
 export function buildLayers(a: LayerArgs): Layer[] {
   const { content, units, t, scene, selection } = a
@@ -196,7 +225,7 @@ export function buildLayers(a: LayerArgs): Layer[] {
     )
     type Anchor = (typeof anchors)[number]
     layers.push(
-      new TextLayer<Anchor>({
+      ...haloText({
         ...TEXT_BASE,
         id: 'polity-labels',
         data: anchors.filter((an) => shown.has(`polity:${an.polity}`)),
@@ -206,8 +235,6 @@ export function buildLayers(a: LayerArgs): Layer[] {
         getColor: (d: Anchor) => darken(colorOf(d.polity), 0.32, 255),
         fontFamily: LABEL_FONT,
         fontWeight: 600,
-        outlineWidth: 4,
-        outlineColor: [...PAPER, 200],
         maxWidth: 16 * 0.62,
         wordBreak: 'break-word',
         lineHeight: 1.05,
@@ -219,12 +246,14 @@ export function buildLayers(a: LayerArgs): Layer[] {
   }
 
   // ---- present-day boundaries (compare with today)
-  if (a.today) {
+  // Every layer is always created, with empty data when hidden: in interleaved mode a layer added later is
+  // stacked above all existing ones, which would put it over the labels.
+  {
     layers.push(
       new GeoJsonLayer({
         ...FLAT,
         id: 'today',
-        data: a.today.features as never,
+        data: (a.today?.features ?? []) as never,
         filled: false,
         stroked: true,
         getLineColor: [30, 55, 95, 210],
@@ -234,17 +263,16 @@ export function buildLayers(a: LayerArgs): Layer[] {
         dashJustified: true,
         extensions: [new PathStyleExtension({ dash: true })],
       } as never),
-      new TextLayer({
+      ...haloText({
         ...TEXT_BASE,
         id: 'today-labels',
-        data: a.today.anchors.filter((an) => shown.has(`today:${an.name}`)),
+        data: (a.today?.anchors ?? []).filter((an) => shown.has(`today:${an.name}`)),
         getPosition: (d: { position: LngLat }) => d.position,
         getText: (d: { name: string }) => d.name,
         getSize: 11.5,
         getColor: [30, 55, 95, 255],
         fontFamily: 'Inter',
         fontWeight: 600,
-        outlineWidth: 4,
         getTextAnchor: 'middle',
         getAlignmentBaseline: 'center',
       } as never),
@@ -252,7 +280,7 @@ export function buildLayers(a: LayerArgs): Layer[] {
   }
 
   // ---- non-British European enclaves
-  if (footholds.length) {
+  {
     layers.push(
       new ScatterplotLayer<(typeof footholds)[number]>({
         ...FLAT,
@@ -315,7 +343,7 @@ export function buildLayers(a: LayerArgs): Layer[] {
   // ---- place labels
   {
     layers.push(
-      new TextLayer<Place>({
+      ...haloText({
         ...TEXT_BASE,
         id: 'place-labels',
         data: content.places.filter((p) => shown.has(`place:${p.id}`)),
@@ -326,7 +354,6 @@ export function buildLayers(a: LayerArgs): Layer[] {
         getColor: () => [...INK, 255],
         fontFamily: LABEL_FONT,
         fontWeight: 600,
-        outlineWidth: 5,
         getPixelOffset: (p: Place) => shown.get(`place:${p.id}`)?.offset ?? placeOffset(p.id),
         getTextAnchor: 'middle',
         getAlignmentBaseline: 'bottom',
@@ -385,7 +412,7 @@ export function buildLayers(a: LayerArgs): Layer[] {
         updateTriggers: { getPosition: [t], getFillColor: [t], getLineColor: [t], getRadius: [selection] },
         onClick: (info) => (info.object && a.onPick({ kind: 'person', id: info.object.p.id }), true),
       }),
-      new TextLayer<M>({
+      ...haloText({
         ...TEXT_BASE,
         id: 'people-labels',
         data: markers.filter((m) => shown.has(`person:${m.p.id}`)),
@@ -395,7 +422,6 @@ export function buildLayers(a: LayerArgs): Layer[] {
         getColor: (d: M) => darken(personColor(d.p.id), 0.8, Math.round(255 * d.s.opacity)),
         fontFamily: 'Inter',
         fontWeight: 600,
-        outlineWidth: 5,
         getPixelOffset: (d: M) => shown.get(`person:${d.p.id}`)?.offset ?? [13, 0],
         getTextAnchor: 'start',
         getAlignmentBaseline: 'center',
@@ -404,5 +430,7 @@ export function buildLayers(a: LayerArgs): Layer[] {
     )
   }
 
-  return layers
+  // Text last: without halos, labels must sit above trails, borders and markers to stay readable.
+  const ordered = [...layers.filter((l) => !(l instanceof TextLayer)), ...layers.filter((l) => l instanceof TextLayer)]
+  return ordered
 }
