@@ -9,6 +9,9 @@ Outputs (public/data/base/):
                       India outside it (Pakistan, Bangladesh, Burma) are filled with present-day districts as
                       proxies (type "Proxy", proxy: true), with any overlap with 1941 units removed
   land.geojson, rivers.geojson, lakes.geojson  clipped to South Asia
+  today.geojson  present-day boundaries for "compare with today" (D25): Indian states and UTs from the
+                 LGD 2024 layer (Survey of India-sourced, via india-geodata), plus Pakistan, Bangladesh and
+                 Myanmar first-level units from geoBoundaries, with any overlap with India removed
 
 Run: uvx --with pyarrow --with shapely python -I scripts/prep_base.py
 """
@@ -123,7 +126,31 @@ def clipped(src, name, keep=lambda p: True, tol=0.01):
     write(name, feats)
 
 
+def today():
+    feats, india = [], []
+    rows = pq.read_table(RAW / "today" / "LGD_States.parquet").to_pylist()
+    for r in rows:
+        g = make_valid(wkb.loads(r["geometry"]))
+        india.append(g)
+        name = (r.get("Remarks") or r["STNAME"].title()).strip()
+        feats.append({"type": "Feature", "properties": {"name": name, "country": "India"},
+                      "geometry": rounded(g.simplify(0.01, preserve_topology=True))})
+    covered = unary_union(india).buffer(0.002)
+    for iso, country in (("PAK", "Pakistan"), ("BGD", "Bangladesh"), ("MMR", "Myanmar")):
+        for f in json.loads((RAW / "gb" / f"{iso}-ADM1.geojson").read_text())["features"]:
+            name = f["properties"]["shapeName"]
+            if name in PROXY_SKIP_ADM1:
+                continue
+            g = make_valid(shape(f["geometry"])).difference(covered)
+            if g.is_empty or g.area < 0.01:
+                continue
+            feats.append({"type": "Feature", "properties": {"name": name, "country": country},
+                          "geometry": rounded(g.simplify(0.01, preserve_topology=True))})
+    write("today.geojson", feats)
+
+
 if __name__ == "__main__":
+    today()
     units()
     clipped("ne_10m_land.geojson", "land.geojson")
     clipped("ne_10m_rivers_lake_centerlines.geojson", "rivers.geojson",

@@ -13,3 +13,7 @@ for c in PAK/ADM1 PAK/ADM2 BGD/ADM1 BGD/ADM2 MMR/ADM1; do
   f=$(echo "$c" | tr / -)
   curl -sSfL -o "gb/$f.geojson" "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/$c/geoBoundaries-${f}_simplified.geojson"
 done
+
+# present-day boundaries (D25); see scripts/prep_base.py
+mkdir -p today
+gh release download admin/states --repo yashveeeeeeer/india-geodata --pattern "LGD_States.parquet" --dir today --clobber
