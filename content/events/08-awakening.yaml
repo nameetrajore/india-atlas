@@ -1,161 +1,384 @@
-# Events: Awakening. Each event explains why (context), what (summary) and what changed (consequences).
+# Events: Awakening (1905–1919). Each explains why (context), what (summary) and what changed (consequences).
 - id: bengal-partition
   name: Partition of Bengal
-  date: 1905-10-16
+  date: "1905-10-16"
   place: dacca
   kind: law
   significance: 4
-  summary: Curzon splits Bengal. The stated reason is administrative efficiency, but it was widely seen as a way
-    to divide Bengali Hindus and Muslims.
-  why: It triggered the Swadeshi movement, the first mass nationalist campaign, and was annulled in 1911.
-  sources:
-    - wp-partition-bengal-1905
-    - sarkar-modern
+  participants: [curzon]
+  causes: [inc-founded]
+  summary: >-
+    Curzon splits Bengal in two. A new province, Eastern Bengal and Assam, gets its capital at Dacca and a
+    Muslim majority. Western Bengal keeps Calcutta, Bihar and Orissa, and has a Hindu majority.
+  context: >-
+    Bengal, with about 78 million people, was too large to govern well. But Bengal was also the centre of
+    educated nationalism, and officials said so in private. "Bengal united is a power; Bengal divided will
+    pull several different ways," wrote Home Secretary Herbert Risley in 1904.
+  consequences: >-
+    Bengalis read it as divide and rule. The protest that followed, the Swadeshi movement, was the first
+    nationalist campaign to reach beyond petitions to the streets. The partition was reversed in 1911, but
+    the idea that the British would play Hindus and Muslims against each other stuck.
+  why: A boundary drawn for administration became the spark for mass nationalism.
+  sources: [wp-partition-bengal-1905, sarkar-modern, wp-curzon]
 - id: swadeshi
   name: Swadeshi movement
-  date: 1905-08-07
-  end: 1911-12
+  date: "1905-08-07"
+  end: "1911-12"
   place: calcutta
   kind: movement
   significance: 4
-  summary: Boycott of British goods, bonfires of foreign cloth, national schools, and "Bande Mataram" as a
-    rallying cry.
-  sources:
-    - wp-swadeshi
-    - sarkar-modern
+  participants: [tagore, tilak]
+  causes: [bengal-partition]
+  summary: >-
+    A boycott of British goods, especially Manchester cloth. People hold bonfires of foreign cloth, set up
+    Indian mills, banks and national schools, and sing "Bande Mataram". Tagore writes songs for it.
+  context: >-
+    The boycott was announced at Calcutta's Town Hall on 7 August 1905, weeks before the partition took
+    effect. Petitions had failed, so nationalists turned to economic pressure. Swadeshi means "of one's own
+    country".
+  consequences: >-
+    Imports of British cloth into Bengal fell sharply for a time. The movement split the Congress between
+    gradualists and radicals and pushed some young Bengalis into secret revolutionary societies. Few
+    peasants and few Muslims joined it, a weakness later leaders tried to fix.
+  sources: [wp-swadeshi, sarkar-modern, chandra-struggle]
 - id: muslim-league
   name: All-India Muslim League founded
-  date: 1906-12-30
+  date: "1906-12-30"
   place: dacca
   kind: founding
   significance: 4
-  summary: Founded at Dacca by Muslim notables to represent Muslim political interests.
-  sources:
-    - wp-muslim-league
+  causes: [bengal-partition]
+  summary: >-
+    Muslim landholders and notables, meeting at Dacca, found the All-India Muslim League to speak for
+    Muslim political interests.
+  context: >-
+    Elected councils were coming, and Muslims, a minority in most provinces, feared being outvoted.
+    Many East Bengal Muslims welcomed the partition the Congress was fighting. In October 1906 a
+    delegation of Muslim leaders asked the Viceroy, Minto, for separate representation.
+  consequences: >-
+    It gave Indian Muslims a separate political voice. For 30 years the League was small and elitist.
+    Under Jinnah in the late 1930s it became a mass party and the vehicle for the demand for Pakistan.
+  sources: [wp-muslim-league, bose-jalal]
+- id: muzaffarpur-bomb
+  name: Muzaffarpur bombing
+  date: "1908-04-30"
+  place: muzaffarpur
+  kind: revolt
+  significance: 2
+  participants: [khudiram-bose]
+  causes: [swadeshi]
+  summary: >-
+    Khudiram Bose and Prafulla Chaki throw a bomb at a carriage they believe carries Magistrate Kingsford.
+    It kills two British women instead. Chaki shoots himself; Bose, aged 18, is hanged in August.
+  context: >-
+    Frustrated by the slow pace of Swadeshi, small secret societies in Bengal, such as the Anushilan
+    Samiti, turned to bombs and assassinations. Kingsford was hated for harsh sentences on Swadeshi
+    protesters.
+  consequences: >-
+    The police uncovered a bomb factory in Calcutta, which led to the Alipore bomb trial, in which
+    Aurobindo Ghose was acquitted. The government answered with press laws and deportations.
+    Revolutionary violence stayed a minor current beside mass politics, but its martyrs became popular
+    heroes.
+  perspectives:
+    - view: Nationalist memory
+      text: Khudiram Bose is remembered as one of the youngest martyrs of the freedom struggle.
+    - view: Critical view
+      text: The attack killed two civilians by mistake, and Moderate leaders condemned it at the time.
+  sources: [wp-khudiram, wp-alipore-bomb]
 - id: surat-split
   name: Surat split
-  date: 1907-12-27
+  date: "1907-12-27"
   place: surat
   kind: political
   significance: 2
-  participants:
-    - tilak
-  summary: The Congress splits between Moderates (Gokhale) and Extremists (Tilak, Lajpat Rai, Bipin Chandra Pal).
-  sources:
-    - wp-surat-split
+  participants: [tilak, gokhale]
+  causes: [swadeshi]
+  summary: >-
+    The Congress session at Surat breaks up in chaos, and shoes are thrown. The Moderates under Gokhale
+    take control and the Extremists under Tilak are pushed out.
+  context: >-
+    The two camps disagreed about method. Moderates wanted constitutional reform through petitions and
+    British goodwill. Extremists wanted boycott, self-reliance and swaraj (self-rule), and they wanted
+    to spread Swadeshi beyond Bengal.
+  consequences: >-
+    A divided Congress was easier to manage. The government jailed Tilak in Mandalay in 1908 and offered
+    the Moderates limited reforms. The two wings reunited only in 1916.
+  sources: [wp-surat-split, chandra-struggle]
+- id: tilak-jailed
+  name: Tilak sentenced to Mandalay
+  date: "1908-07-22"
+  place: mandalay
+  kind: political
+  significance: 2
+  participants: [tilak]
+  causes: [muzaffarpur-bomb]
+  summary: >-
+    Tilak is convicted of sedition for articles in his newspaper Kesari about the Muzaffarpur bombing and
+    is sentenced to six years in prison in Mandalay, Burma. Bombay's mill workers strike in protest.
+  context: The government was using sedition law to break the Extremist leadership after the Surat split.
+  consequences: >-
+    He returned in 1914 and launched the Home Rule League in 1916. He was the most popular leader in
+    India until Gandhi.
+  sources: [wp-tilak]
 - id: morley-minto
   name: Morley–Minto reforms
-  alt_names:
-    - Indian Councils Act 1909
-  date: "1909"
+  alt_names: [Indian Councils Act 1909]
+  date: "1909-05"
   place: calcutta
   kind: law
-  significance: 2
-  summary: Expanded legislative councils with separate electorates for Muslims.
-  why: Separate electorates became a lasting and contested feature of Indian politics.
-  sources:
-    - wp-morley-minto
+  significance: 3
+  causes: [muslim-league, surat-split]
+  summary: >-
+    The legislative councils are enlarged and some members are elected, on a very narrow franchise.
+    Muslims get **separate electorates**, seats for which only Muslims vote.
+  context: >-
+    The government wanted to win over the Moderates, isolate the radicals, and keep the Muslim notables
+    loyal.
+  consequences: >-
+    Councils could debate but not control the government. Separate electorates set communities apart as
+    political blocs at every later reform, which is why many see 1909 as a step towards Partition.
+  why: Separate electorates made religion a basis of political representation.
+  sources: [wp-morley-minto, bose-jalal]
 - id: durbar-1911
   name: Delhi Durbar of 1911
-  date: 1911-12-12
+  date: "1911-12-12"
   place: delhi
   kind: political
   significance: 4
-  summary: George V announces that the capital will move from Calcutta to Delhi and that Bengal's partition is
-    annulled.
-  sources:
-    - wp-delhi-durbar
-    - wp-delhi-province
+  causes: [swadeshi, bengal-partition]
+  summary: >-
+    At a vast durbar, the only one a reigning British monarch attended in person, King George V announces
+    two surprises. The partition of Bengal is annulled, and the capital will move from Calcutta to Delhi.
+  context: >-
+    Swadeshi and revolutionary violence had made the partition a running sore. Moving the capital away
+    from Calcutta also took the government away from Bengali politics. Delhi was the old seat of the
+    Mughals.
+  consequences: >-
+    From April 1912 Bengal was reunited, Bihar and Orissa became a separate province, and Assam was
+    restored. Many Bengali Muslims felt betrayed. Building New Delhi took two decades.
+  sources: [wp-delhi-durbar, wp-delhi-province]
+- id: ww1-india
+  name: India in the First World War
+  date: "1914-08"
+  end: "1918-11"
+  kind: campaign
+  significance: 4
+  summary: >-
+    Britain declares war on India's behalf. About 1.3 million Indians serve as soldiers and labourers in
+    France, Mesopotamia, East Africa and Gallipoli. India pays heavily in money, men and food.
+  context: >-
+    Most Indian leaders, including Gandhi, backed the war effort, expecting self-government as a reward
+    for loyalty.
+  consequences: >-
+    High taxes, war loans, forced recruitment in Punjab and soaring prices hit ordinary Indians. The
+    reward, when it came, was the Rowlatt Act. The gap between promise and reality made the post-war mass
+    movement possible.
+  figures:
+    - label: Indian soldiers and labourers who served
+      min: 1100000
+      max: 1500000
+      note: About 1.3 million is the usual figure. More than 70,000 died.
+      sources: [wp-ww1-india]
+  sources: [wp-ww1-india, bose-jalal]
+- id: komagata-maru
+  name: Komagata Maru and Budge Budge
+  date: "1914-09-29"
+  place: budge-budge
+  kind: atrocity
+  significance: 2
+  causes: [ww1-india]
+  summary: >-
+    A ship carrying 376 Indian emigrants, mostly Sikhs, is refused entry to Canada and sent back. When it
+    docks at Budge Budge near Calcutta, police open fire on the passengers.
+  context: >-
+    Canada's rules effectively barred Indians, although they were fellow British subjects. The episode
+    exposed the empire's racial hierarchy.
+  consequences: It fed the anger behind the Ghadar movement among Punjabi emigrants.
+  figures:
+    - label: Killed at Budge Budge
+      min: 19
+      max: 26
+      note: About 19 passengers were killed by most counts.
+      sources: [wp-komagata-maru]
+  sources: [wp-komagata-maru]
+- id: ghadar
+  name: Ghadar rising foiled
+  date: "1915-02"
+  place: lahore
+  kind: revolt
+  significance: 2
+  causes: [komagata-maru, ww1-india]
+  summary: >-
+    Members of the Ghadar ("Revolt") Party, Punjabi emigrants from North America, return to India to raise
+    the army against the British in wartime. Informers betray the planned February 1915 rising. In
+    Singapore, Indian troops mutiny and are crushed.
+  context: >-
+    The war seemed a chance to strike while Britain was distracted. Ghadar drew on anger at racism abroad
+    and at hardship in Punjab.
+  consequences: >-
+    In the Lahore conspiracy trials, dozens were hanged or transported to the Andamans. The government
+    took sweeping wartime powers under the Defence of India Act, which the Rowlatt Act would try to keep.
+  sources: [wp-ghadar, wp-singapore-mutiny]
 - id: gandhi-returns
   name: Gandhi returns to India
-  date: 1915-01-09
+  date: "1915-01-09"
   place: bombay
   kind: political
   significance: 3
-  participants:
-    - gandhi
-  summary: After 21 years in South Africa, Gandhi lands at Bombay.
-  sources:
-    - wp-gandhi
+  participants: [gandhi, gokhale]
+  summary: >-
+    After 21 years in South Africa, where he developed satyagraha (non-violent resistance), Gandhi lands at
+    Bombay. On Gokhale's advice he spends a year travelling India before taking a political stand.
+  context: >-
+    In South Africa Gandhi led campaigns against laws discriminating against Indians, using organised,
+    disciplined non-violent disobedience. He was known in India, but he had no political base there.
+  consequences: >-
+    He built his base by taking up local grievances, first at Champaran, then Kheda and Ahmedabad.
+  sources: [wp-gandhi, guha-gandhi]
+- id: home-rule
+  name: Home Rule Leagues
+  date: "1916-04"
+  end: "1918"
+  place: poona
+  kind: movement
+  significance: 2
+  participants: [tilak]
+  causes: [surat-split]
+  summary: >-
+    Tilak and the Irish theosophist Annie Besant found Home Rule Leagues demanding self-government within
+    the empire, on the Irish model.
+  context: The war had stalled Congress politics, and the leagues kept nationalist agitation alive.
+  consequences: The leagues brought in new, younger members, many of whom later joined Gandhi's campaigns.
+  sources: [wp-home-rule]
 - id: lucknow-pact
   name: Lucknow Pact
-  date: 1916-12
+  date: "1916-12"
   place: lucknow
   kind: treaty
   significance: 3
-  participants:
-    - tilak
-    - jinnah
-  summary: The Congress and the Muslim League agree on joint demands, accepting separate electorates.
-  sources:
-    - wp-lucknow-pact
+  participants: [tilak, jinnah]
+  causes: [morley-minto, surat-split]
+  summary: >-
+    At Lucknow, the reunited Congress and the Muslim League agree on joint demands for self-government.
+    The Congress accepts separate electorates and extra Muslim seats in provinces where Muslims are a
+    minority.
+  context: >-
+    Both wanted to put pressure on a Britain weakened by war. Jinnah, then a member of both parties, was a
+    key broker, hailed as an "ambassador of Hindu–Muslim unity".
+  consequences: >-
+    It was the high point of Congress–League cooperation. It also made separate electorates part of
+    Indian nationalists' own platform.
+  sources: [wp-lucknow-pact, jalal-sole-spokesman]
 - id: champaran
   name: Champaran Satyagraha
-  date: 1917-04-15
+  date: "1917-04-15"
   place: motihari
   kind: movement
   significance: 3
-  participants:
-    - gandhi
-  summary: Gandhi goes to Champaran on behalf of tenants forced to grow indigo, defies an order to leave, and
-    wins an inquiry.
-  why: His first satyagraha in India.
-  sources:
-    - wp-champaran
+  participants: [gandhi]
+  causes: [gandhi-returns]
+  summary: >-
+    Gandhi goes to Champaran in Bihar, where European planters force tenants to grow indigo on part of
+    their land (the tinkathia system). He is ordered to leave, refuses, and the case against him is
+    dropped. An inquiry follows, and the system is abolished.
+  context: A local peasant, Raj Kumar Shukla, persuaded Gandhi to come and see the conditions.
+  consequences: >-
+    It was Gandhi's first satyagraha in India. It showed that peasants could be mobilised, and that open,
+    lawful defiance could make officials back down.
+  sources: [wp-champaran, guha-gandhi]
+- id: montagu-declaration
+  name: Montagu Declaration
+  date: "1917-08-20"
+  kind: law
+  significance: 3
+  participants: [montagu]
+  causes: [ww1-india, lucknow-pact]
+  summary: >-
+    The Secretary of State for India tells Parliament that British policy is "the gradual development of
+    self-governing institutions" towards "responsible government" in India.
+  context: The war had made Britain dependent on Indian men and money, and nationalists were pressing for a reward.
+  consequences: >-
+    For the first time Britain named self-government as the goal, though not when. It led to the
+    Montagu–Chelmsford reforms of 1919.
+  sources: [wp-montagu-chelmsford]
 - id: kheda
   name: Kheda Satyagraha
-  date: 1918-03-22
+  date: "1918-03-22"
   place: nadiad
   kind: movement
   significance: 2
-  participants:
-    - gandhi
-    - patel
-  summary: Peasants refuse to pay land revenue after crop failure. Patel joins Gandhi.
-  sources:
-    - wp-kheda
+  participants: [gandhi, patel]
+  causes: [champaran, ww1-india]
+  summary: >-
+    After a crop failure and plague, Kheda peasants refuse to pay the land revenue. Gandhi and a Gujarati
+    lawyer, Vallabhbhai Patel, lead the campaign, and the government partly relents.
+  context: Wartime prices had risen steeply, while the revenue demand stayed fixed.
+  consequences: Patel became Gandhi's lieutenant in Gujarat, and the campaign tested the no-tax method used later at Bardoli.
+  sources: [wp-kheda]
 - id: rowlatt
   name: Rowlatt Act and satyagraha
-  date: 1919-03
-  end: 1919-04
+  date: "1919-03-18"
+  end: "1919-04-18"
   place: bombay
   kind: law
-  significance: 3
-  participants:
-    - gandhi
-  summary: Wartime powers of detention without trial are extended into peacetime. Gandhi calls a nationwide
-    hartal (general strike), the first all-India protest.
-  sources:
-    - wp-rowlatt
+  significance: 4
+  participants: [gandhi]
+  causes: [ww1-india, ghadar]
+  summary: >-
+    The Rowlatt Act extends wartime powers into peacetime: detention without trial and trial without jury
+    for political cases. Gandhi calls a nationwide hartal (strike) for 6 April. It is the first all-India
+    protest.
+  context: >-
+    Indians had expected self-government after the war. They got the Rowlatt Act, passed despite the
+    unanimous opposition of the Indian members of the council: "No dalil, no vakil, no appeal" (no
+    argument, no lawyer, no appeal).
+  consequences: >-
+    Protests spread across north India, with violence in Punjab and Gujarat. Gandhi called off the
+    campaign, shocked by the violence. In Amritsar, tension came to a head on 13 April.
+  sources: [wp-rowlatt, chandra-struggle]
 - id: jallianwala
   name: Jallianwala Bagh massacre
-  alt_names:
-    - Amritsar massacre
-  date: 1919-04-13
+  alt_names: [Amritsar massacre]
+  date: "1919-04-13"
   place: amritsar
   kind: atrocity
   significance: 5
-  summary: Brigadier-General Dyer's troops fire without warning on an unarmed crowd in a walled garden on
-    Baisakhi, until their ammunition runs low.
-  why: It turned moderates against the Raj. Tagore returned his knighthood, and Gandhi moved to non-cooperation.
+  participants: [dyer, tagore]
+  causes: [rowlatt]
+  summary: >-
+    In Amritsar, Brigadier-General Reginald Dyer marches troops into a walled garden where thousands
+    have gathered on Baisakhi, many of them pilgrims unaware of a ban on meetings. He orders them to fire
+    without warning. They fire for about ten minutes, into the crowd and at the narrow exits.
+  context: >-
+    After two local leaders were deported on 10 April, riots in Amritsar killed five Europeans. The
+    Punjab government, under Michael O'Dwyer, was determined to crush the unrest. Dyer later said he
+    wanted to "produce a moral effect" across Punjab.
+  consequences: >-
+    Martial law followed, with public floggings and the "crawling order". The Hunter Committee censured
+    Dyer and he was retired, but many in Britain hailed him as a hero. Tagore returned his knighthood.
+    Gandhi, who had backed the empire in the war, concluded that it could not be reformed.
+  why: The massacre turned moderate Indians against British rule for good.
   figures:
     - label: Killed
       min: 379
       max: 1000
-      note: The official Hunter Committee figure is 379. The Congress inquiry estimated about 1,000.
-      sources:
-        - wp-jallianwala
-  sources:
-    - wp-jallianwala
-    - chandra-struggle
+      note: The official Hunter Committee figure is 379. The Congress inquiry estimated about 1,000. Over 1,000 were wounded.
+      sources: [wp-jallianwala]
+  sources: [wp-jallianwala, wp-dyer, chandra-struggle]
 - id: goi-act-1919
   name: Government of India Act 1919
-  alt_names:
-    - Montagu–Chelmsford reforms
-  date: 1919-12-23
+  alt_names: [Montagu–Chelmsford reforms]
+  date: "1919-12-23"
   place: delhi
   kind: law
-  significance: 2
-  summary: Introduces "dyarchy", under which some provincial subjects are handed to elected Indian ministers.
-  sources:
-    - wp-goi-act-1919
+  significance: 3
+  participants: [montagu]
+  causes: [montagu-declaration]
+  summary: >-
+    "Dyarchy" in the provinces: elected Indian ministers take over subjects like education and health,
+    while British officials keep finance, police and justice. The electorate is widened to about 5 million.
+  context: This was the reform promised in 1917, but it arrived in the same year as the Rowlatt Act and Amritsar.
+  consequences: >-
+    Too little and too late for the Congress, which boycotted the first elections. But it began real
+    Indian experience of provincial government, which grew in 1935.
+  sources: [wp-goi-act-1919, wp-montagu-chelmsford]

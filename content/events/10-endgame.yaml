@@ -1,33 +1,141 @@
-# Events: Endgame. Each event explains why (context), what (summary) and what changed (consequences).
-- id: lahore-resolution
-  name: Lahore Resolution
-  alt_names:
-    - Pakistan Resolution
-  date: 1940-03-23
-  place: lahore
+# Events: Endgame (1939–1947). Each explains why (context), what (summary) and what changed (consequences).
+- id: war-declared
+  name: India declared at war
+  date: "1939-09-03"
   kind: political
   significance: 4
-  participants:
-    - jinnah
-  summary: The Muslim League calls for "independent states" in the Muslim-majority regions.
-  sources:
-    - wp-lahore-resolution
+  participants: [linlithgow]
+  causes: [elections-1937]
+  summary: >-
+    Hours after Britain declares war on Germany, Viceroy Linlithgow announces that India too is at war.
+    He consults no Indian leader and no elected legislature.
+  context: >-
+    Under the 1935 Act, defence and foreign policy stayed with the Viceroy. Many Congress leaders opposed
+    fascism and were willing to help, if Britain promised independence.
+  consequences: >-
+    The Congress asked Britain to state its war aims for India. When the answer was vague, the Congress
+    ministries in eight provinces resigned in October–November 1939. Jinnah celebrated a "Day of
+    Deliverance". The League gained ground while the Congress stood aside.
+  why: India was taken into a world war without being asked, and that broke the 1937 settlement.
+  sources: [wp-ww2-india, wp-linlithgow, bose-jalal]
+- id: ministries-resign
+  name: Congress ministries resign
+  date: "1939-10"
+  end: "1939-11"
+  place: delhi
+  kind: political
+  significance: 3
+  participants: [nehru, jinnah]
+  causes: [war-declared]
+  summary: >-
+    In protest at being taken into the war, Congress governments resign in all the provinces they hold.
+    The Muslim League marks 22 December 1939 as a "Day of Deliverance" from Congress rule.
+  context: The Congress wanted a promise of independence after the war and an Indian say in the war now.
+  consequences: >-
+    Governors ruled the Congress provinces directly. The British came to rely more on the League and the
+    princes. The League, out of power, was free to build its following.
+  sources: [wp-ww2-india, jalal-sole-spokesman]
+- id: lahore-resolution
+  name: Lahore Resolution
+  alt_names: [Pakistan Resolution]
+  date: "1940-03-23"
+  place: lahore
+  kind: political
+  significance: 5
+  participants: [jinnah]
+  causes: [elections-1937, ministries-resign, iqbal-allahabad]
+  summary: >-
+    At Lahore the Muslim League demands that the Muslim-majority areas in the north-west and east be
+    grouped into "independent states" that are "autonomous and sovereign". Jinnah argues that Hindus and
+    Muslims are two nations.
+  context: >-
+    The League's experience of the 1937 Congress ministries, and fear of being a permanent minority under
+    a Congress-run centre, pushed it towards a territorial demand. The resolution did not use the word
+    "Pakistan", and it was vague about what "states" meant.
+  consequences: >-
+    "Pakistan" became the League's rallying cry. Historians still debate whether Jinnah meant a fully
+    separate state or a bargaining position for Muslim power in a loose federation.
+  perspectives:
+    - view: Pakistani national view
+      text: The founding statement of the demand for a Muslim homeland.
+    - view: Revisionist view (Ayesha Jalal)
+      text: The demand was deliberately vague, a lever for parity at the centre, not necessarily for partition.
+  sources: [wp-lahore-resolution, jalal-sole-spokesman]
+- id: cripps-mission
+  name: Cripps Mission
+  date: "1942-03-22"
+  end: "1942-04-12"
+  place: delhi
+  kind: political
+  significance: 3
+  participants: [cripps, gandhi, jinnah]
+  causes: [war-declared]
+  summary: >-
+    With Japan sweeping through Southeast Asia, Britain sends Stafford Cripps with an offer: dominion
+    status after the war, a constitution-making body, and the right of any province to stay out.
+  context: >-
+    Singapore had fallen in February 1942 and Rangoon in March. The United States and China pressed
+    Britain to win Indian support.
+  consequences: >-
+    The Congress rejected an offer that gave no real power now and allowed the country to be broken up
+    later. Gandhi reportedly called it "a post-dated cheque". The League rejected it too, but noted that
+    it accepted the principle of provinces opting out.
+  sources: [wp-cripps, bose-jalal]
 - id: quit-india
   name: Quit India movement
-  date: 1942-08-08
-  end: 1943-12
+  date: "1942-08-08"
+  end: "1943-12"
   place: bombay
   kind: movement
   significance: 5
-  participants:
-    - gandhi
-    - nehru
-    - patel
-  summary: 'At Gowalia Tank, Gandhi calls on the British to "Quit India": "Do or die". The leadership is jailed
-    within hours, and a leaderless mass rising follows. It is crushed by force.'
-  sources:
-    - wp-quit-india
-    - chandra-struggle
+  participants: [gandhi, nehru, patel, azad]
+  causes: [cripps-mission]
+  summary: >-
+    At Gowalia Tank in Bombay, Gandhi demands that the British leave India at once: "Do or die." Within
+    hours the whole Congress leadership is arrested. A leaderless rising follows, with railway stations,
+    post offices and police stations attacked, and parallel governments set up in places like Satara,
+    Midnapore and Ballia.
+  context: >-
+    After Cripps failed and Japan reached India's border, Gandhi argued that British rule invited Japanese
+    attack and that a free India would defend itself.
+  consequences: >-
+    The Raj crushed it with more than 50 army battalions, mass arrests, collective fines and aerial
+    machine-gunning in places. It was the most serious revolt since 1857. The Congress spent the rest of
+    the war in jail, while the League, cooperating with the British, grew stronger. Britain concluded it
+    could no longer rule India against its will once the war ended.
+  figures:
+    - label: Arrested
+      min: 60000
+      max: 100000
+      note: Over 60,000 by official counts by 1943. Estimates of the total run higher.
+      sources: [wp-quit-india]
+    - label: Killed
+      min: 1000
+      max: 10000
+      note: The official figure was about 1,000. Nationalist estimates were several times higher.
+      sources: [wp-quit-india]
+  sources: [wp-quit-india, chandra-struggle]
+- id: azad-hind
+  name: Azad Hind government proclaimed
+  date: "1943-10-21"
+  place: singapore
+  kind: political
+  significance: 3
+  participants: [subhas-bose]
+  causes: [war-declared]
+  summary: >-
+    In Japanese-occupied Singapore, Subhas Chandra Bose proclaims the Provisional Government of Free India
+    and takes command of the Indian National Army (INA), recruited largely from Indian prisoners of war.
+  context: >-
+    Bose had broken with Gandhi in 1939 and escaped from house arrest in 1941. He believed India should
+    use Britain's war to win freedom by force, with Axis help.
+  consequences: The INA, about 40,000 strong at its peak, fought alongside the Japanese in Burma and at Imphal.
+  perspectives:
+    - view: Nationalist memory
+      text: '"Netaji" raised an army of Indians to fight for freedom, which inspired the country.'
+    - view: Critical view
+      text: The alliance with imperial Japan and Nazi Germany, regimes guilty of atrocities, is hard to defend.
+  sources: [wp-azad-hind, wp-ina, bayly-harper]
 - id: bengal-famine
   name: Bengal famine of 1943
   date: "1943"
@@ -35,119 +143,295 @@
   place: calcutta
   kind: famine
   significance: 5
-  summary: Wartime policy, the loss of Burmese rice, hoarding and administrative failure produce famine in Bengal.
-  why: The share of blame between wartime policy and other causes is still argued over.
+  participants: [churchill]
+  causes: [war-declared]
+  summary: >-
+    Millions die of starvation and disease in Bengal. Starving villagers crowd into Calcutta.
+  context: >-
+    Japan's conquest of Burma cut off rice imports. A cyclone in October 1942 destroyed crops. The
+    government's "denial policy" seized boats and rice near the coast to deny them to an invader. Wartime
+    spending drove prices up, and traders hoarded. Food went to the army and the city, and both Bengal's
+    ministry and the central government reacted too late.
+  consequences: >-
+    Amartya Sen later showed that there was enough food in Bengal. People starved because they could not
+    afford it, which made it a famine of policy and prices. It deepened Indian bitterness towards the Raj.
+  why: The famine was made by war, policy and markets, not by a harvest failure alone.
+  perspectives:
+    - view: Critics of the War Cabinet
+      text: Churchill's government refused or delayed food imports, despite warnings, to prioritise war needs. Madhusree Mukerjee argues it was a choice.
+    - view: Other historians
+      text: Shipping shortages, the Japanese threat and failures by the Bengal government and traders weigh at least as heavily.
   figures:
     - label: Deaths
       min: 2100000
       max: 3000000
       note: Estimates range from about 2.1 million to about 3 million.
-      sources:
-        - wp-bengal-famine
-  sources:
-    - wp-bengal-famine
+      sources: [wp-bengal-famine]
+  sources: [wp-bengal-famine, sen-poverty-famines, mukerjee-churchill]
 - id: imphal-kohima
   name: Imphal and Kohima
-  date: 1944-03
-  end: 1944-07
+  date: "1944-03"
+  end: "1944-07"
   place: imphal
   kind: battle
-  significance: 3
-  participants:
-    - subhas-bose
-  summary: The Japanese invasion of India, with units of Subhas Chandra Bose's Indian National Army, is defeated.
-  sources:
-    - wp-imphal
+  significance: 4
+  participants: [subhas-bose]
+  causes: [azad-hind]
+  summary: >-
+    Japanese forces, with INA units, invade India to take Imphal and Kohima. The British Indian Army
+    holds both towns, and the attackers retreat through the monsoon, losing most of their strength to
+    battle, hunger and disease.
+  context: Japan hoped to break into India and spark an uprising. Bose hoped the INA's arrival would bring the country to its side.
+  consequences: >-
+    It was the turning point of the Burma war. The British Indian Army, about 2.5 million strong by 1945,
+    the largest volunteer army in history, reconquered Burma.
+  sources: [wp-imphal, wp-kohima, bayly-harper]
+- id: simla-conference
+  name: Simla Conference
+  date: "1945-06-25"
+  end: "1945-07-14"
+  place: simla
+  kind: political
+  significance: 2
+  participants: [jinnah, azad]
+  causes: [quit-india]
+  summary: >-
+    The released Congress leaders and the League meet Viceroy Wavell to form an all-Indian executive
+    council. It fails when Jinnah insists that the League alone may name Muslim members.
+  context: >-
+    The war in Europe had ended, and Britain wanted an interim government. The Congress, which had a
+    Muslim president, Azad, refused to accept that only the League spoke for Muslims.
+  consequences: Elections were called to settle who spoke for whom.
+  sources: [wp-simla-conference]
 - id: ina-trials
   name: INA trials at the Red Fort
-  date: 1945-11
-  end: 1946-05
+  date: "1945-11"
+  end: "1946-05"
   place: delhi
   kind: political
   significance: 3
-  summary: Courts-martial of INA officers spark mass sympathy across India. Sentences are commuted.
-  sources:
-    - wp-ina-trials
+  causes: [imphal-kohima]
+  summary: >-
+    The British court-martial INA officers, a Hindu, a Muslim and a Sikh, for "waging war against the
+    King". Nehru and other Congress lawyers defend them. Protests and riots break out in Calcutta and
+    elsewhere.
+  context: >-
+    The British meant to punish disloyalty. Instead, Indians of every community saw the INA men as
+    patriots.
+  consequences: >-
+    The sentences were remitted. The British learned they could no longer rely on Indian soldiers'
+    loyalty, the foundation of the Raj since 1858.
+  sources: [wp-ina-trials, wp-ina]
+- id: elections-1946
+  name: Elections of 1945–46
+  date: "1945-12"
+  end: "1946-04"
+  place: delhi
+  kind: political
+  significance: 4
+  participants: [jinnah, nehru]
+  causes: [simla-conference]
+  summary: >-
+    The Congress sweeps the general seats. The Muslim League wins almost all the Muslim seats: all 30 in
+    the central assembly and most in the provinces.
+  context: "The League campaigned on one question: Pakistan."
+  consequences: >-
+    Jinnah could now claim to be the "sole spokesman" of India's Muslims. No settlement was possible
+    without him. NWFP, with a Congress ministry, was the main exception.
+  sources: [wp-elections-1946, jalal-sole-spokesman]
 - id: rin-mutiny
   name: Royal Indian Navy mutiny
-  date: 1946-02-18
-  end: 1946-02-23
+  date: "1946-02-18"
+  end: "1946-02-23"
   place: bombay
   kind: revolt
   significance: 3
-  summary: Ratings strike and mutiny in Bombay and Karachi. The episode shook British confidence in the armed forces.
-  sources:
-    - wp-rin-mutiny
+  causes: [ina-trials]
+  summary: >-
+    Ratings on HMIS Talwar in Bombay strike over food, pay and racist treatment. It spreads to 78 ships
+    and shore bases from Karachi to Calcutta, flying Congress, League and Communist flags together.
+    Bombay workers strike in support. It ends after Patel and Jinnah urge surrender.
+  context: The INA trials and wartime grievances had shaken the armed forces.
+  consequences: The British government saw that the armed forces, the last guarantee of its rule, could not be trusted.
+  sources: [wp-rin-mutiny]
+- id: cabinet-mission
+  name: Cabinet Mission
+  date: "1946-03-24"
+  end: "1946-06-29"
+  place: delhi
+  kind: political
+  significance: 4
+  participants: [jinnah, nehru, azad, gandhi]
+  causes: [elections-1946]
+  summary: >-
+    Three British cabinet ministers propose a united India with a weak centre (defence, foreign affairs,
+    communications) and provinces grouped into three blocs, two of them with Muslim majorities. Both the
+    Congress and the League first accept it.
+  context: Britain's new Labour government wanted to leave quickly and hand over to a single Indian state.
+  consequences: >-
+    In July Nehru said the Congress would not be bound by the grouping scheme. The League withdrew its
+    acceptance and called for "Direct Action" to achieve Pakistan. It was the last real chance for a
+    united India.
+  why: The last plan for a united India collapsed over how much power the centre would have.
+  sources: [wp-cabinet-mission, khan-great-partition, jalal-sole-spokesman]
 - id: direct-action
   name: Direct Action Day
-  alt_names:
-    - Great Calcutta Killings
-  date: 1946-08-16
+  alt_names: [Great Calcutta Killings]
+  date: "1946-08-16"
   place: calcutta
   kind: atrocity
-  significance: 4
-  participants:
-    - jinnah
-  summary: The Muslim League's call for "direct action" is followed by days of communal killing in Calcutta.
+  significance: 5
+  participants: [jinnah, suhrawardy]
+  causes: [cabinet-mission]
+  summary: >-
+    The League's day of protest turns into four days of mass killing between Muslims and Hindus and Sikhs
+    in Calcutta. Bodies lie in the streets and the Hooghly.
+  context: >-
+    Tension was at a peak after the Cabinet Mission collapsed. Bengal had a League government under
+    Suhrawardy, who declared a public holiday. Armed gangs on both sides were ready.
+  consequences: >-
+    Killing spread to Noakhali, then Bihar, the United Provinces and Punjab, in a chain of revenge. Many on
+    both sides came to see Partition as unavoidable.
+  perspectives:
+    - view: One reading
+      text: The League and Suhrawardy's government bear primary responsibility for creating the conditions for violence.
+    - view: Another reading
+      text: Organised Hindu and Sikh groups also killed on a large scale, and the British held back the army for too long.
   figures:
     - label: Killed
       min: 4000
       max: 10000
-      note: At least 4,000 dead. Some estimates are much higher.
-      sources:
-        - wp-direct-action
-  sources:
-    - wp-direct-action
+      note: At least 4,000 dead. Some estimates are much higher. About 100,000 were made homeless.
+      sources: [wp-direct-action]
+  sources: [wp-direct-action, khan-great-partition]
 - id: noakhali
   name: Noakhali riots and Gandhi's walk
-  date: 1946-10-10
-  end: 1947-03
+  date: "1946-10-10"
+  end: "1947-03"
   place: noakhali
   kind: atrocity
   significance: 3
-  participants:
-    - gandhi
-  summary: Organised attacks on Hindus in Noakhali. Gandhi spends four months walking through the district.
-  sources:
-    - wp-noakhali
+  participants: [gandhi]
+  causes: [direct-action]
+  summary: >-
+    Organised attacks on Hindus in Noakhali district of East Bengal: killings, forced conversions and
+    abductions. Reprisal killings of Muslims follow in Bihar. Gandhi, aged 77, walks barefoot from village
+    to village in Noakhali for four months, trying to restore trust.
+  context: The Calcutta killings had spread fear and revenge into the countryside.
+  consequences: >-
+    Gandhi was absent from Delhi while the decisive negotiations took place. His walk became a symbol of
+    the alternative to Partition.
+  sources: [wp-noakhali, guha-gandhi]
 - id: mountbatten-plan
   name: Mountbatten Plan
-  date: 1947-06-03
+  alt_names: [3 June Plan]
+  date: "1947-06-03"
   place: delhi
   kind: political
-  significance: 3
-  participants:
-    - nehru
-    - jinnah
-    - patel
-  summary: Partition and early independence are announced. The date is brought forward to August 1947.
-  sources:
-    - wp-partition-1947
+  significance: 4
+  participants: [mountbatten, nehru, jinnah, patel]
+  causes: [direct-action, cabinet-mission]
+  summary: >-
+    The last Viceroy announces that India will be partitioned and power transferred, and he brings the
+    date forward from June 1948 to 15 August 1947. Punjab and Bengal will be divided if their assemblies
+    vote for it. Sylhet and NWFP will hold referendums.
+  context: >-
+    With violence spreading and the interim government paralysed, the Congress leaders, Nehru and Patel
+    above all, accepted partition as the price of a strong central state. Gandhi opposed it but did not
+    fight it.
+  consequences: >-
+    The British left 72 days later. Punjab and Bengal, home to millions of Hindus, Muslims and Sikhs, would
+    be cut in two by a boundary nobody had yet drawn.
+  sources: [wp-partition-1947, khan-great-partition]
+- id: sylhet-referendum
+  name: Sylhet referendum
+  date: "1947-07-06"
+  place: sylhet
+  kind: political
+  significance: 2
+  causes: [mountbatten-plan]
+  summary: Voters in Assam's Sylhet district choose to join East Bengal, and so Pakistan. The Karimganj area stays in India.
+  context: Sylhet had been attached to Assam since 1874, though it was Bengali-speaking and Muslim-majority.
+  consequences: It is one reason Sylhet is in Bangladesh today.
+  sources: [wp-sylhet-referendum]
 - id: independence
   name: Independence and Partition
-  date: 1947-08-15
+  date: "1947-08-15"
   place: delhi
   kind: political
   significance: 5
-  participants:
-    - nehru
-    - jinnah
-    - gandhi
-  summary: India and Pakistan become independent dominions. Nehru speaks of a "tryst with destiny". Gandhi is in
-    Calcutta, fasting against the violence. The Radcliffe boundaries are published on 17 August.
-  why: The end of the Raj, and one of the largest forced migrations in history.
+  participants: [nehru, jinnah, gandhi, mountbatten]
+  causes: [mountbatten-plan]
+  summary: >-
+    Pakistan becomes independent on 14 August and India at midnight on 14–15 August. In Delhi, Nehru speaks
+    of a "tryst with destiny". Gandhi is in Calcutta, fasting and praying against the violence.
+  context: >-
+    The British left in a hurry, partly to escape responsibility for violence they could no longer
+    control.
+  consequences: >-
+    Two states replaced the Raj. Some 560 princely states were brought into India or Pakistan. Most joined
+    peacefully by 15 August; Junagadh, Hyderabad and Kashmir did not. Gandhi was assassinated in January
+    1948 by a Hindu nationalist.
+  why: The Raj ended, and the subcontinent was divided.
   figures:
     - label: Deaths in Partition violence
       min: 200000
       max: 2000000
       note: Estimates vary by an order of magnitude.
-      sources:
-        - wp-partition-1947
+      sources: [wp-partition-1947, khan-great-partition]
     - label: People displaced
       min: 10000000
       max: 20000000
-      sources:
-        - wp-partition-1947
-  sources:
-    - wp-partition-1947
-    - wp-indian-independence-act
+      sources: [wp-partition-1947]
+  sources: [wp-partition-1947, wp-indian-independence-act, khan-great-partition]
+- id: radcliffe-line
+  name: Radcliffe Line published
+  date: "1947-08-17"
+  place: lahore
+  kind: law
+  significance: 5
+  participants: [radcliffe]
+  causes: [mountbatten-plan, independence]
+  summary: >-
+    Two days after independence the new borders are made public. Lahore goes to Pakistan; Amritsar and
+    Gurdaspur's eastern tehsils go to India. In the east, Calcutta stays in India and the Chittagong Hill
+    Tracts go to Pakistan.
+  context: >-
+    Cyril Radcliffe, who had never been to India, drew the lines in about five weeks using outdated maps
+    and census data. The award was held back until after the celebrations.
+  consequences: >-
+    Millions found themselves on the "wrong" side. In Punjab, columns of refugees and trains full of the
+    dead crossed the border in both directions through the autumn. It was among the largest migrations in
+    history.
+  sources: [wp-radcliffe-line, khan-great-partition]
+- id: junagadh-crisis
+  name: Junagadh crisis
+  date: "1947-09-15"
+  end: "1947-11-09"
+  place: junagadh
+  kind: political
+  significance: 2
+  causes: [independence]
+  summary: >-
+    The Muslim Nawab of Hindu-majority Junagadh accedes to Pakistan. India blockades the state, the Nawab
+    flees to Karachi, and Indian forces take over in November. A plebiscite in 1948 confirms the merger.
+  context: Under the independence arrangements, rulers chose which dominion to join.
+  consequences: India argued the will of the people should decide. It made the opposite case in Kashmir.
+  sources: [wp-junagadh, wp-political-integration]
+- id: kashmir-accession
+  name: Kashmir accedes to India
+  date: "1947-10-26"
+  place: srinagar
+  kind: political
+  significance: 4
+  causes: [independence]
+  summary: >-
+    As Pashtun tribal fighters invade from Pakistan, Maharaja Hari Singh signs the Instrument of Accession
+    to India. Indian troops are flown into Srinagar the next day. The first India–Pakistan war follows.
+  context: >-
+    The Hindu ruler of a Muslim-majority state had delayed his choice, hoping for independence. Pakistan
+    believed Kashmir belonged to it on grounds of religion and geography.
+  consequences: >-
+    The war ended in a ceasefire line in 1949. The dispute remains unresolved, and the region is still
+    divided and contested.
+  sources: [wp-kashmir-accession, wp-political-integration]

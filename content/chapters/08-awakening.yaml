@@ -1,0 +1,166 @@
+id: awakening
+number: 8
+title: Awakening
+period: 1905–1919
+summary: >-
+  A viceroy cuts Bengal in two and wakes a nation. War, broken promises and a massacre at Amritsar turn
+  loyal subjects into opponents of the Raj.
+scenes:
+  - id: ch8-partition
+    t: "1905-10-16"
+    camera: { center: [88.5, 24.0], zoom: 5.4, pitch: 15 }
+    title: Bengal cut in two
+    text: >-
+      By 1905 the Congress had been asking politely for twenty years, and mostly being ignored. The
+      Viceroy, Lord Curzon, thought it was "tottering to its fall".
+
+      Then Curzon [partitioned Bengal](event:bengal-partition). On paper it was about efficiency: Bengal had
+      78 million people. But officials wrote privately that a united Bengal was "a power" and a divided one
+      would "pull several different ways". The new eastern province, deep pink on the map, had a Muslim
+      majority and its capital at [Dacca](place:dacca). Western Bengal, with Bihar and Orissa, had a Hindu
+      majority.
+
+      Educated Bengalis saw it as divide and rule, an attempt to break the centre of Indian nationalism.
+    show:
+      events: [bengal-partition]
+      places: [calcutta, dacca]
+      polities: [eastern-bengal-assam, bengal-presidency]
+  - id: ch8-swadeshi
+    t: "1906-06"
+    camera: { center: [88.4, 23.4], zoom: 6.4, pitch: 25 }
+    title: Burn the cloth
+    text: >-
+      Petitions had failed, so Bengalis struck at Britain's pocket. The [Swadeshi movement](event:swadeshi),
+      meaning "of one's own country", boycotted British goods, above all Manchester cotton. People burned
+      foreign cloth in bonfires, set up Indian mills and schools, and sang "Bande Mataram". Tagore wrote
+      songs for it.
+
+      Remember the [Calico Act](event:calico-act) of 1700, when Britain banned Indian cloth to protect its
+      own weavers. Two centuries later Indians were boycotting British cloth to protect theirs.
+
+      The movement had limits. Few peasants and few Muslims joined, and many Muslims in East Bengal
+      welcomed the new province. In December 1906 Muslim notables at Dacca founded the [All-India Muslim
+      League](event:muslim-league).
+    show:
+      events: [swadeshi, muslim-league]
+      places: [calcutta, dacca]
+      polities: [eastern-bengal-assam]
+  - id: ch8-split
+    t: "1908-04-30"
+    camera: { center: [82.0, 22.5], zoom: 4.6, pitch: 10 }
+    title: Moderates, extremists and bombs
+    text: >-
+      The Congress could not agree on how far to go. At [Surat](event:surat-split) in 1907 it split.
+      [Gokhale's](person:gokhale) Moderates wanted reform through British goodwill. [Tilak's](person:tilak)
+      Extremists wanted boycott and swaraj, self-rule.
+
+      Some young Bengalis went further. In April 1908 [Khudiram Bose](person:khudiram-bose), aged 18, threw a
+      bomb at [Muzaffarpur](event:muzaffarpur-bomb). It killed two Englishwomen by mistake, and he was hanged.
+      The government answered with press laws and deportations. Tilak was [jailed in
+      Mandalay](event:tilak-jailed) for six years for his articles.
+    show:
+      events: [surat-split, muzaffarpur-bomb, tilak-jailed]
+      places: [surat, muzaffarpur, mandalay, poona]
+  - id: ch8-morley-minto
+    t: "1909-05"
+    camera: { center: [80.5, 23.0], zoom: 4.4, pitch: 0 }
+    title: Divide by the ballot box
+    text: >-
+      Britain's answer was reform for the Moderates and prison for the radicals. The [Morley–Minto
+      reforms](event:morley-minto) of 1909 let a few Indians elect members to the legislative councils.
+
+      Muslims, at the League's request, got **separate electorates**: seats for which only Muslims could
+      vote. It protected a minority. It also meant that from now on Indians voted as Hindus or Muslims,
+      not just as Indians, at every stage of reform. Many historians see 1909 as one of the first steps
+      on the road to 1947.
+    show:
+      events: [morley-minto, muslim-league]
+      places: [calcutta, dacca, delhi]
+  - id: ch8-durbar
+    t: "1912-04-01"
+    camera: { center: [83.0, 25.0], zoom: 4.8, pitch: 10 }
+    title: A new capital
+    text: >-
+      In December 1911, at a vast [durbar in Delhi](event:durbar-1911), King George V announced two
+      surprises. The partition of Bengal was annulled, and the capital would move from Calcutta to Delhi,
+      the old seat of the Mughals and safely far from Bengali politics.
+
+      Watch the map. In April 1912 Bengal was reunited, Bihar and Orissa became a separate province, and
+      Delhi got its own small territory. Protest had reversed a British decision for the first time. Many
+      Bengali Muslims felt betrayed.
+    show:
+      events: [durbar-1911, bengal-partition]
+      places: [delhi, calcutta, dacca, patna]
+      polities: [bengal-presidency, bihar, assam, delhi]
+  - id: ch8-war
+    t: "1915-02"
+    camera: { center: [80.0, 20.0], zoom: 3.9, pitch: 0 }
+    title: The Empire's war
+    text: >-
+      In 1914 Britain declared war on India's behalf. About 1.3 million Indians [served](event:ww1-india)
+      as soldiers and labourers, in the mud of France, in Mesopotamia, Gallipoli and East Africa. More than
+      70,000 died. India also paid in taxes, war loans and rising prices.
+
+      Most leaders, Gandhi among them, backed the war, expecting self-government as the reward. Others did
+      not wait. The [Komagata Maru](event:komagata-maru), a ship of Punjabi emigrants turned away by Canada,
+      was met by police bullets at Budge Budge. Emigrant revolutionaries of the [Ghadar](event:ghadar) party
+      came home to raise the army in revolt in 1915. Informers betrayed them, and dozens were hanged.
+    show:
+      events: [ww1-india, komagata-maru, ghadar]
+      places: [budge-budge, lahore, singapore]
+  - id: ch8-gandhi
+    t: "1917-04-15"
+    camera: { center: [80.5, 24.0], zoom: 4.6, pitch: 10 }
+    title: A lawyer from South Africa
+    text: >-
+      In January 1915 [Gandhi returned](event:gandhi-returns) after 21 years in South Africa, where he had
+      developed **satyagraha**, disciplined non-violent resistance. He had no base in Indian politics, so
+      he built one from local grievances.
+
+      At [Champaran](event:champaran) in 1917 he took up the cause of tenants forced to grow indigo for
+      European planters. He was ordered to leave and refused, and the government backed down. At
+      [Kheda](event:kheda) in 1918 he led peasants in refusing land revenue after a failed harvest, with a
+      Gujarati lawyer, [Vallabhbhai Patel](person:patel).
+
+      Meanwhile the national parties drew together. At [Lucknow](event:lucknow-pact) in 1916 the Congress
+      and the League agreed joint demands, brokered by a young [Jinnah](person:jinnah). In 1917 Britain
+      [promised](event:montagu-declaration) "responsible government" in the end.
+    show:
+      events: [gandhi-returns, champaran, kheda, lucknow-pact, montagu-declaration]
+      people: [gandhi]
+      places: [bombay, motihari, nadiad, sabarmati, lucknow]
+  - id: ch8-rowlatt
+    t: "1919-04-06"
+    camera: { center: [76.5, 25.5], zoom: 4.8, pitch: 10 }
+    title: The reward for loyalty
+    text: >-
+      When the war ended, Indians expected their reward. Instead they got the [Rowlatt Act](event:rowlatt),
+      which kept wartime powers of arrest and detention without trial. Every Indian member of the council
+      voted against it. It passed anyway.
+
+      Gandhi called a nationwide **hartal**, a day of strikes and closed shops, for 6 April 1919. It was the
+      first protest to reach all of India at once. In Punjab, where wartime recruitment had been hardest,
+      the protests turned violent.
+    show:
+      events: [rowlatt]
+      people: [gandhi]
+      places: [bombay, delhi, lahore, amritsar]
+  - id: ch8-jallianwala
+    t: "1919-04-13"
+    camera: { center: [74.88, 31.62], zoom: 8.5, pitch: 45, bearing: -10 }
+    title: Jallianwala Bagh
+    text: >-
+      On 13 April 1919, the festival of Baisakhi, thousands gathered in Jallianwala Bagh, a walled garden in
+      Amritsar, many unaware of a ban on meetings. Brigadier-General [Dyer](person:dyer) marched in his
+      troops and, without warning, [ordered them to fire](event:jallianwala). They fired for about ten
+      minutes, into the crowd and at the narrow exits.
+
+      The official count was 379 dead; the Congress inquiry estimated about 1,000. Martial law followed,
+      with floggings and the "crawling order". In Britain many hailed Dyer as a hero. [Tagore](person:tagore)
+      returned his knighthood.
+
+      For Gandhi, who had recruited soldiers for the empire, this ended his belief that the Raj could be
+      reformed. The next chapter is about what he did instead.
+    show:
+      events: [jallianwala]
+      places: [amritsar, lahore]

@@ -1,0 +1,60 @@
+# Places for chapters 8–10 (1905–1947).
+- id: muzaffarpur
+  name: Muzaffarpur
+  modern: Muzaffarpur
+  coords: [85.3910, 26.1209]
+  tags: [city]
+  why: Where Khudiram Bose and Prafulla Chaki threw a bomb at a carriage in April 1908, killing two British women.
+  sources: [wp-khudiram]
+- id: budge-budge
+  name: Budge Budge
+  modern: Budge Budge
+  coords: [88.1700, 22.4800]
+  approx: true
+  tags: [port]
+  why: Where police fired on Sikh, Muslim and Hindu passengers of the Komagata Maru in September 1914.
+  sources: [wp-komagata-maru]
+- id: singapore
+  name: Singapore
+  modern: Singapore
+  coords: [103.8198, 1.3521]
+  tags: [port, city]
+  why: >-
+    A British port where Indian troops mutinied in 1915. In 1943 Subhas Chandra Bose proclaimed the
+    Azad Hind government here.
+  sources: [wp-singapore-mutiny, wp-azad-hind]
+- id: haripura
+  name: Haripura
+  modern: Haripura
+  coords: [73.2900, 21.1400]
+  approx: true
+  tags: [movement]
+  why: Village in Gujarat where Bose presided over the 1938 Congress session.
+  sources: [wp-subhas-bose]
+- id: kohima
+  name: Kohima
+  modern: Kohima
+  coords: [94.1086, 25.6751]
+  tags: [battle]
+  why: >-
+    A hill town in the Naga Hills where the Japanese advance into India was stopped in April–June 1944,
+    in some of the hardest fighting of the war.
+  sources: [wp-kohima]
+- id: sylhet
+  name: Sylhet
+  modern: Sylhet
+  coords: [91.8687, 24.8949]
+  tags: [city]
+  why: >-
+    A Bengali-speaking district attached to Assam since 1874. In July 1947 it voted by referendum to
+    join East Bengal (Pakistan).
+  sources: [wp-sylhet-referendum]
+- id: junagadh
+  name: Junagadh
+  modern: Junagadh
+  coords: [70.4579, 21.5222]
+  tags: [capital]
+  why: >-
+    A Hindu-majority Kathiawar state whose Muslim Nawab acceded to Pakistan in 1947. India took it over
+    in November 1947 and held a plebiscite in 1948.
+  sources: [wp-junagadh]

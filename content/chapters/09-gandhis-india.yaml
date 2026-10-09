@@ -1,0 +1,181 @@
+id: gandhis-india
+number: 9
+title: Gandhi's India
+period: 1919–1939
+summary: >-
+  Gandhi turns the Congress into a mass movement and makes salt a weapon. The Raj answers with
+  prisons, reforms and conferences, while Indians argue about what kind of nation they are.
+scenes:
+  - id: ch9-ncm
+    t: "1920-12"
+    camera: { center: [79.0, 22.5], zoom: 4.5, pitch: 10 }
+    title: Non-cooperation
+    text: >-
+      Gandhi's idea was simple. The British ruled India with Indian cooperation: Indian clerks, soldiers,
+      lawyers, students and buyers of British cloth. If Indians withdrew it, the Raj could not function.
+
+      In 1920 he launched [Non-Cooperation](event:ncm): boycott the councils, courts, schools and foreign
+      cloth; spin and wear khadi; give up British titles. He joined it to the **Khilafat** cause of Indian
+      Muslims, angry at the Allies' carve-up of the Ottoman Empire, whose sultan was the Caliph. The
+      Congress adopted the programme at [Nagpur](place:nagpur) in December 1920.
+
+      For the first time the Congress had members in villages. Peasants, workers, students and women joined
+      in their millions. Gandhi promised swaraj within a year.
+    show:
+      events: [ncm]
+      people: [gandhi]
+      places: [nagpur, sabarmati, bombay, calcutta, lahore]
+  - id: ch9-chauri-chaura
+    t: "1922-02-04"
+    camera: { center: [80.0, 21.0], zoom: 4.6, pitch: 10 }
+    title: The movement stops
+    text: >-
+      Mass movements are hard to control. In Malabar, a [rising of Mappila peasants](event:malabar)
+      against the British and Hindu landlords turned into a bloody war, with attacks on Hindus, and was
+      crushed under martial law.
+
+      Then at [Chauri Chaura](event:chauri-chaura), a crowd burned a police station and 22 policemen died.
+      Gandhi called off the whole movement. Non-violence, he believed, was not a tactic but the source of
+      the movement's power.
+
+      Nehru, Bose and many others were dismayed. Gandhi was jailed for six years and released after two.
+      Hindu–Muslim unity collapsed with the Khilafat, and some young men decided only guns would work.
+    show:
+      events: [malabar, chauri-chaura]
+      people: [gandhi]
+      places: [tirurangadi, chauri-chaura, poona]
+  - id: ch9-revolutionaries
+    t: "1929-04-08"
+    camera: { center: [77.5, 28.5], zoom: 5.6, pitch: 20 }
+    title: Revolutionaries
+    text: >-
+      In 1925 revolutionaries of the Hindustan Republican Association robbed a government train at
+      [Kakori](event:kakori) to fund their cause. Four, among them [Ram Prasad Bismil](person:ram-prasad-bismil)
+      and Ashfaqulla Khan, were hanged.
+
+      In 1928 an all-white [Simon Commission](event:simon-commission) arrived to decide India's future. At
+      a protest in Lahore, police beat [Lala Lajpat Rai](person:lajpat-rai), who died weeks later. The young
+      socialist [Bhagat Singh](person:bhagat-singh) and his comrades [shot a police officer](event:saunders-killing)
+      in revenge. In April 1929 he threw harmless bombs [into the Central Assembly](event:assembly-bomb) and
+      waited to be arrested: "It takes a loud voice to make the deaf hear."
+    show:
+      events: [kakori, simon-commission, saunders-killing, assembly-bomb]
+      people: [bhagat-singh]
+      places: [kakori, lahore, delhi]
+  - id: ch9-purna-swaraj
+    t: "1929-12-31"
+    camera: { center: [74.35, 31.55], zoom: 6.8, pitch: 30 }
+    title: Complete independence
+    text: >-
+      Indian parties answered Simon with their own draft constitution, the [Nehru Report](event:nehru-report).
+      It was the first time they agreed on what they wanted, and also the first serious break with Jinnah,
+      whose demands for Muslim safeguards were turned down.
+
+      Britain offered "dominion status" one day, with no date. So at [Lahore](event:purna-swaraj) on the
+      last night of 1929, the Congress, led by the 40-year-old [Jawaharlal Nehru](person:nehru), declared
+      its goal to be purna swaraj, complete independence, and raised the flag by the Ravi. 26 January 1930
+      was kept as Independence Day; it is why India's Republic Day falls on that date.
+
+      Now Gandhi had to find a form of defiance the whole country could join.
+    show:
+      events: [nehru-report, purna-swaraj]
+      people: [gandhi]
+      places: [lahore]
+  - id: ch9-salt-march
+    t: "1930-03-12"
+    play_to: "1930-04-06"
+    camera: { center: [72.85, 22.0], zoom: 7.0, pitch: 35 }
+    title: The Salt March
+    text: >-
+      Gandhi chose salt. Everyone needed it, rich or poor, Hindu or Muslim. The government taxed it and
+      made it a crime to make your own. Anyone could break that law, anywhere on the coast.
+
+      Watch the map. On 12 March 1930 Gandhi set out from [Sabarmati Ashram](place:sabarmati) with 78
+      followers and walked about 385 km in 24 days to [Dandi](place:dandi). The march was slow on purpose:
+      in every village he spoke, crowds grew, and newspapers and newsreels around the world followed him.
+
+      On 6 April he picked up a lump of salt from the shore, and the [Salt March](event:salt-march) became
+      a national movement. (The marker's path between towns is approximate.)
+    show:
+      events: [salt-march]
+      people: [gandhi]
+      places: [sabarmati, dandi, surat, nadiad]
+  - id: ch9-civil-disobedience
+    t: "1930-05-21"
+    camera: { center: [78.0, 24.5], zoom: 4.4, pitch: 0 }
+    title: The whole country breaks the law
+    text: >-
+      Salt-making spread along every coast, alongside boycotts of foreign cloth and liquor shops, forest-law
+      breaking and refusals to pay tax. More than 60,000 people went to jail. Women joined in large numbers
+      for the first time.
+
+      In Peshawar, troops fired on non-violent followers of [Abdul Ghaffar Khan](person:ghaffar-khan) at
+      the [Qissa Khwani Bazaar](event:qissa-khwani), and some Garhwali soldiers refused to shoot. In Bengal,
+      [Surya Sen](person:surya-sen) [raided the Chittagong armouries](event:chittagong-raid). At
+      [Dharasana](event:dharasana), [Sarojini Naidu](person:sarojini-naidu) led volunteers who walked up to
+      the police, column by column, and were beaten down without raising a hand. An American reporter's
+      account of it went round the world.
+    show:
+      events: [qissa-khwani, chittagong-raid, dharasana, salt-march]
+      people: [gandhi]
+      places: [peshawar, chittagong, dharasana, dandi]
+  - id: ch9-talks
+    t: "1931-03-05"
+    camera: { center: [77.2, 28.6], zoom: 6.0, pitch: 20 }
+    title: Talking with the rebel
+    text: >-
+      The Raj could jail tens of thousands, but it could not make India work without their cooperation.
+      In March 1931 the Viceroy, [Irwin](person:irwin), negotiated with Gandhi as an equal. In the
+      [Gandhi–Irwin Pact](event:gandhi-irwin), prisoners were freed and Gandhi agreed to go to the [Round
+      Table Conference](event:round-table) in London. Churchill was disgusted by the sight of a "half-naked
+      fakir" negotiating with the King's representative.
+
+      Many were angry that Gandhi did not insist on saving [Bhagat Singh](person:bhagat-singh), who was
+      [hanged in Lahore](event:bhagat-singh-hanged) on 23 March, aged 23.
+
+      In London the talks deadlocked on the question that would decide India's future: how its minorities
+      would be represented. That year the new imperial capital, [New Delhi](event:new-delhi), was
+      inaugurated.
+    show:
+      events: [gandhi-irwin, bhagat-singh-hanged, round-table, new-delhi]
+      people: [gandhi]
+      places: [delhi, lahore]
+  - id: ch9-poona
+    t: "1932-09-24"
+    camera: { center: [73.86, 18.52], zoom: 7.0, pitch: 30 }
+    title: Who speaks for the untouchables?
+    text: >-
+      Britain then decided the question itself. Its [Communal Award](event:communal-award) gave separate
+      electorates not only to Muslims and Sikhs but to the "Depressed Classes", the people caste Hindus
+      treated as untouchable.
+
+      Their leader, [B. R. Ambedkar](person:ambedkar), argued they needed their own voters to escape
+      caste-Hindu control. Gandhi, in Yeravda jail, saw it as splitting Hindu society and began a fast unto
+      death. After six days Ambedkar agreed to the [Poona Pact](event:poona-pact): more reserved seats, but
+      within joint electorates.
+
+      It is still argued over: an act of unity, or a bargain forced on Ambedkar by a fast. The reserved
+      seats became the model for India's system of reservations.
+    show:
+      events: [communal-award, poona-pact]
+      people: [gandhi]
+      places: [poona]
+  - id: ch9-1937
+    t: "1937-04-01"
+    camera: { center: [79.0, 23.0], zoom: 4.2, pitch: 0 }
+    title: Indians in office
+    text: >-
+      The [Government of India Act 1935](event:goi-act-1935) gave the provinces elected governments. On the
+      map, new provinces appear: Orissa and Sind in 1936. Burma left British India in 1937.
+
+      In the [1937 elections](event:elections-1937) the Congress won most provinces and formed eight
+      ministries. The Muslim League won only about a quarter of the Muslim seats. When the Congress
+      refused to share power with the League in the United Provinces, [Jinnah](person:jinnah) drew a
+      lesson: in a Congress-run India, Muslims would be a permanent minority.
+
+      He began rebuilding the League as a mass party. Seven years earlier, the poet [Iqbal](event:iqbal-allahabad)
+      had already spoken of a Muslim state in the north-west. War would bring all of this to a head.
+    show:
+      events: [goi-act-1935, elections-1937, iqbal-allahabad]
+      places: [delhi, lucknow, karachi]
+      polities: [orissa, sind, burma]

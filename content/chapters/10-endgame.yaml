@@ -1,0 +1,198 @@
+id: endgame
+number: 10
+title: Endgame
+period: 1939–1947
+summary: >-
+  A world war breaks the Raj's hold. Quit India, famine, Bose's army and mutinies show Britain it
+  must go, but Indians cannot agree on what comes after. Freedom comes with Partition.
+scenes:
+  - id: ch10-war
+    t: "1939-10"
+    camera: { center: [79.0, 23.0], zoom: 4.2, pitch: 0 }
+    title: At war without being asked
+    text: >-
+      On 3 September 1939 the Viceroy, [Linlithgow](person:linlithgow), [declared India at war](event:war-declared)
+      with Germany. He consulted no Indian. Many Congress leaders loathed fascism and would have helped, if
+      Britain promised independence. Britain would not.
+
+      So the Congress [ministries resigned](event:ministries-resign) in every province they held. Jinnah
+      celebrated a "Day of Deliverance" from Congress rule. With the Congress out of office, the British
+      leaned on the League and the princes, and the League grew.
+    show:
+      events: [war-declared, ministries-resign]
+      places: [delhi, simla]
+  - id: ch10-lahore
+    t: "1940-03-23"
+    camera: { center: [74.35, 31.55], zoom: 5.6, pitch: 20 }
+    title: Two nations?
+    text: >-
+      At Lahore in March 1940, the Muslim League [resolved](event:lahore-resolution) that the
+      Muslim-majority areas of the north-west and east should become "independent states". Jinnah argued
+      that Hindus and Muslims were not two communities but two nations.
+
+      The resolution did not say "Pakistan", and it was vague about what "states" meant. Historians still
+      debate whether Jinnah wanted a fully separate country or a strong bargaining position for Muslims
+      inside a loose India. Either way, Pakistan had become the League's demand.
+    show:
+      events: [lahore-resolution]
+      places: [lahore, dacca, karachi]
+      polities: [punjab, bengal-presidency, sind]
+  - id: ch10-quit-india
+    t: "1942-08-08"
+    camera: { center: [78.0, 22.0], zoom: 4.3, pitch: 0 }
+    title: Quit India
+    text: >-
+      In 1942 Japan took Singapore and Rangoon and reached India's eastern border. Britain sent
+      [Stafford Cripps](person:cripps) with an [offer](event:cripps-mission): dominion status after the war,
+      and the right of any province to stay out. The Congress called it a cheque on a failing bank and said
+      no.
+
+      On 8 August, at Gowalia Tank in Bombay, Gandhi told the British to [Quit India](event:quit-india): "Do
+      or die." The entire Congress leadership was arrested within hours. A leaderless rising followed, with
+      railway lines torn up, police stations burned and parallel governments in some districts. The Raj
+      crushed it with the army.
+
+      The Congress spent the rest of the war in jail. The League, cooperating with the British, grew
+      stronger.
+    show:
+      events: [cripps-mission, quit-india]
+      people: [gandhi]
+      places: [bombay, poona, delhi]
+  - id: ch10-famine
+    t: "1943-07"
+    camera: { center: [89.0, 23.5], zoom: 5.8, pitch: 20 }
+    title: Famine in Bengal
+    text: >-
+      In 1943 between two and three million people died in the [Bengal famine](event:bengal-famine).
+      There had been a cyclone, and Burmese rice was cut off by the Japanese. But the economist Amartya Sen
+      later showed that Bengal had enough food. War spending drove up prices, boats and rice were seized to
+      deny them to an invader, traders hoarded, and the army and Calcutta were fed first. People starved
+      because they could not afford food.
+
+      How much blame lies with [Churchill's](person:churchill) War Cabinet, which refused or delayed grain
+      shipments, is still fiercely argued. Recall the [famine of 1876–78](event:great-famine). Again, people
+      starved under a government that was there.
+    show:
+      events: [bengal-famine]
+      places: [calcutta, dacca, chittagong]
+  - id: ch10-ina
+    t: "1944-04"
+    camera: { center: [93.0, 22.5], zoom: 5.0, pitch: 20 }
+    title: Netaji's army
+    text: >-
+      [Subhas Chandra Bose](person:subhas-bose) took another path. He had escaped house arrest in 1941 and
+      sought help from Germany and Japan. In Singapore in 1943 he [proclaimed a Free India
+      government](event:azad-hind) and led the Indian National Army, recruited from Indian prisoners of war.
+
+      In 1944 the INA marched with the Japanese on [Imphal and Kohima](event:imphal-kohima). The British
+      Indian Army, 2.5 million strong and the largest volunteer army in history, held both. The attackers
+      retreated through the monsoon, starving.
+
+      Bose is believed to have died after an air crash in Taiwan in August 1945, though some still dispute
+      it. His army had lost, but its story would shake the Raj.
+    show:
+      events: [azad-hind, imphal-kohima]
+      people: [subhas-bose]
+      places: [singapore, rangoon, imphal, kohima]
+  - id: ch10-mutiny
+    t: "1946-02-18"
+    camera: { center: [76.0, 22.0], zoom: 4.6, pitch: 10 }
+    title: The army stops being loyal
+    text: >-
+      After the war, Britain put INA officers on [trial at the Red Fort](event:ina-trials) for treason.
+      Indians of every community saw them as patriots, and the sentences were dropped.
+
+      In February 1946 sailors of the Royal Indian Navy [mutinied](event:rin-mutiny) in Bombay, and the
+      revolt spread to 78 ships and shore bases, flying Congress and League flags side by side.
+
+      Since 1857 the Raj had rested on the loyalty of Indian soldiers. Now that loyalty could not be relied
+      on. Britain's new Labour government, bankrupt from the war, decided to leave. The question was what
+      to leave behind.
+    show:
+      events: [ina-trials, rin-mutiny]
+      places: [delhi, bombay, karachi]
+  - id: ch10-cabinet-mission
+    t: "1946-05"
+    camera: { center: [79.0, 24.0], zoom: 4.2, pitch: 0 }
+    title: The last chance for one India
+    text: >-
+      The [1945–46 elections](event:elections-1946) settled who spoke for whom. The Congress swept the general
+      seats. The League won almost every Muslim seat. [Jinnah](person:jinnah) was now the "sole spokesman"
+      of India's Muslims.
+
+      The [Cabinet Mission](event:cabinet-mission) proposed a compromise: one India with a weak centre, and
+      provinces grouped into three blocs, two of them Muslim-majority. Both sides first accepted it. Then
+      [Nehru](person:nehru) said the Congress would not be bound by the groupings. The League withdrew and
+      called for "Direct Action" to win Pakistan.
+    show:
+      events: [elections-1946, cabinet-mission]
+      places: [delhi, simla, lahore, calcutta]
+  - id: ch10-violence
+    t: "1946-10-10"
+    camera: { center: [89.5, 23.5], zoom: 5.6, pitch: 20 }
+    title: Killing in Calcutta and Noakhali
+    text: >-
+      On 16 August 1946, [Direct Action Day](event:direct-action), Calcutta exploded. In four days of
+      killing between Muslims and Hindus and Sikhs, at least 4,000 people died. Revenge spread to
+      [Noakhali](event:noakhali) in East Bengal, then Bihar, then Punjab.
+
+      Gandhi, aged 77, walked barefoot from village to village in Noakhali for four months, trying to
+      restore trust. In Delhi, many leaders on all sides concluded that Partition could no longer be
+      avoided.
+    show:
+      events: [direct-action, noakhali]
+      people: [gandhi]
+      places: [calcutta, noakhali]
+  - id: ch10-plan
+    t: "1947-06-03"
+    camera: { center: [80.0, 26.0], zoom: 4.4, pitch: 0 }
+    title: 72 days
+    text: >-
+      The last Viceroy, [Mountbatten](person:mountbatten), announced the [plan](event:mountbatten-plan) on 3
+      June 1947: India would be partitioned, and the British would leave not in June 1948 but on 15 August
+      1947, 72 days away.
+
+      Punjab and Bengal, each home to millions of Hindus, Muslims and Sikhs, would be cut in two. Assam's
+      [Sylhet](event:sylhet-referendum) voted to join East Bengal. The lines were drawn in five weeks by
+      [Cyril Radcliffe](person:radcliffe), a lawyer who had never been to India.
+    show:
+      events: [mountbatten-plan, sylhet-referendum]
+      places: [delhi, lahore, calcutta, sylhet]
+      polities: [punjab, bengal-presidency]
+  - id: ch10-independence
+    t: "1947-08-15"
+    camera: { center: [80.0, 25.0], zoom: 4.2, pitch: 0 }
+    title: Freedom, and Partition
+    text: >-
+      At midnight on 14–15 August 1947, India and Pakistan became independent. In Delhi, Nehru spoke of a
+      "tryst with destiny". Gandhi was not there; he was in Calcutta, fasting against the killing.
+
+      Two days later the [Radcliffe Line](event:radcliffe-line) was published. Lahore went to Pakistan,
+      Amritsar to India. Between 10 and 20 million people crossed the new borders, and somewhere between
+      200,000 and 2 million were killed. On the map, Pakistan is in two wings, West and East, 1,600 km
+      apart.
+
+      The princely states, still yellow, had to choose. Most joined India. [Junagadh](event:junagadh-crisis)
+      and Hyderabad were taken over by India, and [Kashmir](event:kashmir-accession) became a war and a
+      dispute that has never ended.
+    show:
+      events: [independence, radcliffe-line, junagadh-crisis, kashmir-accession]
+      places: [delhi, lahore, amritsar, calcutta, karachi, dacca, srinagar, junagadh, hyderabad]
+      polities: [dominion-india, dominion-pakistan]
+  - id: ch10-today
+    t: "1947-12-31"
+    camera: { center: [80.0, 23.0], zoom: 4.0, pitch: 0 }
+    title: What became of it
+    text: >-
+      Switch on **Compare with today** in the map key to see the present-day borders over the map of 1947.
+
+      Punjab is still split: West Punjab is Pakistan's Punjab, and East Punjab became India's Punjab,
+      Haryana and Himachal Pradesh. East Bengal became East Pakistan and then, after a war in 1971,
+      **Bangladesh**. Princely states such as Hyderabad, Mysore and the Rajputana states were merged into
+      India's states, many redrawn by language in 1956. Kashmir is still divided.
+
+      The story began with merchants buying cloth at Surat. It ends with the Company's empire divided into
+      the nations of South Asia, which still live with its borders.
+    show:
+      places: [lahore, amritsar, dacca, calcutta, srinagar, hyderabad, karachi, delhi]
+      polities: [dominion-india, dominion-pakistan]

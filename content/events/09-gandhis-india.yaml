@@ -1,218 +1,422 @@
-# Events: Gandhi's India. Each event explains why (context), what (summary) and what changed (consequences).
+# Events: Gandhi's India (1919–1939). Each explains why (context), what (summary) and what changed (consequences).
 - id: ncm
   name: Non-Cooperation and Khilafat movements
-  date: 1920-08-01
-  end: 1922-02-12
+  date: "1920-08-01"
+  end: "1922-02-12"
   place: nagpur
   kind: movement
-  significance: 4
-  participants:
-    - gandhi
-  summary: Boycott of councils, courts, schools and foreign cloth, joined with the Khilafat cause. It was the
-    first mass movement under Gandhi.
-  sources:
-    - wp-ncm
-    - chandra-struggle
+  significance: 5
+  participants: [gandhi, muhammad-ali-jauhar]
+  causes: [jallianwala, rowlatt, goi-act-1919]
+  summary: >-
+    Gandhi asks Indians to withdraw cooperation from the Raj: boycott the new councils, government
+    schools, law courts and foreign cloth; give up British titles; spin and wear khadi. He promises swaraj
+    "within a year". The Congress adopts the programme at Nagpur in December 1920.
+  context: >-
+    After Amritsar and the Rowlatt Act, constitutional politics looked pointless. Indian Muslims were
+    also angry that the victorious Allies were dismembering the Ottoman Empire, whose sultan was the
+    Caliph (Khalifa) of Sunni Islam. Gandhi joined the two causes, Khilafat and swaraj, to bring Hindus
+    and Muslims into one movement.
+  consequences: >-
+    It was the first truly mass movement. Peasants, workers, students and women joined in huge numbers,
+    and the Congress became a party with members in villages, not just a club of lawyers. Hindu–Muslim
+    unity peaked. Swaraj did not come within a year, and the movement ended abruptly after Chauri Chaura.
+  why: Gandhi turned the Congress into a mass movement.
+  sources: [wp-ncm, wp-khilafat, chandra-struggle]
 - id: malabar
   name: Malabar rebellion
-  alt_names:
-    - Mappila rebellion
-    - Moplah rebellion
-  date: 1921-08-20
-  end: 1922-02
+  alt_names: [Mappila rebellion, Moplah rebellion]
+  date: "1921-08-20"
+  end: "1922-02"
   place: tirurangadi
   kind: revolt
   significance: 3
-  summary: "A Mappila rising against the British and landlords, rooted in Khilafat and agrarian grievances. It
-    was crushed by martial law. Its character is still contested: agrarian revolt, anti-colonial war, or
-    communal violence."
-  sources:
-    - wp-malabar
+  causes: [ncm]
+  summary: >-
+    In Malabar, Mappila Muslim peasants rise against the British and the mostly Hindu landlords. Rebels
+    declare short-lived "Khilafat kingdoms". The British crush the rising under martial law. In the
+    "wagon tragedy", some 60–70 prisoners suffocate in a closed railway wagon.
+  context: >-
+    Malabar had a long history of agrarian conflict between Mappila tenants and Hindu landlords, which
+    British law favoured. Khilafat agitation added a religious charge.
+  consequences: >-
+    Thousands were killed on both sides, and attacks and forced conversions of Hindus fuelled communal
+    suspicion across India.
+  perspectives:
+    - view: Agrarian and anti-colonial reading
+      text: A peasant rebellion against landlords and the colonial state, recognised by Kerala as part of the freedom struggle.
+    - view: Communal reading
+      text: Emphasises the killings and forced conversions of Hindus and sees the rising as religious violence.
+  sources: [wp-malabar, sarkar-modern]
 - id: chauri-chaura
   name: Chauri Chaura
-  date: 1922-02-04
+  date: "1922-02-04"
   place: chauri-chaura
   kind: atrocity
-  significance: 3
-  summary: After police fire on protesters, a crowd burns the police station, killing 22 policemen. Gandhi
-    suspends non-cooperation.
-  sources:
-    - wp-chauri-chaura
+  significance: 4
+  causes: [ncm]
+  summary: >-
+    At Chauri Chaura in the United Provinces, police fire on a procession of protesters. The crowd sets
+    fire to the police station, and 22 policemen die. A week later Gandhi suspends the whole
+    Non-Cooperation movement.
+  context: >-
+    Gandhi insisted that non-violence was the movement's core. Without it, he believed, the British would
+    answer with overwhelming force, and the movement would lose its moral power.
+  consequences: >-
+    Many Congress leaders, including Nehru and Bose, were dismayed. Gandhi was arrested in March 1922 and
+    jailed for six years (released 1924). The Khilafat cause collapsed when Turkey abolished the
+    caliphate in 1924. Hindu–Muslim riots grew in the mid-1920s, and some young radicals turned to
+    revolutionary violence.
+  perspectives:
+    - view: Gandhian view
+      text: Calling off the movement kept it non-violent and preserved its moral authority.
+    - view: Critics
+      text: He halted a movement at its peak over a local incident and left its followers leaderless.
+  sources: [wp-chauri-chaura, chandra-struggle]
 - id: kakori
   name: Kakori train action
-  date: 1925-08-09
+  date: "1925-08-09"
   place: kakori
   kind: revolt
   significance: 2
-  participants:
-    - ram-prasad-bismil
-  summary: Hindustan Republican Association revolutionaries seize government money from a train. Bismil,
-    Ashfaqulla Khan and others are later hanged.
-  sources:
-    - wp-kakori
+  participants: [ram-prasad-bismil]
+  causes: [chauri-chaura]
+  summary: >-
+    Members of the Hindustan Republican Association stop a train near Lucknow and seize government money
+    to fund revolution. Ram Prasad Bismil, Ashfaqulla Khan, Rajendra Lahiri and Roshan Singh are hanged in
+    1927.
+  context: >-
+    After non-cooperation was called off, some young men believed only armed action could free India.
+  consequences: >-
+    The trial made Bismil, a Hindu, and Ashfaqulla, a Muslim, symbols of united resistance. The group
+    regrouped as the Hindustan Socialist Republican Association, Bhagat Singh's organisation.
+  sources: [wp-kakori, wp-hsra]
+- id: simon-commission
+  name: Simon Commission protests
+  date: "1928-02-03"
+  end: "1928-11-17"
+  place: lahore
+  kind: movement
+  significance: 3
+  participants: [lajpat-rai]
+  causes: [goi-act-1919]
+  summary: >-
+    A seven-man parliamentary commission arrives to review the 1919 reforms. It has no Indian members.
+    Across India it is met by black flags and the slogan "Simon Go Back". In Lahore, police beat Lala
+    Lajpat Rai, who dies weeks later.
+  context: >-
+    The 1919 Act promised a review after ten years. Leaving Indians out of a commission deciding India's
+    future was taken as an insult by almost every party.
+  consequences: >-
+    Indian parties drafted their own constitution (the Nehru Report). Lajpat Rai's death led Bhagat Singh's
+    group to kill a police officer in revenge. The protests revived the movement.
+  sources: [wp-simon, chandra-struggle]
 - id: bardoli
   name: Bardoli Satyagraha
-  date: 1928-02
-  end: 1928-08
+  date: "1928-02"
+  end: "1928-08"
   place: bardoli
   kind: movement
   significance: 2
-  participants:
-    - patel
-  summary: A successful no-tax campaign against a revenue increase, led by Vallabhbhai Patel.
-  sources:
-    - wp-bardoli
-- id: simon-commission
-  name: Simon Commission protests
-  date: 1928-02-03
-  end: 1928-11-17
+  participants: [patel]
+  causes: [kheda]
+  summary: >-
+    Peasants of Bardoli taluka refuse to pay a 22 per cent revenue increase. The government seizes land and
+    cattle, but the peasants hold out, and the increase is cut after an inquiry.
+  context: It was a local test of disciplined non-payment, organised village by village.
+  consequences: The women of Bardoli gave Patel the title "Sardar" (leader). The campaign proved mass civil disobedience could work again.
+  sources: [wp-bardoli]
+- id: nehru-report
+  name: Nehru Report and Jinnah's Fourteen Points
+  date: "1928-08"
+  place: lucknow
+  kind: political
+  significance: 3
+  participants: [nehru, jinnah]
+  causes: [simon-commission]
+  summary: >-
+    An all-parties committee chaired by Motilal Nehru drafts a constitution for a self-governing India
+    with joint electorates. Jinnah's amendments for Muslim safeguards are rejected. In 1929 he sets out
+    his own Fourteen Points.
+  context: >-
+    It was an answer to the challenge that Indians could not agree on a constitution among themselves.
+    The hard question was how to protect minorities.
+  consequences: >-
+    Jinnah called it "the parting of the ways". The gap between the Congress and Muslim politics widened.
+  sources: [wp-nehru-report, jalal-sole-spokesman]
+- id: saunders-killing
+  name: Saunders shot in Lahore
+  date: "1928-12-17"
   place: lahore
-  kind: movement
+  kind: revolt
   significance: 2
-  participants:
-    - lajpat-rai
-  summary: An all-white commission on constitutional reform is met with "Simon Go Back". Lala Lajpat Rai is
-    beaten by police at Lahore and dies weeks later.
-  sources:
-    - wp-simon
+  participants: [bhagat-singh]
+  causes: [simon-commission]
+  summary: >-
+    To avenge Lajpat Rai, HSRA members Bhagat Singh, Rajguru and Chandrashekhar Azad shoot Assistant
+    Superintendent J. P. Saunders. They meant to kill Superintendent Scott, who had ordered the beating.
+  context: The HSRA had become socialist and wanted to show that the Raj could be struck back.
+  consequences: Bhagat Singh escaped. He was convicted and hanged for this killing in 1931.
+  sources: [wp-bhagat-singh, wp-hsra]
 - id: assembly-bomb
   name: Central Assembly bombing
-  date: 1929-04-08
+  date: "1929-04-08"
   place: delhi
   kind: revolt
   significance: 2
-  participants:
-    - bhagat-singh
-  summary: Bhagat Singh and Batukeshwar Dutt throw harmless bombs and leaflets in the Assembly and court arrest.
-  sources:
-    - wp-bhagat-singh
+  participants: [bhagat-singh]
+  causes: [saunders-killing]
+  summary: >-
+    Bhagat Singh and Batukeshwar Dutt throw two low-power bombs into an empty part of the Central
+    Legislative Assembly, scatter leaflets and shout "Inquilab Zindabad" (Long live revolution). They do
+    not try to escape.
+  context: >-
+    They were protesting against two repressive bills. The aim was to be arrested and use the trial to
+    spread their ideas: "It takes a loud voice to make the deaf hear."
+  consequences: >-
+    Their trial, hunger strikes and writing in prison made Bhagat Singh as popular as Gandhi for a time,
+    especially among the young.
+  sources: [wp-bhagat-singh]
 - id: purna-swaraj
   name: Purna Swaraj resolution
-  date: 1929-12-31
+  date: "1929-12-31"
   place: lahore
   kind: political
   significance: 4
-  participants:
-    - nehru
-    - gandhi
-  summary: At Lahore, under Nehru's presidency, the Congress declares complete independence its goal, and the
-    flag is raised on the banks of the Ravi. 26 January 1930 is marked as Independence Day.
-  sources:
-    - wp-purna-swaraj
+  participants: [nehru, gandhi]
+  causes: [simon-commission, nehru-report]
+  summary: >-
+    At its Lahore session, with Jawaharlal Nehru presiding at 40, the Congress declares purna swaraj
+    (complete independence) as its goal and authorises civil disobedience. At midnight the tricolour is
+    raised on the banks of the Ravi.
+  context: >-
+    In 1928 the Congress gave Britain a year to grant dominion status. Viceroy Irwin's statement
+    that dominion status was the "natural issue" of India's progress came with no date and no
+    commitment.
+  consequences: >-
+    26 January 1930 was celebrated as Independence Day across India. (It is why India's Republic Day is
+    26 January.) Gandhi had to find a form of civil disobedience everyone could join.
+  sources: [wp-purna-swaraj, chandra-struggle]
 - id: salt-march
   name: Salt March
-  alt_names:
-    - Dandi March
-  date: 1930-03-12
-  end: 1930-04-06
+  alt_names: [Dandi March]
+  date: "1930-03-12"
+  end: "1930-04-06"
   place: dandi
   kind: movement
   significance: 5
-  participants:
-    - gandhi
-  summary: Gandhi and 78 followers walk about 385 km from Sabarmati to Dandi and break the salt law. Civil
-    disobedience spreads across India.
-  why: A tax on something everyone needed made the injustice of the Raj easy to grasp everywhere, and the march
-    was covered by the world's press.
-  sources:
-    - wp-salt-march
-    - chandra-struggle
+  participants: [gandhi]
+  causes: [purna-swaraj]
+  summary: >-
+    Gandhi and 78 followers walk about 385 km in 24 days from Sabarmati Ashram to the sea at Dandi,
+    speaking in villages along the way. On 6 April he picks up a lump of natural salt, breaking the law
+    that made salt a government monopoly.
+  context: >-
+    Colleagues thought salt a strange choice. But the salt tax hit every Indian, rich or poor, Hindu or
+    Muslim, and making salt was an act anyone could commit. The march was slow on purpose, so that
+    newspapers and newsreels around the world could follow it.
+  consequences: >-
+    Civil disobedience spread across India: salt-making on the coasts, boycotts of foreign cloth and
+    liquor, forest-law breaking, and no-tax campaigns. More than 60,000 people were jailed. Women
+    took part in large numbers for the first time. The empire's claim to rule by consent never recovered.
+  why: Salt made the injustice of the Raj easy for everyone to grasp.
+  sources: [wp-salt-march, chandra-struggle, guha-gandhi]
 - id: chittagong-raid
   name: Chittagong armoury raid
-  date: 1930-04-18
+  date: "1930-04-18"
   place: chittagong
   kind: revolt
   significance: 2
-  participants:
-    - surya-sen
-  summary: Surya Sen's Indian Republican Army seizes the police and auxiliary armouries.
-  sources:
-    - wp-chittagong-raid
+  participants: [surya-sen]
+  causes: [purna-swaraj]
+  summary: >-
+    Surya Sen's Indian Republican Army seizes the police and auxiliary armouries in Chittagong and cuts
+    the telegraph. The raiders fight British troops in the Jalalabad hills.
+  context: Bengal's revolutionary tradition revived alongside civil disobedience, with young women such as Pritilata Waddedar taking part.
+  consequences: Sen evaded capture until 1933 and was hanged in 1934.
+  sources: [wp-chittagong-raid]
 - id: qissa-khwani
   name: Qissa Khwani Bazaar massacre
-  date: 1930-04-23
+  date: "1930-04-23"
   place: peshawar
   kind: atrocity
   significance: 3
-  participants:
-    - ghaffar-khan
-  summary: Troops fire on non-violent Khudai Khidmatgar protesters. Garhwali soldiers refuse orders to shoot.
+  participants: [ghaffar-khan]
+  causes: [salt-march]
+  summary: >-
+    After Abdul Ghaffar Khan's arrest, troops fire on unarmed Khudai Khidmatgar ("Servants of God")
+    protesters in Peshawar. Soldiers of the Garhwal Rifles refuse orders to fire on the crowd and are
+    court-martialled.
+  context: >-
+    Ghaffar Khan had organised a disciplined, non-violent Pashtun movement allied with the Congress, in a
+    region the British associated with war.
+  consequences: The Khudai Khidmatgars grew rapidly, and the NWFP became a Congress stronghold until 1947.
   figures:
     - label: Killed
       min: 20
       max: 400
       note: The official figure was about 20. Nationalist estimates ran to several hundred.
-      sources:
-        - wp-qissa-khwani
-  sources:
-    - wp-qissa-khwani
+      sources: [wp-qissa-khwani]
+  sources: [wp-qissa-khwani]
 - id: dharasana
   name: Dharasana Satyagraha
-  date: 1930-05-21
+  date: "1930-05-21"
   place: dharasana
   kind: movement
-  significance: 2
-  participants:
-    - sarojini-naidu
-  summary: Volunteers led by Sarojini Naidu march on the salt works and are beaten by police, column by column.
-  sources:
-    - wp-dharasana
+  significance: 3
+  participants: [sarojini-naidu]
+  causes: [salt-march]
+  summary: >-
+    With Gandhi arrested, Sarojini Naidu leads about 2,500 volunteers to raid the Dharasana salt works.
+    Column after column walks up to the police lines and is beaten down with steel-tipped lathis, without
+    raising a hand.
+  context: Gandhi had announced the raid before his arrest on 5 May.
+  consequences: >-
+    The American journalist Webb Miller's report was printed in hundreds of newspapers. It showed the
+    world the violence behind British rule.
+  sources: [wp-dharasana]
+- id: iqbal-allahabad
+  name: Iqbal's Allahabad address
+  date: "1930-12-29"
+  place: allahabad
+  kind: political
+  significance: 3
+  participants: [iqbal]
+  causes: [nehru-report]
+  summary: >-
+    Presiding over the Muslim League session, the poet Muhammad Iqbal calls for a consolidated Muslim
+    state in north-western India: Punjab, NWFP, Sind and Baluchistan.
+  context: Muslim leaders were looking for ways to protect Muslims in a future India with a Hindu majority.
+  consequences: >-
+    The idea was not yet a demand for a separate nation. But in 1933 a Cambridge student, Choudhry Rahmat
+    Ali, coined the name "Pakistan", and the idea later shaped the 1940 Lahore Resolution.
+  sources: [wp-iqbal, jalal-sole-spokesman]
+- id: round-table
+  name: Round Table Conferences
+  date: "1930-11-12"
+  end: "1932-12"
+  kind: political
+  significance: 3
+  participants: [gandhi, ambedkar, jinnah]
+  causes: [salt-march]
+  summary: >-
+    Three conferences in London discuss India's constitution. The Congress boycotts the first; Gandhi,
+    as its sole representative, attends the second in 1931. They deadlock on how minorities are
+    represented.
+  context: Civil disobedience had forced Britain to negotiate. Britain also invited princes and minority leaders, which made a single Indian voice impossible.
+  consequences: The deadlock let Britain impose its own "Communal Award" and draft the 1935 Act itself.
+  sources: [wp-round-table]
 - id: gandhi-irwin
   name: Gandhi–Irwin Pact
-  date: 1931-03-05
+  date: "1931-03-05"
   place: delhi
   kind: treaty
   significance: 3
-  participants:
-    - gandhi
-  summary: Civil disobedience is suspended in return for the release of prisoners. Gandhi attends the Second
-    Round Table Conference.
-  sources:
-    - wp-gandhi-irwin
+  participants: [gandhi, irwin]
+  causes: [salt-march]
+  summary: >-
+    After talks between the Viceroy and the man Churchill called a "half-naked fakir", civil disobedience is
+    suspended. Non-violent prisoners are released, and coastal villagers may make salt. Gandhi agrees to
+    attend the Round Table Conference.
+  context: Both sides needed a pause. Jails were full, trade was hit by the boycott, and the Congress was exhausted.
+  consequences: >-
+    The Viceroy had negotiated with the rebel as an equal, which itself mattered. Many were angry that
+    Gandhi did not make the commutation of Bhagat Singh's death sentence a condition.
+  sources: [wp-gandhi-irwin, guha-gandhi]
+- id: new-delhi
+  name: New Delhi inaugurated
+  date: "1931-02-13"
+  place: delhi
+  kind: founding
+  significance: 2
+  causes: [durbar-1911]
+  summary: >-
+    Lutyens and Baker's imperial capital, with the Viceroy's House and the Secretariat on Raisina Hill, is
+    formally inaugurated.
+  context: It was planned in 1911 to show British rule as permanent.
+  consequences: It was finished just as the end of British rule began to look likely. Sixteen years later it became independent India's capital.
+  sources: [wp-new-delhi]
 - id: bhagat-singh-hanged
   name: Bhagat Singh, Rajguru and Sukhdev hanged
-  date: 1931-03-23
+  date: "1931-03-23"
   place: lahore
   kind: political
   significance: 3
-  participants:
-    - bhagat-singh
-  summary: The three are executed at Lahore jail for the 1928 killing of police officer J. P. Saunders.
-  sources:
-    - wp-bhagat-singh
-- id: poona-pact
-  name: Poona Pact
-  date: 1932-09-24
-  place: poona
-  kind: treaty
-  significance: 3
-  participants:
-    - gandhi
-    - ambedkar
-  summary: Gandhi fasts against separate electorates for the Depressed Classes. Ambedkar agrees to reserved
-    seats within joint electorates.
-  why: "The pact is still debated: a coerced bargain, or an act of unity?"
-  sources:
-    - wp-poona-pact
-- id: goi-act-1935
-  name: Government of India Act 1935
-  date: 1935-08-02
-  place: delhi
+  participants: [bhagat-singh]
+  causes: [saunders-killing, assembly-bomb]
+  summary: The three are hanged in Lahore jail, a day earlier than scheduled, and their bodies are secretly cremated.
+  context: Appeals for clemency, including from Congress leaders, failed. Bhagat Singh had refused to ask for mercy himself.
+  consequences: Protests swept northern India. At the Karachi Congress days later, young delegates greeted Gandhi with black flags.
+  sources: [wp-bhagat-singh]
+- id: communal-award
+  name: Communal Award
+  date: "1932-08-16"
   kind: law
   significance: 3
-  summary: Grants provincial autonomy and plans a federation including the princely states. The federation never
-    comes into being.
-  sources:
-    - wp-goi-act-1935
+  causes: [round-table, morley-minto]
+  summary: >-
+    British Prime Minister Ramsay MacDonald announces separate electorates for Muslims, Sikhs, Christians
+    and others, and also for the "Depressed Classes" (Dalits).
+  context: >-
+    At the Round Table, Ambedkar argued that Dalits needed their own electorates to escape the control of
+    caste Hindus. Gandhi saw separate Dalit electorates as splitting Hinduism.
+  consequences: Gandhi began a fast unto death against the Dalit electorates in Yeravda jail.
+  sources: [wp-communal-award]
+- id: poona-pact
+  name: Poona Pact
+  date: "1932-09-24"
+  place: poona
+  kind: treaty
+  significance: 4
+  participants: [gandhi, ambedkar]
+  causes: [communal-award]
+  summary: >-
+    As Gandhi's fast enters its sixth day, Ambedkar agrees to give up separate electorates for the
+    Depressed Classes. In return they get 148 reserved seats (more than the Award gave) within joint
+    electorates.
+  context: Ambedkar was under enormous pressure. If Gandhi died, Dalits feared reprisals.
+  consequences: >-
+    Reserved seats became the model for independent India's system of reservations. Gandhi launched a
+    campaign against untouchability. Ambedkar later called the pact a defeat forced on him.
+  perspectives:
+    - view: Gandhian view
+      text: It kept Hindu society together and launched a national effort against untouchability.
+    - view: Ambedkarite view
+      text: It was coercion by fast. Dalit representatives in joint electorates would depend on caste-Hindu votes.
+  sources: [wp-poona-pact, guha-gandhi]
+- id: goi-act-1935
+  name: Government of India Act 1935
+  date: "1935-08-02"
+  place: delhi
+  kind: law
+  significance: 4
+  causes: [round-table]
+  summary: >-
+    Britain's longest act of Parliament. The provinces get full self-government under elected ministries,
+    with the Governor keeping emergency powers. About 35 million can vote. A federation including the
+    princely states is planned but never formed.
+  context: >-
+    It aimed to give Indians power in the provinces while keeping defence, foreign policy and the centre
+    in British hands, and to use the princes as a conservative counterweight.
+  consequences: >-
+    Most of it shaped independent India's constitution in 1950. It also created Orissa and Sind as
+    separate provinces in 1936, and separated Burma from India in 1937.
+  sources: [wp-goi-act-1935, bose-jalal]
 - id: elections-1937
   name: Provincial elections of 1937
-  date: 1937-02
+  date: "1937-02"
   place: delhi
   kind: political
-  significance: 3
-  participants:
-    - nehru
-    - jinnah
-  summary: The Congress wins majorities in most provinces and forms ministries. The Muslim League does poorly.
-  sources:
-    - wp-elections-1937
+  significance: 4
+  participants: [nehru, jinnah]
+  causes: [goi-act-1935]
+  summary: >-
+    The Congress wins clear majorities in five provinces and forms ministries in eight of eleven. The
+    Muslim League wins only about a quarter of the Muslim seats.
+  context: The Congress decided to fight the elections under the 1935 Act despite rejecting it, to show its strength.
+  consequences: >-
+    The Congress refused to share power with the League in the United Provinces. Jinnah used this, and
+    complaints about Congress rule, to rebuild the League as the voice of Muslims. By 1940 it was demanding
+    separate states.
+  why: The Congress won the election, and the League learned what being a permanent minority might mean.
+  sources: [wp-elections-1937, jalal-sole-spokesman]
