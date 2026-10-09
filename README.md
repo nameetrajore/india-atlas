@@ -1,6 +1,6 @@
 # India Atlas
 
-Visual-first, game-like explorer of Indian history across time and space. Current scope: **the British Raj, 1857–1947** (D24). The earlier Plassey slice is archived in `content/archive/plassey/`.
+A visual, map-based story of how the British came to rule India, and how they left (1600–1947), told in 10 chapters and 91 scenes (D25). Explore mode lets you roam the map freely.
 
 Design decisions: [`docs/decisions.md`](docs/decisions.md). Base-data research: [`docs/research/base-units.md`](docs/research/base-units.md).
 
@@ -11,7 +11,7 @@ npm install
 npm run dev          # validates content, then starts Vite
 ```
 
-Open the URL Vite prints. Every view is a shareable URL, for example `?t=1919.28&sel=event:jallianwala` or `?story=the-raj:7`.
+Open the URL Vite prints. Every view is a shareable URL, for example `?ch=1&sc=8` (Plassey) or `?mode=explore&t=1919.28&sel=event:jallianwala&today=1`.
 
 Controls: scroll on the timeline to zoom (centuries down to days), drag the scale to pan, click or drag the track to scrub, Space to play, ←/→ to step. Click anything on the map for its card.
 

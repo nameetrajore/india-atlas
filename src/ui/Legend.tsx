@@ -20,7 +20,7 @@ export function Legend() {
   const highlighted = (scene?.show.polities ?? []).map((id) => content.polities[id])
   const items = detail
     ? present.sort((a, b) => a.bloc.localeCompare(b.bloc) || polityName(a, t).localeCompare(polityName(b, t)))
-    : highlighted
+    : highlighted.filter((p) => p.bloc !== 'india' && p.bloc !== 'pakistan')
   return (
     <div className="legend">
       {!detail &&

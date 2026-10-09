@@ -32,6 +32,8 @@ const PERSON_COLORS: Record<string, RGB> = {
   lakshmibai: [140, 30, 60],
   'subhas-bose': [40, 80, 60],
   'bhagat-singh': [170, 110, 20],
+  clive: [150, 40, 25],
+  'siraj-ud-daulah': [30, 90, 70],
 }
 export const personColor = (id: string): RGB => PERSON_COLORS[id] ?? [60, 60, 90]
 
