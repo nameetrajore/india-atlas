@@ -62,9 +62,9 @@ PROXIES = [("PAK", "PAK-ADM2", "PAK-ADM1"), ("BGD", "BGD-ADM2", "BGD-ADM1"), ("M
 
 
 def proxies(existing):
-    """Present-day districts standing in for 1941 units outside present-day India."""
-    covered = unary_union(existing).buffer(0.002)
-    feats = []
+    """Present-day districts standing in for 1941 units outside present-day India (raw, unsimplified)."""
+    covered = unary_union(existing)
+    out = []
     for iso, src, parent in PROXIES:
         units_ = json.loads((RAW / "gb" / f"{src}.geojson").read_text())["features"]
         parents = []
@@ -80,38 +80,115 @@ def proxies(existing):
             g = g.difference(covered)
             if g.is_empty or g.area < 0.005:
                 continue
-            g = g.simplify(0.005, preserve_topology=True)
-            feats.append({
-                "type": "Feature",
-                "properties": {"id": f"{iso.lower()}--{slug(name)}", "name": name, "division": f"{iso}:{adm1}",
-                               "type": "Proxy", "proxy": True},
-                "geometry": rounded(g),
-            })
-    return feats
+            out.append(({"id": f"{iso.lower()}--{slug(name)}", "name": name, "division": f"{iso}:{adm1}",
+                         "type": "Proxy", "proxy": True}, g))
+    return out
+
+
+# Gap healing (D23 follow-up). The 1941 units and the geoBoundaries proxies come from different surveys, and the
+# 1941 data leaves some river beds empty, so the map showed slivers of base land between units.
+CLOSE = 0.12       # degrees (~12 km): gaps narrower than about twice this are closed (the 1941 and proxy borders differ by up to ~20 km)
+MAX_HOLE = 0.5     # square degrees: interior holes smaller than this are filled
+SIMPLIFY = 0.005   # degrees: shared-edge (coverage) simplification tolerance
+
+
+def polys(g):
+    return [g] if g.geom_type == "Polygon" else [p for p in getattr(g, "geoms", []) if p.geom_type == "Polygon"]
+
+
+def heal(items, land):
+    """Make the units a clean coverage: no overlaps, small gaps absorbed into the neighbour they touch most."""
+    from shapely import STRtree, coverage_simplify
+    from shapely.geometry import Polygon
+    # 1. Remove overlaps (earlier units win), so the set is a valid coverage.
+    geoms, kept = [], []
+    tree_src = []
+    for props, g in items:
+        g = make_valid(g).buffer(0)
+        if tree_src:
+            t = STRtree(tree_src)
+            hits = [tree_src[i] for i in t.query(g, predicate="intersects")]
+            if hits:
+                g = g.difference(unary_union(hits))
+        if g.is_empty or g.area < 1e-6:
+            continue
+        tree_src.append(g)
+        geoms.append(g)
+        kept.append(props)
+    # 2. Match the drawn coastline: clip units to land, so none spill into the sea.
+    coast = land.buffer(0.004)
+    geoms = [g.intersection(coast) for g in geoms]
+    union = unary_union(geoms)
+    # 3. Gaps: any land inside the present-day outlines of India, Pakistan, Bangladesh and Burma that no unit
+    #    covers (coastal strips, seams between the 1941 and proxy surveys), plus narrow gaps and small holes.
+    #    Land outside those outlines (Nepal, Tibet, Afghanistan) is never claimed.
+    today_fc = json.loads((OUT / "today.geojson").read_text())["features"]
+    region = unary_union([make_valid(shape(f["geometry"])) for f in today_fc]).buffer(0.02)
+    closed = union.buffer(CLOSE, join_style="mitre").buffer(-CLOSE, join_style="mitre")
+    holes = [Polygon(r) for p in polys(union) for r in p.interiors if Polygon(r).area < MAX_HOLE]
+    gaps = unary_union([closed.intersection(region.buffer(0.25)), region, *holes]).difference(union).intersection(land)
+    # Seams where the present-day outlines themselves disagree (India vs Pakistan): look a little further out,
+    # but only take pieces mostly enclosed by units, so strips of Nepal or Tibet are never claimed.
+    loose = region.buffer(0.2).intersection(land).difference(union).difference(gaps)
+    enclosed = []
+    # Long seams can join open land at their ends, so test them in 0.5° tiles rather than whole.
+    tiles = []
+    for piece in polys(loose):
+        x0, y0, x1, y1 = piece.bounds
+        x = x0
+        while x < x1:
+            y = y0
+            while y < y1:
+                tiles.extend(polys(piece.intersection(box(x, y, x + 0.5, y + 0.5))))
+                y += 0.5
+            x += 0.5
+    for piece in tiles:
+        if piece.length == 0:
+            continue
+        shared = piece.boundary.intersection(union.buffer(0.002)).length / piece.length
+        if shared >= 0.75:
+            enclosed.append(piece)
+    print(f"enclosed seam pieces: {len(enclosed)}")
+    gaps = unary_union([gaps, *enclosed])
+    tree = STRtree(geoms)
+    added = 0
+    for piece in polys(gaps):
+        if piece.area < 1e-7:
+            continue
+        probe = piece.buffer(0.003)
+        cands = tree.query(probe, predicate="intersects")
+        if not len(cands):
+            continue
+        best = max(cands, key=lambda i: probe.intersection(geoms[i]).area)
+        geoms[best] = unary_union([geoms[best], piece])
+        added += 1
+    print(f"healed {added} gap pieces")
+    # 3. Simplify shared edges together, so neighbours keep identical borders (no cracks).
+    simplified = coverage_simplify(geoms, SIMPLIFY)
+    return [(props, make_valid(g)) for props, g in zip(kept, simplified)]
 
 
 def units():
     rows = pq.read_table(RAW / "India-State-Districts-1941.parquet").to_pylist()
     seen: dict[str, int] = {}
-    feats = []
-    geoms = []
+    items = []
     for r in rows:
         div = (r["Admin Divi"] or "unknown").strip()
         name = (r["Districts"] or div).strip()
         base = f"{slug(div)}--{slug(name)}"
         seen[base] = seen.get(base, 0) + 1
         uid = base if seen[base] == 1 else f"{base}-{seen[base]}"
-        raw = make_valid(wkb.loads(r["geometry"]))
-        geoms.append(raw)
-        g = raw.simplify(0.005, preserve_topology=True)
-        feats.append({
-            "type": "Feature",
-            "properties": {"id": uid, "name": name, "division": div, "type": r["Type"]},
-            "geometry": rounded(g),
-        })
-    extra = proxies(geoms)
+        items.append(({"id": uid, "name": name, "division": div, "type": r["Type"]}, make_valid(wkb.loads(r["geometry"]))))
+    extra = proxies([g for _, g in items])
     print(f"proxies: {len(extra)}")
-    write("units-1941.geojson", feats + extra)
+    for f in json.loads((OUT / "today.geojson").read_text())["features"]:
+        if f["properties"]["name"] == "Andaman & Nicobar":
+            extra.append(({"id": "andaman--andaman-and-nicobar", "name": "Andaman and Nicobar Islands", "division": "Andaman",
+                           "type": "Proxy", "proxy": True}, make_valid(shape(f["geometry"]))))
+    land = unary_union([make_valid(shape(f["geometry"])) for f in json.loads((RAW / "ne_10m_land.geojson").read_text())["features"]]).intersection(BBOX)
+    healed = heal(items + extra, land)
+    feats = [{"type": "Feature", "properties": props, "geometry": rounded(g)} for props, g in healed if not g.is_empty]
+    write("units-1941.geojson", feats)
 
 
 def clipped(src, name, keep=lambda p: True, tol=0.01):

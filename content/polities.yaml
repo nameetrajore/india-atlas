@@ -520,3 +520,20 @@
     and was the last major Indian power the Company fought. It was annexed after two Anglo-Sikh wars
     (1845–46 and 1848–49).
   sources: [isd-provinces, bose-jalal]
+- id: andaman-islanders
+  name: Andaman and Nicobar Islands
+  kind: tribal
+  color: "#c9c2a8"
+  summary: >-
+    Home to indigenous peoples such as the Great Andamanese, Onge, Jarawa and Sentinelese. A Company
+    settlement in 1789 was abandoned in 1796, and Denmark claimed the Nicobars until 1868.
+  sources: [metcalf-concise]
+- id: andaman
+  name: Andaman and Nicobar Islands
+  alt_names: [Kala Pani]
+  kind: province
+  color: "#d99aa0"
+  summary: >-
+    A penal settlement founded at Port Blair in March 1858 for rebels of 1857, and later the site of the
+    Cellular Jail. Japan occupied the islands from 1942 to 1945.
+  sources: [metcalf-concise]

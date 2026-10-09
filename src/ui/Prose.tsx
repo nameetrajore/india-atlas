@@ -1,4 +1,5 @@
-import type { ReactNode } from 'react'
+import { useRef, useState, type ReactNode } from 'react'
+import { createPortal } from 'react-dom'
 import { useStore } from '../store'
 import type { SelectionKind, Term } from '../types'
 
@@ -15,6 +16,50 @@ function glossaryIndex(list: Term[]) {
   return termCache
 }
 
+const POP_W = 270
+
+/**
+ * A glossary term. The definition renders in a portal with fixed positioning, so scrolling panels
+ * (reader, card) never clip it; it is kept inside the viewport.
+ */
+function TermSpan({ text, term }: { text: string; term: Term }) {
+  const ref = useRef<HTMLSpanElement>(null)
+  const [pos, setPos] = useState<{ left: number; top: number; above: boolean } | null>(null)
+  const show = () => {
+    const r = ref.current?.getBoundingClientRect()
+    if (!r) return
+    const left = Math.max(8, Math.min(window.innerWidth - POP_W - 8, r.left))
+    const above = r.bottom + 140 > window.innerHeight
+    setPos({ left, top: above ? r.top - 8 : r.bottom + 6, above })
+  }
+  const hide = () => setPos(null)
+  return (
+    <span
+      ref={ref}
+      className="term"
+      tabIndex={0}
+      onMouseEnter={show}
+      onMouseLeave={hide}
+      onFocus={show}
+      onBlur={hide}
+      onClick={(e) => (e.stopPropagation(), pos ? hide() : show())}
+    >
+      {text}
+      {pos &&
+        createPortal(
+          <span
+            className={`term-def${pos.above ? ' above' : ''}`}
+            role="tooltip"
+            style={{ left: pos.left, top: pos.top, width: POP_W }}
+          >
+            <strong>{term.term}</strong> {term.definition}
+          </span>,
+          document.body,
+        )}
+    </span>
+  )
+}
+
 /** Plain text with the first use of each glossary term marked for a hover definition. */
 function withTerms(text: string, terms: Term[], seen: Set<string>, key: string): ReactNode[] {
   if (!terms.length) return [text]
@@ -26,14 +71,7 @@ function withTerms(text: string, terms: Term[], seen: Set<string>, key: string):
     if (!term || seen.has(term.id)) continue
     seen.add(term.id)
     if (m.index! > last) out.push(text.slice(last, m.index))
-    out.push(
-      <span key={`${key}-${m.index}`} className="term" tabIndex={0}>
-        {m[0]}
-        <span className="term-def" role="tooltip">
-          <strong>{term.term}</strong> {term.definition}
-        </span>
-      </span>,
-    )
+    out.push(<TermSpan key={`${key}-${m.index}`} text={m[0]} term={term} />)
     last = m.index! + m[0].length
   }
   out.push(text.slice(last))

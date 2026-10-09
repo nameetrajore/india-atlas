@@ -24,6 +24,7 @@
       - division:Jammu_and_kashmir bombay--east-khandesh bombay--west-khandesh
       - central-province-and-berar--akola central-province-and-berar--amraoti central-province-and-berar--buldana central-province-and-berar--yeotmal
     portuguese: [goa--goa, daman--daman, daman--daman-2]
+    andaman-islanders: [andaman--andaman-and-nicobar]
 - date: "1639"
   certainty: confident
   note: The Company gets land at Madras from a local Nayaka ruler and builds Fort St George.
@@ -527,12 +528,19 @@
       - assam--sadiya-frontier-tract-n-e-f-a assam--balipara-frontier-tract-n-e-f-a
     french: [pondicherry--pondicherry, karikal--karikal, mahe--mahe]
     portuguese: [goa--goa, daman--daman, daman--daman-2]
+    andaman-islanders: [andaman--andaman-and-nicobar]
 - date: "1858-02"
   certainty: confident
   note: After its recapture, Delhi is moved from the North-Western Provinces to Punjab as punishment.
   sources: [wp-delhi-province, wp-punjab-province]
   changes:
     punjab: [delhi--delhi]
+- date: "1858-03-10"
+  certainty: confident
+  note: A penal settlement for prisoners of the revolt is founded at Port Blair in the Andaman Islands.
+  sources: [metcalf-concise]
+  changes:
+    andaman: [andaman--andaman-and-nicobar]
 - date: "1861-11-02"
   certainty: approximate
   note: Nagpur Province and the Saugor and Nerbudda Territories are merged into the new Central Provinces.
@@ -682,7 +690,7 @@
       - division:Bengal|british division:Bihar division:Orissa|british division:Assam|british
       - division:United_Province|british division:Punjab|british himachal--shimla delhi--delhi
       - division:Madras|british division:Bombay|british division:Central_Province_and_Berar|british
-      - almer-marwara--ajmer-merwara coorg--coorg naga-tribes--naga-tribes
+      - almer-marwara--ajmer-merwara coorg--coorg naga-tribes--naga-tribes andaman--andaman-and-nicobar
     dominion-pakistan:
       - division:BGD:Barisal division:BGD:Chittagong division:BGD:Dhaka division:BGD:Khulna
       - division:BGD:Mymensingh division:BGD:Noakhali division:BGD:Rajshani division:BGD:Rangpur
