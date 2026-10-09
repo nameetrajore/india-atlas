@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { currentScene, useStore } from '../store'
 import { Prose } from './Prose'
 import { badgeUrl } from './icons'
@@ -76,6 +76,7 @@ export function Reader() {
       <div className="reader-body">
         <div className="scene-date">{scene.date.label}</div>
         <h2 className="scene-title">{scene.title}</h2>
+        {scene.image && <SceneImage image={scene.image} />}
         <Prose text={scene.text} className="scene-text" />
         {scene.chart && <Chart id={scene.chart} />}
         {(evs.length > 0 || ppl.length > 0) && (
@@ -151,4 +152,31 @@ export function StoryClock() {
   if (!scene) return null
   const moving = Math.abs(t - scene.date.t) > 0.05
   return <div className={`story-clock${moving ? ' moving' : ''}`}>{Math.floor(t)}</div>
+}
+
+type SceneImg = NonNullable<ReturnType<typeof currentScene>>['image'] & {}
+
+/** A period image with caption and credit; click to see it large. */
+function SceneImage({ image }: { image: SceneImg }) {
+  const [open, setOpen] = useState(false)
+  const src = `${import.meta.env.BASE_URL}${image.src}`
+  return (
+    <figure className="scene-image">
+      <button className="scene-image-btn" onClick={() => setOpen(true)} aria-label="Enlarge image">
+        <img src={src} alt={image.caption} loading="lazy" />
+      </button>
+      <figcaption>
+        {image.caption}{' '}
+        <a href={image.source} target="_blank" rel="noreferrer" className="credit">
+          {image.credit} · {image.license}
+        </a>
+      </figcaption>
+      {open && (
+        <div className="lightbox" onClick={() => setOpen(false)} role="dialog">
+          <img src={src} alt={image.caption} />
+          <div className="lightbox-cap">{image.caption}</div>
+        </div>
+      )}
+    </figure>
+  )
 }

@@ -426,3 +426,13 @@ button:disabled { cursor: default; opacity: 0.45; }
 .chart-table { width: 100%; border-collapse: collapse; font-size: 12.5px; font-variant-numeric: tabular-nums; }
 .chart-table td { padding: 3px 0; border-bottom: 1px dotted var(--rule); }
 .chart-table td:last-child { text-align: right; }
+
+/* Scene images */
+.scene-image { margin: 0 0 14px; }
+.scene-image-btn { display: block; width: 100%; padding: 0; border: 1px solid var(--rule); background: var(--paper-2); cursor: zoom-in; }
+.scene-image img { display: block; width: 100%; max-height: 230px; object-fit: cover; filter: sepia(0.15); }
+.scene-image figcaption { font-size: 12px; line-height: 1.4; color: var(--ink-2); margin-top: 5px; }
+.scene-image .credit { color: var(--ink-3); font-size: 11px; }
+.lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(28, 22, 16, 0.88); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px; cursor: zoom-out; }
+.lightbox img { max-width: 100%; max-height: calc(100% - 60px); box-shadow: 0 10px 40px rgba(0,0,0,.5); }
+.lightbox-cap { color: #f3ead7; font-size: 14px; margin-top: 12px; max-width: 720px; text-align: center; }

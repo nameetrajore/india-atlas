@@ -129,6 +129,13 @@ scenes:
       places: [ allahabad, murshidabad, calcutta ]
       polities: [ eic-diwani, awadh, mughal ]
     chart: british-share
+    image:
+      src: media/ch3-diwani.jpg
+      caption: "Shah Alam II conveys the diwani to Clive. Benjamin West, 1818: an imagined, grander scene painted
+        half a century later."
+      credit: Benjamin West
+      license: Public domain
+      source: https://commons.wikimedia.org/wiki/File:Shah_%27Alam_conveying_the_grant_of_the_Diwani_to_Lord_Clive.jpg
   - id: ch3-famine
     t: "1770-06"
     camera: { center: [ 87.5, 24.0 ], zoom: 5.8, pitch: 20 }

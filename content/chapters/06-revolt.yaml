@@ -3,12 +3,12 @@ number: 6
 title: The revolt of 1857
 period: 1857–1858
 summary: >-
-  Soldiers, dispossessed princes, landholders and peasants rise across north India. It is the gravest
-  threat British rule ever faced. Its defeat ends both the Company and the Mughals.
+  Soldiers, dispossessed princes, landholders and peasants rise across north India. It is the gravest threat
+  British rule ever faced. Its defeat ends both the Company and the Mughals.
 scenes:
   - id: ch6-barrackpore
     t: "1857-03-29"
-    camera: { center: [88.35, 22.75], zoom: 8.0, pitch: 30 }
+    camera: { center: [ 88.35, 22.75 ], zoom: 8.0, pitch: 30 }
     title: A shot at Barrackpore
     text: >-
       Through the early months of 1857, regiments near Calcutta refused the new cartridges, and the army
@@ -16,15 +16,14 @@ scenes:
       Pandey](person:mangal-pandey) [attacked his officers](event:mangal-pandey) and called on his comrades to
       rise.
 
-      They did not. He was hanged a week later. But word of the hanging spread along the chain of
-      cantonments up the Ganges, where the Bengal Army's regiments were stationed among their own
-      people.
+      They did not. He was hanged a week later. But word of the hanging spread along the chain of cantonments
+      up the Ganges, where the Bengal Army's regiments were stationed among their own people.
     show:
-      events: [mangal-pandey]
-      places: [barrackpore, calcutta]
+      events: [ mangal-pandey ]
+      places: [ barrackpore, calcutta ]
   - id: ch6-meerut
     t: "1857-05-10"
-    camera: { center: [77.5, 28.8], zoom: 7.4, pitch: 35 }
+    camera: { center: [ 77.5, 28.8 ], zoom: 7.4, pitch: 35 }
     title: Meerut to Delhi
     text: >-
       On 9 May, 85 cavalry troopers at [Meerut](place:meerut) who had refused the cartridges were stripped of
@@ -35,34 +34,34 @@ scenes:
       [Bahadur Shah Zafar](person:bahadur-shah-zafar), to lead them. He [reluctantly
       agreed](event:delhi-seized).
 
-      A mutiny had become something larger: a war to restore the old order, fought in the name of the
-      Mughal crown.
+      A mutiny had become something larger: a war to restore the old order, fought in the name of the Mughal
+      crown.
     show:
-      events: [meerut, delhi-seized]
-      places: [meerut, delhi]
+      events: [ meerut, delhi-seized ]
+      places: [ meerut, delhi ]
   - id: ch6-spread
     t: "1857-06-15"
-    camera: { center: [80.5, 26.0], zoom: 5.0, pitch: 15 }
+    camera: { center: [ 80.5, 26.0 ], zoom: 5.0, pitch: 15 }
     title: Who rose, and who did not
     text: >-
       Within weeks most of the Bengal Army had [rebelled](event:revolt-1857), from Delhi to Bihar. In
-      [Awadh](place:lucknow), annexed only a year before, the whole countryside rose: sepoys,
-      talukdars who had lost estates, and peasants burdened by revenue. In central India, rulers
-      dispossessed by lapse joined in.
+      [Awadh](place:lucknow), annexed only a year before, the whole countryside rose: sepoys, talukdars who
+      had lost estates, and peasants burdened by revenue. In central India, rulers dispossessed by lapse
+      joined in.
 
-      Just as important is who did not. Punjab, newly conquered, stayed quiet, and its Sikh and Punjabi
-      troops fought for the British. Bengal proper, the south and the Bombay and Madras armies stayed
-      largely loyal, and so did most princes, including Hyderabad and the Rajput states.
+      Just as important is who did not. Punjab, newly conquered, stayed quiet, and its Sikh and Punjabi troops
+      fought for the British. Bengal proper, the south and the Bombay and Madras armies stayed largely loyal,
+      and so did most princes, including Hyderabad and the Rajput states.
 
-      Even its name is still argued over. British writers called it the "Mutiny". Nationalists, following
-      V. D. Savarkar's 1909 book, called it the "First War of Independence". Many historians now speak of
-      a revolt or rebellion: widespread, but not national.
+      Even its name is still argued over. British writers called it the "Mutiny". Nationalists, following V.
+      D. Savarkar's 1909 book, called it the "First War of Independence". Many historians now speak of a
+      revolt or rebellion: widespread, but not national.
     show:
-      events: [revolt-1857]
-      places: [delhi, lucknow, cawnpore, jhansi, meerut, allahabad]
+      events: [ revolt-1857 ]
+      places: [ delhi, lucknow, cawnpore, jhansi, meerut, allahabad ]
   - id: ch6-cawnpore
     t: "1857-06-27"
-    camera: { center: [80.6, 26.3], zoom: 7.6, pitch: 30 }
+    camera: { center: [ 80.6, 26.3 ], zoom: 7.6, pitch: 30 }
     title: Cawnpore
     text: >-
       At Cawnpore, [Nana Sahib](person:nana-sahib), the adopted son of the last Peshwa, who had been refused
@@ -72,14 +71,14 @@ scenes:
       Bibighar were killed too.
 
       British vengeance was already under way. Columns marching up from Allahabad had been [hanging
-      villagers](event:british-reprisals) along the road. After Cawnpore, "Remember Cawnpore" licensed
-      killing on a far greater scale.
+      villagers](event:british-reprisals) along the road. After Cawnpore, "Remember Cawnpore" licensed killing
+      on a far greater scale.
     show:
-      events: [cawnpore-siege, british-reprisals]
-      places: [cawnpore, allahabad]
+      events: [ cawnpore-siege, british-reprisals ]
+      places: [ cawnpore, allahabad ]
   - id: ch6-lucknow
     t: "1857-07-01"
-    camera: { center: [80.95, 26.85], zoom: 8.0, pitch: 35 }
+    camera: { center: [ 80.95, 26.85 ], zoom: 8.0, pitch: 35 }
     title: The Residency
     text: >-
       In Lucknow, about 1,700 soldiers, loyal sepoys and civilians shut themselves in the British Residency
@@ -87,52 +86,63 @@ scenes:
       the deposed Nawab's young son, with his mother [Begum Hazrat Mahal](person:begum-hazrat-mahal) in
       charge.
 
-      The siege became a British legend. For Awadh it was something else: a popular war against an
-      annexation barely a year old, and one that went on in the countryside long after Lucknow fell in
-      March 1858.
+      The siege became a British legend. For Awadh it was something else: a popular war against an annexation
+      barely a year old, and one that went on in the countryside long after Lucknow fell in March 1858.
     show:
-      events: [lucknow-siege]
-      places: [lucknow]
-      polities: [oudh]
+      events: [ lucknow-siege ]
+      places: [ lucknow ]
+      polities: [ oudh ]
+    image:
+      src: media/ch6-lucknow.jpg
+      caption: The Secundra Bagh, Lucknow, after the fighting of November 1857. Photograph by Felice Beato, 1858.
+      credit: Felice Beato
+      license: Public domain
+      source: https://commons.wikimedia.org/wiki/File:Felice_Beato_(British,_born_Italy_-_(Exterior_of_The_Secundra_Bagh)_-_Google_Art_Project.jpg
   - id: ch6-delhi
     t: "1857-09-20"
-    camera: { center: [77.23, 28.66], zoom: 9.0, pitch: 40 }
+    camera: { center: [ 77.23, 28.66 ], zoom: 9.0, pitch: 40 }
     title: The fall of Delhi
     text: >-
       For three months a small British force, reinforced from Punjab, held the Ridge outside Delhi. The rebels
       inside had numbers but no unified command, little pay and dwindling food.
 
-      In September the British stormed the city and [took it](event:delhi-recaptured) after six days of
-      street fighting. The emperor's sons were shot after surrendering. Much of the population was killed or
-      driven out, and the city was looted.
+      In September the British stormed the city and [took it](event:delhi-recaptured) after six days of street
+      fighting. The emperor's sons were shot after surrendering. Much of the population was killed or driven
+      out, and the city was looted.
 
       With Delhi gone, the revolt lost its centre. Its leaders fought on in Awadh and central India.
     show:
-      events: [delhi-recaptured]
-      places: [delhi]
+      events: [ delhi-recaptured ]
+      places: [ delhi ]
   - id: ch6-rani
     t: "1858-03-23"
     play_to: "1858-06-18"
-    camera: { center: [78.9, 25.9], zoom: 6.8, pitch: 30 }
+    camera: { center: [ 78.9, 25.9 ], zoom: 6.8, pitch: 30 }
     title: The Rani of Jhansi
     text: >-
       In central India, Hugh Rose's field force moved against [Rani Lakshmibai](person:lakshmibai) of Jhansi,
       whose adopted son the Company had refused to recognise in 1854.
 
       Watch her route. Jhansi was [stormed](event:jhansi-stormed) in April, and she escaped by night to
-      [Kalpi](place:kalpi), where she joined [Tatya Tope](person:tatya-tope). Defeated there, the rebels made a
-      bold strike and seized Gwalior's fortress in June. On 18 June she was [killed in battle](event:lakshmibai-killed)
-      near Gwalior.
+      [Kalpi](place:kalpi), where she joined [Tatya Tope](person:tatya-tope). Defeated there, the rebels made
+      a bold strike and seized Gwalior's fortress in June. On 18 June she was [killed in
+      battle](event:lakshmibai-killed) near Gwalior.
 
       She became the most remembered figure of 1857. Hugh Rose called her the most dangerous of the rebel
       leaders.
     show:
-      events: [jhansi-stormed, lakshmibai-killed]
-      people: [lakshmibai]
-      places: [jhansi, kalpi, gwalior]
+      events: [ jhansi-stormed, lakshmibai-killed ]
+      people: [ lakshmibai ]
+      places: [ jhansi, kalpi, gwalior ]
+    image:
+      src: media/ch6-rani.jpg
+      caption: Lakshmibai, the Rani of Jhansi, on horseback. Painting, c. 1860.
+      credit: Unknown artist
+      license: Public domain
+      source: https://commons.wikimedia.org/wiki/File:Equestrian_painting_of_Lakshmibai,_the_Rani_of_Jhansi,_Central_India,_perhaps_Jhansi,_ca.1860.jpg
   - id: ch6-exile
     t: "1858-10-07"
-    camera: { center: [84.0, 22.0], zoom: 4.4, pitch: 0 }
+    camera: { center: [ 84.0, 22.0 ], zoom: 4.4, pitch: 0 }
     title: The end of the Mughals
     text: >-
       By mid-1858 the revolt had been crushed. The [reprisals](event:british-reprisals) had killed far more
@@ -142,20 +152,20 @@ scenes:
       The old emperor was tried for rebellion and [exiled](event:zafar-exiled) to [Rangoon](place:rangoon),
       where he died in 1862. After more than three centuries, the Mughal dynasty was over.
     show:
-      events: [zafar-exiled, british-reprisals]
-      places: [delhi, rangoon]
+      events: [ zafar-exiled, british-reprisals ]
+      places: [ delhi, rangoon ]
   - id: ch6-crown
     t: "1858-11-01"
-    camera: { center: [81.85, 25.45], zoom: 6.6, pitch: 25 }
+    camera: { center: [ 81.85, 25.45 ], zoom: 6.6, pitch: 25 }
     title: The Crown takes over
     text: >-
-      Parliament blamed the Company for the revolt and abolished its rule. On 1 November 1858, at
-      Allahabad, Canning, now the first Viceroy, read [Queen Victoria's
-      proclamation](event:crown-rule): India would be ruled directly by the Crown.
+      Parliament blamed the Company for the revolt and abolished its rule. On 1 November 1858, at Allahabad,
+      Canning, now the first Viceroy, read [Queen Victoria's proclamation](event:crown-rule): India would be
+      ruled directly by the Crown.
 
       The proclamation promised to respect Indian religions, honour the princes' treaties, and annex no more
-      territory. The company of 1600 was finished. The next chapter is about the Raj that replaced it, and
-      how the lessons of 1857 shaped it.
+      territory. The company of 1600 was finished. The next chapter is about the Raj that replaced it, and how
+      the lessons of 1857 shaped it.
     show:
-      events: [crown-rule]
-      places: [allahabad, calcutta]
+      events: [ crown-rule ]
+      places: [ allahabad, calcutta ]

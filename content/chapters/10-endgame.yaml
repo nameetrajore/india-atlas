@@ -37,6 +37,12 @@ scenes:
       events: [ lahore-resolution ]
       places: [ lahore, dacca, karachi ]
       polities: [ punjab, bengal-presidency, sind ]
+    image:
+      src: media/ch10-lahore.jpg
+      caption: Gandhi and Jinnah in Bombay, September 1944, during their talks. They could not agree.
+      credit: Unknown author
+      license: Public domain
+      source: https://commons.wikimedia.org/wiki/File:Gandhi_Jinnah_1944.jpg
   - id: ch10-quit-india
     t: "1942-08-08"
     camera: { center: [ 78.0, 22.0 ], zoom: 4.3, pitch: 0 }
@@ -176,6 +182,12 @@ scenes:
       events: [ independence, radcliffe-line, junagadh-crisis, kashmir-accession ]
       places: [ delhi, lahore, amritsar, calcutta, karachi, dacca, srinagar, junagadh, hyderabad ]
       polities: [ dominion-india, dominion-pakistan ]
+    image:
+      src: media/ch10-independence.jpg
+      caption: Jawaharlal Nehru at the Red Fort, Delhi, August 1947.
+      credit: Unknown author
+      license: Public domain
+      source: https://commons.wikimedia.org/wiki/File:PM_Nehru_addresses_the_nation_from_the_Red_Fort_on_15_August_1947.jpg
   - id: ch10-today
     t: "1947-12-31"
     camera: { center: [ 80.0, 23.0 ], zoom: 4.0, pitch: 0 }
@@ -194,3 +206,9 @@ scenes:
       places: [ lahore, amritsar, dacca, calcutta, srinagar, hyderabad, karachi, delhi ]
       polities: [ dominion-india, dominion-pakistan ]
     chart: world-gdp-share
+    image:
+      src: media/ch10-today.jpg
+      caption: A refugee train in Punjab, 1947. Partition uprooted between 10 and 20 million people.
+      credit: Unknown author
+      license: Public domain
+      source: https://commons.wikimedia.org/wiki/File:A_refugee_train,_Punjab,_1947.jpg

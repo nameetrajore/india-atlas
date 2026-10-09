@@ -62,6 +62,12 @@ scenes:
       events: [ roe-embassy ]
       places: [ ajmer, agra, surat ]
       polities: [ mughal ]
+    image:
+      src: media/ch1-roe.jpg
+      caption: Jahangir invests a courtier with a robe of honour; Sir Thomas Roe watches. Mughal painting, c. 1616.
+      credit: Mughal Style
+      license: Public domain
+      source: https://commons.wikimedia.org/wiki/File:Jahangir_investing_a_courtier_with_a_robe_of_honour_watched_by_Sir_Thomas_Roe,_English_ambassador_to_the_court_of_Jahangir_at_Agra_from_1615-18,_and_others.jpg
   - id: ch1-cloth
     t: "1639-08-22"
     camera: { center: [ 80.0, 15.5 ], zoom: 5.4, pitch: 20 }
@@ -81,6 +87,12 @@ scenes:
     show:
       events: [ amboyna, madras-founded ]
       places: [ madras, pulicat, negapatam, masulipatnam, tranquebar ]
+    image:
+      src: media/ch1-cloth.jpg
+      caption: Fort St George, Madras, as engraved by Jan Van Ryne in 1754, a century after it was built.
+      credit: Jan Van Ryne (1712–60)
+      license: Public domain
+      source: https://commons.wikimedia.org/wiki/File:Fort_St._George,_Chennai.jpg
   - id: ch1-bombay
     t: "1668-03-27"
     camera: { center: [ 72.9, 19.6 ], zoom: 6.4, pitch: 25 }

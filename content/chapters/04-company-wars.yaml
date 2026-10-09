@@ -27,6 +27,12 @@ scenes:
       events: [ regulating-act, first-mysore-war ]
       places: [ calcutta, madras, seringapatam ]
       polities: [ eic, mysore ]
+    image:
+      src: media/ch4-bailout.jpg
+      caption: "East India House on Leadenhall Street, London: the Company's headquarters. Thomas Malton."
+      credit: Thomas Malton
+      license: Public domain
+      source: https://commons.wikimedia.org/wiki/File:East_India_House_by_Thomas_Malton_the_Younger.jpg
   - id: ch4-mysore
     t: "1780-09-10"
     camera: { center: [ 78.2, 12.6 ], zoom: 6.4, pitch: 30 }
@@ -119,6 +125,12 @@ scenes:
       events: [ subsidiary-alliance, seringapatam-1799 ]
       places: [ seringapatam, hyderabad, madras ]
       polities: [ mysore, hyderabad ]
+    image:
+      src: media/ch4-wellesley.jpg
+      caption: Tipu Sultan of Mysore, c. 1790.
+      credit: Unknown author
+      license: Public domain
+      source: https://commons.wikimedia.org/wiki/File:Tipu_Sultan,_a_portrait_c.1790.jpg
   - id: ch4-1801
     t: "1801-11"
     camera: { center: [ 81.5, 22.5 ], zoom: 4.6, pitch: 0 }

@@ -3,184 +3,186 @@ number: 2
 title: The empire breaks
 period: 1707–1757
 summary: >-
-  The Mughal Empire comes apart into rival states, Persians and Afghans raid it, and European
-  companies learn that small drilled armies can win Indian wars. At Plassey the Company makes a
-  Nawab.
+  The Mughal Empire comes apart into rival states, Persians and Afghans raid it, and European companies learn
+  that small drilled armies can win Indian wars. At Plassey the Company makes a Nawab.
 scenes:
   - id: ch2-farman
     t: "1717"
-    camera: { center: [80.0, 24.0], zoom: 4.4, pitch: 0 }
+    camera: { center: [ 80.0, 24.0 ], zoom: 4.4, pitch: 0 }
     title: A favour from a weak emperor
     text: >-
-      After [Aurangzeb's death](event:aurangzeb-dies), his sons fought for the throne. Seven emperors
-      followed in twelve years. Real power drifted to the nobles who could pay soldiers.
+      After [Aurangzeb's death](event:aurangzeb-dies), his sons fought for the throne. Seven emperors followed
+      in twelve years. Real power drifted to the nobles who could pay soldiers.
 
       In 1717 a Company embassy won an order (a farman) from Emperor [Farrukhsiyar](person:farrukhsiyar):
-      duty-free trade in Bengal for a flat 3,000 rupees a year. Company passes, called dastaks, now
-      exempted its goods from customs.
+      duty-free trade in Bengal for a flat 3,000 rupees a year. Company passes, called dastaks, now exempted
+      its goods from customs.
 
-      It seemed a small favour. But Company servants soon used dastaks for their own private trade, and
-      even sold them. To the governors of Bengal it looked like tax evasion on a grand scale. **Remember
-      the dastak**: it caused two wars.
+      It seemed a small favour. But Company servants soon used dastaks for their own private trade, and even
+      sold them. To the governors of Bengal it looked like tax evasion on a grand scale. **Remember the
+      dastak**: it caused two wars.
     show:
-      events: [farrukhsiyar-farman]
-      places: [delhi, calcutta, murshidabad]
-      polities: [mughal]
+      events: [ farrukhsiyar-farman ]
+      places: [ delhi, calcutta, murshidabad ]
+      polities: [ mughal ]
   - id: ch2-successors
     t: "1724-10"
-    camera: { center: [80.5, 22.0], zoom: 4.3, pitch: 0 }
+    camera: { center: [ 80.5, 22.0 ], zoom: 4.3, pitch: 0 }
     title: Governors become kings
     text: >-
-      On the map the empire still looks whole. In practice its great provinces were becoming states of
-      their own. In Bengal, Murshid Quli Khan ran the revenue and sent less and less to Delhi. In
-      Awadh, [Saadat Khan](event:awadh-autonomous) made his governorship hereditary. In the Deccan, the
+      On the map the empire still looks whole. In practice its great provinces were becoming states of their
+      own. In Bengal, Murshid Quli Khan ran the revenue and sent less and less to Delhi. In Awadh, [Saadat
+      Khan](event:awadh-autonomous) made his governorship hereditary. In the Deccan, the
       [Nizam](event:hyderabad-independent) defeated the man Delhi sent to replace him.
 
-      None of them declared independence. They kept Mughal titles, struck coins in the emperor's name,
-      and ran their own courts, armies and treasuries. Historians call them **successor states**.
+      None of them declared independence. They kept Mughal titles, struck coins in the emperor's name, and ran
+      their own courts, armies and treasuries. Historians call them **successor states**.
 
-      This is the key to the century. The Company would never face "India" or "the Mughals". It would face
-      a dozen separate rulers, each with rivals at home and enemies next door.
+      This is the key to the century. The Company would never face "India" or "the Mughals". It would face a
+      dozen separate rulers, each with rivals at home and enemies next door.
     show:
-      events: [awadh-autonomous, hyderabad-independent]
+      events: [ awadh-autonomous, hyderabad-independent ]
       people: []
-      places: [hyderabad, faizabad, murshidabad, delhi]
-      polities: [mughal]
+      places: [ hyderabad, faizabad, murshidabad, delhi ]
+      polities: [ mughal ]
   - id: ch2-marathas
     t: "1737-03"
-    camera: { center: [76.5, 22.5], zoom: 4.6, pitch: 10 }
+    camera: { center: [ 76.5, 22.5 ], zoom: 4.6, pitch: 10 }
     title: The Maratha century
     text: >-
-      The Marathas, whom Aurangzeb never defeated, became the fastest-growing power in India. Under
-      the Peshwas of [Poona](place:poona), their cavalry took Malwa and Gujarat and demanded chauth (a
-      quarter of the revenue) from far beyond.
+      The Marathas, whom Aurangzeb never defeated, became the fastest-growing power in India. Under the
+      Peshwas of [Poona](place:poona), their cavalry took Malwa and Gujarat and demanded chauth (a quarter of
+      the revenue) from far beyond.
 
-      In 1737 [Baji Rao I](person:baji-rao-i) [raided the outskirts of Delhi](event:marathas-north)
-      itself. The emperor could not stop him. By mid-century the Marathas were the largest power on the
-      subcontinent, and the likeliest heirs to the Mughals.
+      In 1737 [Baji Rao I](person:baji-rao-i) [raided the outskirts of Delhi](event:marathas-north) itself.
+      The emperor could not stop him. By mid-century the Marathas were the largest power on the subcontinent,
+      and the likeliest heirs to the Mughals.
     show:
-      events: [marathas-north]
-      places: [poona, delhi]
-      polities: [maratha-peshwa, mughal]
+      events: [ marathas-north ]
+      places: [ poona, delhi ]
+      polities: [ maratha-peshwa, mughal ]
   - id: ch2-nadir
     t: "1739-03-22"
-    camera: { center: [76.5, 29.0], zoom: 6.0, pitch: 25 }
+    camera: { center: [ 76.5, 29.0 ], zoom: 6.0, pitch: 25 }
     title: Delhi sacked
     text: >-
-      In 1739 the Persian ruler [Nadir Shah](person:nadir-shah) came through the passes, routed the
-      Mughal army at Karnal and entered Delhi. After a riot against his troops he ordered a
-      [massacre](event:nadir-shah-sack). He left with the treasury, the Peacock Throne and the
-      Koh-i-Noor diamond.
+      In 1739 the Persian ruler [Nadir Shah](person:nadir-shah) came through the passes, routed the Mughal
+      army at Karnal and entered Delhi. After a riot against his troops he ordered a
+      [massacre](event:nadir-shah-sack). He left with the treasury, the Peacock Throne and the Koh-i-Noor
+      diamond.
 
-      An empire runs on money to pay its armies. After 1739 the emperor had neither the money nor the
-      fear of his governors. From here on, every ruler in India, and every European company on the
-      coast, acted for itself.
+      An empire runs on money to pay its armies. After 1739 the emperor had neither the money nor the fear of
+      his governors. From here on, every ruler in India, and every European company on the coast, acted for
+      itself.
     show:
-      events: [nadir-shah-sack]
-      places: [delhi, panipat]
-      polities: [mughal]
+      events: [ nadir-shah-sack ]
+      places: [ delhi, panipat ]
+      polities: [ mughal ]
   - id: ch2-bengal
     t: "1745"
-    camera: { center: [87.0, 23.6], zoom: 5.8, pitch: 20 }
+    camera: { center: [ 87.0, 23.6 ], zoom: 5.8, pitch: 20 }
     title: Bengal on its own
     text: >-
       Bengal shows the pattern. In 1740 [Alivardi Khan](person:alivardi-khan) killed the Nawab at
-      [Giria](event:giria) and took his throne, backed by the great bankers, the Jagat Seths. The
-      emperor's approval was bought afterwards.
+      [Giria](event:giria) and took his throne, backed by the great bankers, the Jagat Seths. The emperor's
+      approval was bought afterwards.
 
-      Alivardi ruled well but spent ten years fighting Maratha [raiders from Nagpur](event:maratha-raids),
-      the bargis, who burned western Bengal. Merchants and weavers fled to the safety of Company
-      [Calcutta](place:calcutta), which dug a "Maratha Ditch" round itself and grew richer as Bengal
-      suffered.
+      Alivardi ruled well but spent ten years fighting Maratha [raiders from Nagpur](event:maratha-raids), the
+      bargis, who burned western Bengal. Merchants and weavers fled to the safety of Company
+      [Calcutta](place:calcutta), which dug a "Maratha Ditch" round itself and grew richer as Bengal suffered.
 
       Green is the Nawabs of Bengal; orange is the Marathas, who took Orissa in 1751.
     show:
-      events: [giria, maratha-raids, orissa-ceded]
+      events: [ giria, maratha-raids, orissa-ceded ]
       people: []
-      places: [murshidabad, calcutta, giria]
-      polities: [bengal-nawabs, marathas-nagpur]
+      places: [ murshidabad, calcutta, giria ]
+      polities: [ bengal-nawabs, marathas-nagpur ]
   - id: ch2-adyar
     t: "1746-11"
-    camera: { center: [80.0, 12.5], zoom: 6.4, pitch: 25 }
+    camera: { center: [ 80.0, 12.5 ], zoom: 6.4, pitch: 25 }
     title: A lesson on the Adyar river
     text: >-
-      When Britain and France went to war in Europe in the 1740s, their companies fought in India too. In
-      1746 the French [took Madras](event:madras-falls-1746).
+      When Britain and France went to war in Europe in the 1740s, their companies fought in India too. In 1746
+      the French [took Madras](event:madras-falls-1746).
 
-      The Nawab of the Carnatic sent a large army to drive the French out. At the
-      [Adyar river](event:adyar) a few hundred French soldiers and trained sepoys routed it.
+      The Nawab of the Carnatic sent a large army to drive the French out. At the [Adyar river](event:adyar) a
+      few hundred French soldiers and trained sepoys routed it.
 
-      **This is the answer to the question from Chapter 1.** In 1690 the Company lost to the Mughals.
-      Now a small force, drilled to fire in volleys, paid regularly and backed by mobile cannon, could
-      beat an Indian army many times its size. Both companies began recruiting Indian soldiers and
-      training them the European way.
+      **This is the answer to the question from Chapter 1.** In 1690 the Company lost to the Mughals. Now a
+      small force, drilled to fire in volleys, paid regularly and backed by mobile cannon, could beat an
+      Indian army many times its size. Both companies began recruiting Indian soldiers and training them the
+      European way.
     show:
-      events: [madras-falls-1746, adyar]
-      places: [madras, pondicherry, fort-st-david]
-      polities: [carnatic, french]
+      events: [ madras-falls-1746, adyar ]
+      places: [ madras, pondicherry, fort-st-david ]
+      polities: [ carnatic, french ]
   - id: ch2-arcot
     t: "1751-09"
-    camera: { center: [79.2, 12.0], zoom: 6.6, pitch: 30 }
+    camera: { center: [ 79.2, 12.0 ], zoom: 6.6, pitch: 30 }
     title: Armies for hire
     text: >-
-      The French governor [Dupleix](person:dupleix) took the next step. When rival princes fought over
-      the thrones of Hyderabad and the Carnatic, he lent his sepoy army to one side in return for land
-      revenue and influence. A grateful nawab would pay the bills.
+      The French governor [Dupleix](person:dupleix) took the next step. When rival princes fought over the
+      thrones of Hyderabad and the Carnatic, he lent his sepoy army to one side in return for land revenue and
+      influence. A grateful nawab would pay the bills.
 
-      The British copied him and backed the other side in the
-      [Second Carnatic War](event:second-carnatic-war). In 1751 a 26-year-old former clerk,
-      [Robert Clive](person:clive), seized [Arcot](event:siege-arcot) with about 500 men and held it for
-      50 days.
+      The British copied him and backed the other side in the [Second Carnatic
+      War](event:second-carnatic-war). In 1751 a 26-year-old former clerk, [Robert Clive](person:clive),
+      seized [Arcot](event:siege-arcot) with about 500 men and held it for 50 days.
 
-      The French cause collapsed and Dupleix was [recalled](event:dupleix-recalled). The method
-      remained: sepoy armies plus a friendly ruler. Clive would take it to Bengal.
+      The French cause collapsed and Dupleix was [recalled](event:dupleix-recalled). The method remained:
+      sepoy armies plus a friendly ruler. Clive would take it to Bengal.
     show:
-      events: [second-carnatic-war, siege-arcot, dupleix-recalled]
-      people: [clive]
-      places: [arcot, trichinopoly, pondicherry, madras, fort-st-david]
-      polities: [carnatic, french]
+      events: [ second-carnatic-war, siege-arcot, dupleix-recalled ]
+      people: [ clive ]
+      places: [ arcot, trichinopoly, pondicherry, madras, fort-st-david ]
+      polities: [ carnatic, french ]
   - id: ch2-calcutta
     t: "1756-06-20"
-    camera: { center: [88.2, 23.2], zoom: 7.2, pitch: 35 }
+    camera: { center: [ 88.2, 23.2 ], zoom: 7.2, pitch: 35 }
     title: The Nawab strikes first
     text: >-
       In 1756 [Siraj-ud-Daulah](person:siraj-ud-daulah), about 23, [succeeded](event:siraj-accession)
-      Alivardi. He had three complaints against the Company. It was fortifying Calcutta without
-      permission, fearing a new war with France. It was sheltering a man he wanted. And its servants
-      were abusing their dastaks.
+      Alivardi. He had three complaints against the Company. It was fortifying Calcutta without permission,
+      fearing a new war with France. It was sheltering a man he wanted. And its servants were abusing their
+      dastaks.
 
-      When the Company refused his terms, he [seized its factory](event:kasimbazar-seized) at
-      Kasimbazar and [took Calcutta](event:fall-of-calcutta). Prisoners died overnight in the fort's
-      lock-up, the "[Black Hole](event:black-hole)". The numbers are disputed, but in Britain the story
-      became a lasting justification for empire.
+      When the Company refused his terms, he [seized its factory](event:kasimbazar-seized) at Kasimbazar and
+      [took Calcutta](event:fall-of-calcutta). Prisoners died overnight in the fort's lock-up, the "[Black
+      Hole](event:black-hole)". The numbers are disputed, but in Britain the story became a lasting
+      justification for empire.
 
       From his point of view, the Nawab had disciplined a disobedient tenant. From Madras, the Company sent
       Clive to get Calcutta back.
     show:
-      events: [siraj-accession, kasimbazar-seized, fall-of-calcutta, black-hole]
-      people: [siraj-ud-daulah]
-      places: [calcutta, kasimbazar, murshidabad, fulta]
-      polities: [bengal-nawabs]
+      events: [ siraj-accession, kasimbazar-seized, fall-of-calcutta, black-hole ]
+      people: [ siraj-ud-daulah ]
+      places: [ calcutta, kasimbazar, murshidabad, fulta ]
+      polities: [ bengal-nawabs ]
   - id: ch2-plassey
     t: "1757-06-23"
-    camera: { center: [88.25, 23.6], zoom: 8.0, pitch: 45, bearing: 10 }
+    camera: { center: [ 88.25, 23.6 ], zoom: 8.0, pitch: 45, bearing: 10 }
     select: { kind: event, id: plassey }
     title: Plassey
     text: >-
-      Clive [retook Calcutta](event:calcutta-retaken) in January 1757 and then
-      [captured Chandernagore](event:chandernagore-captured), removing the Nawab's only possible European
-      ally.
+      Clive [retook Calcutta](event:calcutta-retaken) in January 1757 and then [captured
+      Chandernagore](event:chandernagore-captured), removing the Nawab's only possible European ally.
 
       Then he joined a conspiracy. The Nawab's general [Mir Jafar](person:mir-jafar) and the Jagat Seth
-      bankers wanted Siraj gone. They agreed that Mir Jafar would take the throne and pay the Company
-      for its help.
+      bankers wanted Siraj gone. They agreed that Mir Jafar would take the throne and pay the Company for its
+      help.
 
       At [Plassey](event:plassey) on 23 June, about 3,000 Company troops faced some 50,000. Mir Jafar's
-      division stood aside, the Nawab's army broke, and Siraj fled. It was won by a coup, not a battle.
-      The Company had not conquered Bengal. It had bought its ruler, and next it would find out what that
-      was worth.
+      division stood aside, the Nawab's army broke, and Siraj fled. It was won by a coup, not a battle. The
+      Company had not conquered Bengal. It had bought its ruler, and next it would find out what that was
+      worth.
     show:
-      events: [calcutta-retaken, chandernagore-captured, plassey]
-      people: [clive, siraj-ud-daulah]
-      places: [plassey, murshidabad, calcutta, chandernagore]
-      polities: [bengal-nawabs]
+      events: [ calcutta-retaken, chandernagore-captured, plassey ]
+      people: [ clive, siraj-ud-daulah ]
+      places: [ plassey, murshidabad, calcutta, chandernagore ]
+      polities: [ bengal-nawabs ]
+    image:
+      src: media/ch2-plassey.jpg
+      caption: Lord Clive meeting Mir Jafar after Plassey. Francis Hayman, c. 1760, painted for a London audience.
+      credit: Francis Hayman
+      license: Public domain
+      source: https://commons.wikimedia.org/wiki/File:Lord_Clive_meeting_with_Mir_Jafar_after_the_Battle_of_Plassey.jpg

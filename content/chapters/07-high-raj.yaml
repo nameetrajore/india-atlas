@@ -78,6 +78,13 @@ scenes:
       events: [ durbar-1877, great-famine ]
       places: [ delhi, madras, bombay, hyderabad ]
     chart: famine-deaths
+    image:
+      src: media/ch7-famine.jpg
+      caption: The Imperial Assemblage at Delhi, 1 January 1877, where Victoria was proclaimed Empress of India,
+        during the famine.
+      credit: Unknown author
+      license: Public domain
+      source: https://commons.wikimedia.org/wiki/File:The_Imperial_Assemblage_at_Delhi,_1877.jpg
   - id: ch7-ilbert
     t: "1883"
     camera: { center: [ 88.3, 22.6 ], zoom: 6.6, pitch: 20 }
@@ -123,6 +130,12 @@ scenes:
     show:
       events: [ inc-founded ]
       places: [ bombay ]
+    image:
+      src: media/ch7-congress.jpg
+      caption: Delegates at the first session of the Indian National Congress, Bombay, December 1885.
+      credit: Unknown author
+      license: Public domain
+      source: https://commons.wikimedia.org/wiki/File:1st_INC1885.jpg
   - id: ch7-curzon
     t: "1899-09"
     camera: { center: [ 77.0, 22.0 ], zoom: 4.6, pitch: 0 }

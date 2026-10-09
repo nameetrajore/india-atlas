@@ -170,6 +170,11 @@ const Scene = z
     play_to: dateStr.optional(),
     /** A chart from charts.yaml shown under the text. */
     chart: id.optional(),
+    /** A period image: public domain or CC0 only, credited (D12, D21). */
+    image: z
+      .object({ src: z.string(), caption: z.string(), credit: z.string(), license: z.enum(['Public domain', 'CC0']), source: z.string().url() })
+      .strict()
+      .optional(),
   })
   .strict()
 const Chapter = z
@@ -434,6 +439,7 @@ const compiledChapters = chapters.map((c) => {
         select: sc.select,
         playTo: sc.play_to ? parseDate(sc.play_to) : undefined,
         chart: sc.chart,
+        image: sc.image,
       }
     }),
   }

@@ -132,6 +132,7 @@ export interface Scene {
   select?: Selection
   playTo?: CDate
   chart?: string
+  image?: { src: string; caption: string; credit: string; license: string; source: string }
 }
 
 export interface Chapter {
