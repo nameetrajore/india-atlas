@@ -1,6 +1,6 @@
 import { currentScene, useStore } from '../store'
 import { keyframeIndexAt, polityName } from '../lib/derive'
-import { BLOC_COLORS, BLOC_NAMES } from '../map/layers'
+import { BLOC_COLORS, BLOC_NAMES, FLOW_COLORS, FLOW_NAMES, railwaysVisible, visibleTrade } from '../map/layers'
 import type { Bloc } from '../types'
 
 const rgb = (c: number[]) => `rgb(${c.join(',')})`
@@ -13,6 +13,7 @@ export function Legend() {
   const today = useStore((s) => s.today)
   const scene = useStore((s) => currentScene(s))
   const select = useStore((s) => s.select)
+  const econ = useStore((s) => s.econ)
   if (!content) return null
   const kf = content.keyframes[keyframeIndexAt(content.keyframes, t)]
   const present = [...new Set(kf ? Object.values(kf.units) : [])].map((id) => content.polities[id])
@@ -40,6 +41,25 @@ export function Legend() {
           ))}
         </div>
       )}
+      {(() => {
+        const flows = [...new Set(visibleTrade(content, t, scene, econ).map((r) => r.flow))]
+        const rails = railwaysVisible(scene, econ) && content.railways.some((r) => r.opened.t <= t)
+        if (!flows.length && !rails) return null
+        return (
+          <div className="legend-detail">
+            {rails && (
+              <div className="legend-row">
+                <span className="legend-rail" /> Railways open
+              </div>
+            )}
+            {flows.map((f) => (
+              <div key={f} className="legend-row">
+                <span className="legend-flow" style={{ background: rgb(FLOW_COLORS[f]) }} /> {FLOW_NAMES[f]}
+              </div>
+            ))}
+          </div>
+        )
+      })()}
       {today && <div className="legend-note">Right of the divider: today's states. Drag it to compare.</div>}
     </div>
   )
@@ -49,7 +69,8 @@ export function Legend() {
 export function MapToggles() {
   const detail = useStore((s) => s.detail)
   const today = useStore((s) => s.today)
-  const { setDetail, setToday } = useStore.getState()
+  const econ = useStore((s) => s.econ)
+  const { setDetail, setToday, setEcon } = useStore.getState()
   return (
     <div className="toggles">
       <label>
@@ -57,6 +78,9 @@ export function MapToggles() {
       </label>
       <label>
         <input type="checkbox" checked={today} onChange={(e) => setToday(e.target.checked)} /> Then vs now
+      </label>
+      <label>
+        <input type="checkbox" checked={econ} onChange={(e) => setEcon(e.target.checked)} /> Railways & trade
       </label>
     </div>
   )

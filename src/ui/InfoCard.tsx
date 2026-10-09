@@ -1,5 +1,6 @@
 import { useState, type ReactNode } from 'react'
-import { useStore } from '../store'
+import { journeySteps, useStore } from '../store'
+import { FLOW_COLORS, FLOW_NAMES } from '../map/layers'
 import { controlAt, keyframeIndexAt, personAt, polityName, visitsToPlace } from '../lib/derive'
 import { formatT } from '../lib/time'
 import type { Content, Figure, HistEvent, LngLat, Selection } from '../types'
@@ -280,6 +281,25 @@ export function InfoCard() {
     )
   }
 
+  if (sel.kind === 'trade') {
+    const r = content.trade.find((x) => x.id === sel.id)
+    if (!r) return null
+    return (
+      <Card
+        kicker={<span style={{ color: rgb(FLOW_COLORS[r.flow]) }}>{FLOW_NAMES[r.flow]}</span>}
+        title={r.name}
+        sub={`${r.from.label} – ${r.to.label}${r.beyond ? ` · to ${r.beyond}` : ''}`}
+      >
+        <Prose text={r.summary} />
+        <Section title="Why it happened" text={r.context} />
+        <Section title="What it changed" text={r.consequences} />
+        <More>
+          <Sources ids={r.sources} content={content} />
+        </More>
+      </Card>
+    )
+  }
+
   if (sel.kind === 'person') {
     const p = content.people.find((x) => x.id === sel.id)
     if (!p) return null
@@ -306,6 +326,11 @@ export function InfoCard() {
           </p>
         )}
         <Prose text={p.summary} />
+        {journeySteps(p).length >= 4 && (
+          <button className="follow-btn" onClick={() => useStore.getState().startJourney(p.id)}>
+            Follow {p.name.split(' ').slice(-1)[0]}'s journey · {journeySteps(p).length} stops →
+          </button>
+        )}
         {events.length > 0 && (
           <section>
             <h4>In the story</h4>

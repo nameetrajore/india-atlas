@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import { MapboxOverlay } from '@deck.gl/mapbox'
@@ -8,7 +8,9 @@ import { keyframeIndexAt, polityName } from '../lib/derive'
 import { formatT } from '../lib/time'
 import { BLOC_NAMES } from './layers'
 import { baseStyle } from './style'
-import { buildLayers, PULSE_MS } from './layers'
+import { buildLayers, PULSE_MS, tradeDots, visibleTrade } from './layers'
+import type { Layer } from '@deck.gl/core'
+import type { Content, Scene } from '../types'
 import { NowMap } from './NowMap'
 import { loadUnits, type UnitIndex } from './units'
 
@@ -22,7 +24,12 @@ export function MapView() {
 
   const content = useStore((s) => s.content)
   const t = useStore((s) => s.t)
-  const scene = useStore((s) => currentScene(s))
+  const storyScene = useStore((s) => currentScene(s))
+  const econ = useStore((s) => s.econ)
+  const journey = useStore((s) => s.journey?.person ?? null)
+  const scene = useMemo(() => (journey && content ? journeyScene(content, journey, t) : storyScene), [journey, content, t, storyScene])
+  const base = useRef<Layer[]>([])
+  const dotsLayer = useRef<Layer | null>(null)
   const detail = useStore((s) => s.detail)
   const showToday = useStore((s) => s.today)
   const todayIdx = useToday()
@@ -90,7 +97,12 @@ export function MapView() {
     // Frame the scene in the part of the map the reader can see, not behind the panels.
     const phone = window.innerWidth <= 760
     const story = useStore.getState().mode === 'story'
-    const padding = !story
+    const journeying = !!useStore.getState().journey
+    const padding = journeying
+      ? phone
+        ? { top: 40, bottom: Math.round(window.innerHeight * 0.5), left: 0, right: 0 }
+        : { top: 40, bottom: 200, left: window.innerWidth <= 1280 ? 350 : 380, right: 0 }
+      : !story
       ? { top: 0, bottom: 0, left: 0, right: 0 }
       : phone
         ? { top: 40, bottom: Math.round(window.innerHeight * 0.42), left: 0, right: 0 }
@@ -126,18 +138,20 @@ export function MapView() {
       } else if (layer.id === 'events') html = `<div class="tt-title">${esc(object.e.name)}</div><div class="tt-sub">${esc(object.e.date.label)}</div>`
       else if (layer.id === 'people') html = `<div class="tt-title">${esc(object.p.name)}</div><div class="tt-sub">${esc(object.p.role)}</div>`
       else if (layer.id === 'footholds') html = `<div class="tt-title">${esc(object.p.name)}</div><div class="tt-sub">${esc(polityName(content.polities[object.c.power], t))}</div>`
+      else if (layer.id === 'railways') html = `<div class="tt-title">${esc(object.line)}</div><div class="tt-sub">Opened ${esc(object.opened.label)}${object.note ? ` · ${esc(object.note)}` : ''}</div>`
+      else if (layer.id === 'trade') html = `<div class="tt-title">${esc(object.name)}</div><div class="tt-sub">${esc(object.goods)} · ${esc(object.from.label)}–${esc(object.to.label)}</div>`
       else if (layer.id === 'place-labels') html = `<div class="tt-title">${esc(object.name)}</div>${object.modern && object.modern !== object.name ? `<div class="tt-sub">now ${esc(object.modern)}</div>` : ''}`
       else return null
       return { html, className: 'map-tooltip', style: { background: 'none', padding: '0' } }
     }
-    overlay.current.setProps({
-      getTooltip: getTooltip as never,
-      layers: buildLayers({
+    base.current = buildLayers({
         content,
         units,
         t,
         scene,
         detail,
+        econ,
+        journey,
         selection,
         zoom,
         pulses: crossed.map((c) => ({ id: c.id, age: now - c.at })).filter((p) => p.age >= 0 && p.age < PULSE_MS),
@@ -146,9 +160,27 @@ export function MapView() {
           return [pt.x, pt.y]
         },
         onPick: (s) => useStore.getState().select(s),
-      }),
-    })
-  }, [content, units, t, scene, detail, todayIdx, selection, zoom, camera, crossed, now])
+      })
+    const dl = dotsLayer.current
+    overlay.current.setProps({ getTooltip: getTooltip as never, layers: dl ? base.current.map((l) => (l.id === 'trade-dots' ? dl : l)) : base.current })
+  }, [content, units, t, scene, detail, econ, journey, todayIdx, selection, zoom, camera, crossed, now])
+
+  // Cargo dots move continuously along the visible trade routes; only that one layer is rebuilt per frame.
+  const routes = useMemo(() => (content ? visibleTrade(content, t, scene, econ) : []), [content, t, scene, econ])
+  useEffect(() => {
+    dotsLayer.current = null
+    if (!routes.length || !overlay.current) return
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
+    let raf = 0
+    const tick = (clock: number) => {
+      const dots = tradeDots(routes, reduce ? 0 : clock)
+      dotsLayer.current = dots
+      overlay.current?.setProps({ layers: base.current.map((l) => (l.id === 'trade-dots' ? dots : l)) })
+      if (!reduce) raf = requestAnimationFrame(tick)
+    }
+    raf = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(raf)
+  }, [routes])
 
   return (
     <div className="map">
@@ -156,4 +188,20 @@ export function MapView() {
       {showToday && main && <NowMap main={main} />}
     </div>
   )
+}
+
+/** Follow-a-person as a scene: only that person, the places they have reached by t, and their events so far. */
+function journeyScene(content: Content, id: string, t: number): Scene | null {
+  const p = content.people.find((x) => x.id === id)
+  if (!p) return null
+  const places = [...new Set(p.itinerary.filter((s) => s.place && s.date.t <= t + 0.001).map((s) => s.place!))]
+  const events = content.events.filter((e) => e.participants.includes(id) && e.date.t <= t + 0.001).map((e) => e.id)
+  return {
+    id: `journey-${id}`,
+    date: p.itinerary[0].date,
+    camera: { center: [0, 0], zoom: 0 },
+    title: p.name,
+    text: '',
+    show: { events, people: [id], places, polities: [], trade: [], railways: false },
+  }
 }

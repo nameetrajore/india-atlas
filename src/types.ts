@@ -94,6 +94,7 @@ export interface Stop {
   place?: string
   coords?: LngLat
   away: boolean
+  approx?: boolean
   note?: string
 }
 

@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import type { Camera, Content, Scene, Selection } from './types'
+import type { Camera, Content, Person, Scene, Selection } from './types'
 
 export type Mode = 'story' | 'explore'
 
@@ -29,6 +29,10 @@ interface State {
   autoplay: boolean
   /** The Sources & methods page is open. */
   methods: boolean
+  /** Railways and trade routes drawn on the map. */
+  econ: boolean
+  /** Follow a person: their id and the current step (an index into journeySteps). */
+  journey: { person: string; step: number } | null
 
   setContent: (c: Content) => void
   setT: (t: number, opts?: { announce?: boolean }) => void
@@ -46,6 +50,10 @@ interface State {
   setSheetDown: (d: boolean) => void
   setAutoplay: (a: boolean) => void
   setMethods: (m: boolean) => void
+  setEcon: (e: boolean) => void
+  startJourney: (person: string, step?: number) => void
+  journeyStep: (delta: number) => void
+  endJourney: () => void
 }
 
 export const INITIAL_CAMERA: Camera = { center: [80.5, 22.5], zoom: 4.2, pitch: 0, bearing: 0 }
@@ -66,6 +74,8 @@ export const useStore = create<State>((set, get) => ({
   crossed: [],
   sheetDown: false,
   methods: false,
+  econ: false,
+  journey: null,
   autoplay: false,
 
   setContent: (content) => set({ content, t: content.range[0] }),
@@ -81,9 +91,9 @@ export const useStore = create<State>((set, get) => ({
     }
     set({ t: next, ...(fresh.length ? { crossed: [...crossed, ...fresh].slice(-3) } : {}) })
   },
-  setMode: (mode) => set({ mode, playing: false, crossed: [], ...(mode === 'story' ? {} : { selection: null }) }),
+  setMode: (mode) => set({ mode, playing: false, crossed: [], journey: null, ...(mode === 'story' ? {} : { selection: null }) }),
   openChapter: (chapter, scene = 0) => {
-    set({ chapter, scene, mode: 'story', playing: false, crossed: [], ...(chapter === null ? { autoplay: false } : {}) })
+    set({ chapter, scene, mode: 'story', playing: false, crossed: [], journey: null, ...(chapter === null ? { autoplay: false } : {}) })
     if (chapter !== null) enterScene(get, set)
     else set({ selection: null })
   },
@@ -116,6 +126,22 @@ export const useStore = create<State>((set, get) => ({
   setSheetDown: (sheetDown) => set({ sheetDown }),
   setAutoplay: (autoplay) => set({ autoplay }),
   setMethods: (methods) => set({ methods }),
+  setEcon: (econ) => set({ econ }),
+  startJourney: (person, step = 0) => {
+    set({ journey: { person, step }, mode: 'explore', playing: false, crossed: [], selection: null, methods: false })
+    enterStop(get, undefined)
+  },
+  journeyStep: (delta) => {
+    const { journey: j, content } = get()
+    const p = j && content?.people.find((x) => x.id === j.person)
+    if (!j || !p) return
+    const step = j.step + delta
+    if (step < 0 || step >= journeySteps(p).length) return
+    const from = get().t
+    set({ journey: { ...j, step } })
+    enterStop(get, delta > 0 ? from : undefined)
+  },
+  endJourney: () => set({ journey: null }),
 }))
 
 export function currentScene(s: Pick<State, 'content' | 'chapter' | 'scene' | 'mode'>): Scene | null {
@@ -158,4 +184,35 @@ function enterScene(get: () => State, set: (p: Partial<State>) => void, fromT?: 
     get().setT(sc.date.t, { announce: false })
     if (sc.playTo) tween(get, sc, sc.date.t, sc.playTo.t, 1800, 9000)
   }
+}
+
+/** The stops worth a step in "follow a person": those with a note. Notes-less stops only shape the trail. */
+export function journeySteps(p: Person): number[] {
+  return p.itinerary.flatMap((s, i) => (s.note ? [i] : []))
+}
+
+/** Move to the current journey stop: time (travelled forward from `fromT` when given), then the camera. */
+let stopAnim = 0
+function enterStop(get: () => State, fromT: number | undefined) {
+  cancelAnimationFrame(stopAnim)
+  const { journey: j, content } = get()
+  const p = j && content?.people.find((x) => x.id === j.person)
+  if (!j || !p) return
+  const stop = p.itinerary[journeySteps(p)[j.step]]
+  if (!stop) return
+  if (stop.coords) get().requestFly({ center: stop.coords, zoom: 6.2, pitch: 20, bearing: 0 })
+  const to = stop.date.t
+  if (fromT === undefined || to <= fromT) {
+    get().setT(to, { announce: false })
+    return
+  }
+  const dur = Math.min(3500, Math.max(900, (to - fromT) * 400))
+  const start = performance.now()
+  const tick = (now: number) => {
+    if (get().journey !== j) return
+    const f = Math.min(1, (now - start) / dur)
+    get().setT(fromT + (to - fromT) * ease(f), { announce: false })
+    if (f < 1) stopAnim = requestAnimationFrame(tick)
+  }
+  stopAnim = requestAnimationFrame(tick)
 }

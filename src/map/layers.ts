@@ -2,7 +2,7 @@ import { GeoJsonLayer, IconLayer, ScatterplotLayer, TextLayer, PathLayer } from 
 import { TripsLayer } from '@deck.gl/geo-layers'
 import { PathStyleExtension } from '@deck.gl/extensions'
 import type { Layer } from '@deck.gl/core'
-import type { Bloc, Content, HistEvent, LngLat, Person, Place, Scene, Selection } from '../types'
+import type { Bloc, Content, HistEvent, LngLat, Person, Place, Railway, Scene, Selection, TradeRoute } from '../types'
 import {
   controlAt,
   eventOpacity,
@@ -34,7 +34,60 @@ const PERSON_COLORS: Record<string, RGB> = {
   clive: [150, 40, 25],
   'siraj-ud-daulah': [30, 90, 70],
 }
-export const personColor = (id: string): RGB => PERSON_COLORS[id] ?? [60, 60, 90]
+/** Extra trail colours for people without a fixed one, picked by id so a person keeps their colour. */
+const SPARE: RGB[] = [[36, 64, 110], [120, 50, 110], [20, 110, 120], [130, 90, 20], [90, 40, 40], [50, 100, 40]]
+export const personColor = (id: string): RGB =>
+  PERSON_COLORS[id] ?? SPARE[[...id].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7) % SPARE.length]
+
+/** Trade flows (D27): out of India in the accent red, into India in blue, people in plum. */
+export const FLOW_COLORS: Record<TradeRoute['flow'], RGB> = { export: [156, 61, 37], import: [36, 64, 110], people: [112, 54, 120] }
+export const FLOW_NAMES: Record<TradeRoute['flow'], string> = { export: 'Exports', import: 'Imports', people: 'Migration and indenture' }
+const RAIL: RGB = [58, 46, 36]
+
+/** Trade routes on the map: a scene's own, or (with the layer on) all active at t. */
+export function visibleTrade(content: Content, t: number, scene: Scene | null, econ: boolean): TradeRoute[] {
+  if (scene?.show.trade.length) return content.trade.filter((r) => scene.show.trade.includes(r.id))
+  if (!econ) return []
+  return content.trade.filter((r) => r.from.t <= t && t <= r.to.t)
+}
+export const railwaysVisible = (scene: Scene | null, econ: boolean) => econ || !!scene?.show.railways
+
+/** Point at fraction f (0–1) of a path's length. */
+function along(path: LngLat[], f: number): LngLat {
+  const seg = path.slice(1).map((p, i) => Math.hypot(p[0] - path[i][0], p[1] - path[i][1]))
+  let d = f * seg.reduce((s, x) => s + x, 0)
+  for (let i = 0; i < seg.length; i++) {
+    if (d <= seg[i] || i === seg.length - 1) {
+      const g = seg[i] ? Math.min(1, d / seg[i]) : 0
+      return [path[i][0] + (path[i + 1][0] - path[i][0]) * g, path[i][1] + (path[i + 1][1] - path[i][1]) * g]
+    }
+    d -= seg[i]
+  }
+  return path[path.length - 1]
+}
+
+const DOTS = 4
+const DOT_PERIOD_MS = 9000
+/** Cargo dots moving along each route; `clock` in ms. Rebuilt every frame, so kept apart from buildLayers. */
+export function tradeDots(routes: TradeRoute[], clock: number): Layer {
+  const data = routes.flatMap((r) =>
+    Array.from({ length: DOTS }, (_, k) => ({ r, p: along(r.path, (clock / DOT_PERIOD_MS + k / DOTS) % 1) })),
+  )
+  return new ScatterplotLayer<(typeof data)[number]>({
+    ...FLAT,
+    id: 'trade-dots',
+    data,
+    getPosition: (d) => d.p,
+    getRadius: 3.5,
+    radiusUnits: 'pixels',
+    getFillColor: (d) => FLOW_COLORS[d.r.flow],
+    getLineColor: [...PAPER, 230],
+    stroked: true,
+    lineWidthUnits: 'pixels',
+    getLineWidth: 1.5,
+    updateTriggers: { getPosition: [clock] },
+  })
+}
 
 /** Simple-map colours (D25): one per bloc; the atlas convention of pink for British, yellow for Indian. */
 export const BLOC_COLORS: Record<Bloc, RGB> = {
@@ -61,6 +114,10 @@ export interface LayerArgs {
   /** Story scene: when set, only what it references is drawn. */
   scene: Scene | null
   detail: boolean
+  /** Railways and trade routes on. */
+  econ: boolean
+  /** Follow-a-person: this person's whole trail so far stays drawn. */
+  journey: string | null
   selection: Selection | null
   zoom: number
   project: (p: LngLat) => [number, number]
@@ -240,6 +297,63 @@ export function buildLayers(a: LayerArgs): Layer[] {
     )
   }
 
+  // ---- railways, open by t; lines opened in the last two years drawn bolder (D27)
+  {
+    const rails = railwaysVisible(scene, a.econ) ? content.railways.filter((r) => r.opened.t <= t) : []
+    layers.push(
+      new PathLayer<Railway>({
+        ...FLAT,
+        id: 'railways',
+        data: rails,
+        pickable: true,
+        getPath: (d) => d.path,
+        getColor: (d) => (t - d.opened.t < 2 ? [...FLOW_COLORS.export, 255] : [...RAIL, 200]),
+        getWidth: (d) => (t - d.opened.t < 2 ? 3 : 1.6),
+        widthUnits: 'pixels',
+        capRounded: true,
+        jointRounded: true,
+        updateTriggers: { getColor: [Math.floor(t * 4)], getWidth: [Math.floor(t * 4)] },
+      }),
+    )
+  }
+
+  // ---- trade routes: faint route line, end label; cargo dots come from tradeDots()
+  {
+    const routes = visibleTrade(content, t, scene, a.econ)
+    const ends = routes.filter((r) => r.beyond)
+    layers.push(
+      new PathLayer<TradeRoute>({
+        ...FLAT,
+        id: 'trade',
+        data: routes,
+        pickable: true,
+        getPath: (d) => d.path,
+        getColor: (d) => [...FLOW_COLORS[d.flow], isSel(selection, 'trade', d.id) ? 230 : 110],
+        getWidth: (d) => (isSel(selection, 'trade', d.id) ? 4 : 2.5),
+        widthUnits: 'pixels',
+        capRounded: true,
+        jointRounded: true,
+        updateTriggers: { getColor: [selection], getWidth: [selection] },
+        onClick: (info) => (info.object && a.onPick({ kind: 'trade', id: info.object.id }), true),
+      }),
+      tradeDots([], 0),
+      ...haloText({
+        ...TEXT_BASE,
+        id: 'trade-ends',
+        data: ends,
+        getPosition: (d: TradeRoute) => d.path[d.path.length - 1],
+        getText: (d: TradeRoute) => `${d.goods} → ${d.beyond}`,
+        getSize: 11.5,
+        getColor: (d: TradeRoute) => [...FLOW_COLORS[d.flow], 255],
+        fontFamily: 'Inter',
+        fontWeight: 600,
+        getTextAnchor: (d: TradeRoute) => (d.path[d.path.length - 1][0] < 70 ? 'start' : 'end'),
+        getAlignmentBaseline: 'bottom',
+        getPixelOffset: [0, -6],
+      }),
+    )
+  }
+
   // ---- non-British European enclaves
   {
     layers.push(
@@ -348,8 +462,8 @@ export function buildLayers(a: LayerArgs): Layer[] {
         getTimestamps: (d) => d.timestamps,
         getColor: (d) => personColor(d.person),
         currentTime: t - T0,
-        trailLength: 1.5,
-        fadeTrail: true,
+        trailLength: a.journey ? 1000 : 1.5,
+        fadeTrail: !a.journey,
         widthMinPixels: 3,
         capRounded: true,
         jointRounded: true,

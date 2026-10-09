@@ -439,7 +439,7 @@ const compiledPeople = people.map((p) => {
     prev = date.t
     const place = s.place ? placeById.get(s.place) : undefined
     if (s.place && !place) fail(where, `unknown place "${s.place}"`)
-    return { date, place: s.place, coords: (place?.coords ?? s.coords) as LngLat | undefined, away: s.away, note: s.note }
+    return { date, place: s.place, coords: (place?.coords ?? s.coords) as LngLat | undefined, away: s.away, approx: s.approx, note: s.note }
   })
   return {
     id: p.id,

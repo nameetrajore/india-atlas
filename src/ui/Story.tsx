@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { JourneyList } from './Journey'
 import { currentScene, useStore } from '../store'
 import { Prose } from './Prose'
 import { badgeUrl } from './icons'
@@ -34,6 +35,7 @@ export function ChapterIndex() {
         <button className="link-btn" onClick={() => setMode('explore')}>
           Or explore the map freely →
         </button>
+        <JourneyList />
         <button className="link-btn index-methods" onClick={() => useStore.getState().setMethods(true)}>
           Sources & methods: who wrote this and how sure it is
         </button>

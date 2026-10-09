@@ -7,6 +7,7 @@ import { Legend, MapToggles } from './ui/Legend'
 import { NowCaption } from './ui/NowCaption'
 import { Toasts } from './ui/Toasts'
 import { Methods } from './ui/Methods'
+import { Journey } from './ui/Journey'
 import { Search } from './ui/Search'
 import { useStore } from './store'
 import { readUrl, syncUrl } from './lib/url'
@@ -16,6 +17,7 @@ export default function App() {
   const [ready, setReady] = useState(false)
   const [searching, setSearching] = useState(false)
   const methods = useStore((s) => s.methods)
+  const journey = useStore((s) => s.journey)
 
   // ⌘K / Ctrl+K or / opens search.
   useEffect(() => {
@@ -50,7 +52,7 @@ export default function App() {
 
   const story = mode === 'story'
   return (
-    <div className={`app ${story ? 'is-story' : 'is-explore'}${story && chapter === null ? ' is-index' : ''}`}>
+    <div className={`app ${story ? 'is-story' : 'is-explore'}${story && chapter === null ? ' is-index' : ''}${journey ? ' is-journey' : ''}`}>
       {ready && <MapView />}
       <header className="topbar">
         <button className="brand" onClick={() => openChapter(null)}>
@@ -100,6 +102,7 @@ export default function App() {
           <Timeline />
         </>
       )}
+      {ready && journey && <Journey />}
       {ready && <InfoCard />}
       {ready && methods && <Methods />}
       {ready && searching && <Search onClose={() => setSearching(false)} />}

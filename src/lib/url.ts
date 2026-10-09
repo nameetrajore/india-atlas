@@ -8,6 +8,12 @@ export function readUrl() {
   if (q.get('detail') === '1') s.setDetail(true)
   if (q.get('today') === '1') s.setToday(true)
   if (q.get('page') === 'methods') s.setMethods(true)
+  if (q.get('econ') === '1') s.setEcon(true)
+  const j = q.get('journey')
+  if (j && s.content?.people.some((p) => p.id === j)) {
+    s.startJourney(j, Math.max(0, Number(q.get('step') ?? 0) || 0))
+    return
+  }
   if (q.get('mode') === 'explore') {
     s.setMode('explore')
     const t = Number(q.get('t'))
@@ -32,7 +38,10 @@ export function syncUrl() {
     clearTimeout(timer)
     timer = window.setTimeout(() => {
       const q = new URLSearchParams()
-      if (s.mode === 'explore') {
+      if (s.journey) {
+        q.set('journey', s.journey.person)
+        q.set('step', String(s.journey.step))
+      } else if (s.mode === 'explore') {
         q.set('mode', 'explore')
         q.set('t', s.t.toFixed(4))
         const c = s.camera
@@ -43,6 +52,7 @@ export function syncUrl() {
       }
       if (s.detail) q.set('detail', '1')
       if (s.today) q.set('today', '1')
+      if (s.econ) q.set('econ', '1')
       if (s.methods) q.set('page', 'methods')
       if (s.selection) q.set('sel', `${s.selection.kind}:${s.selection.id}`)
       const qs = q.toString().replace(/%2C/g, ',').replace(/%3A/g, ':')

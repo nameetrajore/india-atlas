@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { useStore } from '../store'
+import { journeySteps, useStore } from '../store'
+import { followable } from './Journey'
 import { personAt, polityName } from '../lib/derive'
 import type { Content, LngLat } from '../types'
 import { badgeUrl } from './icons'
 
-type Kind = 'scene' | 'event' | 'person' | 'place' | 'polity' | 'term'
+type Kind = 'scene' | 'event' | 'person' | 'place' | 'polity' | 'term' | 'trade' | 'journey'
 interface Entry {
   kind: Kind
   id: string
@@ -17,7 +18,7 @@ interface Entry {
   run: () => void
 }
 
-const KIND_LABEL: Record<Kind, string> = { scene: 'Story', event: 'Event', person: 'Person', place: 'Place', polity: 'Polity', term: 'Term' }
+const KIND_LABEL: Record<Kind, string> = { scene: 'Story', event: 'Event', person: 'Person', place: 'Place', polity: 'Polity', term: 'Term', trade: 'Trade', journey: 'Journey' }
 const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
 
 /** Jump the map to explore mode at a date and place. */
@@ -102,6 +103,30 @@ function buildIndex(c: Content): Entry[] {
         if (!onMap && first) explore(first.date.t + 0.001, undefined, 0)
         s().select({ kind: 'polity', id: p.id })
       },
+    })
+  for (const r of c.trade)
+    out.push({
+      kind: 'trade',
+      id: r.id,
+      title: r.name,
+      sub: `${r.goods} · ${r.from.label}–${r.to.label}`,
+      names: [r.name, r.goods].map(norm),
+      body: norm(`${r.summary} ${r.context ?? ''}`),
+      run: () => {
+        s().setEcon(true)
+        explore(r.from.t + Math.min(20, (r.to.t - r.from.t) / 2), undefined, 0)
+        s().select({ kind: 'trade', id: r.id })
+      },
+    })
+  for (const p of followable(c))
+    out.push({
+      kind: 'journey',
+      id: p.id,
+      title: `Follow ${p.name}`,
+      sub: `${journeySteps(p).length} stops`,
+      names: [norm(p.name)],
+      body: '',
+      run: () => s().startJourney(p.id),
     })
   for (const g of c.glossary)
     out.push({ kind: 'term', id: g.id, title: g.term, sub: g.definition, names: [g.term, ...g.aliases].map(norm), body: '', run: () => {} })
