@@ -23,15 +23,22 @@ perspectives:
       bankers and generals who wanted him gone.
 sources: [wp-siraj, marshall-bengal]
 itinerary:
-  - { date: "1756-04", place: murshidabad, note: Succeeds Alivardi Khan }
-  - { date: "1756-06", place: kasimbazar, note: Seizes the English factory }
-  - { date: "1756-06-20", place: calcutta, note: Takes Fort William }
+  - { date: "1750", place: patna, approx: true, note: "Rebels against his grandfather Alivardi and seizes Patna, then submits and is forgiven." }
+  - { date: "1752-05", place: murshidabad, approx: true, note: "Named heir by Alivardi, which turns rival relatives against him." }
+  - { date: "1753-05", place: murshidabad, approx: true }
+  - { date: "1754-05", place: murshidabad, approx: true }
+  - { date: "1755-05", place: murshidabad, approx: true }
+  - { date: "1756-04-10", place: murshidabad, note: "Becomes Nawab of Bengal, aged about 23, when Alivardi dies." }
+  - { date: "1756-06-04", place: kasimbazar, approx: true, note: "Seizes the English factory after Calcutta refuses to stop fortifying." }
+  - { date: "1756-06-20", place: calcutta, note: "Takes Fort William; captives die that night in the 'Black Hole'." }
   - { date: "1756-07", place: murshidabad, approx: true }
-  - { date: "1756-10", place: manihari, note: Defeats Shaukat Jang }
+  - { date: "1756-10-16", place: manihari, note: "Defeats and kills his cousin Shaukat Jang, the rival claimant from Purnea." }
   - { date: "1756-11", place: murshidabad, approx: true }
-  - { date: "1757-02-05", place: calcutta, note: Clash with Clive outside Calcutta }
-  - { date: "1757-02-09", place: calcutta, note: Treaty of Alinagar }
-  - { date: "1757-03", place: murshidabad, approx: true }
-  - { date: "1757-06-23", place: plassey, note: Battle of Plassey }
-  - { date: "1757-06-24", place: murshidabad, note: Flees to his capital }
-  - { date: "1757-07-02", place: murshidabad, note: Executed }
+  - { date: "1757-02-05", place: calcutta, note: "Clive attacks his camp outside Calcutta at dawn; both sides lose heavily." }
+  - { date: "1757-02-09", place: calcutta, note: "Signs the Treaty of Alinagar, giving back the Company's trade rights." }
+  - { date: "1757-04", place: murshidabad, approx: true }
+  - { date: "1757-06-04", place: murshidabad, approx: true, note: "His general Mir Jafar and the Jagat Seth bankers secretly agree terms with Clive." }
+  - { date: "1757-06-23", place: plassey, note: "Loses at Plassey when Mir Jafar's troops stand aside." }
+  - { date: "1757-06-24", place: murshidabad, note: "Flees to his capital, then slips away upriver by night." }
+  - { date: "1757-07-01", coords: [87.835, 25.05], approx: true, note: "Captured near Rajmahal while trying to reach his French allies." }
+  - { date: "1757-07-02", place: murshidabad, note: "Killed in Murshidabad on the orders of Mir Jafar's son Miran." }

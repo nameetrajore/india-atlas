@@ -1,0 +1,46 @@
+id: tipu-sultan
+name: Tipu Sultan
+tier: 1
+born: "1750-11-20"
+died: "1799-05-04"
+role: Sultan of Mysore (1782–1799)
+summary: >-
+  Haidar Ali's son. He modernised Mysore's army and economy, sought French alliance, and fought the
+  Company in four wars until he died defending Seringapatam.
+perspectives:
+  - view: British accounts
+    text: '"Citizen Tipu", a fanatic tyrant and France''s ally, whose defeat removed the last great threat in the south.'
+  - view: Nationalist memory
+    text: The "Tiger of Mysore", a moderniser who died fighting colonial rule.
+  - view: Regional critics
+    text: Remembered in parts of Coorg and Malabar for forced conversions and deportations. His record is still fought over today.
+sources: [wp-tipu, wp-anglo-mysore, brittlebank-tipu]
+itinerary:
+  - { date: "1750-11-20", coords: [77.71, 13.25], note: "Born at Devanahalli, near Bangalore, son of the soldier Haidar Ali." }
+  - { date: "1767", coords: [79.07, 12.23], approx: true, note: "Leads cavalry in the Carnatic, aged 16, in Mysore's first war with the Company." }
+  - { date: "1780-09-10", place: pollilur, note: "Destroys Baillie's column at Pollilur, one of the Company's worst defeats in India." }
+  - { date: "1782-02-18", coords: [79.30, 10.90], approx: true, note: "Defeats Colonel Braithwaite's force near Tanjore." }
+  - { date: "1782-12", coords: [79.10, 13.22], approx: true, note: "Takes command of Mysore after Haidar Ali dies in camp near Chittoor." }
+  - { date: "1783-05", place: mangalore, approx: true, note: "Besieges the British garrison in Mangalore for eight months." }
+  - { date: "1784-03-11", place: mangalore, note: "The Treaty of Mangalore ends the war, each side returning its conquests." }
+  - { date: "1784-09", place: seringapatam, approx: true }
+  - { date: "1785-09", place: seringapatam, approx: true }
+  - { date: "1786-09", place: seringapatam, approx: true }
+  - { date: "1787-09", place: seringapatam, approx: true }
+  - { date: "1788-09", place: seringapatam, approx: true }
+  - { date: "1789-09", place: seringapatam, approx: true }
+  - { date: "1789-12-29", coords: [76.25, 10.25], approx: true, note: "Attacks the Travancore Lines; Travancore is a Company ally, so Britain goes to war." }
+  - { date: "1790-09", place: seringapatam, approx: true }
+  - { date: "1791-03-21", place: bangalore, note: "Fails to save Bangalore, which Cornwallis takes by storm." }
+  - { date: "1791-05-15", place: seringapatam, note: "Cornwallis reaches Seringapatam but has to retreat for lack of supplies." }
+  - { date: "1792-02-06", place: seringapatam, note: "Cornwallis returns and besieges Seringapatam; Tipu sues for peace." }
+  - { date: "1792-03-18", place: seringapatam, note: "Treaty of Seringapatam: gives up half his kingdom and two sons as hostages." }
+  - { date: "1793-03", place: seringapatam }
+  - { date: "1794-03", place: seringapatam }
+  - { date: "1795-03", place: seringapatam }
+  - { date: "1796-03", place: seringapatam }
+  - { date: "1797-05", place: seringapatam, approx: true, note: "Courts revolutionary France; French officers found a Jacobin club at his capital." }
+  - { date: "1798-03", place: seringapatam }
+  - { date: "1799-03-27", coords: [77.06, 12.39], note: "His army is beaten at Mallavalli by Harris and Arthur Wellesley." }
+  - { date: "1799-04-05", place: seringapatam, note: "Besieged in Seringapatam by a British and Hyderabad army." }
+  - { date: "1799-05-04", place: seringapatam, note: "Dies fighting at a breach as the British storm Seringapatam." }

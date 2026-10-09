@@ -1,0 +1,24 @@
+id: thomas-roe
+name: Sir Thomas Roe
+tier: 1
+died: "1644-11-06"
+role: "James I's ambassador to the Mughal court (1615–1619)"
+summary: >-
+  Spent three years at Jahangir's court seeking a trade treaty. He came away with permissions, not a
+  treaty, and advised the Company to seek profit through trade, not war.
+sources: [wp-thomas-roe, foster-roe]
+itinerary:
+  - { date: "1615-03", away: true, approx: true, note: "Sails from England as James I's first ambassador to the Mughal emperor." }
+  - { date: "1615-09", place: swally, approx: true, note: "Lands at Swally, near Surat, and insists on an ambassador's honours." }
+  - { date: "1615-10", place: surat, approx: true, note: "Quarrels with Surat's Mughal governor over searches of English goods." }
+  - { date: "1615-11", place: burhanpur, approx: true, note: "Meets Prince Parviz, governor of the Deccan, on the road north." }
+  - { date: "1615-12-23", place: ajmer, note: "Reaches Jahangir's court at Ajmer, sick, after three months on the road." }
+  - { date: "1616-01-10", place: ajmer, note: "Presented to Jahangir at the darbar; begins three years of courtly bargaining." }
+  - { date: "1616-06", place: ajmer, note: "Finds that Prince Khurram and Asaf Khan control every request to the emperor." }
+  - { date: "1616-11", place: ajmer, note: "Follows the court south when Jahangir leaves Ajmer for the Deccan war." }
+  - { date: "1617-03", place: mandu, note: "Camps with the court in the ruined hill city of Mandu." }
+  - { date: "1617-08", place: mandu }
+  - { date: "1618-01", place: ahmedabad, approx: true, note: "Follows Jahangir to Ahmedabad, capital of Khurram's new province of Gujarat." }
+  - { date: "1618-08", place: ahmedabad, approx: true, note: "Wins a farman from Khurram that lets the English trade at Surat." }
+  - { date: "1618-10", place: surat, approx: true, note: "Leaves the court with permissions, not the treaty King James wanted." }
+  - { date: "1619-02-17", place: surat, note: "Sails home, advising the Company to seek profit 'at sea, and in quiet trade'." }

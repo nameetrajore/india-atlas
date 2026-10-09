@@ -12,15 +12,53 @@ perspectives:
     text: '"Netaji", a revolutionary patriot whose INA hastened the end of British rule.'
   - view: Critical historiography
     text: His alliance with Nazi Germany and imperial Japan remains a point of serious criticism.
-sources: [wp-subhas-bose]
+sources: [wp-subhas-bose, bose-opponent]
 itinerary:
-  - { date: "1938-02", coords: [73.21, 21.21], approx: true, note: Presides over the Haripura Congress }
-  - { date: "1939-04", place: calcutta, note: Resigns as Congress president }
-  - { date: "1940-07", place: calcutta, note: Arrested; later under house arrest }
-  - { date: "1941-01-16", place: calcutta, note: Escapes in disguise }
-  - { date: "1941-01-19", place: peshawar, approx: true, note: Heads for Kabul }
-  - { date: "1941-02", away: true, note: "In Germany, then Japan-held Asia" }
-  - { date: "1944-01", place: rangoon, note: Moves INA headquarters to Rangoon }
-  - { date: "1944-06", place: rangoon }
+  - { date: "1897-01-23", place: cuttack, note: "Born in Cuttack, the son of a successful Bengali lawyer." }
+  - { date: "1916-02", place: calcutta, note: "Expelled from Presidency College after students assault a British professor." }
+  - { date: "1919-09", away: true, note: "Goes to Cambridge and places fourth in the Indian Civil Service exam." }
+  - { date: "1921-07-16", place: bombay, note: "Back from England after resigning the ICS, he meets Gandhi the day he lands." }
+  - { date: "1921-12-10", place: calcutta, note: "Jailed with C. R. Das for organising a boycott of the Prince of Wales's visit." }
+  - { date: "1922-12", place: calcutta, approx: true }
+  - { date: "1924-04", place: calcutta, note: "Becomes chief executive of the Calcutta Corporation under Mayor C. R. Das." }
+  - { date: "1925-01", place: mandalay, note: "Held without trial in Mandalay jail, Burma, as a suspected revolutionary." }
+  - { date: "1925-10", place: mandalay }
+  - { date: "1926-07", place: mandalay }
+  - { date: "1927-05", place: calcutta, note: "Released on health grounds and returns to Calcutta." }
+  - { date: "1928-12", place: calcutta, note: "Leads uniformed Congress volunteers at the Calcutta session." }
+  - { date: "1929-12", place: calcutta, approx: true }
+  - { date: "1930-08", place: calcutta, approx: true, note: "Elected Mayor of Calcutta while in jail." }
+  - { date: "1931-08", place: calcutta, approx: true }
+  - { date: "1932-08", place: calcutta, approx: true }
+  - { date: "1933-02", away: true, note: "Sent to Europe for treatment; works for India's cause from Vienna." }
+  - { date: "1936-04-08", place: bombay, note: "Returns from Europe and is arrested on landing at Bombay." }
+  - { date: "1937-03", place: calcutta, approx: true }
+  - { date: "1938-02-19", place: haripura, note: "Presides over the Haripura Congress and calls for national economic planning." }
+  - { date: "1938-12", place: calcutta, approx: true }
+  - { date: "1939-03", coords: [79.95, 23.15], approx: true, note: "Re-elected against Gandhi's candidate; at Tripuri, Gandhi's allies curb his powers." }
+  - { date: "1939-04-29", place: calcutta, note: "Resigns as Congress president and soon forms the Forward Bloc." }
+  - { date: "1940-03", place: calcutta, approx: true }
+  - { date: "1940-07-02", place: calcutta, note: "Arrested before a protest against the Holwell monument." }
+  - { date: "1940-12-05", place: calcutta, note: "Released to house arrest at his Elgin Road home after a hunger strike." }
+  - { date: "1941-01-16", place: calcutta, note: "Escapes house arrest at night, disguised as a Pathan insurance agent." }
+  - { date: "1941-01-18", coords: [86.15, 23.87], note: "Boards a train at Gomoh, avoiding Calcutta's stations." }
+  - { date: "1941-01-19", place: peshawar, note: "Reaches Peshawar, where Bhagat Ram Talwar becomes his guide." }
+  - { date: "1941-01-26", coords: [71.10, 34.15], approx: true, note: "Crosses the tribal hills into Afghanistan, posing as a deaf-mute." }
+  - { date: "1941-01-31", place: kabul, approx: true, note: "Hides in Kabul for seven weeks while the Axis embassies decide on him." }
+  - { date: "1941-03-18", place: kabul, note: "Leaves on an Italian passport as 'Orlando Mazzotta', via Moscow." }
+  - { date: "1941-04-02", away: true, approx: true, note: "Reaches Berlin and asks Germany to back Indian independence." }
+  - { date: "1942-05", away: true, approx: true, note: "Meets Hitler, who offers little real help." }
+  - { date: "1943-02-08", away: true, note: "Leaves Germany by U-boat; changes to a Japanese submarine off Madagascar." }
+  - { date: "1943-07-04", place: singapore, note: "Takes over the Indian Independence League and its Indian National Army." }
+  - { date: "1943-10-21", place: singapore, note: "Proclaims the Provisional Government of Free India (Azad Hind)." }
+  - { date: "1943-12-30", place: port-blair, note: "Raises the Azad Hind flag at Port Blair in the Japanese-held Andamans." }
+  - { date: "1944-01-07", place: rangoon, note: "Moves his headquarters to Rangoon for the march on India." }
+  - { date: "1944-03", place: rangoon, note: "Sends INA units with the Japanese attack on Imphal and Kohima." }
+  - { date: "1944-07", place: rangoon, note: "The Imphal offensive collapses; the INA retreats with heavy losses." }
   - { date: "1945-01", place: rangoon }
-  - { date: "1945-04-24", away: true, note: Leaves Rangoon as the British advance }
+  - { date: "1945-04-24", place: rangoon, note: "Leaves Rangoon as the British close in, retreating with his troops." }
+  - { date: "1945-05", coords: [100.50, 13.75], approx: true, note: "Reaches Bangkok after a hard retreat, then moves on to Singapore." }
+  - { date: "1945-06", place: singapore, approx: true }
+  - { date: "1945-08-16", place: singapore, note: "After Japan surrenders, he decides to seek help from the Soviet Union." }
+  - { date: "1945-08-17", coords: [106.70, 10.78], note: "Leaves Saigon on a Japanese bomber bound north." }
+  - { date: "1945-08-18", away: true, note: "Dies of burns after his plane crashes at Taihoku; many refuse to believe it." }

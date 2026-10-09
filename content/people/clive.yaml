@@ -16,24 +16,40 @@ perspectives:
       A man who conquered by bribery and coup, and whose regime in Bengal led to plunder and the famine
       of 1770.
 sources: [wp-clive, dalrymple-anarchy]
-# Itinerary: dated locations. `away` = outside the map (marker hidden).
+# Itinerary: dated locations. `away` = outside the map (marker hidden). A stop with no note is "still here" filler.
 itinerary:
-  - { date: "1744-06", place: madras, note: Arrives as a Company writer (clerk) }
-  - { date: "1747", place: fort-st-david, approx: true, note: Takes a commission in the Company army }
-  - { date: "1751-09", place: arcot, note: Seizes Arcot }
-  - { date: "1751-11", place: arcot, note: Siege lifted }
-  - { date: "1752", place: madras, approx: true }
-  - { date: "1753-03", away: true, note: Sails for Britain }
-  - { date: "1756-06", place: fort-st-david, approx: true, note: Returns as governor of Fort St David }
-  - { date: "1756-10", place: madras, note: Sails with Watson's fleet for Bengal }
-  - { date: "1756-12", place: fulta, note: Joins the Calcutta refugees }
-  - { date: "1757-01-02", place: calcutta, note: Retakes Fort William }
-  - { date: "1757-03-23", place: chandernagore, note: Captures the French settlement }
-  - { date: "1757-06-23", place: plassey, note: Battle of Plassey }
-  - { date: "1757-06-29", place: murshidabad, note: Installs Mir Jafar }
+  - { date: "1744-06", place: madras, note: "Arrives at Madras as a Company writer (clerk), aged 18." }
+  - { date: "1746-09", place: madras, note: "Taken prisoner when the French capture Madras." }
+  - { date: "1746-11", place: fort-st-david, approx: true, note: "Escapes in disguise to Fort St David, the last English post on the coast." }
+  - { date: "1747-03", place: fort-st-david, approx: true, note: "Gives up clerking for a commission in the Company's army." }
+  - { date: "1748-08", place: pondicherry, note: "Fights in the failed British siege of French Pondicherry." }
+  - { date: "1749-06", place: fort-st-david, approx: true }
+  - { date: "1750-06", place: fort-st-david, approx: true }
+  - { date: "1751-09-01", place: arcot, note: "Seizes Arcot with about 500 men to pull French allies away from Trichinopoly." }
+  - { date: "1751-11-14", place: arcot, note: "Holds Arcot through a 50-day siege; the victory makes his name." }
+  - { date: "1752-06", place: trichinopoly, approx: true, note: "With Stringer Lawrence, forces the French army near Trichinopoly to surrender." }
+  - { date: "1753-02", place: madras, note: "Marries Margaret Maskelyne at Madras before sailing home." }
+  - { date: "1753-03", away: true, note: "Sails to Britain rich and famous; wins, then loses, a seat in Parliament." }
+  - { date: "1755-11", place: bombay, approx: true, note: "Lands at Bombay as a lieutenant-colonel in the Company's service." }
+  - { date: "1756-02", coords: [73.335, 16.563], note: "Helps Admiral Watson destroy the Angre fleet at Gheria (Vijaydurg)." }
+  - { date: "1756-06", place: fort-st-david, note: "Takes office as governor of Fort St David." }
+  - { date: "1756-10", place: madras, note: "Sails north with Watson's fleet to retake Calcutta from Siraj-ud-Daulah." }
+  - { date: "1756-12", place: fulta, note: "Joins the English refugees from Calcutta, camped downriver at Fulta." }
+  - { date: "1757-01-02", place: calcutta, note: "Retakes Fort William with Watson almost without a fight." }
+  - { date: "1757-02-05", place: calcutta, note: "Attacks the Nawab's camp at dawn; four days later Siraj agrees to terms." }
+  - { date: "1757-03-23", place: chandernagore, note: "With Watson, captures the French base at Chandernagore." }
+  - { date: "1757-06-23", place: plassey, note: "Wins at Plassey when Mir Jafar's troops stand aside." }
+  - { date: "1757-06-29", place: murshidabad, note: "Puts Mir Jafar on the throne and takes a fortune in gifts." }
   - { date: "1757-09", place: calcutta, approx: true }
-  - { date: "1760-02", away: true, note: Sails for Britain }
-  - { date: "1765-05-03", place: calcutta, note: Returns as governor }
-  - { date: "1765-08-12", place: allahabad, note: Treaty of Allahabad }
+  - { date: "1758-06", place: calcutta, note: "Becomes governor of the Company's settlement in Bengal." }
+  - { date: "1759-06", place: calcutta, approx: true }
+  - { date: "1759-11-25", place: calcutta, note: "Sends Colonel Forde to crush a Dutch force at Chinsurah." }
+  - { date: "1760-02", away: true, note: "Sails home; buys estates, a seat in Parliament and an Irish peerage." }
+  - { date: "1765-05-03", place: calcutta, note: "Returns as governor, with orders to curb Company corruption." }
+  - { date: "1765-08-12", place: allahabad, note: "Obtains the diwani of Bengal, Bihar and Orissa from Shah Alam II." }
   - { date: "1765-10", place: calcutta, approx: true }
-  - { date: "1767-01", away: true, note: Leaves India for the last time }
+  - { date: "1766-05", place: monghyr, note: "Breaks a mutiny of British officers over cuts to their allowances." }
+  - { date: "1766-08", place: calcutta, approx: true }
+  - { date: "1767-01", away: true, approx: true, note: "Leaves India for the last time." }
+  - { date: "1773-05-21", away: true, note: "After an inquiry into his fortune, Parliament votes that he served his country well." }
+  - { date: "1774-11-22", away: true, note: "Dies at his London house, probably by his own hand." }

@@ -698,3 +698,84 @@
       power: portuguese
   sources:
     - wp-portuguese-india
+- id: bithur
+  name: Bithur
+  modern: Bithoor
+  coords: [80.2733, 26.6119]
+  tags: [city]
+  why: >-
+    Town on the Ganges near Cawnpore where the last Peshwa, Baji Rao II, lived in exile. Nana Sahib
+    and Lakshmibai grew up at his court.
+  sources: [wp-bithur, wp-baji-rao-ii]
+- id: ahmedabad
+  name: Ahmedabad
+  modern: Ahmedabad
+  coords: [72.5714, 23.0225]
+  tags: [city, capital]
+  why: Capital of Mughal Gujarat and a great textile city. Jahangir held court here in 1618.
+  sources: [wp-thomas-roe]
+- id: burhanpur
+  name: Burhanpur
+  modern: Burhanpur
+  coords: [76.2300, 21.3100]
+  tags: [city, fort]
+  why: The Mughal base for wars in the Deccan, on the road from Surat to the north.
+  sources: [wp-thomas-roe]
+- id: mandu
+  name: Mandu
+  modern: Mandav
+  coords: [75.3950, 22.3550]
+  tags: [fort]
+  why: A ruined hilltop capital of Malwa where Jahangir camped in 1617 with Thomas Roe in his train.
+  sources: [wp-mandu, wp-thomas-roe]
+- id: mangalore
+  name: Mangalore
+  modern: Mangaluru
+  coords: [74.8560, 12.9141]
+  tags: [port, fort]
+  why: Mysore's main west-coast port. Tipu besieged its British garrison in 1783–84 and made peace here in 1784.
+  sources: [wp-anglo-mysore]
+- id: bangalore
+  name: Bangalore
+  modern: Bengaluru
+  coords: [77.5946, 12.9716]
+  tags: [fort, city]
+  why: A Mysore fortress, stormed by Cornwallis in 1791 on his way to Seringapatam.
+  sources: [wp-anglo-mysore]
+- id: gujranwala
+  name: Gujranwala
+  modern: Gujranwala
+  coords: [74.1883, 32.1877]
+  tags: [city]
+  why: Seat of the Sukerchakia misl and birthplace of Ranjit Singh.
+  sources: [wp-ranjit-singh]
+- id: rupar
+  name: Rupar
+  modern: Rupnagar
+  coords: [76.5263, 30.9661]
+  tags: [city]
+  why: Town on the Sutlej where Ranjit Singh met Governor-General Bentinck in 1831.
+  sources: [wp-ranjit-singh]
+- id: ferozepur
+  name: Ferozepur
+  modern: Firozpur
+  coords: [74.6133, 30.9250]
+  tags: [fort, city]
+  why: >-
+    A British frontier post on the Sutlej. The army for Afghanistan gathered here in 1838, and it was a
+    base in the Sikh wars.
+  sources: [wp-ranjit-singh, wp-first-sikh-war]
+- id: almora
+  name: Almora
+  modern: Almora
+  coords: [79.6591, 29.5971]
+  tags: [hill-station, prison]
+  why: A Kumaon hill town whose jail held Nehru in 1934–35 and again in 1945.
+  sources: [wp-nehru]
+- id: cuttack
+  name: Cuttack
+  modern: Cuttack
+  coords: [85.8830, 20.4625]
+  tags: [city]
+  why: The old capital of Orissa and the birthplace of Subhas Chandra Bose.
+  sources: [wp-subhas-bose]

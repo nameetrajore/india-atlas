@@ -12,11 +12,24 @@ perspectives:
     text: '"Shaheed-e-Azam", the great martyr.'
   - view: Gandhian position
     text: Gandhi condemned the violence and did not make his commutation a condition of the Irwin pact. Many criticised him for this at the time.
-sources: [wp-bhagat-singh]
+sources: [wp-bhagat-singh, noorani-bhagat]
 itinerary:
-  - { date: "1928-12-17", place: lahore, note: Saunders shot }
-  - { date: "1929-04-08", place: delhi, note: Bombs in the Central Assembly; courts arrest }
-  - { date: "1929-07", place: lahore, note: Lahore conspiracy trial; hunger strike }
+  - { date: "1907-09-28", coords: [73.35, 31.37], approx: true, note: "Born in Banga, a Lyallpur village, into a family of anti-British activists." }
+  - { date: "1919-04-14", place: amritsar, approx: true, note: "Visits Jallianwala Bagh, aged 11, the day after the massacre." }
+  - { date: "1923", place: lahore, approx: true, note: "Studies at Lahore's National College, founded by Lajpat Rai." }
+  - { date: "1924", place: cawnpore, approx: true, note: "Leaves home to avoid marriage and joins revolutionaries in Cawnpore." }
+  - { date: "1926-03", place: lahore, note: "Founds the Naujawan Bharat Sabha to draw young people into revolution." }
+  - { date: "1927-05", place: lahore, note: "Arrested over a Lahore bomb blast, then freed on heavy bail." }
+  - { date: "1928-04", place: lahore, approx: true }
+  - { date: "1928-09-08", place: delhi, note: "At Feroz Shah Kotla, helps turn the HRA into a socialist party, the HSRA." }
+  - { date: "1928-10-30", place: lahore, note: "Police beat Lajpat Rai at an anti-Simon protest; he dies on 17 November." }
+  - { date: "1928-12-17", place: lahore, note: "With Rajguru, kills police officer Saunders, mistaken for Scott, to avenge Lajpat Rai." }
+  - { date: "1928-12-22", place: calcutta, approx: true, note: "Escapes Lahore in disguise with Durgawati Devi and hides in Calcutta." }
+  - { date: "1929-04-08", place: delhi, note: "Throws harmless bombs into the Central Assembly with Batukeshwar Dutt and waits for arrest." }
+  - { date: "1929-06-12", place: delhi, note: "Sentenced to transportation for life in the Assembly bomb case." }
+  - { date: "1929-06-15", coords: [71.53, 32.58], approx: true, note: "Starts a hunger strike in Mianwali jail for political prisoners' rights." }
+  - { date: "1929-07-10", place: lahore, note: "The Lahore conspiracy trial for the Saunders killing opens." }
+  - { date: "1929-09-13", place: lahore, note: "His comrade Jatin Das dies after 63 days on hunger strike." }
   - { date: "1930-04", place: lahore }
-  - { date: "1930-10", place: lahore, note: Sentenced to death }
-  - { date: "1931-03-23", place: lahore, note: Hanged }
+  - { date: "1930-10-07", place: lahore, note: "A special tribunal sentences him, Rajguru and Sukhdev to death." }
+  - { date: "1931-03-23", place: lahore, note: "Hanged with Rajguru and Sukhdev, a day earlier than planned, aged 23." }

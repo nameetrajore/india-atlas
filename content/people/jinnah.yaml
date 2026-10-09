@@ -1,0 +1,57 @@
+id: jinnah
+name: Muhammad Ali Jinnah
+tier: 1
+born: "1876-12-25"
+died: "1948-09-11"
+role: Leader of the Muslim League
+summary: >-
+  A Congressman who brokered the Lucknow Pact. He later led the League's demand for Pakistan and
+  became its first Governor-General.
+sources: [wp-lahore-resolution, wp-jinnah, jalal-sole-spokesman, wolpert-jinnah]
+itinerary:
+  - { date: "1876-12-25", place: karachi, note: "Born in Karachi, son of a Gujarati Khoja merchant." }
+  - { date: "1893", away: true, approx: true, note: "Studies law in London and is called to the bar at 19." }
+  - { date: "1896-08", place: bombay, approx: true, note: "Settles in Bombay and builds one of its leading law practices." }
+  - { date: "1906-12", place: calcutta, note: "Attends the Calcutta Congress as Dadabhai Naoroji's secretary." }
+  - { date: "1910-01", place: calcutta, note: "Takes a seat in the Imperial Legislative Council for Bombay's Muslims." }
+  - { date: "1911-01", place: bombay, approx: true }
+  - { date: "1912-01", place: bombay, approx: true }
+  - { date: "1913-01", place: bombay, approx: true }
+  - { date: "1914-01", place: bombay, approx: true }
+  - { date: "1915-01", place: bombay, approx: true }
+  - { date: "1916-01", place: bombay, approx: true }
+  - { date: "1916-12", place: lucknow, note: "Brokers the Lucknow Pact, uniting Congress and the League on reform demands." }
+  - { date: "1918-04-19", place: bombay, note: "Marries Rattanbai Petit against her father's wishes." }
+  - { date: "1919-03", place: delhi, approx: true, note: "Fights the Rowlatt Act in the council, then resigns his seat in protest." }
+  - { date: "1919-12", place: bombay, approx: true }
+  - { date: "1920-12", place: nagpur, note: "Shouted down at Nagpur for opposing non-cooperation; he leaves the Congress." }
+  - { date: "1921-12", place: bombay, approx: true }
+  - { date: "1922-12", place: bombay, approx: true }
+  - { date: "1923-12", place: bombay, approx: true }
+  - { date: "1924-12", place: bombay, approx: true }
+  - { date: "1925-12", place: bombay, approx: true }
+  - { date: "1926-12", place: bombay, approx: true }
+  - { date: "1927-12", place: bombay, approx: true }
+  - { date: "1928-12", place: calcutta, note: "His changes to the Nehru Report are voted down; he calls it a 'parting of the ways'." }
+  - { date: "1929-03", place: delhi, note: "Sets out his Fourteen Points, the Muslim terms for any settlement." }
+  - { date: "1930-11", away: true, note: "Attends the Round Table Conference, then stays in London to practise law." }
+  - { date: "1934", place: bombay, approx: true, note: "Comes home to rebuild the Muslim League." }
+  - { date: "1935", place: bombay, approx: true }
+  - { date: "1936", place: bombay, approx: true }
+  - { date: "1937-10", place: lucknow, note: "After poor election results, wins provincial leaders to the League at Lucknow." }
+  - { date: "1938-10", place: bombay, approx: true }
+  - { date: "1939-12-22", place: bombay, note: "Calls a 'Day of Deliverance' when the Congress ministries resign." }
+  - { date: "1940-03-23", place: lahore, note: "Presides as the League's Lahore Resolution demands separate Muslim states." }
+  - { date: "1941-03", place: bombay, approx: true }
+  - { date: "1942-03", place: bombay, approx: true }
+  - { date: "1943-03", place: bombay, approx: true }
+  - { date: "1944-09-09", place: bombay, note: "Talks with Gandhi at his Bombay house end without agreement." }
+  - { date: "1945-06-25", place: simla, note: "Wrecks the Simla Conference by claiming the sole right to name Muslim members." }
+  - { date: "1946-03", place: delhi, approx: true }
+  - { date: "1946-07-29", place: bombay, note: "Withdraws from the Cabinet Mission plan and calls for 'Direct Action'." }
+  - { date: "1947-06-03", place: delhi, note: "Accepts the plan for Partition in a radio broadcast." }
+  - { date: "1947-08-07", place: karachi, note: "Flies to Karachi, leaving India for good." }
+  - { date: "1947-08-11", place: karachi, note: "Tells Pakistan's Constituent Assembly that religion has nothing to do with the business of the state." }
+  - { date: "1947-08-15", place: karachi, note: "Sworn in as Pakistan's first Governor-General." }
+  - { date: "1948-07", coords: [67.72, 30.38], approx: true, note: "Ill with tuberculosis, he is taken to Ziarat in the Baluchistan hills to rest." }
+  - { date: "1948-09-11", place: karachi, note: "Dies in Karachi, thirteen months after Pakistan's creation." }

@@ -33,6 +33,11 @@ const PERSON_COLORS: Record<string, RGB> = {
   'bhagat-singh': [170, 110, 20],
   clive: [150, 40, 25],
   'siraj-ud-daulah': [30, 90, 70],
+  'thomas-roe': [36, 64, 110],
+  'tipu-sultan': [120, 70, 20],
+  'ranjit-singh': [20, 105, 120],
+  nehru: [112, 54, 120],
+  jinnah: [40, 100, 40],
 }
 /** Extra trail colours for people without a fixed one, picked by id so a person keeps their colour. */
 const SPARE: RGB[] = [[36, 64, 110], [120, 50, 110], [20, 110, 120], [130, 90, 20], [90, 40, 40], [50, 100, 40]]

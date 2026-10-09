@@ -1,0 +1,57 @@
+id: nehru
+name: Jawaharlal Nehru
+tier: 1
+born: "1889-11-14"
+died: "1964-05-27"
+role: Congress leader
+summary: Congress president at Lahore in 1929 and India's first Prime Minister.
+sources: [wp-purna-swaraj, wp-nehru, nehru-autobiography]
+itinerary:
+  - { date: "1889-11-14", place: allahabad, note: "Born in Allahabad, son of the wealthy lawyer Motilal Nehru." }
+  - { date: "1905-05", away: true, note: "Leaves for school at Harrow, then Cambridge and the bar in London." }
+  - { date: "1912-08", place: allahabad, note: "Returns a barrister and joins his father's practice." }
+  - { date: "1913-08", place: allahabad, approx: true }
+  - { date: "1914-08", place: allahabad, approx: true }
+  - { date: "1915-08", place: allahabad, approx: true }
+  - { date: "1916-02-08", place: delhi, note: "Marries Kamala Kaul in Delhi." }
+  - { date: "1916-12", place: lucknow, note: "Meets Gandhi for the first time, at the Lucknow Congress." }
+  - { date: "1917-12", place: allahabad, approx: true }
+  - { date: "1918-12", place: allahabad, approx: true }
+  - { date: "1919-12", place: allahabad, approx: true }
+  - { date: "1920-06", coords: [81.94, 25.90], approx: true, note: "Visits peasant meetings in Pratapgarh and discovers rural India." }
+  - { date: "1921-12-06", place: allahabad, note: "Jailed for the first time, for non-cooperation; eight more terms follow." }
+  - { date: "1922-12", place: allahabad, approx: true }
+  - { date: "1923-09-22", coords: [76.15, 30.37], note: "Arrested in Nabha state while watching a Sikh protest." }
+  - { date: "1924-09", place: allahabad, approx: true }
+  - { date: "1925-09", place: allahabad, approx: true }
+  - { date: "1926-03", away: true, note: "Takes Kamala to Europe; at Brussels he joins the League against Imperialism." }
+  - { date: "1927-12", place: madras, note: "Back home, he moves a Congress resolution for complete independence at Madras." }
+  - { date: "1928-11-29", place: lucknow, note: "Beaten by police at a Simon Commission protest in Lucknow." }
+  - { date: "1929-06", place: allahabad, approx: true }
+  - { date: "1929-12-31", place: lahore, note: "As Congress president, raises the flag of complete independence on the Ravi." }
+  - { date: "1930-04-14", place: allahabad, note: "Arrested for breaking the salt law; sentenced to six months." }
+  - { date: "1930-10", place: allahabad, approx: true }
+  - { date: "1931-02-06", place: lucknow, note: "His father Motilal dies in Lucknow." }
+  - { date: "1932-02", place: allahabad, approx: true }
+  - { date: "1933-02", place: allahabad, approx: true }
+  - { date: "1934-02", place: calcutta, note: "Sentenced to two years for speeches in Calcutta." }
+  - { date: "1934-10", place: almora, approx: true }
+  - { date: "1935-02", place: almora, note: "Finishes his autobiography in Almora jail." }
+  - { date: "1935-09", away: true, note: "Released to join Kamala in Europe; she dies in Lausanne in February 1936." }
+  - { date: "1936-04", place: lucknow, note: "Presides over the Lucknow Congress and calls socialism the answer to India's poverty." }
+  - { date: "1937-04", place: allahabad, approx: true }
+  - { date: "1938-04", place: allahabad, approx: true }
+  - { date: "1939-04", place: allahabad, approx: true }
+  - { date: "1940-04", place: allahabad, approx: true }
+  - { date: "1940-11", coords: [83.37, 26.76], approx: true, note: "Sentenced to four years at Gorakhpur for anti-war speeches." }
+  - { date: "1941-12", place: allahabad, approx: true }
+  - { date: "1942-08-08", place: bombay, note: "Moves the Quit India resolution at the Congress meeting in Bombay." }
+  - { date: "1942-08-09", place: ahmednagar, note: "Arrested and held in Ahmednagar Fort, where he writes The Discovery of India." }
+  - { date: "1943-06", place: ahmednagar }
+  - { date: "1944-06", place: ahmednagar }
+  - { date: "1945-03", place: almora, approx: true }
+  - { date: "1945-06-15", place: almora, note: "Released after almost three years; it is his ninth and last prison term." }
+  - { date: "1945-12", place: allahabad, approx: true }
+  - { date: "1946-09-02", place: delhi, note: "Heads the interim government as vice-president of the viceroy's council." }
+  - { date: "1947-03", place: delhi, approx: true }
+  - { date: "1947-08-14", place: delhi, note: "Gives his 'tryst with destiny' speech at midnight and becomes Prime Minister." }

@@ -1,0 +1,58 @@
+id: ranjit-singh
+name: Maharaja Ranjit Singh
+tier: 1
+born: "1780-11-13"
+died: "1839-06-27"
+role: Founder of the Sikh Empire
+summary: >-
+  United the Punjab under a single kingdom with a modern army. While he lived, the British treated him
+  as an equal.
+sources: [wp-ranjit-singh, khushwant-ranjit]
+itinerary:
+  - { date: "1780-11-13", place: gujranwala, note: "Born at Gujranwala, son of the chief of the Sukerchakia misl." }
+  - { date: "1792", place: gujranwala, approx: true, note: "Becomes head of the Sukerchakia misl at 12 when his father dies." }
+  - { date: "1799-07-07", place: lahore, note: "Takes Lahore from its Bhangi chiefs, aged 18." }
+  - { date: "1800-07", place: lahore }
+  - { date: "1801-04-12", place: lahore, note: "Proclaimed Maharaja of the Punjab." }
+  - { date: "1802", place: amritsar, approx: true, note: "Takes Amritsar; he later covers the Harmandir Sahib in gold." }
+  - { date: "1803", place: lahore, approx: true }
+  - { date: "1804", place: lahore, approx: true }
+  - { date: "1805", place: lahore, approx: true }
+  - { date: "1806", place: lahore, approx: true }
+  - { date: "1807", place: lahore, approx: true }
+  - { date: "1808", place: lahore, approx: true }
+  - { date: "1809-04-25", place: amritsar, note: "Signs the Treaty of Amritsar, accepting the Sutlej as his border with the Company." }
+  - { date: "1810", place: lahore, approx: true }
+  - { date: "1811", place: lahore, approx: true }
+  - { date: "1812", place: lahore, approx: true }
+  - { date: "1813-06", place: lahore, note: "Takes the Koh-i-Noor diamond from the exiled Afghan king Shah Shuja." }
+  - { date: "1814", place: lahore, approx: true }
+  - { date: "1815", place: lahore, approx: true }
+  - { date: "1816", place: lahore, approx: true }
+  - { date: "1817", place: lahore, approx: true }
+  - { date: "1818-06", place: lahore, note: "His army takes Multan from its Afghan governor after a long siege." }
+  - { date: "1819-07", place: lahore, note: "His army conquers Kashmir from the Afghans." }
+  - { date: "1820", place: lahore, approx: true }
+  - { date: "1821", place: lahore, approx: true }
+  - { date: "1822", place: lahore, approx: true }
+  - { date: "1823-03-14", coords: [71.98, 34.02], note: "Leads his army to victory over the Afghans at Nowshera, opening the way to Peshawar." }
+  - { date: "1823-09", place: lahore, approx: true }
+  - { date: "1824", place: lahore, approx: true }
+  - { date: "1825", place: lahore, approx: true }
+  - { date: "1826", place: lahore, approx: true }
+  - { date: "1827", place: lahore, approx: true }
+  - { date: "1828", place: lahore, approx: true }
+  - { date: "1829", place: lahore, approx: true }
+  - { date: "1830", place: lahore, approx: true }
+  - { date: "1831-04", place: lahore, approx: true }
+  - { date: "1831-10-26", place: rupar, note: "Meets Governor-General Bentinck on the Sutlej at Rupar, with great display on both sides." }
+  - { date: "1832", place: lahore, approx: true }
+  - { date: "1833", place: lahore, approx: true }
+  - { date: "1834-05", place: lahore, note: "His general Hari Singh Nalwa annexes Peshawar outright." }
+  - { date: "1835", place: lahore, approx: true }
+  - { date: "1836", place: lahore, approx: true }
+  - { date: "1837", place: lahore, approx: true }
+  - { date: "1838-06", place: lahore, note: "Signs the Tripartite Treaty with the British to put Shah Shuja back on the Afghan throne." }
+  - { date: "1838-11-29", place: ferozepur, approx: true, note: "Meets Lord Auckland at Ferozepur as the British army gathers for Afghanistan." }
+  - { date: "1839-01", place: lahore, approx: true }
+  - { date: "1839-06-27", place: lahore, note: "Dies at Lahore; within ten years his kingdom falls to the British." }

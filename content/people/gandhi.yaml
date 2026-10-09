@@ -19,67 +19,87 @@ perspectives:
     text: >-
       He mobilised peasants but kept movements within limits acceptable to Indian propertied classes. He
       called off struggles, as after Chauri Chaura, when they went beyond his control.
-sources: [wp-gandhi, chandra-struggle, sarkar-modern]
-# Repeated stops at one place mean "still here" (e.g. prison terms), so the marker does not fade.
+sources: [wp-gandhi, chandra-struggle, sarkar-modern, guha-gandhi]
+# Repeated stops at one place with no note mean "still here" (e.g. prison terms), so the marker does not fade.
 itinerary:
-  - { date: "1869-10-02", place: porbandar, note: Born }
-  - { date: "1888-09", away: true, note: Studies law in London }
-  - { date: "1891-07", place: bombay, note: Returns as a barrister }
-  - { date: "1893-04", away: true, note: Leaves for South Africa (21 years) }
-  - { date: "1915-01-09", place: bombay, note: Returns to India }
-  - { date: "1915-05", place: sabarmati, approx: true, note: Founds his ashram at Ahmedabad }
-  - { date: "1917-04-15", place: motihari, note: Champaran satyagraha }
+  - { date: "1869-10-02", place: porbandar, note: "Born in Porbandar, son of the chief minister of a small princely state." }
+  - { date: "1888-09", away: true, note: "Sails to London to train as a barrister." }
+  - { date: "1891-07", place: bombay, note: "Returns a barrister, but fails to build a practice in Bombay." }
+  - { date: "1893-04", away: true, note: "Sails for South Africa on a one-year legal job; he stays 21 years." }
+  - { date: "1893-06-07", away: true, note: "Thrown off a first-class train at Pietermaritzburg for being Indian." }
+  - { date: "1906-09-11", away: true, note: "In Johannesburg, Indians vow to resist the pass law: the start of satyagraha." }
+  - { date: "1913-11-06", away: true, note: "Leads striking Indian miners on a mass march into the Transvaal." }
+  - { date: "1915-01-09", place: bombay, note: "Returns to India; Gokhale advises him to spend a year listening first." }
+  - { date: "1915-05", place: sabarmati, approx: true, note: "Founds his first Indian ashram at Ahmedabad." }
+  - { date: "1917-04-15", place: motihari, note: "Defies an order to leave Champaran and takes up the indigo peasants' cause." }
   - { date: "1917-06", place: sabarmati, approx: true }
-  - { date: "1918-03-22", place: nadiad, note: Kheda satyagraha }
+  - { date: "1918-03-15", place: sabarmati, note: "Fasts for the first time, to back striking Ahmedabad mill workers." }
+  - { date: "1918-03-22", place: nadiad, note: "Leads Kheda peasants in refusing land revenue after their crops fail." }
   - { date: "1918-06", place: sabarmati, approx: true }
-  - { date: "1919-04-06", place: bombay, note: Rowlatt satyagraha hartal }
-  - { date: "1919-06", place: sabarmati, approx: true }
+  - { date: "1919-04-06", place: bombay, note: "Calls a nationwide hartal against the Rowlatt Act." }
+  - { date: "1919-04-18", place: sabarmati, note: "Calls off the satyagraha after violence in Punjab and Gujarat." }
+  - { date: "1919-10", place: sabarmati, approx: true }
   - { date: "1920-06", place: sabarmati, approx: true }
-  - { date: "1920-12", place: nagpur, note: Congress adopts non-cooperation }
+  - { date: "1920-12", place: nagpur, note: "The Nagpur Congress backs non-cooperation and rebuilds itself as a mass party." }
   - { date: "1921-06", place: sabarmati, approx: true }
-  - { date: "1922-02-12", place: bardoli, note: Suspends non-cooperation after Chauri Chaura }
-  - { date: "1922-03-10", place: sabarmati, note: Arrested for sedition }
-  - { date: "1922-03-21", place: poona, note: Yeravda prison }
-  - { date: "1923-03", place: poona, note: In prison }
-  - { date: "1924-02-05", place: poona, note: Released on medical grounds }
-  - { date: "1924-09", place: delhi, approx: true, note: 21-day fast for Hindu–Muslim unity }
+  - { date: "1922-02-12", place: bardoli, note: "Calls off non-cooperation after a crowd kills 22 policemen at Chauri Chaura." }
+  - { date: "1922-03-10", place: sabarmati, note: "Arrested at his ashram for sedition." }
+  - { date: "1922-03-18", place: sabarmati, note: "Pleads guilty at his 'Great Trial' and is sentenced to six years." }
+  - { date: "1922-03-21", place: poona, note: "Begins his sentence in Yeravda jail, Poona." }
+  - { date: "1923-03", place: poona }
+  - { date: "1924-02-05", place: poona, note: "Released early after an emergency appendix operation." }
+  - { date: "1924-09-17", place: delhi, note: "Fasts 21 days for Hindu–Muslim unity after riots at Kohat." }
   - { date: "1925-06", place: sabarmati, approx: true }
   - { date: "1926-06", place: sabarmati, approx: true }
   - { date: "1927-06", place: sabarmati, approx: true }
   - { date: "1928-06", place: sabarmati, approx: true }
   - { date: "1929-06", place: sabarmati, approx: true }
-  - { date: "1929-12-31", place: lahore, note: Purna Swaraj resolution }
-  - { date: "1930-03-12", place: sabarmati, note: Sets out on the Salt March }
-  - { date: "1930-03-18", coords: [72.95, 22.55], approx: true, note: Marching south through Kheda }
-  - { date: "1930-03-27", coords: [73.00, 21.65], approx: true, note: Crossing the Narmada near Broach }
-  - { date: "1930-04-01", coords: [72.83, 21.17], approx: true, note: Near Surat }
-  - { date: "1930-04-05", place: dandi, note: Reaches Dandi }
-  - { date: "1930-04-06", place: dandi, note: Breaks the salt law }
-  - { date: "1930-05-05", place: poona, note: Arrested near Dandi and taken to Yeravda }
-  - { date: "1930-10", place: poona, note: In prison }
-  - { date: "1931-01-26", place: poona, note: Released }
-  - { date: "1931-03-05", place: delhi, note: Gandhi–Irwin Pact }
-  - { date: "1931-08-29", away: true, note: Sails for the Round Table Conference in London }
-  - { date: "1931-12-28", place: bombay, note: Returns }
-  - { date: "1932-01-04", place: poona, note: Arrested; Yeravda }
-  - { date: "1932-09-24", place: poona, note: Poona Pact after his fast }
-  - { date: "1933-05", place: poona, note: Released }
-  - { date: "1936-04", place: wardha, note: Settles at Sevagram }
+  - { date: "1929-12-31", place: lahore, note: "The Lahore Congress adopts his resolution for complete independence." }
+  - { date: "1930-03-12", place: sabarmati, note: "Sets out with 78 followers on the Salt March to the sea." }
+  - { date: "1930-03-18", coords: [72.95, 22.55], approx: true }
+  - { date: "1930-03-27", coords: [73.00, 21.65], approx: true }
+  - { date: "1930-04-01", coords: [72.83, 21.17], approx: true }
+  - { date: "1930-04-05", place: dandi, note: "Reaches Dandi after 24 days and about 385 km on foot." }
+  - { date: "1930-04-06", place: dandi, note: "Picks up salt on the beach, breaking the salt law; defiance spreads nationwide." }
+  - { date: "1930-05-04", place: dandi, note: "Arrested at night at Karadi, near Dandi, and held without trial." }
+  - { date: "1930-05-05", place: poona }
+  - { date: "1930-10", place: poona }
+  - { date: "1931-01-26", place: poona, note: "Released with the Congress leaders so that talks can begin." }
+  - { date: "1931-03-05", place: delhi, note: "Signs the Gandhi–Irwin Pact: prisoners freed, civil disobedience called off." }
+  - { date: "1931-03-29", place: karachi, note: "The Karachi Congress endorses the pact, days after Bhagat Singh's hanging." }
+  - { date: "1931-08-29", away: true, note: "Sails to London as Congress's only delegate to the Round Table Conference." }
+  - { date: "1931-12-28", place: bombay, note: "Returns empty-handed as the government prepares to crush the Congress." }
+  - { date: "1932-01-04", place: poona, note: "Arrested again and held in Yeravda as civil disobedience resumes." }
+  - { date: "1932-06", place: poona }
+  - { date: "1932-09-20", place: poona, note: "Begins a fast unto death against separate electorates for untouchables." }
+  - { date: "1932-09-24", place: poona, note: "Poona Pact: Ambedkar gives up separate electorates for reserved seats." }
+  - { date: "1933-05-08", place: poona, note: "Released as he starts a 21-day fast against untouchability." }
+  - { date: "1933-11-07", place: wardha, note: "Starts a ten-month tour of India against untouchability." }
+  - { date: "1934-09", place: wardha, approx: true }
+  - { date: "1935-06", place: wardha, approx: true }
+  - { date: "1936-04", place: wardha, note: "Settles at Segaon village, near Wardha, later named Sevagram." }
   - { date: "1937-04", place: wardha }
   - { date: "1938-04", place: wardha }
   - { date: "1939-04", place: wardha }
   - { date: "1940-04", place: wardha }
   - { date: "1941-04", place: wardha }
   - { date: "1942-03", place: wardha }
-  - { date: "1942-08-08", place: bombay, note: '"Quit India" speech' }
-  - { date: "1942-08-09", place: poona, note: Arrested; Aga Khan Palace }
-  - { date: "1943-02", place: poona, note: 21-day fast in detention }
-  - { date: "1944-05-06", place: poona, note: Released }
-  - { date: "1944-09", place: bombay, note: Talks with Jinnah }
+  - { date: "1942-08-08", place: bombay, note: "Gives his 'Do or Die' Quit India speech at Gowalia Tank." }
+  - { date: "1942-08-09", place: poona, note: "Arrested before dawn and held in the Aga Khan Palace, Poona." }
+  - { date: "1943-02-10", place: poona, note: "Fasts 21 days in detention, rejecting blame for Quit India violence." }
+  - { date: "1943-09", place: poona }
+  - { date: "1944-02-22", place: poona, note: "His wife Kasturba dies beside him in detention." }
+  - { date: "1944-05-06", place: poona, note: "Released on health grounds; it is his last prison term." }
+  - { date: "1944-09-09", place: bombay, note: "Begins 18 days of talks with Jinnah, which end without agreement." }
   - { date: "1945-04", place: wardha, approx: true }
-  - { date: "1946-04", place: delhi, approx: true, note: Cabinet Mission talks }
-  - { date: "1946-11-06", place: noakhali, note: Begins walking village to village }
-  - { date: "1947-03-01", place: noakhali }
-  - { date: "1947-04-01", place: delhi, note: Prayer meetings at Bhangi Colony }
-  - { date: "1947-08-13", place: calcutta, note: At Beliaghata on Independence Day }
-  - { date: "1947-09-09", place: delhi, note: Returns to a city in riots }
+  - { date: "1946-04", place: delhi, approx: true, note: "Advises the Congress during the Cabinet Mission talks in Delhi." }
+  - { date: "1946-11-07", place: noakhali, note: "Arrives in riot-torn Noakhali to bring Hindus and Muslims back to peace." }
+  - { date: "1947-01-02", place: noakhali, note: "Begins a barefoot walk through 47 villages." }
+  - { date: "1947-03-05", place: patna, approx: true, note: "Moves to Bihar, where Hindus have killed Muslims in revenge." }
+  - { date: "1947-04-01", place: delhi, note: "Meets Mountbatten and argues against Partition, but cannot stop it." }
+  - { date: "1947-08-13", place: calcutta, note: "Moves into a Beliaghata house with Suhrawardy to keep Calcutta calm." }
+  - { date: "1947-08-15", place: calcutta, note: "Marks independence with fasting and prayer, not celebration." }
+  - { date: "1947-09-01", place: calcutta, note: "Fasts until Calcutta's rioting stops, three days later." }
+  - { date: "1947-09-09", place: delhi, note: "Arrives in a Delhi torn by riots and stays to work for peace." }
+  - { date: "1948-01-13", place: delhi, note: "Begins his last fast, for communal peace and for India to pay Pakistan its share of assets." }
+  - { date: "1948-01-30", place: delhi, note: "Shot dead by Nathuram Godse, a Hindu nationalist, at a prayer meeting at Birla House." }

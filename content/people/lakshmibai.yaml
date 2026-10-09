@@ -11,12 +11,25 @@ perspectives:
     text: First blamed for the killing of Jhansi's Europeans, though the evidence is weak. Hugh Rose called her the most dangerous rebel leader.
   - view: Nationalist memory
     text: A symbol of resistance, as in Subhadra Kumari Chauhan's poem "Khoob ladi mardani".
-sources: [wp-lakshmibai]
+sources: [wp-lakshmibai, lebra-rani]
 itinerary:
-  - { date: "1857-06", place: jhansi, note: Takes charge of Jhansi after the garrison revolts }
+  - { date: "1828-11-19", place: benares, approx: true, note: "Born Manikarnika Tambe in Benares; the year of her birth is disputed." }
+  - { date: "1832", place: bithur, approx: true, note: "Grows up at the exiled Peshwa's court in Bithur, alongside Nana Sahib." }
+  - { date: "1842-05", place: jhansi, note: "Marries Raja Gangadhar Rao of Jhansi and takes the name Lakshmibai." }
+  - { date: "1853-11-21", place: jhansi, note: "The Raja dies a day after adopting a son, Damodar Rao." }
+  - { date: "1854-03", place: jhansi, note: "Dalhousie annexes Jhansi under the doctrine of lapse and rejects her adopted heir." }
+  - { date: "1855-03", place: jhansi }
+  - { date: "1856-03", place: jhansi }
+  - { date: "1857-03", place: jhansi }
+  - { date: "1857-06-08", place: jhansi, note: "Rebel sepoys kill Jhansi's British residents; her part in this is disputed." }
+  - { date: "1857-06-14", place: jhansi, approx: true, note: "Takes over the government of Jhansi, at first claiming to act for the Company." }
+  - { date: "1857-09", place: jhansi, approx: true, note: "Drives off invading armies from neighbouring Orchha and Datia." }
   - { date: "1857-12", place: jhansi }
-  - { date: "1858-03-23", place: jhansi, note: Rose besieges Jhansi }
-  - { date: "1858-04-04", place: kalpi, note: Escapes by night to Kalpi }
-  - { date: "1858-05-22", place: kalpi, note: Defeated at Kalpi }
-  - { date: "1858-06-01", place: gwalior, note: Rebels seize Gwalior }
-  - { date: "1858-06-18", place: gwalior, note: Killed in battle }
+  - { date: "1858-03-23", place: jhansi, note: "Hugh Rose besieges Jhansi; she leads the defence from the walls." }
+  - { date: "1858-04-01", place: jhansi, note: "Tatya Tope's relief army is routed at the Betwa river." }
+  - { date: "1858-04-04", place: jhansi, note: "Escapes by night as Jhansi falls, her adopted son with her." }
+  - { date: "1858-04-05", place: kalpi, approx: true, note: "Rides about 160 km to join Tatya Tope at Kalpi." }
+  - { date: "1858-05-06", coords: [79.15, 25.99], approx: true, note: "Fights beside Tatya Tope at Kunch; Rose beats the rebels again." }
+  - { date: "1858-05-22", place: kalpi, note: "Rose defeats the rebels at Kalpi; she and Tatya Tope escape west." }
+  - { date: "1858-06-01", place: gwalior, note: "The rebels win over Scindia's army and take the fortress-city of Gwalior." }
+  - { date: "1858-06-18", place: gwalior, note: "Killed fighting British cavalry at Kotah-ki-Serai, near Gwalior." }
