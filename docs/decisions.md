@@ -112,3 +112,9 @@ Supersedes D3's sandbox-first default, and D24's start date. Prompted by user fe
 - **Then vs now** replaces the dashed present-day overlay. A second, non-interactive MapLibre map draws today's states, clipped right of a draggable divider and locked to the main camera (including padding, pitch and bearing). Toggle and URL key unchanged (`today=1`).
 - **Fact-check pass.** Six AI agents checked all content against cited sources and the web, about 75 corrections. Open doubts and map gaps are listed in `content/methods.yaml`.
 - **Draft badge removed.** The Sources & methods page (`?page=methods`) states that the content is AI-written and AI-checked, not yet reviewed by a historian, and lists the full bibliography with citation counts. This replaces the per-card badge for D6's disclosure.
+
+## D27. Railways, trade routes and journeys (2026-10-09)
+- **Railways** (`content/railways.yaml`): segments with an opening date and a waypoint path. Drawn from their opening date; stretches opened in the last two years are drawn bold, so the network visibly grows.
+- **Trade routes** (`content/trade.yaml`): flows of goods or people with a date range, a path, and an optional destination beyond the map edge. Colour by flow (export red, import blue, people plum). Cargo dots move along each active route; only that layer is rebuilt per frame.
+- Both show with the "Railways & trade" toggle (`econ=1`), or in a scene via `show.railways` / `show.trade`.
+- **Follow a person**: steps are itinerary stops with a `note`. Each step travels time forward and flies the camera to the stop. The map shows only that person, the places reached so far, and their events. URL `journey=<id>&step=<n>`.
