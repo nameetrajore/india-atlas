@@ -25,3 +25,4 @@ dist-ssr
 
 # raw inputs fetched by scripts/fetch_raw.sh
 data/raw/ne_*.geojson
+data/raw/gb/
