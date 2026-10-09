@@ -22,7 +22,7 @@ from shapely.validation import make_valid
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
 OUT = ROOT / "public" / "data" / "base"
-BBOX = box(60, 4, 101, 40)
+BBOX = box(40, -12, 125, 50)
 PRECISION = 4
 
 

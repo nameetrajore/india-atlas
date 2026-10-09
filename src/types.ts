@@ -139,6 +139,8 @@ export interface Content {
   events: HistEvent[]
   people: Person[]
   stories: Story[]
+  /** Display names of base units, by id. */
+  unitNames: Record<string, string>
 }
 
 export type SelectionKind = 'event' | 'place' | 'person' | 'polity' | 'unit'

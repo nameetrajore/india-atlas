@@ -87,3 +87,6 @@ India Atlas. Repo: `india-atlas`.
 - Base admin-unit layer (~1931 districts + princely states) availability/licensing unverified — gates D6/D9 border model.
 - All ten lenses in v1 (~2x data work).
 - Review load on owner for agent-drafted PRs.
+
+## D23. Base data (resolved 2026-10-09)
+CC0 1941 district and princely-state layer (India State Story via india-geodata) for the extent of present-day India. Digitise the missing regions from the 1931 Imperial Gazetteer atlas. See `docs/research/base-units.md`.

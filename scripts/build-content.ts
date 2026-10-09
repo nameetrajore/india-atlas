@@ -176,8 +176,8 @@ const personIds = new Set(people.map((p) => p.id))
 const eventIds = new Set(events.map((e) => e.id))
 
 const units = JSON.parse(readFileSync(join(OUT, 'base', 'units-1941.geojson'), 'utf8')).features.map(
-  (f: { properties: { id: string; division: string } }) => f.properties,
-) as { id: string; division: string }[]
+  (f: { properties: { id: string; name: string; division: string } }) => f.properties,
+) as { id: string; name: string; division: string }[]
 const unitIds = new Set(units.map((u) => u.id))
 
 function checkCites(where: string, ids: string[]) {
@@ -340,6 +340,7 @@ const content: Content = {
   events: compiledEvents,
   people: compiledPeople,
   stories: compiledStories,
+  unitNames: Object.fromEntries(units.map((u) => [u.id, u.name])),
 }
 mkdirSync(OUT, { recursive: true })
 writeFileSync(join(OUT, 'content.json'), JSON.stringify(content))

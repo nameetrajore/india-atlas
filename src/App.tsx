@@ -1,35 +1,60 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from 'react'
+import { MapView } from './map/MapView'
+import { Timeline } from './ui/Timeline'
+import { InfoCard } from './ui/InfoCard'
+import { LensDock } from './ui/LensDock'
+import { StoryMenu, StoryPlayer } from './ui/StoryPlayer'
+import { useStore } from './store'
+import { readUrl, syncUrl } from './lib/url'
+import type { Content } from './types'
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [ready, setReady] = useState(false)
+  const [menu, setMenu] = useState(false)
+  const story = useStore((s) => s.story)
+
+  useEffect(() => {
+    // deck.gl builds its glyph atlas on first use, so fonts must be loaded first.
+    Promise.all([
+      fetch(`${import.meta.env.BASE_URL}data/content.json`).then((r) => r.json() as Promise<Content>),
+      document.fonts.load('700 16px "Cormorant Garamond"'),
+      document.fonts.load('600 16px "Cormorant Garamond"'),
+      document.fonts.load('600 13px "Inter"'),
+    ]).then(([content]) => {
+      useStore.getState().setContent(content)
+      readUrl()
+      setReady(true)
+    })
+    return syncUrl()
+  }, [])
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="app">
+      {ready && <MapView />}
+      <header className="topbar">
+        <div className="brand">
+          <span className="brand-name">India Atlas</span>
+          <span className="brand-sub">1740–1765 · preview</span>
+        </div>
+        <div className="topbar-actions">
+          <button className="btn" disabled title="Grounded Q&A arrives once cards are reviewed (D12)">
+            Ask
+          </button>
+          <button className={`btn${menu || story ? ' on' : ''}`} onClick={() => setMenu(!menu)}>
+            Stories
+          </button>
+        </div>
+        {menu && <StoryMenu onClose={() => setMenu(false)} />}
+      </header>
+      {ready && (
+        <>
+          <LensDock />
+          <InfoCard />
+          <StoryPlayer />
+          <Timeline />
+        </>
+      )}
+      {!ready && <div className="loading">Unrolling the map…</div>}
+    </div>
   )
 }
-
-export default App

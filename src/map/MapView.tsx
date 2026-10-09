@@ -1,0 +1,98 @@
+import { useEffect, useRef, useState } from 'react'
+import maplibregl from 'maplibre-gl'
+import 'maplibre-gl/dist/maplibre-gl.css'
+import { MapboxOverlay } from '@deck.gl/mapbox'
+import { activeLenses, useStore } from '../store'
+import { viewById } from '../views'
+import { baseStyle } from './style'
+import { buildLayers } from './layers'
+import { loadUnits, type UnitIndex } from './units'
+
+export function MapView() {
+  const el = useRef<HTMLDivElement>(null)
+  const map = useRef<maplibregl.Map | null>(null)
+  const overlay = useRef<MapboxOverlay | null>(null)
+  const [units, setUnits] = useState<UnitIndex | null>(null)
+  const [zoom, setZoom] = useState(useStore.getState().camera.zoom)
+
+  const content = useStore((s) => s.content)
+  const t = useStore((s) => s.t)
+  const view = useStore((s) => s.view)
+  const hidden = useStore((s) => s.hidden)
+  const advanced = useStore((s) => s.advanced)
+  const selection = useStore((s) => s.selection)
+  const flyTo = useStore((s) => s.flyTo)
+  // Labels are decluttered in screen space, so they recompute when the camera settles.
+  const camera = useStore((s) => s.camera)
+
+  useEffect(() => {
+    loadUnits().then(setUnits)
+    const cam = useStore.getState().camera
+    const m = new maplibregl.Map({
+      container: el.current!,
+      style: baseStyle,
+      center: cam.center,
+      zoom: cam.zoom,
+      pitch: cam.pitch ?? 0,
+      bearing: cam.bearing ?? 0,
+      maxPitch: 60,
+      minZoom: 3.4,
+      maxZoom: 11,
+      maxBounds: [
+        [45, -8],
+        [118, 46],
+      ],
+      attributionControl: { compact: true },
+    })
+    m.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'bottom-right')
+    const o = new MapboxOverlay({
+      interleaved: true,
+      layers: [],
+      getCursor: ({ isHovering }) => (isHovering ? 'pointer' : 'grab'),
+      onClick: (info) => {
+        if (!info.picked) useStore.getState().select(null)
+      },
+    })
+    m.addControl(o)
+    m.on('moveend', () => {
+      const c = m.getCenter()
+      useStore.getState().setCamera({ center: [c.lng, c.lat], zoom: m.getZoom(), pitch: m.getPitch(), bearing: m.getBearing() })
+    })
+    m.on('zoomend', () => setZoom(m.getZoom()))
+    map.current = m
+    overlay.current = o
+    return () => m.remove()
+  }, [])
+
+  useEffect(() => {
+    if (!flyTo || !map.current) return
+    const c = flyTo.camera
+    map.current.flyTo({ center: c.center, zoom: c.zoom, pitch: c.pitch ?? 0, bearing: c.bearing ?? 0, duration: 2200, essential: true })
+  }, [flyTo])
+
+  useEffect(() => {
+    if (!content || !units || !overlay.current) return
+    overlay.current.setProps({
+      layers: buildLayers({
+        content,
+        units,
+        t,
+        lenses: activeLenses({ view, hidden, advanced }),
+        polityOpacity: viewById(view).polityOpacity,
+        selection,
+        zoom,
+        project: (p) => {
+          const pt = map.current!.project(p)
+          return [pt.x, pt.y]
+        },
+        onPick: (s) => useStore.getState().select(s),
+      }),
+    })
+  }, [content, units, t, view, hidden, advanced, selection, zoom, camera])
+
+  return (
+    <div className="map">
+      <div ref={el} className="map-canvas" />
+    </div>
+  )
+}
