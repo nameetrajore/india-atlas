@@ -1,0 +1,22 @@
+id: lakshmibai
+name: Rani Lakshmibai
+tier: 1
+died: "1858-06-18"
+role: Rani of Jhansi, rebel leader of 1857
+summary: >-
+  Regent of Jhansi, whose adopted heir was refused recognition under the doctrine of lapse in 1854.
+  She led Jhansi's resistance in 1858 and died fighting at Gwalior.
+perspectives:
+  - view: Colonial accounts
+    text: First blamed for the killing of Jhansi's Europeans, though the evidence is weak. Hugh Rose called her the most dangerous rebel leader.
+  - view: Nationalist memory
+    text: A symbol of resistance, as in Subhadra Kumari Chauhan's poem "Khoob ladi mardani".
+sources: [wp-lakshmibai]
+itinerary:
+  - { date: "1857-06", place: jhansi, note: Takes charge of Jhansi after the garrison revolts }
+  - { date: "1857-12", place: jhansi }
+  - { date: "1858-03-23", place: jhansi, note: Rose besieges Jhansi }
+  - { date: "1858-04-04", place: kalpi, note: Escapes by night to Kalpi }
+  - { date: "1858-05-22", place: kalpi, note: Defeated at Kalpi }
+  - { date: "1858-06-01", place: gwalior, note: Rebels seize Gwalior }
+  - { date: "1858-06-18", place: gwalior, note: Killed in battle }

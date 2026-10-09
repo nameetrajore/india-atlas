@@ -21,7 +21,9 @@ export interface Polity {
   id: string
   name: string
   altNames: string[]
-  kind: 'polity' | 'power'
+  /** Official names over time, oldest first. */
+  names: { date: CDate; name: string }[]
+  kind: 'polity' | 'power' | 'province' | 'state' | 'tribal' | 'foreign' | 'dominion'
   color: [number, number, number]
   summary: string
   sources: string[]
@@ -131,6 +133,8 @@ export interface Story {
 export interface Content {
   /** Every record is unreviewed until a human approves it (D6). */
   status: 'draft' | 'reviewed'
+  title: string
+  subtitle: string
   range: [number, number]
   sources: Record<string, Source>
   polities: Record<string, Polity>

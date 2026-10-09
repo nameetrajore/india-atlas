@@ -1,0 +1,26 @@
+id: subhas-bose
+name: Subhas Chandra Bose
+tier: 1
+born: "1897-01-23"
+died: "1945-08-18"
+role: Congress president; leader of the Indian National Army
+summary: >-
+  Twice Congress president (1938, 1939). He broke with Gandhi, escaped house arrest in 1941, and
+  sought Axis help. He led the Azad Hind government and the INA from Singapore and Rangoon.
+perspectives:
+  - view: Nationalist memory
+    text: '"Netaji", a revolutionary patriot whose INA hastened the end of British rule.'
+  - view: Critical historiography
+    text: His alliance with Nazi Germany and imperial Japan remains a point of serious criticism.
+sources: [wp-subhas-bose]
+itinerary:
+  - { date: "1938-02", coords: [73.29, 21.14], approx: true, note: Presides over the Haripura Congress }
+  - { date: "1939-04", place: calcutta, note: Resigns as Congress president }
+  - { date: "1940-07", place: calcutta, note: Arrested; later under house arrest }
+  - { date: "1941-01-16", place: calcutta, note: Escapes in disguise }
+  - { date: "1941-01-19", place: peshawar, approx: true, note: Heads for Kabul }
+  - { date: "1941-02", away: true, note: "In Germany, then Japan-held Asia" }
+  - { date: "1944-01", place: rangoon, note: Moves INA headquarters to Rangoon }
+  - { date: "1944-06", place: rangoon }
+  - { date: "1945-01", place: rangoon }
+  - { date: "1945-04-24", away: true, note: Leaves Rangoon as the British advance }

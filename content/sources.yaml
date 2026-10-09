@@ -141,3 +141,273 @@
 - id: wp-munro
   title: "Wikipedia: Hector Munro, 8th laird of Novar"
   url: https://en.wikipedia.org/wiki/Hector_Munro,_8th_laird_of_Novar
+# ---- British Raj (D24)
+- id: igi-atlas-1931
+  title: "Imperial Gazetteer of India, vol. 26: Atlas (new edition, 1931). DSAL digital edition"
+  url: https://dsal.uchicago.edu/maps/gazetteer/
+- id: geoboundaries
+  title: "geoBoundaries (Runfola et al. 2020): PAK ADM2 (public domain), BGD ADM2 (CC BY 3.0 IGO), MMR ADM1 (CC BY 4.0). Used as proxies for 1941 units outside present-day India"
+  url: https://www.geoboundaries.org/
+- id: isd-evolution
+  title: "India State Story, India State and District Evolution Database 1872–2025, Harvard Dataverse (CC BY 4.0)"
+  url: https://doi.org/10.7910/DVN/D1AGUR
+- id: isd-princely
+  title: "India State Story, Database of Princely States in British India 1939, Harvard Dataverse (CC0)"
+  url: https://doi.org/10.7910/DVN/2ES4C1
+- id: bose-jalal
+  title: "Bose, S. & Jalal, A., Modern South Asia: History, Culture, Political Economy, 5th ed., Routledge, 2022"
+- id: sarkar-modern
+  title: "Sarkar, S., Modern India 1885–1947, Macmillan, 1983"
+- id: chandra-struggle
+  title: "Chandra, B. et al., India's Struggle for Independence 1857–1947, Penguin, 1989"
+- id: metcalf-concise
+  title: "Metcalf, B. D. & Metcalf, T. R., A Concise History of Modern India, 3rd ed., Cambridge University Press, 2012"
+- id: wp-presidencies
+  title: "Wikipedia: Presidencies and provinces of British India"
+  url: https://en.wikipedia.org/wiki/Presidencies_and_provinces_of_British_India
+- id: wp-princely-states
+  title: "Wikipedia: Princely state"
+  url: https://en.wikipedia.org/wiki/Princely_state
+- id: wp-cp
+  title: "Wikipedia: Central Provinces"
+  url: https://en.wikipedia.org/wiki/Central_Provinces
+- id: wp-nwp
+  title: "Wikipedia: North-Western Provinces"
+  url: https://en.wikipedia.org/wiki/North-Western_Provinces
+- id: wp-up
+  title: "Wikipedia: United Provinces of Agra and Oudh"
+  url: https://en.wikipedia.org/wiki/United_Provinces_of_Agra_and_Oudh
+- id: wp-oudh-province
+  title: "Wikipedia: Oudh State (Chief Commissionership of Oudh)"
+  url: https://en.wikipedia.org/wiki/Oudh_State
+- id: wp-punjab-province
+  title: "Wikipedia: Punjab Province (British India)"
+  url: https://en.wikipedia.org/wiki/Punjab_Province_(British_India)
+- id: wp-bengal-presidency
+  title: "Wikipedia: Bengal Presidency"
+  url: https://en.wikipedia.org/wiki/Bengal_Presidency
+- id: wp-madras-presidency
+  title: "Wikipedia: Madras Presidency"
+  url: https://en.wikipedia.org/wiki/Madras_Presidency
+- id: wp-assam-province
+  title: "Wikipedia: Assam Province"
+  url: https://en.wikipedia.org/wiki/Assam_Province
+- id: wp-ebna
+  title: "Wikipedia: Eastern Bengal and Assam"
+  url: https://en.wikipedia.org/wiki/Eastern_Bengal_and_Assam
+- id: wp-partition-bengal-1905
+  title: "Wikipedia: Partition of Bengal (1905)"
+  url: https://en.wikipedia.org/wiki/Partition_of_Bengal_(1905)
+- id: wp-bihar-orissa
+  title: "Wikipedia: Bihar and Orissa Province"
+  url: https://en.wikipedia.org/wiki/Bihar_and_Orissa_Province
+- id: wp-orissa-province
+  title: "Wikipedia: Orissa Province"
+  url: https://en.wikipedia.org/wiki/Orissa_Province
+- id: wp-sind-province
+  title: "Wikipedia: Sind Province (1936–1955)"
+  url: https://en.wikipedia.org/wiki/Sind_Province_(1936%E2%80%931955)
+- id: wp-nwfp
+  title: "Wikipedia: North-West Frontier Province (1901–1955)"
+  url: https://en.wikipedia.org/wiki/North-West_Frontier_Province_(1901%E2%80%931955)
+- id: wp-baluchistan
+  title: "Wikipedia: Baluchistan Agency"
+  url: https://en.wikipedia.org/wiki/Baluchistan_Agency
+- id: wp-gandamak
+  title: "Wikipedia: Treaty of Gandamak"
+  url: https://en.wikipedia.org/wiki/Treaty_of_Gandamak
+- id: wp-british-burma
+  title: "Wikipedia: Province of Burma"
+  url: https://en.wikipedia.org/wiki/Province_of_Burma
+- id: wp-third-burmese-war
+  title: "Wikipedia: Third Anglo-Burmese War"
+  url: https://en.wikipedia.org/wiki/Third_Anglo-Burmese_War
+- id: wp-berar
+  title: "Wikipedia: Berar Province"
+  url: https://en.wikipedia.org/wiki/Berar_Province
+- id: wp-mysore-rendition
+  title: "Wikipedia: Kingdom of Mysore (British commission, 1831–1881)"
+  url: https://en.wikipedia.org/wiki/Kingdom_of_Mysore
+- id: wp-delhi-province
+  title: "Wikipedia: Delhi Province"
+  url: https://en.wikipedia.org/wiki/Delhi_Province
+- id: wp-ajmer-merwara
+  title: "Wikipedia: Ajmer-Merwara"
+  url: https://en.wikipedia.org/wiki/Ajmer-Merwara
+- id: wp-coorg
+  title: "Wikipedia: Coorg Province"
+  url: https://en.wikipedia.org/wiki/Coorg_Province
+- id: wp-gwadar
+  title: "Wikipedia: Gwadar (Omani rule 1783–1958)"
+  url: https://en.wikipedia.org/wiki/Gwadar
+- id: wp-partition-1947
+  title: "Wikipedia: Partition of India"
+  url: https://en.wikipedia.org/wiki/Partition_of_India
+- id: wp-indian-independence-act
+  title: "Wikipedia: Indian Independence Act 1947"
+  url: https://en.wikipedia.org/wiki/Indian_Independence_Act_1947
+- id: wp-fata
+  title: "Wikipedia: Federally Administered Tribal Areas (colonial tribal agencies)"
+  url: https://en.wikipedia.org/wiki/Federally_Administered_Tribal_Areas
+- id: wp-shan-states
+  title: "Wikipedia: Shan States"
+  url: https://en.wikipedia.org/wiki/Shan_States
+- id: wp-konbaung
+  title: "Wikipedia: Konbaung dynasty"
+  url: https://en.wikipedia.org/wiki/Konbaung_dynasty
+- id: wp-afghanistan-emirate
+  title: "Wikipedia: Emirate of Afghanistan"
+  url: https://en.wikipedia.org/wiki/Emirate_of_Afghanistan
+- id: wp-kalat
+  title: "Wikipedia: Khanate of Kalat"
+  url: https://en.wikipedia.org/wiki/Khanate_of_Kalat
+- id: wp-1857
+  title: "Wikipedia: Indian Rebellion of 1857"
+  url: https://en.wikipedia.org/wiki/Indian_Rebellion_of_1857
+- id: wp-mangal-pandey
+  title: "Wikipedia: Mangal Pandey"
+  url: https://en.wikipedia.org/wiki/Mangal_Pandey
+- id: wp-siege-delhi
+  title: "Wikipedia: Siege of Delhi"
+  url: https://en.wikipedia.org/wiki/Siege_of_Delhi
+- id: wp-cawnpore
+  title: "Wikipedia: Siege of Cawnpore"
+  url: https://en.wikipedia.org/wiki/Siege_of_Cawnpore
+- id: wp-lucknow-siege
+  title: "Wikipedia: Siege of Lucknow"
+  url: https://en.wikipedia.org/wiki/Siege_of_Lucknow
+- id: wp-lakshmibai
+  title: "Wikipedia: Rani of Jhansi"
+  url: https://en.wikipedia.org/wiki/Rani_of_Jhansi
+- id: wp-goi-act-1858
+  title: "Wikipedia: Government of India Act 1858"
+  url: https://en.wikipedia.org/wiki/Government_of_India_Act_1858
+- id: wp-amu
+  title: "Wikipedia: Aligarh Muslim University"
+  url: https://en.wikipedia.org/wiki/Aligarh_Muslim_University
+- id: wp-indigo-revolt
+  title: "Wikipedia: Indigo revolt"
+  url: https://en.wikipedia.org/wiki/Indigo_revolt
+- id: wp-birsa
+  title: "Wikipedia: Birsa Munda"
+  url: https://en.wikipedia.org/wiki/Birsa_Munda
+- id: wp-surat-split
+  title: "Wikipedia: Surat Split"
+  url: https://en.wikipedia.org/wiki/Surat_Split
+- id: wp-poona-pact
+  title: "Wikipedia: Poona Pact"
+  url: https://en.wikipedia.org/wiki/Poona_Pact
+- id: wp-gandhi
+  title: "Wikipedia: Mahatma Gandhi"
+  url: https://en.wikipedia.org/wiki/Mahatma_Gandhi
+- id: wp-champaran
+  title: "Wikipedia: Champaran Satyagraha"
+  url: https://en.wikipedia.org/wiki/Champaran_Satyagraha
+- id: wp-kheda
+  title: "Wikipedia: Kheda Satyagraha"
+  url: https://en.wikipedia.org/wiki/Kheda_Satyagraha
+- id: wp-salt-march
+  title: "Wikipedia: Salt March"
+  url: https://en.wikipedia.org/wiki/Salt_March
+- id: wp-jallianwala
+  title: "Wikipedia: Jallianwala Bagh massacre"
+  url: https://en.wikipedia.org/wiki/Jallianwala_Bagh_massacre
+- id: wp-ncm
+  title: "Wikipedia: Non-cooperation movement"
+  url: https://en.wikipedia.org/wiki/Non-cooperation_movement
+- id: wp-malabar
+  title: "Wikipedia: Malabar rebellion"
+  url: https://en.wikipedia.org/wiki/Malabar_rebellion
+- id: wp-chauri-chaura
+  title: "Wikipedia: Chauri Chaura incident"
+  url: https://en.wikipedia.org/wiki/Chauri_Chaura_incident
+- id: wp-bardoli
+  title: "Wikipedia: Bardoli Satyagraha"
+  url: https://en.wikipedia.org/wiki/Bardoli_Satyagraha
+- id: wp-kakori
+  title: "Wikipedia: Kakori conspiracy"
+  url: https://en.wikipedia.org/wiki/Kakori_conspiracy
+- id: wp-dharasana
+  title: "Wikipedia: Dharasana Satyagraha"
+  url: https://en.wikipedia.org/wiki/Dharasana_Satyagraha
+- id: wp-chittagong-raid
+  title: "Wikipedia: Chittagong armoury raid"
+  url: https://en.wikipedia.org/wiki/Chittagong_armoury_raid
+- id: wp-qissa-khwani
+  title: "Wikipedia: Qissa Khwani massacre"
+  url: https://en.wikipedia.org/wiki/Qissa_Khwani_massacre
+- id: wp-imphal
+  title: "Wikipedia: Battle of Imphal"
+  url: https://en.wikipedia.org/wiki/Battle_of_Imphal
+- id: wp-noakhali
+  title: "Wikipedia: Noakhali riots"
+  url: https://en.wikipedia.org/wiki/Noakhali_riots
+- id: wp-great-famine
+  title: "Wikipedia: Great Famine of 1876–1878"
+  url: https://en.wikipedia.org/wiki/Great_Famine_of_1876%E2%80%931878
+- id: wp-delhi-durbar
+  title: "Wikipedia: Delhi Durbar"
+  url: https://en.wikipedia.org/wiki/Delhi_Durbar
+- id: wp-ilbert-bill
+  title: "Wikipedia: Ilbert Bill"
+  url: https://en.wikipedia.org/wiki/Ilbert_Bill
+- id: wp-inc
+  title: "Wikipedia: Indian National Congress"
+  url: https://en.wikipedia.org/wiki/Indian_National_Congress
+- id: wp-swadeshi
+  title: "Wikipedia: Swadeshi movement"
+  url: https://en.wikipedia.org/wiki/Swadeshi_movement
+- id: wp-muslim-league
+  title: "Wikipedia: All-India Muslim League"
+  url: https://en.wikipedia.org/wiki/All-India_Muslim_League
+- id: wp-morley-minto
+  title: "Wikipedia: Indian Councils Act 1909"
+  url: https://en.wikipedia.org/wiki/Indian_Councils_Act_1909
+- id: wp-lucknow-pact
+  title: "Wikipedia: Lucknow Pact"
+  url: https://en.wikipedia.org/wiki/Lucknow_Pact
+- id: wp-rowlatt
+  title: "Wikipedia: Rowlatt Act"
+  url: https://en.wikipedia.org/wiki/Rowlatt_Act
+- id: wp-goi-act-1919
+  title: "Wikipedia: Government of India Act 1919"
+  url: https://en.wikipedia.org/wiki/Government_of_India_Act_1919
+- id: wp-simon
+  title: "Wikipedia: Simon Commission"
+  url: https://en.wikipedia.org/wiki/Simon_Commission
+- id: wp-bhagat-singh
+  title: "Wikipedia: Bhagat Singh"
+  url: https://en.wikipedia.org/wiki/Bhagat_Singh
+- id: wp-purna-swaraj
+  title: "Wikipedia: Purna Swaraj"
+  url: https://en.wikipedia.org/wiki/Purna_Swaraj
+- id: wp-gandhi-irwin
+  title: "Wikipedia: Gandhi–Irwin Pact"
+  url: https://en.wikipedia.org/wiki/Gandhi%E2%80%93Irwin_Pact
+- id: wp-goi-act-1935
+  title: "Wikipedia: Government of India Act 1935"
+  url: https://en.wikipedia.org/wiki/Government_of_India_Act_1935
+- id: wp-elections-1937
+  title: "Wikipedia: 1937 Indian provincial elections"
+  url: https://en.wikipedia.org/wiki/1937_Indian_provincial_elections
+- id: wp-lahore-resolution
+  title: "Wikipedia: Lahore Resolution"
+  url: https://en.wikipedia.org/wiki/Lahore_Resolution
+- id: wp-quit-india
+  title: "Wikipedia: Quit India Movement"
+  url: https://en.wikipedia.org/wiki/Quit_India_Movement
+- id: wp-bengal-famine
+  title: "Wikipedia: Bengal famine of 1943"
+  url: https://en.wikipedia.org/wiki/Bengal_famine_of_1943
+- id: wp-ina-trials
+  title: "Wikipedia: INA trials"
+  url: https://en.wikipedia.org/wiki/INA_trials
+- id: wp-rin-mutiny
+  title: "Wikipedia: Royal Indian Navy mutiny"
+  url: https://en.wikipedia.org/wiki/Royal_Indian_Navy_mutiny
+- id: wp-direct-action
+  title: "Wikipedia: Direct Action Day"
+  url: https://en.wikipedia.org/wiki/Direct_Action_Day
+- id: wp-subhas-bose
+  title: "Wikipedia: Subhas Chandra Bose"
+  url: https://en.wikipedia.org/wiki/Subhas_Chandra_Bose

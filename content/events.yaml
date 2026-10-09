@@ -1,0 +1,658 @@
+# British Raj events, 1857–1947. significance 1..5. Disputed numbers go in `figures` as ranges (D11).
+- id: mangal-pandey
+  name: Mangal Pandey's attack at Barrackpore
+  date: "1857-03-29"
+  place: barrackpore
+  kind: revolt
+  significance: 2
+  participants: [mangal-pandey]
+  summary: >-
+    A sepoy of the 34th Bengal Native Infantry attacks his officers. Unrest had been growing over
+    cartridges rumoured to be greased with cow and pig fat. He is hanged on 8 April.
+  sources: [wp-mangal-pandey, wp-1857]
+- id: meerut
+  name: Meerut uprising
+  date: "1857-05-10"
+  place: meerut
+  kind: revolt
+  significance: 4
+  summary: >-
+    Sepoys mutiny, free 85 comrades jailed for refusing the cartridges, kill British officers and
+    civilians, and ride for Delhi.
+  why: The revolt of 1857 begins here.
+  sources: [wp-1857, bose-jalal]
+- id: delhi-seized
+  name: Rebels take Delhi
+  date: "1857-05-11"
+  place: delhi
+  kind: revolt
+  significance: 4
+  participants: [bahadur-shah-zafar]
+  summary: >-
+    The Meerut sepoys reach Delhi and proclaim the aged Mughal emperor Bahadur Shah Zafar leader of the
+    revolt.
+  why: The revolt gains a symbol of legitimacy, the Mughal crown.
+  sources: [wp-1857, wp-siege-delhi]
+- id: revolt-1857
+  name: Revolt of 1857
+  alt_names: [Indian Mutiny, Sepoy Mutiny, First War of Independence]
+  date: "1857-05-10"
+  end: "1858-07"
+  place: lucknow
+  kind: campaign
+  significance: 5
+  summary: >-
+    A rising of sepoys across the Bengal Army, joined by dispossessed rulers, landholders and peasants
+    across the Ganges plain and central India. It is crushed with mass reprisals by mid-1858.
+  why: >-
+    It ended Company rule and the Mughal dynasty. After it the Raj stopped annexing princely states and
+    reorganised the army on "martial race" lines. Its name is still contested: "Mutiny" in colonial
+    accounts, the "First War of Independence" in V. D. Savarkar's 1909 book and in later nationalist
+    usage.
+  sources: [wp-1857, bose-jalal, metcalf-concise]
+- id: cawnpore-siege
+  name: Siege of Cawnpore
+  date: "1857-06-05"
+  end: "1857-07-15"
+  place: cawnpore
+  kind: battle
+  significance: 3
+  participants: [nana-sahib]
+  summary: >-
+    Nana Sahib's forces besiege the British entrenchment, which surrenders on 25 June. The evacuees are
+    massacred at Satichaura Ghat, and in July the women and children held at the Bibighar are killed.
+    British reprisals follow.
+  sources: [wp-cawnpore]
+- id: lucknow-siege
+  name: Siege of the Lucknow Residency
+  date: "1857-06-30"
+  end: "1857-11-22"
+  place: lucknow
+  kind: battle
+  significance: 3
+  participants: [begum-hazrat-mahal]
+  summary: >-
+    The British Residency is besieged for nearly five months. It is relieved, then evacuated in November.
+    Begum Hazrat Mahal leads the resistance in Oudh until Lucknow falls in March 1858.
+  sources: [wp-lucknow-siege]
+- id: delhi-recaptured
+  name: Delhi recaptured
+  date: "1857-09-20"
+  place: delhi
+  kind: battle
+  significance: 4
+  participants: [bahadur-shah-zafar]
+  summary: >-
+    After a long siege, British forces storm the city. The emperor surrenders and his sons are shot.
+    The city is sacked and many residents are killed or expelled.
+  sources: [wp-siege-delhi]
+- id: jhansi-stormed
+  name: Storming of Jhansi
+  date: "1858-04-03"
+  place: jhansi
+  kind: battle
+  significance: 3
+  participants: [lakshmibai]
+  summary: Hugh Rose takes Jhansi. Rani Lakshmibai escapes by night to Kalpi.
+  sources: [wp-lakshmibai]
+- id: lakshmibai-killed
+  name: Death of Rani Lakshmibai
+  date: "1858-06-18"
+  place: gwalior
+  kind: battle
+  significance: 3
+  participants: [lakshmibai]
+  summary: The Rani of Jhansi is killed fighting British cavalry near Gwalior.
+  why: She became the best-remembered figure of 1857, both as a symbol and in later nationalist memory.
+  sources: [wp-lakshmibai]
+- id: crown-rule
+  name: "Queen's Proclamation: Crown takes over"
+  date: "1858-11-01"
+  place: allahabad
+  kind: law
+  significance: 5
+  summary: >-
+    Under the Government of India Act 1858, the Company's rule passes to the Crown. Canning, now the
+    first Viceroy, reads the Queen's proclamation at Allahabad. It promises religious non-interference
+    and an end to annexation.
+  why: The Raj, direct British Crown rule, begins.
+  sources: [wp-goi-act-1858, metcalf-concise]
+- id: indigo-revolt
+  name: Indigo revolt
+  alt_names: [Nil Bidroho]
+  date: "1859"
+  end: "1860"
+  place: krishnanagar
+  kind: revolt
+  significance: 2
+  summary: >-
+    Bengal ryots (cultivators) refuse to grow indigo for European planters. The play Nil Darpan
+    publicises their cause.
+  sources: [wp-indigo-revolt]
+- id: aligarh-college
+  name: Muhammadan Anglo-Oriental College founded
+  date: "1875-05-24"
+  place: aligarh
+  kind: founding
+  significance: 2
+  participants: [syed-ahmad-khan]
+  summary: Sir Syed Ahmad Khan founds a college to give Muslims Western education. It later becomes Aligarh Muslim University.
+  sources: [wp-amu]
+- id: great-famine
+  name: Great Famine of 1876–78
+  date: "1876"
+  end: "1878"
+  place: madras
+  kind: famine
+  significance: 4
+  summary: >-
+    Drought across the Deccan and south. Grain exports continued, and relief was kept deliberately
+    limited.
+  why: The famine became central to nationalist critiques of the economics of British rule.
+  figures:
+    - label: Deaths
+      min: 5500000
+      max: 10300000
+      note: Estimates vary by method and region.
+      sources: [wp-great-famine]
+  sources: [wp-great-famine, bose-jalal]
+- id: durbar-1877
+  name: Delhi Durbar of 1877
+  date: "1877-01-01"
+  place: delhi
+  kind: political
+  significance: 3
+  summary: Lytton proclaims Queen Victoria Empress of India in a vast imperial assembly, during the famine.
+  sources: [wp-delhi-durbar]
+- id: ilbert-bill
+  name: Ilbert Bill controversy
+  date: "1883"
+  place: calcutta
+  kind: law
+  significance: 2
+  summary: >-
+    A bill to let Indian judges try Europeans provokes a furious European backlash and is diluted.
+  why: The affair showed educated Indians how far racial privilege went, and fed the push for an all-India body.
+  sources: [wp-ilbert-bill]
+- id: inc-founded
+  name: Indian National Congress founded
+  date: "1885-12-28"
+  place: bombay
+  kind: founding
+  significance: 4
+  summary: Seventy-two delegates meet in Bombay for the first session of the Indian National Congress.
+  sources: [wp-inc, chandra-struggle]
+- id: burma-annexed
+  name: Mandalay taken
+  date: "1885-11-28"
+  place: mandalay
+  kind: battle
+  significance: 3
+  summary: The Third Anglo-Burmese War ends in days. King Thibaw is deposed and exiled to India.
+  sources: [wp-third-burmese-war]
+- id: ulgulan
+  name: Birsa Munda's Ulgulan
+  date: "1899-12"
+  end: "1900-06"
+  place: ranchi
+  kind: revolt
+  significance: 2
+  participants: [birsa-munda]
+  summary: >-
+    Munda adivasis rise against landlords, moneylenders and colonial land law. Birsa dies in Ranchi jail
+    in June 1900.
+  why: The rising led to the Chotanagpur Tenancy Act of 1908, which protected adivasi land.
+  sources: [wp-birsa]
+- id: bengal-partition
+  name: Partition of Bengal
+  date: "1905-10-16"
+  place: dacca
+  kind: law
+  significance: 4
+  summary: >-
+    Curzon splits Bengal. The stated reason is administrative efficiency, but it was widely seen as a
+    way to divide Bengali Hindus and Muslims.
+  why: >-
+    It triggered the Swadeshi movement, the first mass nationalist campaign, and was annulled in 1911.
+  sources: [wp-partition-bengal-1905, sarkar-modern]
+- id: swadeshi
+  name: Swadeshi movement
+  date: "1905-08-07"
+  end: "1911-12"
+  place: calcutta
+  kind: movement
+  significance: 4
+  summary: >-
+    Boycott of British goods, bonfires of foreign cloth, national schools, and "Bande Mataram" as a
+    rallying cry.
+  sources: [wp-swadeshi, sarkar-modern]
+- id: muslim-league
+  name: All-India Muslim League founded
+  date: "1906-12-30"
+  place: dacca
+  kind: founding
+  significance: 4
+  summary: Founded at Dacca by Muslim notables to represent Muslim political interests.
+  sources: [wp-muslim-league]
+- id: surat-split
+  name: Surat split
+  date: "1907-12-27"
+  place: surat
+  kind: political
+  significance: 2
+  participants: [tilak]
+  summary: The Congress splits between Moderates (Gokhale) and Extremists (Tilak, Lajpat Rai, Bipin Chandra Pal).
+  sources: [wp-surat-split]
+- id: morley-minto
+  name: Morley–Minto reforms
+  alt_names: [Indian Councils Act 1909]
+  date: "1909"
+  place: calcutta
+  kind: law
+  significance: 2
+  summary: Expanded legislative councils with separate electorates for Muslims.
+  why: Separate electorates became a lasting and contested feature of Indian politics.
+  sources: [wp-morley-minto]
+- id: durbar-1911
+  name: Delhi Durbar of 1911
+  date: "1911-12-12"
+  place: delhi
+  kind: political
+  significance: 4
+  summary: George V announces that the capital will move from Calcutta to Delhi and that Bengal's partition is annulled.
+  sources: [wp-delhi-durbar, wp-delhi-province]
+- id: gandhi-returns
+  name: Gandhi returns to India
+  date: "1915-01-09"
+  place: bombay
+  kind: political
+  significance: 3
+  participants: [gandhi]
+  summary: After 21 years in South Africa, Gandhi lands at Bombay.
+  sources: [wp-gandhi]
+- id: lucknow-pact
+  name: Lucknow Pact
+  date: "1916-12"
+  place: lucknow
+  kind: treaty
+  significance: 3
+  participants: [tilak, jinnah]
+  summary: The Congress and the Muslim League agree on joint demands, accepting separate electorates.
+  sources: [wp-lucknow-pact]
+- id: champaran
+  name: Champaran Satyagraha
+  date: "1917-04-15"
+  place: motihari
+  kind: movement
+  significance: 3
+  participants: [gandhi]
+  summary: >-
+    Gandhi goes to Champaran on behalf of tenants forced to grow indigo, defies an order to leave, and
+    wins an inquiry.
+  why: His first satyagraha in India.
+  sources: [wp-champaran]
+- id: kheda
+  name: Kheda Satyagraha
+  date: "1918-03-22"
+  place: nadiad
+  kind: movement
+  significance: 2
+  participants: [gandhi, patel]
+  summary: Peasants refuse to pay land revenue after crop failure. Patel joins Gandhi.
+  sources: [wp-kheda]
+- id: rowlatt
+  name: Rowlatt Act and satyagraha
+  date: "1919-03"
+  end: "1919-04"
+  place: bombay
+  kind: law
+  significance: 3
+  participants: [gandhi]
+  summary: >-
+    Wartime powers of detention without trial are extended into peacetime. Gandhi calls a nationwide
+    hartal (general strike), the first all-India protest.
+  sources: [wp-rowlatt]
+- id: jallianwala
+  name: Jallianwala Bagh massacre
+  alt_names: [Amritsar massacre]
+  date: "1919-04-13"
+  place: amritsar
+  kind: atrocity
+  significance: 5
+  summary: >-
+    Brigadier-General Dyer's troops fire without warning on an unarmed crowd in a walled garden on
+    Baisakhi, until their ammunition runs low.
+  why: >-
+    It turned moderates against the Raj. Tagore returned his knighthood, and Gandhi moved to
+    non-cooperation.
+  figures:
+    - label: Killed
+      min: 379
+      max: 1000
+      note: The official Hunter Committee figure is 379. The Congress inquiry estimated about 1,000.
+      sources: [wp-jallianwala]
+  sources: [wp-jallianwala, chandra-struggle]
+- id: goi-act-1919
+  name: Government of India Act 1919
+  alt_names: [Montagu–Chelmsford reforms]
+  date: "1919-12-23"
+  place: delhi
+  kind: law
+  significance: 2
+  summary: Introduces "dyarchy", under which some provincial subjects are handed to elected Indian ministers.
+  sources: [wp-goi-act-1919]
+- id: ncm
+  name: Non-Cooperation and Khilafat movements
+  date: "1920-08-01"
+  end: "1922-02-12"
+  place: nagpur
+  kind: movement
+  significance: 4
+  participants: [gandhi]
+  summary: >-
+    Boycott of councils, courts, schools and foreign cloth, joined with the Khilafat cause. It was the
+    first mass movement under Gandhi.
+  sources: [wp-ncm, chandra-struggle]
+- id: malabar
+  name: Malabar rebellion
+  alt_names: [Mappila rebellion, Moplah rebellion]
+  date: "1921-08-20"
+  end: "1922-02"
+  place: tirurangadi
+  kind: revolt
+  significance: 3
+  summary: >-
+    A Mappila rising against the British and landlords, rooted in Khilafat and agrarian grievances. It
+    was crushed by martial law. Its character is still contested: agrarian revolt, anti-colonial war,
+    or communal violence.
+  sources: [wp-malabar]
+- id: chauri-chaura
+  name: Chauri Chaura
+  date: "1922-02-04"
+  place: chauri-chaura
+  kind: atrocity
+  significance: 3
+  summary: >-
+    After police fire on protesters, a crowd burns the police station, killing 22 policemen. Gandhi
+    suspends non-cooperation.
+  sources: [wp-chauri-chaura]
+- id: kakori
+  name: Kakori train action
+  date: "1925-08-09"
+  place: kakori
+  kind: revolt
+  significance: 2
+  participants: [ram-prasad-bismil]
+  summary: >-
+    Hindustan Republican Association revolutionaries seize government money from a train. Bismil,
+    Ashfaqulla Khan and others are later hanged.
+  sources: [wp-kakori]
+- id: bardoli
+  name: Bardoli Satyagraha
+  date: "1928-02"
+  end: "1928-08"
+  place: bardoli
+  kind: movement
+  significance: 2
+  participants: [patel]
+  summary: A successful no-tax campaign against a revenue increase, led by Vallabhbhai Patel.
+  sources: [wp-bardoli]
+- id: simon-commission
+  name: Simon Commission protests
+  date: "1928-02-03"
+  end: "1928-11-17"
+  place: lahore
+  kind: movement
+  significance: 2
+  participants: [lajpat-rai]
+  summary: >-
+    An all-white commission on constitutional reform is met with "Simon Go Back". Lala Lajpat Rai is
+    beaten by police at Lahore and dies weeks later.
+  sources: [wp-simon]
+- id: assembly-bomb
+  name: Central Assembly bombing
+  date: "1929-04-08"
+  place: delhi
+  kind: revolt
+  significance: 2
+  participants: [bhagat-singh]
+  summary: >-
+    Bhagat Singh and Batukeshwar Dutt throw harmless bombs and leaflets in the Assembly and court arrest.
+  sources: [wp-bhagat-singh]
+- id: purna-swaraj
+  name: Purna Swaraj resolution
+  date: "1929-12-31"
+  place: lahore
+  kind: political
+  significance: 4
+  participants: [nehru, gandhi]
+  summary: >-
+    At Lahore, under Nehru's presidency, the Congress declares complete independence its goal, and
+    the flag is raised on the banks of the Ravi. 26 January 1930 is marked as Independence Day.
+  sources: [wp-purna-swaraj]
+- id: salt-march
+  name: Salt March
+  alt_names: [Dandi March]
+  date: "1930-03-12"
+  end: "1930-04-06"
+  place: dandi
+  kind: movement
+  significance: 5
+  participants: [gandhi]
+  summary: >-
+    Gandhi and 78 followers walk about 385 km from Sabarmati to Dandi and break the salt law. Civil
+    disobedience spreads across India.
+  why: >-
+    A tax on something everyone needed made the injustice of the Raj easy to grasp everywhere, and the
+    march was covered by the world's press.
+  sources: [wp-salt-march, chandra-struggle]
+- id: chittagong-raid
+  name: Chittagong armoury raid
+  date: "1930-04-18"
+  place: chittagong
+  kind: revolt
+  significance: 2
+  participants: [surya-sen]
+  summary: Surya Sen's Indian Republican Army seizes the police and auxiliary armouries.
+  sources: [wp-chittagong-raid]
+- id: qissa-khwani
+  name: Qissa Khwani Bazaar massacre
+  date: "1930-04-23"
+  place: peshawar
+  kind: atrocity
+  significance: 3
+  participants: [ghaffar-khan]
+  summary: >-
+    Troops fire on non-violent Khudai Khidmatgar protesters. Garhwali soldiers refuse orders to shoot.
+  figures:
+    - label: Killed
+      min: 20
+      max: 400
+      note: The official figure was about 20. Nationalist estimates ran to several hundred.
+      sources: [wp-qissa-khwani]
+  sources: [wp-qissa-khwani]
+- id: dharasana
+  name: Dharasana Satyagraha
+  date: "1930-05-21"
+  place: dharasana
+  kind: movement
+  significance: 2
+  participants: [sarojini-naidu]
+  summary: Volunteers led by Sarojini Naidu march on the salt works and are beaten by police, column by column.
+  sources: [wp-dharasana]
+- id: gandhi-irwin
+  name: Gandhi–Irwin Pact
+  date: "1931-03-05"
+  place: delhi
+  kind: treaty
+  significance: 3
+  participants: [gandhi]
+  summary: Civil disobedience is suspended in return for the release of prisoners. Gandhi attends the Second Round Table Conference.
+  sources: [wp-gandhi-irwin]
+- id: bhagat-singh-hanged
+  name: Bhagat Singh, Rajguru and Sukhdev hanged
+  date: "1931-03-23"
+  place: lahore
+  kind: political
+  significance: 3
+  participants: [bhagat-singh]
+  summary: The three are executed at Lahore jail for the 1928 killing of police officer J. P. Saunders.
+  sources: [wp-bhagat-singh]
+- id: poona-pact
+  name: Poona Pact
+  date: "1932-09-24"
+  place: poona
+  kind: treaty
+  significance: 3
+  participants: [gandhi, ambedkar]
+  summary: >-
+    Gandhi fasts against separate electorates for the Depressed Classes. Ambedkar agrees to reserved
+    seats within joint electorates.
+  why: "The pact is still debated: a coerced bargain, or an act of unity?"
+  sources: [wp-poona-pact]
+- id: goi-act-1935
+  name: Government of India Act 1935
+  date: "1935-08-02"
+  place: delhi
+  kind: law
+  significance: 3
+  summary: Grants provincial autonomy and plans a federation including the princely states. The federation never comes into being.
+  sources: [wp-goi-act-1935]
+- id: elections-1937
+  name: Provincial elections of 1937
+  date: "1937-02"
+  place: delhi
+  kind: political
+  significance: 3
+  participants: [nehru, jinnah]
+  summary: >-
+    The Congress wins majorities in most provinces and forms ministries. The Muslim League does poorly.
+  sources: [wp-elections-1937]
+- id: lahore-resolution
+  name: Lahore Resolution
+  alt_names: [Pakistan Resolution]
+  date: "1940-03-23"
+  place: lahore
+  kind: political
+  significance: 4
+  participants: [jinnah]
+  summary: The Muslim League calls for "independent states" in the Muslim-majority regions.
+  sources: [wp-lahore-resolution]
+- id: quit-india
+  name: Quit India movement
+  date: "1942-08-08"
+  end: "1943-12"
+  place: bombay
+  kind: movement
+  significance: 5
+  participants: [gandhi, nehru, patel]
+  summary: >-
+    At Gowalia Tank, Gandhi calls on the British to "Quit India": "Do or die". The leadership is jailed
+    within hours, and a leaderless mass rising follows. It is crushed by force.
+  sources: [wp-quit-india, chandra-struggle]
+- id: bengal-famine
+  name: Bengal famine of 1943
+  date: "1943"
+  end: "1944"
+  place: calcutta
+  kind: famine
+  significance: 5
+  summary: >-
+    Wartime policy, the loss of Burmese rice, hoarding and administrative failure produce famine in
+    Bengal.
+  why: The share of blame between wartime policy and other causes is still argued over.
+  figures:
+    - label: Deaths
+      min: 2100000
+      max: 3000000
+      note: Estimates range from about 2.1 million to about 3 million.
+      sources: [wp-bengal-famine]
+  sources: [wp-bengal-famine]
+- id: imphal-kohima
+  name: Imphal and Kohima
+  date: "1944-03"
+  end: "1944-07"
+  place: imphal
+  kind: battle
+  significance: 3
+  participants: [subhas-bose]
+  summary: >-
+    The Japanese invasion of India, with units of Subhas Chandra Bose's Indian National Army, is
+    defeated.
+  sources: [wp-imphal]
+- id: ina-trials
+  name: INA trials at the Red Fort
+  date: "1945-11"
+  end: "1946-05"
+  place: delhi
+  kind: political
+  significance: 3
+  summary: >-
+    Courts-martial of INA officers spark mass sympathy across India. Sentences are commuted.
+  sources: [wp-ina-trials]
+- id: rin-mutiny
+  name: Royal Indian Navy mutiny
+  date: "1946-02-18"
+  end: "1946-02-23"
+  place: bombay
+  kind: revolt
+  significance: 3
+  summary: Ratings strike and mutiny in Bombay and Karachi. The episode shook British confidence in the armed forces.
+  sources: [wp-rin-mutiny]
+- id: direct-action
+  name: Direct Action Day
+  alt_names: [Great Calcutta Killings]
+  date: "1946-08-16"
+  place: calcutta
+  kind: atrocity
+  significance: 4
+  participants: [jinnah]
+  summary: The Muslim League's call for "direct action" is followed by days of communal killing in Calcutta.
+  figures:
+    - label: Killed
+      min: 4000
+      max: 10000
+      note: At least 4,000 dead. Some estimates are much higher.
+      sources: [wp-direct-action]
+  sources: [wp-direct-action]
+- id: noakhali
+  name: Noakhali riots and Gandhi's walk
+  date: "1946-10-10"
+  end: "1947-03"
+  place: noakhali
+  kind: atrocity
+  significance: 3
+  participants: [gandhi]
+  summary: Organised attacks on Hindus in Noakhali. Gandhi spends four months walking through the district.
+  sources: [wp-noakhali]
+- id: mountbatten-plan
+  name: Mountbatten Plan
+  date: "1947-06-03"
+  place: delhi
+  kind: political
+  significance: 3
+  participants: [nehru, jinnah, patel]
+  summary: Partition and early independence are announced. The date is brought forward to August 1947.
+  sources: [wp-partition-1947]
+- id: independence
+  name: Independence and Partition
+  date: "1947-08-15"
+  place: delhi
+  kind: political
+  significance: 5
+  participants: [nehru, jinnah, gandhi]
+  summary: >-
+    India and Pakistan become independent dominions. Nehru speaks of a "tryst with destiny". Gandhi is
+    in Calcutta, fasting against the violence. The Radcliffe boundaries are published on 17 August.
+  why: The end of the Raj, and one of the largest forced migrations in history.
+  figures:
+    - label: Deaths in Partition violence
+      min: 200000
+      max: 2000000
+      note: Estimates vary by an order of magnitude.
+      sources: [wp-partition-1947]
+    - label: People displaced
+      min: 10000000
+      max: 20000000
+      sources: [wp-partition-1947]
+  sources: [wp-partition-1947, wp-indian-independence-act]

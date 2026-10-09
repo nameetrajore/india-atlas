@@ -28,12 +28,15 @@ const Polity = z
     id,
     name: z.string(),
     alt_names: z.array(z.string()).default([]),
-    kind: z.enum(['polity', 'power']),
+    /** Official names over time; `name` is the fallback. */
+    names: z.array(z.object({ from: dateStr, name: z.string() }).strict()).default([]),
+    kind: z.enum(['polity', 'power', 'province', 'state', 'tribal', 'foreign', 'dominion']),
     color: hex,
     summary: z.string(),
     sources: cites,
   })
   .strict()
+const Meta = z.object({ title: z.string(), subtitle: z.string(), range: z.tuple([z.number(), z.number()]) }).strict()
 const KeyframeRaw = z
   .object({
     date: dateStr,
@@ -54,7 +57,7 @@ const Place = z
     modern: z.string().optional(),
     coords: lngLat,
     approx: z.boolean().default(false),
-    tags: z.array(z.enum(['port', 'fort', 'factory', 'capital', 'battle', 'pilgrimage', 'movement'])),
+    tags: z.array(z.enum(['port', 'fort', 'factory', 'capital', 'battle', 'pilgrimage', 'movement', 'city', 'hill-station', 'prison'])),
     why: z.string().optional(),
     control: z.array(Control).default([]),
     sources: cites,
@@ -72,7 +75,7 @@ const Event = z
     end: dateStr.optional(),
     approx: z.boolean().optional(),
     place: id,
-    kind: z.enum(['battle', 'treaty', 'political', 'campaign', 'atrocity', 'movement', 'famine', 'founding']),
+    kind: z.enum(['battle', 'treaty', 'political', 'campaign', 'atrocity', 'movement', 'famine', 'founding', 'revolt', 'law']),
     significance: z.number().int().min(1).max(5),
     participants: z.array(id).default([]),
     summary: z.string(),
@@ -159,6 +162,7 @@ function uniqueIds(kind: string, items: { id: string }[]) {
 const hexToRgb = (h: string): [number, number, number] => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16)) as never
 
 // ---- load
+const meta = load('meta.yaml', Meta)[0]
 const sources = load('sources.yaml', Source)
 const polities = load('polities.yaml', Polity)
 const keyframesRaw = load('territory.yaml', KeyframeRaw)
@@ -176,8 +180,8 @@ const personIds = new Set(people.map((p) => p.id))
 const eventIds = new Set(events.map((e) => e.id))
 
 const units = JSON.parse(readFileSync(join(OUT, 'base', 'units-1941.geojson'), 'utf8')).features.map(
-  (f: { properties: { id: string; name: string; division: string } }) => f.properties,
-) as { id: string; name: string; division: string }[]
+  (f: { properties: { id: string; name: string; division: string; type: string | null } }) => f.properties,
+) as { id: string; name: string; division: string; type: string | null }[]
 const unitIds = new Set(units.map((u) => u.id))
 
 function checkCites(where: string, ids: string[]) {
@@ -188,15 +192,37 @@ for (const p of polities) checkCites(`polities.yaml[${p.id}]`, p.sources)
 for (const p of people) checkCites(`people[${p.id}]`, p.sources)
 
 // ---- territory: expand selectors, accumulate state
+/**
+ * Selector grammar, space-separated tokens:
+ *   <unit-id>                    one unit
+ *   division:<Division>[|filter] every unit in a division; filter is british, princely or proxy
+ *   -<unit-id>                   remove a unit from the set built so far
+ */
+const isPrincely = (u: (typeof units)[number]) => /princely/i.test(u.type ?? '')
+const isProxy = (u: (typeof units)[number]) => u.type === 'Proxy'
 function expand(where: string, selector: string): string[] {
-  if (selector.startsWith('division:')) {
-    const div = selector.slice('division:'.length)
-    const hit = units.filter((u) => u.division === div).map((u) => u.id)
-    if (!hit.length) fail(where, `no units in division "${div}"`)
-    return hit
+  const out = new Set<string>()
+  for (const tok of selector.trim().split(/\s+/)) {
+    if (tok.startsWith('-')) {
+      const u = tok.slice(1)
+      if (!out.delete(u)) fail(where, `cannot remove "${u}": not in "${selector}"`)
+    } else if (tok.startsWith('division:')) {
+      const [div, filter] = tok.slice('division:'.length).split('|')
+      const divName = div.replace(/_/g, ' ')
+      const hit = units.filter(
+        (u) =>
+          u.division === divName &&
+          (!filter ||
+            (filter === 'princely' && isPrincely(u)) ||
+            (filter === 'proxy' && isProxy(u)) ||
+            (filter === 'british' && !isPrincely(u) && !isProxy(u) && u.type === 'British districts')),
+      )
+      if (!hit.length) fail(where, `no units match "${tok}"`)
+      hit.forEach((u) => out.add(u.id))
+    } else if (unitIds.has(tok)) out.add(tok)
+    else fail(where, `unknown unit "${tok}"`)
   }
-  if (!unitIds.has(selector)) fail(where, `unknown unit "${selector}"`)
-  return [selector]
+  return [...out]
 }
 
 const keyframes: Keyframe[] = []
@@ -327,12 +353,23 @@ if (errors.length) {
 
 const content: Content = {
   status: 'draft',
-  range: [1740, 1766],
+  title: meta.title,
+  subtitle: meta.subtitle,
+  range: meta.range,
   sources: Object.fromEntries(sources.map((s) => [s.id, s])),
   polities: Object.fromEntries(
     polities.map((p) => [
       p.id,
-      { id: p.id, name: p.name, altNames: p.alt_names, kind: p.kind, color: hexToRgb(p.color), summary: p.summary, sources: p.sources },
+      {
+        id: p.id,
+        name: p.name,
+        altNames: p.alt_names,
+        names: p.names.map((n) => ({ date: parseDate(n.from), name: n.name })),
+        kind: p.kind,
+        color: hexToRgb(p.color),
+        summary: p.summary,
+        sources: p.sources,
+      },
     ]),
   ),
   keyframes,

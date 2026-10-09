@@ -1,0 +1,266 @@
+# British Raj territory, 1857–1947, as sets of base units (D6, D24).
+# Selectors: unit id | division:<Division>[|british|princely|proxy] | -<unit id> to remove. Spaces in a
+# division name are written as "_".
+# Units outside present-day India are present-day district proxies (geoboundaries), so borders there
+# are approximate.
+- date: "1857"
+  certainty: approximate
+  note: >-
+    On the eve of the revolt. Company territory has reached its greatest extent: Dalhousie has annexed
+    Punjab (1849), Pegu (1852), Nagpur and Jhansi (by lapse, 1853–54) and Oudh (1856). The princely
+    states cover about two-fifths of the subcontinent.
+  sources: [schwartzberg, igi-atlas-1931, wp-presidencies, isd-1941, geoboundaries]
+  assign:
+    bengal-presidency:
+      - division:Bengal|british
+      - division:Bihar
+      - orissa--balasore orissa--cuttack orissa--puri orissa--sambalpur
+      - division:BGD:Barisal division:BGD:Chittagong division:BGD:Dhaka division:BGD:Khulna
+      - division:BGD:Mymensingh division:BGD:Noakhali division:BGD:Rajshani division:BGD:Rangpur
+      - division:BGD:Sylhet assam--sylhet
+      - assam--goalpara assam--kamrup assam--darrang assam--nowgong assam--sibsagar assam--lakhimpur
+      - assam--cachar assam--khasi-and-jaintia-hills
+    madras-presidency: [division:Madras|british, orissa--ganjam, orissa--koraput]
+    bombay-presidency:
+      - division:Bombay|british
+      - division:PAK:Sindh -pak--khairpur
+    up:
+      - >-
+        division:United_Province|british -united-province--lucknow -united-province--unao
+        -united-province--rae-bareli -united-province--sitapur -united-province--hardoi
+        -united-province--kheri -united-province--fyzabad -united-province--gonda
+        -united-province--bahraich -united-province--sultanpur -united-province--partabgarh
+        -united-province--bara-banki
+      - central-province-and-berar--saugor central-province-and-berar--jubbulpore
+      - central-province-and-berar--hoshangabad central-province-and-berar--mandla
+      - central-province-and-berar--betul
+      - delhi--delhi
+    oudh:
+      - united-province--lucknow united-province--unao united-province--rae-bareli
+      - united-province--sitapur united-province--hardoi united-province--kheri
+      - united-province--fyzabad united-province--gonda united-province--bahraich
+      - united-province--sultanpur united-province--partabgarh united-province--bara-banki
+    punjab:
+      - division:Punjab|british
+      - himachal--shimla
+      - division:PAK:Punjab -pak--bahawalpur -pak--bahawalnagar -pak--rahim-yar-khan
+      - division:PAK:Islamabad_Capital_Territory
+      - pak--peshawar pak--kohat pak--bannu pak--dera-ismail-khan pak--abbottabad pak--mansehra
+      - pak--haripur pak--mardan pak--charsadda pak--nowshera pak--swabi pak--karak
+      - pak--lakki-marwat pak--tank pak--hangu
+    nagpur-province:
+      - central-province-and-berar--nagpur central-province-and-berar--wardha
+      - central-province-and-berar--bhandara central-province-and-berar--chanda
+      - central-province-and-berar--balaghat central-province-and-berar--raipur
+      - central-province-and-berar--bilaspur central-province-and-berar--drug
+      - central-province-and-berar--chhindwara
+    berar:
+      - central-province-and-berar--akola central-province-and-berar--amraoti
+      - central-province-and-berar--buldana central-province-and-berar--yeotmal
+    ajmer-merwara: [almer-marwara--ajmer-merwara]
+    coorg: [coorg--coorg]
+    mysore-commission: [division:Mysore]
+    burma: [mmr--rakhine, mmr--tanitharyi, mmr--bago, mmr--yangon, mmr--ayeyarwady, mmr--mon, mmr--kayin]
+    kingdom-of-burma: [mmr--mandalay, mmr--saigang, mmr--magway, mmr--chin, mmr--kachin, mmr--kayah]
+    shan-states: [mmr--shan]
+    hyderabad-state: [division:Hyderabad]
+    baroda: [division:Baroda]
+    gwalior: [division:Gwalior, central-province-and-berar--nimar]
+    jammu-kashmir: [division:Jammu_and_kashmir]
+    travancore-state: [madras--travancore]
+    cochin-state: [madras--cochin]
+    madras-states: [madras--pudukkottai, madras--sandur, madras--banganapalle]
+    rajputana-states: [division:Rajputana_Agency]
+    central-india-states: [division:Central_India_Agency]
+    western-india-states: [division:Western_India_State_Agency, division:Rann_of_Kutch]
+    deccan-states: [division:Bombay|princely]
+    orissa-states: [division:Orissa|princely]
+    chhattisgarh-states: [division:Central_Province_and_Berar|princely]
+    punjab-states: [division:Punjab|princely]
+    eastern-states: [division:Bengal|princely, division:Assam|princely]
+    up-states: [division:United_Province|princely]
+    sikkim: [division:Sikkim]
+    bahawalpur: [pak--bahawalpur, pak--bahawalnagar, pak--rahim-yar-khan]
+    khairpur: [pak--khairpur]
+    baluchistan-states:
+      - pak--kalat pak--khuzdar pak--mastung pak--kachhi pak--jhal-magsi pak--awaran pak--nasirabad
+      - pak--jafarabad pak--kharan pak--lasbela pak--kech pak--panjgur pak--quetta pak--chagai pak--nushki
+    oman: [pak--gwadar]
+    afghanistan: [pak--pishin, pak--qilla-abdullah, pak--sibi, pak--ziarat]
+    frontier-states: [pak--swat, pak--buner, pak--shangla, pak--upper-dir, pak--lower-dir, pak--chitral]
+    tribal-areas:
+      - pak--bajaur pak--mohmand pak--khyber pak--kurram pak--orakzai pak--north-waziristan
+      - pak--south-waziristan pak--malakand pak--kohistan pak--battagram
+      - pak--zhob pak--loralai pak--musakhel pak--qilla-saifullah pak--barkhan pak--kohlu pak--dera-bugti
+      - assam--naga-hills naga-tribes--naga-tribes assam--lushai-hills assam--garo-hills
+      - assam--sadiya-frontier-tract-n-e-f-a assam--balipara-frontier-tract-n-e-f-a
+    french: [pondicherry--pondicherry, karikal--karikal, mahe--mahe]
+    portuguese: [goa--goa, daman--daman, daman--daman-2]
+- date: "1858-02"
+  certainty: confident
+  note: After its recapture, Delhi is moved from the North-Western Provinces to Punjab as punishment.
+  sources: [wp-delhi-province, wp-punjab-province]
+  changes:
+    punjab: [delhi--delhi]
+- date: "1861-11-02"
+  certainty: approximate
+  note: Nagpur Province and the Saugor and Nerbudda Territories are merged into the new Central Provinces.
+  sources: [wp-cp]
+  changes:
+    central-provinces:
+      - division:Central_Province_and_Berar|british -central-province-and-berar--akola
+        -central-province-and-berar--amraoti -central-province-and-berar--buldana
+        -central-province-and-berar--yeotmal
+- date: "1862"
+  certainty: approximate
+  note: Sambalpur is transferred from Bengal to the Central Provinces.
+  sources: [wp-cp]
+  changes:
+    central-provinces: [orissa--sambalpur]
+- date: "1874-02-06"
+  certainty: approximate
+  note: >-
+    Assam is separated from Bengal as a chief commissionership. Sylhet, a Bengali-speaking district, is
+    attached to it, a decision that shaped the 1947 referendum.
+  sources: [wp-assam-province]
+  changes:
+    assam:
+      - division:BGD:Sylhet assam--sylhet
+      - assam--goalpara assam--kamrup assam--darrang assam--nowgong assam--sibsagar assam--lakhimpur
+      - assam--cachar assam--khasi-and-jaintia-hills assam--naga-hills assam--garo-hills
+- date: "1877-02"
+  certainty: confident
+  note: Oudh is merged with the North-Western Provinces under a single lieutenant-governor.
+  sources: [wp-nwp, wp-up]
+  changes:
+    up:
+      - united-province--lucknow united-province--unao united-province--rae-bareli
+      - united-province--sitapur united-province--hardoi united-province--kheri
+      - united-province--fyzabad united-province--gonda united-province--bahraich
+      - united-province--sultanpur united-province--partabgarh united-province--bara-banki
+- date: "1879-05-26"
+  certainty: approximate
+  note: >-
+    In the Treaty of Gandamak, during the Second Anglo-Afghan War, Afghanistan cedes Pishin and Sibi.
+  sources: [wp-gandamak, wp-baluchistan]
+  changes:
+    baluchistan: [pak--pishin, pak--qilla-abdullah, pak--sibi, pak--ziarat]
+- date: "1881-03-25"
+  certainty: confident
+  note: The "rendition" of Mysore. After fifty years of British administration, Mysore is returned to its Wodeyar ruler.
+  sources: [wp-mysore-rendition]
+  changes:
+    mysore-state: [division:Mysore]
+- date: "1886-01-01"
+  certainty: approximate
+  note: >-
+    After the Third Anglo-Burmese War, Upper Burma is annexed. King Thibaw is exiled to Ratnagiri in
+    India.
+  sources: [wp-third-burmese-war, wp-british-burma]
+  changes:
+    burma: [mmr--mandalay, mmr--saigang, mmr--magway, mmr--chin, mmr--kachin, mmr--kayah]
+- date: "1887-11"
+  certainty: approximate
+  note: >-
+    British Baluchistan is constituted. Quetta, leased from the Khan of Kalat since 1876, becomes its
+    seat.
+  sources: [wp-baluchistan, wp-kalat]
+  changes:
+    baluchistan: [pak--quetta]
+- date: "1890"
+  certainty: approximate
+  note: The Zhob and Loralai tribal country is brought under the Baluchistan Agency.
+  sources: [wp-baluchistan]
+  changes:
+    baluchistan: [pak--zhob, pak--loralai, pak--musakhel, pak--qilla-saifullah, pak--barkhan]
+- date: "1899"
+  certainty: approximate
+  note: Chagai and Nushki are leased from Kalat for the railway towards Persia.
+  sources: [wp-baluchistan]
+  changes:
+    baluchistan: [pak--chagai, pak--nushki]
+- date: "1901-11-09"
+  certainty: confident
+  note: >-
+    Curzon separates the North-West Frontier Province from Punjab to manage the Afghan border directly.
+  sources: [wp-nwfp]
+  changes:
+    nwfp:
+      - pak--peshawar pak--kohat pak--bannu pak--dera-ismail-khan pak--abbottabad pak--mansehra
+      - pak--haripur pak--mardan pak--charsadda pak--nowshera pak--swabi pak--karak
+      - pak--lakki-marwat pak--tank pak--hangu
+- date: "1903-10"
+  certainty: approximate
+  note: Berar, leased in perpetuity from the Nizam in 1902, is attached to the Central Provinces.
+  sources: [wp-berar]
+  changes:
+    central-provinces:
+      - central-province-and-berar--akola central-province-and-berar--amraoti
+      - central-province-and-berar--buldana central-province-and-berar--yeotmal
+- date: "1905-10-16"
+  certainty: approximate
+  note: >-
+    Curzon's partition of Bengal. Eastern Bengal and Assam is formed with its capital at Dacca. Western
+    Bengal keeps Bihar and Orissa, and gains Sambalpur.
+  sources: [wp-partition-bengal-1905, wp-ebna]
+  changes:
+    eastern-bengal-assam:
+      - division:BGD:Barisal division:BGD:Chittagong division:BGD:Dhaka division:BGD:Khulna
+      - division:BGD:Mymensingh division:BGD:Noakhali division:BGD:Rajshani division:BGD:Rangpur
+      - division:BGD:Sylhet assam--sylhet bengal--malda bengal--dinajpur bengal--jalpaiguri
+      - assam--goalpara assam--kamrup assam--darrang assam--nowgong assam--sibsagar assam--lakhimpur
+      - assam--cachar assam--khasi-and-jaintia-hills assam--naga-hills assam--garo-hills
+    bengal-presidency: [orissa--sambalpur]
+- date: "1912-04-01"
+  certainty: approximate
+  note: >-
+    The partition is annulled, as announced at the Delhi Durbar of December 1911. Bengal is reunited;
+    Bihar and Orissa becomes a new province; Assam is restored; and Delhi becomes the new capital as
+    its own province.
+  sources: [wp-partition-bengal-1905, wp-bihar-orissa, wp-delhi-province]
+  changes:
+    bengal-presidency:
+      - division:BGD:Barisal division:BGD:Chittagong division:BGD:Dhaka division:BGD:Khulna
+      - division:BGD:Mymensingh division:BGD:Noakhali division:BGD:Rajshani division:BGD:Rangpur
+      - bengal--malda bengal--dinajpur bengal--jalpaiguri
+    assam:
+      - division:BGD:Sylhet assam--sylhet
+      - assam--goalpara assam--kamrup assam--darrang assam--nowgong assam--sibsagar assam--lakhimpur
+      - assam--cachar assam--khasi-and-jaintia-hills assam--naga-hills assam--garo-hills
+    bihar: [division:Bihar, orissa--balasore, orissa--cuttack, orissa--puri, orissa--sambalpur]
+    delhi: [delhi--delhi]
+- date: "1936-04-01"
+  certainty: confident
+  note: >-
+    Two new provinces. Orissa is formed on linguistic lines, and Sind is separated from Bombay.
+  sources: [wp-orissa-province, wp-sind-province]
+  changes:
+    orissa: [orissa--balasore, orissa--cuttack, orissa--puri, orissa--sambalpur, orissa--ganjam, orissa--koraput]
+    sind: [division:PAK:Sindh -pak--khairpur]
+- date: "1947-08-15"
+  certainty: approximate
+  note: >-
+    Independence and Partition. The British provinces are divided between the Dominions of India and
+    Pakistan; Punjab and Bengal are split along the Radcliffe Line, and Sylhet joins East Bengal by
+    referendum. Princely states are shown as they stood: most had acceded to India, some to Pakistan,
+    while Hyderabad, Junagadh and Kashmir were still in dispute. Borders here follow the present-day
+    boundary, which closely tracks the Radcliffe Line.
+  sources: [wp-partition-1947, wp-indian-independence-act]
+  changes:
+    dominion-india:
+      - division:Bengal|british division:Bihar division:Orissa|british division:Assam|british
+      - division:United_Province|british division:Punjab|british himachal--shimla delhi--delhi
+      - division:Madras|british division:Bombay|british division:Central_Province_and_Berar|british
+      - almer-marwara--ajmer-merwara coorg--coorg naga-tribes--naga-tribes
+    dominion-pakistan:
+      - division:BGD:Barisal division:BGD:Chittagong division:BGD:Dhaka division:BGD:Khulna
+      - division:BGD:Mymensingh division:BGD:Noakhali division:BGD:Rajshani division:BGD:Rangpur
+      - division:BGD:Sylhet
+      - division:PAK:Sindh -pak--khairpur
+      - division:PAK:Punjab -pak--bahawalpur -pak--bahawalnagar -pak--rahim-yar-khan
+      - division:PAK:Islamabad_Capital_Territory
+      - pak--peshawar pak--kohat pak--bannu pak--dera-ismail-khan pak--abbottabad pak--mansehra
+      - pak--haripur pak--mardan pak--charsadda pak--nowshera pak--swabi pak--karak
+      - pak--lakki-marwat pak--tank pak--hangu
+      - pak--pishin pak--qilla-abdullah pak--sibi pak--ziarat pak--quetta pak--zhob pak--loralai
+      - pak--musakhel pak--qilla-saifullah pak--barkhan pak--chagai pak--nushki

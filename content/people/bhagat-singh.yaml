@@ -1,0 +1,22 @@
+id: bhagat-singh
+name: Bhagat Singh
+tier: 1
+born: "1907-09-28"
+died: "1931-03-23"
+role: Revolutionary, Hindustan Socialist Republican Association
+summary: >-
+  A socialist revolutionary. He was involved in the killing of J. P. Saunders to avenge Lajpat Rai,
+  and in the Assembly bombing. His trial and execution at 23 made him a national hero.
+perspectives:
+  - view: Popular memory
+    text: '"Shaheed-e-Azam", the great martyr.'
+  - view: Gandhian position
+    text: Gandhi condemned the violence and did not make his commutation a condition of the Irwin pact. Many criticised him for this at the time.
+sources: [wp-bhagat-singh]
+itinerary:
+  - { date: "1928-12-17", place: lahore, note: Saunders shot }
+  - { date: "1929-04-08", place: delhi, note: Bombs in the Central Assembly; courts arrest }
+  - { date: "1929-07", place: lahore, note: Lahore conspiracy trial; hunger strike }
+  - { date: "1930-04", place: lahore }
+  - { date: "1930-10", place: lahore, note: Sentenced to death }
+  - { date: "1931-03-23", place: lahore, note: Hanged }

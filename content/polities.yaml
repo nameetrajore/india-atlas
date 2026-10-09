@@ -120,3 +120,388 @@
   summary: >-
     The first European power in India. By the 18th century it held only Goa, Daman and Diu.
   sources: [wp-portuguese-india]
+
+# ---- British Raj, 1857–1947 (D24)
+# Atlas convention of the period: British India in shades of pink, princely states in yellow.
+- id: bengal-presidency
+  name: Bengal Presidency
+  names:
+    - { from: "1765", name: Bengal Presidency }
+    - { from: "1905-10-16", name: Bengal (after partition) }
+    - { from: "1912-04-01", name: Bengal Presidency }
+  kind: province
+  color: "#e79a92"
+  summary: >-
+    The largest and oldest British province, governed from Calcutta. In 1857 it covered Bengal, Bihar,
+    Orissa and, until 1874, Assam. It was split in 1905, reunited in 1912, and partitioned between India
+    and Pakistan in 1947.
+  sources: [wp-bengal-presidency, wp-presidencies]
+- id: madras-presidency
+  name: Madras Presidency
+  kind: province
+  color: "#eeb2a2"
+  summary: >-
+    The southern presidency, governed from Madras (Fort St George). It was stable in extent through the
+    Raj, apart from losing Ganjam and Koraput to Orissa in 1936.
+  sources: [wp-madras-presidency]
+- id: bombay-presidency
+  name: Bombay Presidency
+  kind: province
+  color: "#dd8a8f"
+  summary: >-
+    The western presidency, governed from Bombay. It included Sind until 1936, and many small princely
+    states were attached to it.
+  sources: [wp-bombay-presidency, wp-presidencies]
+- id: up
+  name: United Provinces
+  names:
+    - { from: "1836", name: North-Western Provinces }
+    - { from: "1877-02", name: North-Western Provinces and Oudh }
+    - { from: "1902-03-22", name: United Provinces of Agra and Oudh }
+    - { from: "1937-04-01", name: United Provinces }
+  kind: province
+  color: "#f2bfb2"
+  summary: >-
+    The upper Ganges plain, a heartland of the 1857 revolt. It began as the North-Western Provinces,
+    absorbed Oudh in 1877, and was renamed the United Provinces in 1902.
+  sources: [wp-nwp, wp-up]
+- id: oudh
+  name: Chief Commissionership of Oudh
+  alt_names: [Awadh]
+  kind: province
+  color: "#e7a3ad"
+  summary: >-
+    Annexed by Dalhousie in February 1856 on grounds of "misgovernment". The annexation was a major
+    grievance in 1857, when Lucknow was besieged. It was merged with the North-Western Provinces in 1877.
+  sources: [wp-oudh-province]
+- id: punjab
+  name: Punjab
+  kind: province
+  color: "#e3958a"
+  summary: >-
+    Annexed in 1849 after the Anglo-Sikh wars. It became a major recruiting ground for the Indian Army,
+    and it was partitioned in 1947.
+  sources: [wp-punjab-province]
+- id: nagpur-province
+  name: Nagpur Province
+  kind: province
+  color: "#eaa59c"
+  summary: The Bhonsle kingdom of Nagpur, annexed by lapse in 1853. It was merged into the Central Provinces in 1861.
+  sources: [wp-cp]
+- id: central-provinces
+  name: Central Provinces
+  names:
+    - { from: "1861-11-02", name: Central Provinces }
+    - { from: "1936", name: Central Provinces and Berar }
+  kind: province
+  color: "#f0b7aa"
+  summary: >-
+    Formed in 1861 from Nagpur Province and the Saugor and Nerbudda Territories. Berar was attached in
+    1903.
+  sources: [wp-cp]
+- id: berar
+  name: Berar (Hyderabad Assigned Districts)
+  kind: province
+  color: "#e9ab9f"
+  summary: >-
+    Assigned by the Nizam of Hyderabad to the British in 1853 to pay for troops. It was formally still
+    Hyderabad's, and from 1903 it was run as part of the Central Provinces.
+  sources: [wp-berar]
+- id: assam
+  name: Assam
+  kind: province
+  color: "#e49aa2"
+  summary: >-
+    Separated from Bengal as a chief commissionership in 1874, with Sylhet attached. It was merged into
+    Eastern Bengal and Assam from 1905 to 1912, and became a governor's province in 1921.
+  sources: [wp-assam-province]
+- id: eastern-bengal-assam
+  name: Eastern Bengal and Assam
+  kind: province
+  color: "#d97f8a"
+  summary: >-
+    The province created by Curzon's partition of Bengal in 1905, with its capital at Dacca. It had a
+    Muslim majority. Mass protest (the Swadeshi movement) forced the partition to be annulled in 1911.
+  sources: [wp-ebna, wp-partition-bengal-1905]
+- id: bihar
+  name: Bihar
+  names:
+    - { from: "1912-04-01", name: Bihar and Orissa }
+    - { from: "1936-04-01", name: Bihar }
+  kind: province
+  color: "#ecaf9b"
+  summary: >-
+    Carved out of Bengal in 1912 as Bihar and Orissa, with its capital at Patna. Orissa was separated
+    in 1936.
+  sources: [wp-bihar-orissa]
+- id: orissa
+  name: Orissa
+  kind: province
+  color: "#f3c4b3"
+  summary: >-
+    The first Indian province drawn on linguistic lines (1936), formed from Bihar and Orissa and the
+    Oriya-speaking districts of Madras.
+  sources: [wp-orissa-province]
+- id: sind
+  name: Sind
+  kind: province
+  color: "#e5a08c"
+  summary: Conquered in 1843 and governed as part of Bombay until it became a separate province in 1936.
+  sources: [wp-sind-province]
+- id: nwfp
+  name: North-West Frontier Province
+  kind: province
+  color: "#d98c83"
+  summary: >-
+    Separated from Punjab by Curzon in 1901 to manage the Afghan frontier. It was the base of Abdul
+    Ghaffar Khan's Khudai Khidmatgar movement.
+  sources: [wp-nwfp]
+- id: baluchistan
+  name: British Baluchistan
+  alt_names: [Baluchistan Agency]
+  kind: province
+  color: "#e8b1a0"
+  summary: >-
+    Built up from the Quetta lease (1876) and the districts ceded by Afghanistan at Gandamak (1879).
+    It was a chief commissioner's province from 1887.
+  sources: [wp-baluchistan, wp-gandamak]
+- id: burma
+  name: Burma
+  names:
+    - { from: "1852", name: Lower Burma (under Bengal) }
+    - { from: "1862-01-31", name: British Burma }
+    - { from: "1886-01-01", name: Province of Burma }
+    - { from: "1937-04-01", name: Burma (separated from India) }
+  kind: province
+  color: "#eab7c0"
+  summary: >-
+    Conquered in three wars (1824–1885) and governed as a province of British India until 1937, when it
+    became a separate colony.
+  sources: [wp-british-burma, wp-third-burmese-war]
+- id: delhi
+  name: Delhi Province
+  kind: province
+  color: "#c96f78"
+  summary: >-
+    Separated from Punjab in 1912 after the capital moved from Calcutta. New Delhi was inaugurated in
+    1931.
+  sources: [wp-delhi-province]
+- id: ajmer-merwara
+  name: Ajmer-Merwara
+  kind: province
+  color: "#d6858b"
+  summary: A small British enclave among the Rajputana states, ceded by Sindhia in 1818.
+  sources: [wp-ajmer-merwara]
+- id: coorg
+  name: Coorg
+  kind: province
+  color: "#e08f8f"
+  summary: A small hill kingdom annexed in 1834 and governed as a chief commissioner's province.
+  sources: [wp-coorg]
+- id: mysore-commission
+  name: Mysore (British commission)
+  kind: province
+  color: "#e9bf9a"
+  summary: >-
+    The British took over Mysore's administration in 1831 and returned it to the Wodeyar dynasty in
+    1881 (the "rendition").
+  sources: [wp-mysore-rendition]
+# Princely states and agencies: yellows
+- id: hyderabad-state
+  name: Hyderabad
+  alt_names: [Nizam's Dominions]
+  kind: state
+  color: "#e3c25e"
+  summary: >-
+    The largest and richest princely state, ruled by the Nizam. In 1948 India annexed it by force
+    ("Operation Polo").
+  sources: [wp-hyderabad, isd-princely]
+- id: mysore-state
+  name: Mysore
+  kind: state
+  color: "#ead17f"
+  summary: >-
+    A princely state from 1881, after its rendition. It was a model "progressive" state, with
+    Bangalore as its leading city.
+  sources: [wp-mysore, isd-princely]
+- id: jammu-kashmir
+  name: Jammu and Kashmir
+  kind: state
+  color: "#e8cc6c"
+  summary: >-
+    Created by the Treaty of Amritsar (1846). Its Hindu ruler governed a Muslim-majority population, and
+    its accession in October 1947 began the Kashmir dispute.
+  sources: [wp-princely-states, isd-princely]
+- id: baroda
+  name: Baroda
+  kind: state
+  color: "#dcbf55"
+  summary: The Gaekwad's state in Gujarat, one of the five largest gun-salute states.
+  sources: [isd-princely]
+- id: gwalior
+  name: Gwalior
+  kind: state
+  color: "#e6c766"
+  summary: >-
+    The Sindhia's state. Its army joined the rebels in 1857, and Rani Lakshmibai died in battle near
+    Gwalior.
+  sources: [isd-princely]
+- id: travancore-state
+  name: Travancore
+  kind: state
+  color: "#efd88e"
+  summary: >-
+    A princely state in the far south, known for high literacy. The 1936 Temple Entry Proclamation
+    opened its temples to all castes.
+  sources: [wp-travancore, isd-princely]
+- id: cochin-state
+  name: Cochin
+  kind: state
+  color: "#e2c973"
+  summary: A princely state on the Malabar coast.
+  sources: [isd-princely]
+- id: rajputana-states
+  name: Rajputana Agency states
+  kind: state
+  color: "#ecd283"
+  summary: >-
+    About 20 Rajput and other states (Jaipur, Jodhpur, Udaipur, Bikaner and others) under a British
+    political agent.
+  sources: [isd-princely, wp-princely-states]
+- id: central-india-states
+  name: Central India Agency states
+  kind: state
+  color: "#e7cb76"
+  summary: Indore, Bhopal, Rewa and dozens of smaller states and estates.
+  sources: [isd-princely]
+- id: western-india-states
+  name: Western India States
+  alt_names: [Kathiawar Agency]
+  kind: state
+  color: "#f0db96"
+  summary: >-
+    Junagadh, Nawanagar, Bhavnagar, Cutch and over 200 smaller states and talukas in Gujarat. Gandhi's
+    birthplace, Porbandar, was one of them.
+  sources: [isd-princely]
+- id: deccan-states
+  name: Bombay and Deccan states
+  kind: state
+  color: "#e5c46a"
+  summary: Kolhapur, Sangli, Bhor and other states attached to the Bombay Presidency.
+  sources: [isd-princely]
+- id: orissa-states
+  name: Orissa feudatory states
+  kind: state
+  color: "#ebd079"
+  summary: Mayurbhanj, Keonjhar and about 24 other states attached to Bengal, later Bihar and Orissa.
+  sources: [isd-princely]
+- id: chhattisgarh-states
+  name: Chhattisgarh feudatory states
+  kind: state
+  color: "#e1c36b"
+  summary: Bastar, Surguja and about 13 other states attached to the Central Provinces.
+  sources: [isd-princely]
+- id: punjab-states
+  name: Punjab and Simla Hill states
+  kind: state
+  color: "#ecd38a"
+  summary: The Phulkian states (Patiala, Nabha, Jind), Kapurthala, and the hill states around Simla.
+  sources: [isd-princely]
+- id: eastern-states
+  name: Eastern states
+  kind: state
+  color: "#e9cf7e"
+  summary: Cooch Behar, Tripura, Manipur and the Khasi states.
+  sources: [isd-princely]
+- id: madras-states
+  name: Madras states
+  kind: state
+  color: "#e8ce83"
+  summary: Pudukkottai, Banganapalle and Sandur.
+  sources: [isd-princely]
+- id: up-states
+  name: United Provinces states
+  kind: state
+  color: "#e4c873"
+  summary: Rampur, Benares and Tehri Garhwal.
+  sources: [isd-princely]
+- id: sikkim
+  name: Sikkim
+  kind: state
+  color: "#ddc778"
+  summary: A Himalayan kingdom under British protection from 1861.
+  sources: [isd-princely]
+- id: bahawalpur
+  name: Bahawalpur
+  kind: state
+  color: "#e7c86a"
+  summary: A large princely state on the Sutlej. It acceded to Pakistan in 1947.
+  sources: [isd-princely]
+- id: khairpur
+  name: Khairpur
+  kind: state
+  color: "#ecd590"
+  summary: A princely state in Sind ruled by the Talpur Mirs.
+  sources: [isd-princely]
+- id: baluchistan-states
+  name: Baluchistan states
+  alt_names: [Kalat, Kharan, Las Bela, Makran]
+  kind: state
+  color: "#e9d39a"
+  summary: The Khanate of Kalat and its feudatories, Kharan, Las Bela and Makran.
+  sources: [wp-kalat, wp-baluchistan]
+- id: frontier-states
+  name: Frontier states
+  alt_names: [Swat, Dir, Chitral]
+  kind: state
+  color: "#e3cb86"
+  summary: Swat, Dir and Chitral, under the Malakand political agency.
+  sources: [wp-nwfp]
+- id: shan-states
+  name: Shan States
+  kind: state
+  color: "#ead396"
+  summary: Shan principalities, tributary to the Burmese crown until 1885 and then under British protection.
+  sources: [wp-shan-states]
+- id: tribal-areas
+  name: Tribal areas
+  kind: tribal
+  color: "#cfc4a6"
+  summary: >-
+    Pashtun and Baloch tribal territories on the Afghan frontier. They were controlled through political
+    agents, subsidies and punitive expeditions rather than direct administration.
+  sources: [wp-fata]
+- id: kingdom-of-burma
+  name: Kingdom of Burma (Konbaung)
+  kind: foreign
+  color: "#bfb6a5"
+  summary: The independent Burmese kingdom at Mandalay, conquered in the Third Anglo-Burmese War (1885).
+  sources: [wp-konbaung, wp-third-burmese-war]
+- id: afghanistan
+  name: Emirate of Afghanistan
+  kind: foreign
+  color: "#b9b4a6"
+  summary: Ceded Pishin and Sibi to the British by the Treaty of Gandamak (1879).
+  sources: [wp-afghanistan-emirate, wp-gandamak]
+- id: oman
+  name: Sultanate of Muscat and Oman
+  kind: foreign
+  color: "#b4b0a8"
+  summary: Held the port of Gwadar on the Makran coast from 1783 until it sold it to Pakistan in 1958.
+  sources: [wp-gwadar]
+- id: dominion-india
+  name: Dominion of India
+  kind: dominion
+  color: "#e3a35f"
+  summary: >-
+    Independent from 15 August 1947 under the Indian Independence Act. Most princely states acceded to
+    it, a few (Hyderabad, Junagadh, Kashmir) only after crises.
+  sources: [wp-indian-independence-act, wp-partition-1947]
+- id: dominion-pakistan
+  name: Dominion of Pakistan
+  kind: dominion
+  color: "#7fa57a"
+  summary: >-
+    Created on 14–15 August 1947 in two wings, West and East (East Bengal), separated by about 1,600 km
+    of India.
+  sources: [wp-indian-independence-act, wp-partition-1947]

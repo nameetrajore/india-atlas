@@ -1,0 +1,17 @@
+# Tier-2 people (D19): shown at their events, no itinerary.
+- { id: mangal-pandey, name: Mangal Pandey, tier: 2, died: "1857-04-08", role: "Sepoy, 34th Bengal Native Infantry", summary: Attacked his officers at Barrackpore in March 1857 and was hanged. A symbol of the revolt., sources: [wp-mangal-pandey] }
+- { id: bahadur-shah-zafar, name: Bahadur Shah Zafar, tier: 2, died: "1862-11-07", role: Last Mughal emperor, summary: "Proclaimed leader of the revolt in 1857, tried, and exiled to Rangoon. A noted Urdu poet.", sources: [wp-siege-delhi] }
+- { id: nana-sahib, name: Nana Sahib, tier: 2, role: Adopted heir of the last Peshwa, summary: Led the rebels at Cawnpore and disappeared into Nepal in 1859., sources: [wp-cawnpore] }
+- { id: begum-hazrat-mahal, name: Begum Hazrat Mahal, tier: 2, role: Begum of Oudh, summary: Led resistance in Lucknow in 1857–58 in the name of her son. She died in exile in Kathmandu., sources: [wp-lucknow-siege] }
+- { id: syed-ahmad-khan, name: Sir Syed Ahmad Khan, tier: 2, role: Educationist and reformer, summary: Founded the Aligarh college to bring Muslims modern education., sources: [wp-amu] }
+- { id: birsa-munda, name: Birsa Munda, tier: 2, died: "1900-06-09", role: Munda leader, summary: "Led the Ulgulan of 1899–1900 and died in Ranchi jail aged 25. Revered as 'Dharti Aaba'.", sources: [wp-birsa] }
+- { id: tilak, name: Bal Gangadhar Tilak, tier: 2, role: Extremist leader, summary: '"Swaraj is my birthright." He was jailed in Mandalay from 1908 to 1914.', sources: [wp-surat-split] }
+- { id: jinnah, name: Muhammad Ali Jinnah, tier: 2, role: Leader of the Muslim League, summary: "A Congressman who brokered the Lucknow Pact. He later led the League's demand for Pakistan and became its first Governor-General.", sources: [wp-lahore-resolution] }
+- { id: patel, name: Vallabhbhai Patel, tier: 2, role: Congress leader, summary: "Led Kheda and Bardoli. As Home Minister after 1947 he oversaw the integration of the princely states.", sources: [wp-bardoli] }
+- { id: nehru, name: Jawaharlal Nehru, tier: 2, role: Congress leader, summary: Congress president at Lahore in 1929 and India's first Prime Minister., sources: [wp-purna-swaraj] }
+- { id: ambedkar, name: B. R. Ambedkar, tier: 2, role: Leader of the Depressed Classes, summary: "A jurist and anti-caste leader who signed the Poona Pact. He later chaired the drafting of India's constitution.", sources: [wp-poona-pact] }
+- { id: lajpat-rai, name: Lala Lajpat Rai, tier: 2, died: "1928-11-17", role: Punjab leader, summary: Died after a police lathi-charge at a Simon Commission protest., sources: [wp-simon] }
+- { id: ram-prasad-bismil, name: Ram Prasad Bismil, tier: 2, died: "1927-12-19", role: HRA revolutionary and poet, summary: Hanged for the Kakori action., sources: [wp-kakori] }
+- { id: surya-sen, name: Surya Sen, tier: 2, died: "1934-01-12", role: Revolutionary, summary: Led the Chittagong raid and was hanged in 1934., sources: [wp-chittagong-raid] }
+- { id: ghaffar-khan, name: Abdul Ghaffar Khan, tier: 2, role: Khudai Khidmatgar leader, summary: '"Frontier Gandhi", who led a non-violent Pashtun movement allied with the Congress.', sources: [wp-qissa-khwani] }
+- { id: sarojini-naidu, name: Sarojini Naidu, tier: 2, role: Poet and Congress leader, summary: The first Indian woman to be Congress president (1925). She led the Dharasana raid., sources: [wp-dharasana] }
