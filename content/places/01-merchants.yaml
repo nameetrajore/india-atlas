@@ -1,0 +1,46 @@
+- id: swally
+  name: Swally Hole
+  modern: Suvali, near Surat
+  coords: [72.6600, 21.1000]
+  approx: true
+  tags: [port, battle]
+  why: >-
+    The anchorage off the mouth of the Tapti where English ships beat a Portuguese squadron in 1612,
+    which won the right to trade at Surat.
+  sources: [wp-swally]
+- id: agra
+  name: Agra
+  modern: Agra
+  coords: [78.0081, 27.1767]
+  tags: [capital, city]
+  why: >-
+    The Mughal capital where William Hawkins asked Jahangir for trading rights in 1609. Later it was
+    the city of the Taj Mahal.
+  sources: [wp-jahangir]
+- id: ajmer
+  name: Ajmer
+  modern: Ajmer
+  coords: [74.6399, 26.4499]
+  tags: [city]
+  why: Jahangir was holding court here when Sir Thomas Roe presented his credentials in January 1616.
+  sources: [wp-thomas-roe]
+- id: hughli
+  name: Hughli
+  modern: Hooghly-Chinsurah
+  coords: [88.4000, 22.9200]
+  approx: true
+  tags: [port, factory]
+  why: >-
+    The Mughal river port of Bengal. The English set up a factory here in 1651, and lost it in the
+    war of 1686–90.
+  control:
+    - { from: "1651", power: eic, note: English factory (trading post) }
+    - { from: "1686-10", power: mughal, note: Seized in Child's War }
+  sources: [keay-honourable]
+- id: ahmednagar
+  name: Ahmednagar
+  modern: Ahilyanagar
+  coords: [74.7496, 19.0948]
+  tags: [city, fort]
+  why: Aurangzeb's camp in the Deccan, where he died in 1707 after decades of war with the Marathas.
+  sources: [wp-aurangzeb]

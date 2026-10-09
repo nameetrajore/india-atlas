@@ -4,10 +4,10 @@ import type { SelectionKind } from '../types'
 
 const LINK = /\[([^\]]+)\]\((event|person|place|polity|unit):([a-z0-9-]+)\)|\*\*([^*]+)\*\*/g
 
-/** Narrative text: paragraphs split by blank lines; [label](kind:id) links open cards; **bold**. */
+/** Narrative text: one paragraph per line (YAML folds blank lines to newlines); [label](kind:id) links open cards; **bold**. */
 export function Prose({ text, className }: { text: string; className?: string }) {
   const select = useStore((s) => s.select)
-  const paras = text.trim().split(/\n\s*\n/)
+  const paras = text.trim().split(/\n+/)
   return (
     <div className={className}>
       {paras.map((p, i) => {

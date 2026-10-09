@@ -1,0 +1,224 @@
+# Events: Merchants at the Mughal court (1600–1707). Each explains why (context), what (summary), and what changed (consequences).
+- id: eic-charter
+  name: East India Company chartered
+  date: "1600-12-31"
+  kind: founding
+  significance: 5
+  summary: >-
+    Elizabeth I grants "the Governor and Company of Merchants of London trading into the East Indies"
+    a 15-year monopoly on English trade east of the Cape of Good Hope. About 200 investors put up the
+    money.
+  context: >-
+    Europe wanted Asian pepper, spices, silk and cotton cloth, and the profits were enormous. For a
+    century the sea route round Africa had been controlled by Portugal from Goa. In the 1590s the Dutch
+    broke in and raised the price of pepper. London merchants decided to send their own ships.
+
+    A voyage to Asia took up to two years and many ships never returned, so no single merchant could
+    carry the risk. A **joint-stock company** spread it across many investors, and a royal monopoly
+    kept other English traders out.
+  consequences: >-
+    The Company was a private business with a public charter. Over time it gained the right to make
+    war, mint coins and govern territory. That mix of trade and state power is what eventually let it
+    rule India.
+  why: The British did not come to India to conquer it. They came to buy things.
+  sources: [wp-eic, keay-honourable, roy-eic]
+- id: swally
+  name: Battle of Swally
+  date: "1612-11-29"
+  place: swally
+  kind: battle
+  significance: 3
+  causes: [eic-charter]
+  summary: >-
+    Two English ships under Thomas Best fight off a larger Portuguese squadron near Surat over several
+    days. Crowds watch from the shore.
+  context: >-
+    Surat was the Mughal Empire's great port. The English had tried to trade there since 1608, but the
+    Portuguese, who controlled shipping in the Arabian Sea and sold passes (cartazes) to Indian ships,
+    pressured the Mughal court to keep them out.
+  consequences: >-
+    The victory showed the Mughals that the English could stand up to the Portuguese at sea. Jahangir
+    permitted an English factory (a trading post) at Surat in 1613.
+  sources: [wp-swally, keay-honourable]
+- id: surat-factory
+  name: English factory at Surat
+  date: "1613-01"
+  place: surat
+  kind: founding
+  significance: 3
+  causes: [swally]
+  summary: >-
+    A Mughal order permits the English to keep a factory at Surat. The word "factory" meant a house
+    for "factors", the agents who bought and stored goods; nothing was manufactured there.
+  context: >-
+    The Mughal Empire was one of the richest states in the world, producing something like a fifth to
+    a quarter of world output by modern estimates. It had no reason to fear a few foreign merchants,
+    and good reason to welcome the silver they paid in.
+  consequences: Surat was the Company's main base in India for the next 70 years.
+  sources: [keay-honourable, maddison-world-economy]
+- id: roe-embassy
+  name: Sir Thomas Roe at Jahangir's court
+  date: "1615-09"
+  end: "1619-02"
+  place: ajmer
+  kind: political
+  significance: 3
+  participants: [thomas-roe, jahangir]
+  causes: [surat-factory]
+  summary: >-
+    James I's ambassador spends three years following the Mughal court, seeking a formal treaty to
+    protect English trade. Jahangir is courteous but grants no treaty, only local permissions.
+  context: >-
+    To the Mughals, England was a small, distant kingdom, and treaties were not how emperors dealt
+    with merchants. Roe's gifts, including an English coach and paintings, were received politely and
+    soon outdone.
+  consequences: >-
+    Roe advised the Company to avoid fortresses and war: "Let this be received as a rule, that if you
+    will profit, seek it at sea, and in quiet trade." For half a century it did.
+  sources: [wp-thomas-roe, keay-honourable]
+- id: amboyna
+  name: Amboyna massacre
+  date: "1623-02"
+  kind: atrocity
+  significance: 3
+  causes: [eic-charter]
+  summary: >-
+    On the island of Ambon in the Spice Islands, the Dutch East India Company tortures and executes ten
+    English traders, along with Japanese and Portuguese men, on charges of plotting to seize the fort.
+  context: >-
+    The Dutch company had ten times the capital of the English one, and it was determined to monopolise
+    cloves, nutmeg and mace by force.
+  consequences: >-
+    The English were driven out of the spice trade. They turned to India and to a trade they had not
+    planned on: Indian cotton cloth, which sold well across Asia and Europe. This was a defeat that
+    redirected the Company towards India.
+  why: The British ended up in India partly because the Dutch drove them out of Indonesia.
+  sources: [wp-amboyna, roy-eic]
+- id: madras-founded
+  name: Madras founded
+  date: "1639-08-22"
+  place: madras
+  kind: founding
+  significance: 3
+  causes: [amboyna]
+  summary: >-
+    Francis Day obtains a strip of coast from a local Nayaka ruler and builds Fort St George. It is the
+    Company's first fortified base in India.
+  context: >-
+    The Coromandel coast's weavers made the finest painted and printed cottons (chintz and calico).
+    The Company needed a secure place to buy, store and ship them, away from Portuguese and Dutch
+    rivals.
+  consequences: >-
+    Weavers and merchants settled around the fort, and Madras grew into a city. It became the base
+    from which the Company would later fight the French in the Carnatic.
+  sources: [wp-fort-st-george, keay-honourable]
+- id: surat-sacked
+  name: Shivaji sacks Surat
+  date: "1664-01"
+  place: surat
+  kind: battle
+  significance: 2
+  participants: [shivaji]
+  summary: >-
+    The Maratha leader Shivaji plunders Surat for several days. The English and Dutch defend their own
+    factories, but the Mughal city is looted. He returns in 1670.
+  context: >-
+    Shivaji was building a Maratha state in the western hills against the Mughals and the sultanate of
+    Bijapur. Surat was the richest Mughal target within reach.
+  consequences: >-
+    Surat's merchants and the Company learned that Mughal power could not protect the coast. The
+    Company began to shift its western base to Bombay, which could be fortified.
+  sources: [wp-sack-of-surat]
+- id: bombay-to-company
+  name: Bombay given to the Company
+  date: "1668-03-27"
+  place: bombay
+  kind: founding
+  significance: 3
+  causes: [surat-sacked]
+  summary: >-
+    Charles II, who received the islands of Bombay from Portugal as part of Catherine of Braganza's
+    dowry in 1661, rents them to the Company for £10 a year.
+  context: >-
+    Bombay had a superb natural harbour and, being islands, could be defended from both Maratha raids
+    and Mughal pressure.
+  consequences: Bombay replaced Surat as the Company's western headquarters in 1687.
+  sources: [wp-bombay-presidency, keay-honourable]
+- id: childs-war
+  name: Child's War with the Mughals
+  date: "1686-10"
+  end: "1690-02"
+  place: hughli
+  kind: battle
+  significance: 4
+  participants: [josiah-child, aurangzeb]
+  causes: [surat-factory]
+  summary: >-
+    Under Sir Josiah Child the Company declares war on the Mughal Empire. It seizes Mughal shipping and
+    attacks Bengal. Aurangzeb responds by seizing its factories and besieging Bombay. The Company
+    begs for peace, pays a fine, and its envoys prostrate themselves before the emperor.
+  context: >-
+    The Company resented the customs duties and demands for payment from Mughal governors in Bengal.
+    Child believed it should behave like a state, holding fortified territory and using force, as the
+    Dutch did.
+  consequences: >-
+    It was a humiliating defeat. While the Mughal Empire was strong, the Company could not fight it, so
+    for another 60 years it went back to trading under Mughal permission. The idea of using force did
+    not go away.
+  why: In 1690 the Company was still weak enough to be crushed by the Mughals.
+  sources: [wp-childs-war, stern-company-state, keay-honourable]
+- id: calcutta-founded
+  name: Calcutta founded
+  date: "1690-08-24"
+  place: calcutta
+  kind: founding
+  significance: 4
+  participants: [job-charnock]
+  causes: [childs-war]
+  summary: >-
+    After peace with Aurangzeb, Job Charnock returns to Bengal and settles at the village of Sutanuti
+    on the Hooghly. In 1698 the Company buys the rights to three villages, including Kalikata. A fort,
+    Fort William, is begun in 1696.
+  context: >-
+    Bengal was the richest Mughal province, producing silk, fine muslin, saltpetre (for gunpowder) and
+    rice. The Company needed a base on the river that it could defend.
+  consequences: >-
+    Calcutta grew fast because it offered safety and trade. From here the Company would take Bengal in
+    the 1750s, and it remained the capital of British India until 1911.
+  sources: [wp-job-charnock, wp-fort-william]
+- id: calico-act
+  name: Calico Act
+  date: "1700"
+  kind: law
+  significance: 2
+  causes: [madras-founded]
+  summary: >-
+    England bans imports of printed Indian cotton cloth to protect its own wool and silk weavers. A
+    second act in 1721 bans wearing it.
+  context: >-
+    Indian calico and chintz were so cheap, light and colourful that they became a craze in England,
+    and English weavers rioted against them.
+  consequences: >-
+    In 1700 England protected itself against Indian manufacturing. A century later, British machine-made
+    cotton would flood India and help ruin its handloom weavers. This reversal runs through the rest
+    of the story.
+  why: In 1700 India made the cloth and England tried to keep it out.
+  sources: [wp-calico-acts, roy-eic]
+- id: aurangzeb-dies
+  name: Death of Aurangzeb
+  date: "1707-03-03"
+  place: ahmednagar
+  kind: political
+  significance: 4
+  participants: [aurangzeb]
+  causes: [surat-sacked]
+  summary: >-
+    The emperor dies in the Deccan, aged 88. His empire is at its largest, and it is worn out by 25
+    years of war against the Marathas.
+  context: >-
+    Aurangzeb conquered the Deccan sultanates of Bijapur (1686) and Golconda (1687), but he could not
+    defeat the Marathas. The war drained the treasury and the nobility's loyalty.
+  consequences: >-
+    Succession wars and weak emperors followed. Within 40 years real power passed to provincial
+    governors and regional kingdoms. This was the opening the Company would exploit.
+  sources: [wp-aurangzeb, bose-jalal]
