@@ -131,6 +131,7 @@ export interface Scene {
   show: { events: string[]; people: string[]; places: string[]; polities: string[] }
   select?: Selection
   playTo?: CDate
+  chart?: string
 }
 
 export interface Chapter {
@@ -159,6 +160,20 @@ export interface Content {
   unitNames: Record<string, string>
   eras: Era[]
   glossary: Term[]
+  charts: ChartData[]
+}
+
+export interface ChartData {
+  id: string
+  kind: 'line' | 'ranges'
+  step: boolean
+  title: string
+  subtitle: string
+  unit: string
+  points: [number, number][]
+  ranges: { event: string; label: string; year: number; min: number; max: number }[]
+  note?: string
+  sources: string[]
 }
 
 export interface Term {

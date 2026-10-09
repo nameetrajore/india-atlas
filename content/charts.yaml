@@ -1,0 +1,29 @@
+# Small charts that make the "why" concrete. A scene shows one with `chart: <id>`.
+# kind line: `points` are [year, value]. kind ranges: `events` whose `figure` (by label) gives a min–max bar.
+# computed: british-share is derived at build time from the territory keyframes.
+- id: world-gdp-share
+  kind: line
+  title: India's share of world output
+  subtitle: Per cent of world GDP, undivided India, by Angus Maddison's estimates
+  unit: "%"
+  points: [[1600, 22.4], [1700, 24.4], [1820, 16.0], [1870, 12.2], [1913, 7.6], [1950, 4.2]]
+  note: Estimates for these centuries are rough reconstructions. The trend matters more than any one value.
+  sources: [maddison-world-economy]
+- id: british-share
+  kind: line
+  title: Land under British rule
+  subtitle: Share of the subcontinent's area held directly by the Company or Crown (excludes Burma and princely states)
+  unit: "%"
+  computed: british-share
+  note: Computed from this atlas's borders, which are approximate before 1857.
+  sources: [isd-provinces, isd-1941]
+- id: famine-deaths
+  kind: ranges
+  title: Deaths in major famines
+  subtitle: Range of scholarly estimates, millions
+  unit: m
+  scale: 1000000
+  events: [bengal-famine-1770, great-famine, famine-1899, bengal-famine]
+  figure: Deaths
+  note: Bars span the lowest and highest published estimates, not a single figure.
+  sources: [wp-great-famine, wp-bengal-famine]

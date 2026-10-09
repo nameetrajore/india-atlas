@@ -44,6 +44,22 @@ const Era = z
 const Term = z
   .object({ id, term: z.string(), aliases: z.array(z.string()).default([]), definition: z.string(), sources: cites })
   .strict()
+const Chart = z
+  .object({
+    id,
+    kind: z.enum(['line', 'ranges']),
+    title: z.string(),
+    subtitle: z.string(),
+    unit: z.string(),
+    points: z.array(z.tuple([z.number(), z.number()])).optional(),
+    computed: z.enum(['british-share']).optional(),
+    events: z.array(id).optional(),
+    figure: z.string().optional(),
+    scale: z.number().default(1),
+    note: z.string().optional(),
+    sources: cites,
+  })
+  .strict()
 const Meta = z.object({ title: z.string(), subtitle: z.string(), range: z.tuple([z.number(), z.number()]) }).strict()
 const KeyframeRaw = z
   .object({
@@ -152,6 +168,8 @@ const Scene = z
     select: z.object({ kind: z.enum(['event', 'place', 'person', 'polity', 'unit']), id }).optional(),
     /** Play time forward to this date while the scene is open (e.g. a march). */
     play_to: dateStr.optional(),
+    /** A chart from charts.yaml shown under the text. */
+    chart: id.optional(),
   })
   .strict()
 const Chapter = z
@@ -216,6 +234,7 @@ const people = loadDir('people', Person)
 const chapters = loadDir('chapters', Chapter).sort((a, b) => a.number - b.number)
 const eras = loadDir('eras', Era)
 const glossary = load('glossary.yaml', Term)
+const charts = load('charts.yaml', Chart)
 
 for (const [k, v] of Object.entries({ sources, polities, places, events, people, chapters })) uniqueIds(k, v)
 uniqueIds('scenes', chapters.flatMap((c) => c.scenes))
@@ -398,6 +417,7 @@ const compiledChapters = chapters.map((c) => {
     summary: c.summary,
     scenes: c.scenes.map((sc) => {
       const where = `chapters[${c.id}].${sc.id}`
+      if (sc.chart && !charts.some((c) => c.id === sc.chart)) fail(where, `unknown chart "${sc.chart}"`)
       if (sc.select && !selectable[sc.select.kind].has(sc.select.id)) fail(where, `unknown ${sc.select.kind} "${sc.select.id}"`)
       for (const [kind, ids] of [['event', sc.show.events], ['person', sc.show.people], ['place', sc.show.places], ['polity', sc.show.polities]] as const)
         for (const x of ids) if (!selectable[kind].has(x)) fail(where, `unknown ${kind} "${x}"`)
@@ -413,12 +433,58 @@ const compiledChapters = chapters.map((c) => {
         show: sc.show,
         select: sc.select,
         playTo: sc.play_to ? parseDate(sc.play_to) : undefined,
+        chart: sc.chart,
       }
     }),
   }
 })
 
 for (const g of glossary) checkCites(`glossary.yaml[${g.id}]`, g.sources)
+// ---- charts
+const geoFeatures = JSON.parse(readFileSync(join(OUT, 'base', 'units-1941.geojson'), 'utf8')).features as {
+  properties: { id: string; division: string }
+  geometry: { type: string; coordinates: number[][][] | number[][][][] }
+}[]
+/** Unit area on the sphere, roughly: planar ring area scaled by cos(latitude). */
+function unitArea(g: (typeof geoFeatures)[number]['geometry']) {
+  const polys = (g.type === 'Polygon' ? [g.coordinates] : g.coordinates) as number[][][][]
+  let a = 0
+  for (const poly of polys)
+    poly.forEach((ring, i) => {
+      let r = 0
+      for (let k = 0, j = ring.length - 1; k < ring.length; j = k++) r += ring[j][0] * ring[k][1] - ring[k][0] * ring[j][1]
+      const lat = ring.reduce((s, c) => s + c[1], 0) / ring.length
+      a += (i === 0 ? 1 : -1) * Math.abs(r / 2) * Math.cos((lat * Math.PI) / 180)
+    })
+  return a
+}
+const subcontinent = geoFeatures.filter((f) => !f.properties.division.startsWith('MMR:'))
+const areaOf = new Map(subcontinent.map((f) => [f.properties.id, unitArea(f.geometry)]))
+const totalArea = [...areaOf.values()].reduce((s, x) => s + x, 0)
+const polityBloc = new Map(polities.map((p) => [p.id, p.bloc ?? defaultBloc(p.kind)]))
+const compiledCharts = charts.map((c) => {
+  checkCites(`charts.yaml[${c.id}]`, c.sources)
+  let points = c.points
+  if (c.computed === 'british-share')
+    points = keyframes
+      .filter((k) => k.date.t < 1947.6)
+      .map((k) => {
+        let a = 0
+        for (const [u, p] of Object.entries(k.units)) if (polityBloc.get(p) === 'british') a += areaOf.get(u) ?? 0
+        return [Math.round(k.date.t * 100) / 100, Math.round((1000 * a) / totalArea) / 10] as [number, number]
+      })
+  // Hold the last value to the end of British rule.
+  if (c.computed === 'british-share' && points?.length) points.push([1947.6, points[points.length - 1][1]])
+  const ranges = (c.events ?? []).map((eid) => {
+    const e = events.find((x) => x.id === eid)
+    if (!e) fail(`charts.yaml[${c.id}]`, `unknown event "${eid}"`)
+    const f = e?.figures.find((x) => x.label === c.figure)
+    if (e && !f) fail(`charts.yaml[${c.id}]`, `event "${eid}" has no figure "${c.figure}"`)
+    return { event: eid, label: e?.name ?? eid, year: e ? parseDate(e.date).t : 0, min: (f?.min ?? 0) / c.scale, max: (f?.max ?? 0) / c.scale }
+  })
+  return { id: c.id, kind: c.kind, step: c.computed === 'british-share', title: c.title, subtitle: c.subtitle, unit: c.unit, points: points ?? [], ranges, note: c.note, sources: c.sources }
+})
+
 const compiledEras = eras.map((e) => {
   checkCites(`eras.yaml[${e.id}]`, e.sources)
   return { id: e.id, kind: e.kind, name: e.name, from: parseDate(e.from), to: parseDate(e.to), sources: e.sources }
@@ -458,6 +524,7 @@ const content: Content = {
   chapters: compiledChapters,
   unitNames: Object.fromEntries(units.map((u) => [u.id, u.name])),
   eras: compiledEras,
+  charts: compiledCharts,
   glossary: glossary.map((g) => ({ id: g.id, term: g.term, aliases: g.aliases, definition: g.definition })),
 }
 mkdirSync(OUT, { recursive: true })

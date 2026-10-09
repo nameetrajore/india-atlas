@@ -8,96 +8,97 @@ summary: >-
 scenes:
   - id: ch1-why
     t: "1600-12-31"
-    camera: { center: [76.0, 20.0], zoom: 3.9, pitch: 0 }
+    camera: { center: [ 76.0, 20.0 ], zoom: 3.9, pitch: 0 }
     title: Why come at all?
     text: >-
-      In 1600 the richest place a European merchant could reach was India. The Mughal Empire under Akbar
-      ruled from Kabul to Bengal, and by modern estimates South Asia produced something like a fifth to a
-      quarter of the world's goods. Its cotton cloth was dressing half of Asia.
+      In 1600 the richest place a European merchant could reach was India. The Mughal Empire under Akbar ruled
+      from Kabul to Bengal, and by modern estimates South Asia produced something like a fifth to a quarter of
+      the world's goods. Its cotton cloth was dressing half of Asia.
 
-      Europeans wanted those goods, above all pepper and spices, and later cloth. For a hundred years
-      the sea route round Africa had been controlled by the **Portuguese** from [Goa](place:goa). In the
-      1590s the Dutch broke in and pushed the price of pepper up. A group of London merchants decided to
-      cut out the middlemen.
+      Europeans wanted those goods, above all pepper and spices, and later cloth. For a hundred years the sea
+      route round Africa had been controlled by the **Portuguese** from [Goa](place:goa). In the 1590s the
+      Dutch broke in and pushed the price of pepper up. A group of London merchants decided to cut out the
+      middlemen.
 
       On the last day of 1600, Elizabeth I gave them a [charter](event:eic-charter): a monopoly on English
-      trade with the East. Note what it was. It was not an army or a colony but a **company**, set up to
-      buy goods cheaply in Asia and sell them dearly in Europe. On the map, yellow is land ruled by
-      Indian powers, which in 1600 was almost all of it.
+      trade with the East. Note what it was. It was not an army or a colony but a **company**, set up to buy
+      goods cheaply in Asia and sell them dearly in Europe. On the map, yellow is land ruled by Indian powers,
+      which in 1600 was almost all of it.
     show:
-      events: [eic-charter]
-      places: [goa, surat]
-      polities: [mughal]
+      events: [ eic-charter ]
+      places: [ goa, surat ]
+      polities: [ mughal ]
+    chart: world-gdp-share
   - id: ch1-surat
     t: "1612-11-29"
-    camera: { center: [72.8, 21.2], zoom: 7.2, pitch: 30 }
+    camera: { center: [ 72.8, 21.2 ], zoom: 7.2, pitch: 30 }
     title: A foothold at Surat
     text: >-
-      The English arrived at **Surat**, the Mughal Empire's great port, in 1608. For four years the
-      Portuguese kept them out by pressuring the Mughal court and threatening Indian shipping.
+      The English arrived at **Surat**, the Mughal Empire's great port, in 1608. For four years the Portuguese
+      kept them out by pressuring the Mughal court and threatening Indian shipping.
 
-      In November 1612 two English ships beat a larger Portuguese squadron at [Swally](event:swally),
-      in full view of the shore. The Mughals took note of a new power at sea, and in 1613 Emperor
-      Jahangir allowed an [English factory](event:surat-factory) at Surat.
+      In November 1612 two English ships beat a larger Portuguese squadron at [Swally](event:swally), in full
+      view of the shore. The Mughals took note of a new power at sea, and in 1613 Emperor Jahangir allowed an
+      [English factory](event:surat-factory) at Surat.
 
-      A "factory" was a warehouse and office for the Company's agents, the "factors". The English were
-      in India as tenants, on the emperor's terms.
+      A "factory" was a warehouse and office for the Company's agents, the "factors". The English were in
+      India as tenants, on the emperor's terms.
     show:
-      events: [swally, surat-factory]
-      places: [surat, swally, daman, diu]
+      events: [ swally, surat-factory ]
+      places: [ surat, swally, daman, diu ]
   - id: ch1-roe
     t: "1616-01"
-    camera: { center: [76.0, 25.0], zoom: 5.4, pitch: 20 }
+    camera: { center: [ 76.0, 25.0 ], zoom: 5.4, pitch: 20 }
     title: An ambassador nobody needed
     text: >-
-      To secure their position, the English sent a real ambassador. [Sir Thomas Roe](person:thomas-roe)
-      spent three years following [Jahangir's](person:jahangir) court around [Ajmer](place:ajmer) and
-      Mandu, asking for a treaty.
+      To secure their position, the English sent a real ambassador. [Sir Thomas Roe](person:thomas-roe) spent
+      three years following [Jahangir's](person:jahangir) court around [Ajmer](place:ajmer) and Mandu, asking
+      for a treaty.
 
-      He never got one. To a Mughal emperor, England was a minor kingdom and its merchants were
-      petitioners, not equals. Roe came home with local permissions and some advice: avoid forts and
-      wars, because "if you will profit, seek it at sea, and in quiet trade."
+      He never got one. To a Mughal emperor, England was a minor kingdom and its merchants were petitioners,
+      not equals. Roe came home with local permissions and some advice: avoid forts and wars, because "if you
+      will profit, seek it at sea, and in quiet trade."
     show:
-      events: [roe-embassy]
-      places: [ajmer, agra, surat]
-      polities: [mughal]
+      events: [ roe-embassy ]
+      places: [ ajmer, agra, surat ]
+      polities: [ mughal ]
   - id: ch1-cloth
     t: "1639-08-22"
-    camera: { center: [80.0, 15.5], zoom: 5.4, pitch: 20 }
+    camera: { center: [ 80.0, 15.5 ], zoom: 5.4, pitch: 20 }
     title: From spices to cloth
     text: >-
-      The English had wanted spices, but in 1623 the far stronger Dutch company drove them out of the
-      Spice Islands, torturing and executing English traders at [Amboyna](event:amboyna). They turned
-      instead to India's real treasure: **cotton cloth**.
+      The English had wanted spices, but in 1623 the far stronger Dutch company drove them out of the Spice
+      Islands, torturing and executing English traders at [Amboyna](event:amboyna). They turned instead to
+      India's real treasure: **cotton cloth**.
 
       The weavers of the Coromandel coast made painted and printed cottons (chintz and calico) that were
-      lighter, cheaper and more colourful than anything Europe made. In 1639 the Company got land from a
-      local ruler and built Fort St George. [Madras](event:madras-founded) grew up around it, with the
-      Dutch at [Pulicat](place:pulicat) and Negapatam not far away.
+      lighter, cheaper and more colourful than anything Europe made. In 1639 the Company got land from a local
+      ruler and built Fort St George. [Madras](event:madras-founded) grew up around it, with the Dutch at
+      [Pulicat](place:pulicat) and Negapatam not far away.
 
       For the rest of the century the Company's profits came from Indian manufactures, paid for mostly in
       silver. It was a trade between equals, or one that favoured India.
     show:
-      events: [amboyna, madras-founded]
-      places: [madras, pulicat, negapatam, masulipatnam, tranquebar]
+      events: [ amboyna, madras-founded ]
+      places: [ madras, pulicat, negapatam, masulipatnam, tranquebar ]
   - id: ch1-bombay
     t: "1668-03-27"
-    camera: { center: [72.9, 19.6], zoom: 6.4, pitch: 25 }
+    camera: { center: [ 72.9, 19.6 ], zoom: 6.4, pitch: 25 }
     title: Islands for £10 a year
     text: >-
-      In 1664 the Maratha leader [Shivaji](person:shivaji) [sacked Surat](event:surat-sacked). The
-      English defended their own factory, but the lesson was clear: the Mughal Empire could not protect
-      its own richest port.
+      In 1664 the Maratha leader [Shivaji](person:shivaji) [sacked Surat](event:surat-sacked). The English
+      defended their own factory, but the lesson was clear: the Mughal Empire could not protect its own
+      richest port.
 
       The answer was Bombay. Portugal had given its islands to Charles II as part of his Portuguese bride's
-      dowry, and in 1668 he [rented them to the Company](event:bombay-to-company) for £10 a year. They had
-      a deep harbour and could be fortified. In 1687 the Company moved its western headquarters there.
+      dowry, and in 1668 he [rented them to the Company](event:bombay-to-company) for £10 a year. They had a
+      deep harbour and could be fortified. In 1687 the Company moved its western headquarters there.
     show:
-      events: [surat-sacked, bombay-to-company]
-      places: [bombay, surat, goa]
+      events: [ surat-sacked, bombay-to-company ]
+      places: [ bombay, surat, goa ]
   - id: ch1-childs-war
     t: "1686-10"
-    camera: { center: [84.0, 21.5], zoom: 4.6, pitch: 10 }
+    camera: { center: [ 84.0, 21.5 ], zoom: 4.6, pitch: 10 }
     title: The war the Company lost
     text: >-
       By the 1680s some in London thought the Company should act like a state. Its governor, [Sir Josiah
@@ -105,49 +106,47 @@ scenes:
       Company [declared war on the Mughal Empire](event:childs-war).
 
       It went badly. [Aurangzeb's](person:aurangzeb) forces seized the Company's factories, including
-      [Hughli](place:hughli) in Bengal, and besieged Bombay. By 1690 the Company was begging for peace.
-      It paid a fine, and its envoys lay face-down before the emperor.
+      [Hughli](place:hughli) in Bengal, and besieged Bombay. By 1690 the Company was begging for peace. It
+      paid a fine, and its envoys lay face-down before the emperor.
 
       **This matters for everything that follows.** In 1690 the Company could not beat the Mughal Empire.
-      Sixty years later it would beat the Mughal Empire's successors. What changed was not the British;
-      it was India.
+      Sixty years later it would beat the Mughal Empire's successors. What changed was not the British; it was
+      India.
     show:
-      events: [childs-war]
-      places: [hughli, bombay, surat, madras]
-      polities: [mughal]
+      events: [ childs-war ]
+      places: [ hughli, bombay, surat, madras ]
+      polities: [ mughal ]
   - id: ch1-calcutta
     t: "1690-08-24"
-    camera: { center: [88.3, 22.7], zoom: 8.0, pitch: 35 }
+    camera: { center: [ 88.3, 22.7 ], zoom: 8.0, pitch: 35 }
     title: A swamp on the Hooghly
     text: >-
       Allowed back into Bengal after the peace, agent [Job Charnock](person:job-charnock) settled at the
-      riverside village of Sutanuti. Within a decade the Company had bought the rights to three villages,
-      one of them Kalikata, and begun Fort William. That was the start of [Calcutta](event:calcutta-founded).
+      riverside village of Sutanuti. Within a decade the Company had bought the rights to three villages, one
+      of them Kalikata, and begun Fort William. That was the start of [Calcutta](event:calcutta-founded).
 
       Bengal was the Mughal Empire's richest province: silk, muslin, rice, and saltpetre for Europe's
       gunpowder. Calcutta, safe and open to trade, grew quickly. It was a modest beginning for what would
       become the capital of British India.
 
-      Meanwhile in London, the [Calico Act](event:calico-act) of 1700 banned printed Indian cloth to
-      protect English weavers. In 1700 Britain was protecting itself from Indian industry. Remember
-      that.
+      Meanwhile in London, the [Calico Act](event:calico-act) of 1700 banned printed Indian cloth to protect
+      English weavers. In 1700 Britain was protecting itself from Indian industry. Remember that.
     show:
-      events: [calcutta-founded, calico-act]
-      places: [calcutta, hughli, chinsurah, chandernagore]
+      events: [ calcutta-founded, calico-act ]
+      places: [ calcutta, hughli, chinsurah, chandernagore ]
   - id: ch1-1707
     t: "1707-03-03"
-    camera: { center: [78.0, 22.0], zoom: 4.2, pitch: 0 }
+    camera: { center: [ 78.0, 22.0 ], zoom: 4.2, pitch: 0 }
     title: The emperor dies
     text: >-
-      In 1707 Aurangzeb [died](event:aurangzeb-dies) at Ahmednagar, aged 88. The purple shows his empire
-      at its widest. He had spent 25 years in the Deccan, taking Bijapur and Golconda but never defeating
-      the Marathas, and the war had drained the treasury and the loyalty of his nobles.
+      In 1707 Aurangzeb [died](event:aurangzeb-dies) at Ahmednagar, aged 88. The purple shows his empire at
+      its widest. He had spent 25 years in the Deccan, taking Bijapur and Golconda but never defeating the
+      Marathas, and the war had drained the treasury and the loyalty of his nobles.
 
-      Look at the English: three small coastal settlements, at [Bombay](place:bombay),
-      [Madras](place:madras) and [Calcutta](place:calcutta), held by permission. The next chapter is
-      about how the great empire behind them came apart, and how the Company learned to profit from
-      the pieces.
+      Look at the English: three small coastal settlements, at [Bombay](place:bombay), [Madras](place:madras)
+      and [Calcutta](place:calcutta), held by permission. The next chapter is about how the great empire
+      behind them came apart, and how the Company learned to profit from the pieces.
     show:
-      events: [aurangzeb-dies]
-      places: [bombay, madras, calcutta, ahmednagar, delhi]
-      polities: [mughal, maratha-peshwa]
+      events: [ aurangzeb-dies ]
+      places: [ bombay, madras, calcutta, ahmednagar, delhi ]
+      polities: [ mughal, maratha-peshwa ]

@@ -3,141 +3,141 @@ number: 3
 title: From traders to rulers
 period: 1757–1772
 summary: >-
-  The Company makes and unmakes nawabs, beats the last alliance of the north at Buxar, and becomes
-  Bengal's tax collector. Then famine shows what rule without responsibility means.
+  The Company makes and unmakes nawabs, beats the last alliance of the north at Buxar, and becomes Bengal's
+  tax collector. Then famine shows what rule without responsibility means.
 scenes:
   - id: ch3-kingmaker
     t: "1757-07-02"
-    camera: { center: [88.2, 23.8], zoom: 7.0, pitch: 25 }
+    camera: { center: [ 88.2, 23.8 ], zoom: 7.0, pitch: 25 }
     title: The kingmakers
     text: >-
-      Clive led [Mir Jafar](event:mir-jafar-installed) to the throne at Murshidabad. Days later Siraj
-      was caught and [killed](event:siraj-killed).
+      Clive led [Mir Jafar](event:mir-jafar-installed) to the throne at Murshidabad. Days later Siraj was
+      caught and [killed](event:siraj-killed).
 
       Then the bill came. Mir Jafar paid the Company, its army and its officers millions of pounds in
-      "presents" and compensation. Clive alone became one of the richest men in Britain. Company servants
-      also used their power to expand private trade, duty-free. This was the
-      [plunder of Bengal](event:plassey-plunder).
+      "presents" and compensation. Clive alone became one of the richest men in Britain. Company servants also
+      used their power to expand private trade, duty-free. This was the [plunder of
+      Bengal](event:plassey-plunder).
 
-      For a century Europeans had brought silver to Bengal to buy its goods. Now Bengal's own wealth paid
-      for its exports and flowed out. Conquest turned out to be far more profitable than trade.
+      For a century Europeans had brought silver to Bengal to buy its goods. Now Bengal's own wealth paid for
+      its exports and flowed out. Conquest turned out to be far more profitable than trade.
     show:
-      events: [mir-jafar-installed, siraj-killed, plassey-plunder]
-      people: [clive]
-      places: [murshidabad, calcutta]
-      polities: [bengal-nawabs]
+      events: [ mir-jafar-installed, siraj-killed, plassey-plunder ]
+      people: [ clive ]
+      places: [ murshidabad, calcutta ]
+      polities: [ bengal-nawabs ]
   - id: ch3-first-land
     t: "1757-12"
-    camera: { center: [88.4, 22.4], zoom: 8.0, pitch: 30 }
+    camera: { center: [ 88.4, 22.4 ], zoom: 8.0, pitch: 30 }
     title: The first piece of land
     text: >-
       Part of the price was land. Mir Jafar granted the Company the [24 Parganas](event:24-parganas), the
       district south of Calcutta. Pink now marks Company territory.
 
-      The Company collected rent as well as profit. A trading business was becoming a landlord, and soon
-      it would be more than that.
+      The Company collected rent as well as profit. A trading business was becoming a landlord, and soon it
+      would be more than that.
     show:
-      events: [24-parganas]
-      places: [calcutta]
-      polities: [eic, bengal-nawabs]
+      events: [ 24-parganas ]
+      places: [ calcutta ]
+      polities: [ eic, bengal-nawabs ]
   - id: ch3-rivals-gone
     t: "1760-01-22"
-    camera: { center: [84.5, 17.0], zoom: 4.5, pitch: 0 }
+    camera: { center: [ 84.5, 17.0 ], zoom: 4.5, pitch: 0 }
     title: No European rival left
     text: >-
       Mir Jafar quietly invited the Dutch to balance the British. Their force was beaten at
       [Chinsurah](event:chinsurah) in 1759.
 
       In the south, the Seven Years' War brought a final French attempt. Eyre Coote crushed it at
-      [Wandiwash](event:wandiwash) in January 1760, and [Pondicherry fell](event:pondicherry-falls) a
-      year later. Bengal's revenue paid for the British reinforcements; France had no Bengal.
+      [Wandiwash](event:wandiwash) in January 1760, and [Pondicherry fell](event:pondicherry-falls) a year
+      later. Bengal's revenue paid for the British reinforcements; France had no Bengal.
 
       After 1761 the Company's rivals in India were Indian, not European.
     show:
-      events: [chinsurah, wandiwash, pondicherry-falls]
-      places: [chinsurah, wandiwash, pondicherry, madras]
-      polities: [french]
+      events: [ chinsurah, wandiwash, pondicherry-falls ]
+      places: [ chinsurah, wandiwash, pondicherry, madras ]
+      polities: [ french ]
   - id: ch3-panipat
     t: "1761-01-14"
-    camera: { center: [77.0, 28.0], zoom: 5.6, pitch: 20 }
+    camera: { center: [ 77.0, 28.0 ], zoom: 5.6, pitch: 20 }
     title: Disaster at Panipat
     text: >-
-      The same week, India's strongest power suffered a catastrophe. The Marathas had pushed into the
-      Punjab, which the Afghan ruler Ahmad Shah Durrani claimed. At [Panipat](event:panipat), north of
-      Delhi, he destroyed their main army.
+      The same week, India's strongest power suffered a catastrophe. The Marathas had pushed into the Punjab,
+      which the Afghan ruler Ahmad Shah Durrani claimed. At [Panipat](event:panipat), north of Delhi, he
+      destroyed their main army.
 
-      The Marathas lost a generation of leaders. For a decade the north had no dominant power, and it
-      was exactly the decade the Company needed.
+      The Marathas lost a generation of leaders. For a decade the north had no dominant power, and it was
+      exactly the decade the Company needed.
     show:
-      events: [panipat]
-      places: [panipat, delhi, poona]
-      polities: [maratha-peshwa]
+      events: [ panipat ]
+      places: [ panipat, delhi, poona ]
+      polities: [ maratha-peshwa ]
   - id: ch3-mir-qasim
     t: "1763-09-05"
-    camera: { center: [86.8, 24.6], zoom: 6.2, pitch: 25 }
+    camera: { center: [ 86.8, 24.6 ], zoom: 6.2, pitch: 25 }
     title: A Nawab who fought back
     text: >-
       Mir Jafar could not pay what he owed, so in 1760 the Company [replaced him](event:mir-qasim-installed)
       with his son-in-law, [Mir Qasim](person:mir-qasim), in return for three more districts.
 
-      Mir Qasim was able. He moved his capital to [Monghyr](place:monghyr), away from Calcutta, reformed
-      the revenue and built a modern army. Then he tackled the dastak problem. He abolished internal duties
-      for everyone, so Indian merchants could compete with the Company's tax-free servants.
+      Mir Qasim was able. He moved his capital to [Monghyr](place:monghyr), away from Calcutta, reformed the
+      revenue and built a modern army. Then he tackled the dastak problem. He abolished internal duties for
+      everyone, so Indian merchants could compete with the Company's tax-free servants.
 
       The Company's men called it an attack on their rights, and war followed in 1763. Mir Qasim lost at
-      [Udhwa Nala](event:udhwa-nala), had his English prisoners [killed at Patna](event:patna-massacre),
-      and fled west to raise an alliance.
+      [Udhwa Nala](event:udhwa-nala), had his English prisoners [killed at Patna](event:patna-massacre), and
+      fled west to raise an alliance.
     show:
-      events: [mir-qasim-installed, udhwa-nala, patna-massacre]
-      places: [monghyr, patna, udhwa-nala, murshidabad]
-      polities: [bengal-nawabs, eic]
+      events: [ mir-qasim-installed, udhwa-nala, patna-massacre ]
+      places: [ monghyr, patna, udhwa-nala, murshidabad ]
+      polities: [ bengal-nawabs, eic ]
   - id: ch3-buxar
     t: "1764-10-22"
-    camera: { center: [83.9, 25.6], zoom: 7.0, pitch: 40, bearing: -10 }
+    camera: { center: [ 83.9, 25.6 ], zoom: 7.0, pitch: 40, bearing: -10 }
     select: { kind: event, id: buxar }
     title: Buxar
     text: >-
-      Mir Qasim persuaded the two leading powers of the north to join him: [Shuja-ud-Daula](person:shuja-ud-daula),
-      Nawab of Awadh, and [Shah Alam II](person:shah-alam-ii), the Mughal emperor, who was then wandering
-      without his capital.
+      Mir Qasim persuaded the two leading powers of the north to join him:
+      [Shuja-ud-Daula](person:shuja-ud-daula), Nawab of Awadh, and [Shah Alam II](person:shah-alam-ii), the
+      Mughal emperor, who was then wandering without his capital.
 
       At [Buxar](event:buxar) in October 1764, Hector Munro's army of about 7,000 beat them. Unlike Plassey,
       this was a hard-fought battle, won on the field. The emperor came over to the British camp, and the
       Company was now the strongest military power in north India.
     show:
-      events: [buxar]
-      places: [buxar, patna, allahabad, faizabad]
-      polities: [awadh, bengal-nawabs]
+      events: [ buxar ]
+      places: [ buxar, patna, allahabad, faizabad ]
+      polities: [ awadh, bengal-nawabs ]
   - id: ch3-diwani
     t: "1765-08-12"
-    camera: { center: [84.5, 24.5], zoom: 5.2, pitch: 15 }
+    camera: { center: [ 84.5, 24.5 ], zoom: 5.2, pitch: 15 }
     select: { kind: event, id: allahabad }
     title: The diwani
     text: >-
-      Clive came back to settle the peace. He chose not to conquer Awadh but to return it as a buffer.
-      From the emperor he took something more useful.
+      Clive came back to settle the peace. He chose not to conquer Awadh but to return it as a buffer. From
+      the emperor he took something more useful.
 
-      At [Allahabad](event:allahabad), Shah Alam II granted the Company the **diwani** of Bengal, Bihar
-      and Orissa: the right to collect their land revenue. In return the emperor got a pension and two
-      districts.
+      At [Allahabad](event:allahabad), Shah Alam II granted the Company the **diwani** of Bengal, Bihar and
+      Orissa: the right to collect their land revenue. In return the emperor got a pension and two districts.
 
       The light pink is Bengal under "dual government". The Company took the money, while the Nawab's
       officials still ran the administration. A London company had become the tax authority for perhaps 20
       million people.
     show:
-      events: [allahabad]
-      people: [clive]
-      places: [allahabad, murshidabad, calcutta]
-      polities: [eic-diwani, awadh, mughal]
+      events: [ allahabad ]
+      people: [ clive ]
+      places: [ allahabad, murshidabad, calcutta ]
+      polities: [ eic-diwani, awadh, mughal ]
+    chart: british-share
   - id: ch3-famine
     t: "1770-06"
-    camera: { center: [87.5, 24.0], zoom: 5.8, pitch: 20 }
+    camera: { center: [ 87.5, 24.0 ], zoom: 5.8, pitch: 20 }
     select: { kind: event, id: bengal-famine-1770 }
     title: Famine
     text: >-
-      In 1769 the rains failed. Under dual government, no one was really responsible for Bengal: the
-      Company wanted revenue, and the Nawab's officials had no power. Revenue demands stayed high, and some
-      Company servants were accused of hoarding rice.
+      In 1769 the rains failed. Under dual government, no one was really responsible for Bengal: the Company
+      wanted revenue, and the Nawab's officials had no power. Revenue demands stayed high, and some Company
+      servants were accused of hoarding rice.
 
       The [famine of 1770](event:bengal-famine-1770) killed a huge share of Bengal's people. Warren Hastings
       put it at a third; modern estimates are lower but still terrible.
@@ -145,22 +145,23 @@ scenes:
       In London, outrage grew at the "nabobs" coming home rich. And with the cultivators dead, the revenue
       collapsed. The Company that had conquered Bengal for its money was going bankrupt.
     show:
-      events: [bengal-famine-1770]
-      places: [murshidabad, calcutta, patna]
-      polities: [eic-diwani]
+      events: [ bengal-famine-1770 ]
+      places: [ murshidabad, calcutta, patna ]
+      polities: [ eic-diwani ]
+    chart: famine-deaths
   - id: ch3-diwan
     t: "1772-05"
-    camera: { center: [86.0, 24.0], zoom: 5.0, pitch: 10 }
+    camera: { center: [ 86.0, 24.0 ], zoom: 5.0, pitch: 10 }
     title: The Company takes charge
     text: >-
-      In 1772 the new governor, [Warren Hastings](person:warren-hastings), ended dual government. The
-      Company would "stand forth as Diwan": it collected the revenue directly, and the treasury moved
-      from Murshidabad to Calcutta.
+      In 1772 the new governor, [Warren Hastings](person:warren-hastings), ended dual government. The Company
+      would "stand forth as Diwan": it collected the revenue directly, and the treasury moved from Murshidabad
+      to Calcutta.
 
-      Bengal is now solid pink. In fifteen years, from Plassey to 1772, the Company had gone from trader
-      to government. It ruled the richest province in India without a mandate from anyone but a pensioned
+      Bengal is now solid pink. In fifteen years, from Plassey to 1772, the Company had gone from trader to
+      government. It ruled the richest province in India without a mandate from anyone but a pensioned
       emperor, and it was broke. Who would control it now?
     show:
-      events: [dual-government-ends]
-      places: [calcutta, murshidabad]
-      polities: [eic]
+      events: [ dual-government-ends ]
+      places: [ calcutta, murshidabad ]
+      polities: [ eic ]

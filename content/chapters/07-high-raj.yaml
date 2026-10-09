@@ -3,13 +3,13 @@ number: 7
 title: The high Raj
 period: 1858–1905
 summary: >-
-  After 1857 the British rule with princes as allies, an army built on "loyal" races, and railways that
-  bind India to Britain's economy. Famines kill millions. A new English-educated class begins to ask what
-  British rule is for.
+  After 1857 the British rule with princes as allies, an army built on "loyal" races, and railways that bind
+  India to Britain's economy. Famines kill millions. A new English-educated class begins to ask what British
+  rule is for.
 scenes:
   - id: ch7-after
     t: "1859"
-    camera: { center: [79.0, 22.5], zoom: 4.2, pitch: 0 }
+    camera: { center: [ 79.0, 22.5 ], zoom: 4.2, pitch: 0 }
     title: Lessons of the revolt
     text: >-
       The British drew three lessons from 1857. First, stop annexing. The princes, who had mostly stayed
@@ -17,19 +17,19 @@ scenes:
       showered with titles and gun salutes.
 
       Second, never again trust a single army. The [army was rebuilt](event:army-reorganised) with more
-      British troops and recruits drawn from the "martial races": Sikhs, Gurkhas, Pathans and Punjabi
-      Muslims, groups that had stayed loyal.
+      British troops and recruits drawn from the "martial races": Sikhs, Gurkhas, Pathans and Punjabi Muslims,
+      groups that had stayed loyal.
 
-      Third, be wary of reform. The Raj became more cautious about interfering in religion, and more
-      distant from Indians. Peasants, though, did not stay quiet: in Bengal, cultivators rose against the
-      [indigo planters](event:indigo-revolt).
+      Third, be wary of reform. The Raj became more cautious about interfering in religion, and more distant
+      from Indians. Peasants, though, did not stay quiet: in Bengal, cultivators rose against the [indigo
+      planters](event:indigo-revolt).
     show:
-      events: [army-reorganised, indigo-revolt]
-      places: [calcutta, krishnanagar, lahore]
-      polities: [hyderabad-state, rajputana-states, jammu-kashmir]
+      events: [ army-reorganised, indigo-revolt ]
+      places: [ calcutta, krishnanagar, lahore ]
+      polities: [ hyderabad-state, rajputana-states, jammu-kashmir ]
   - id: ch7-economy
     t: "1869-11-17"
-    camera: { center: [77.0, 21.0], zoom: 4.2, pitch: 0 }
+    camera: { center: [ 77.0, 21.0 ], zoom: 4.2, pitch: 0 }
     title: Railways and the drain
     text: >-
       Railways spread fast, reaching about 40,000 km by 1900, and the [Suez Canal](event:suez-canal) cut the
@@ -44,29 +44,29 @@ scenes:
       The drain theory gave Indians an economic case against British rule that did not depend on religion or
       region.
     show:
-      events: [suez-canal, drain-theory]
-      places: [bombay, calcutta, madras, karachi]
+      events: [ suez-canal, drain-theory ]
+      places: [ bombay, calcutta, madras, karachi ]
   - id: ch7-aligarh
     t: "1875-05-24"
-    camera: { center: [78.1, 27.9], zoom: 7.0, pitch: 25 }
+    camera: { center: [ 78.1, 27.9 ], zoom: 7.0, pitch: 25 }
     title: Aligarh
     text: >-
       The British blamed Muslims in particular for 1857, and the old Mughal elite had lost its world. [Sir
-      Syed Ahmad Khan](person:syed-ahmad-khan) concluded that Muslims must master English and modern
-      science, and stay loyal to the Crown, to recover.
+      Syed Ahmad Khan](person:syed-ahmad-khan) concluded that Muslims must master English and modern science,
+      and stay loyal to the Crown, to recover.
 
       In 1875 he [founded a college at Aligarh](event:aligarh-college). Its graduates became a new Muslim
       leadership, one that would later be wary of a Congress dominated by Hindus.
     show:
-      events: [aligarh-college]
-      places: [aligarh, delhi]
+      events: [ aligarh-college ]
+      places: [ aligarh, delhi ]
   - id: ch7-famine
     t: "1877-01-01"
-    camera: { center: [77.5, 17.0], zoom: 4.8, pitch: 10 }
+    camera: { center: [ 77.5, 17.0 ], zoom: 4.8, pitch: 10 }
     title: An empress and a famine
     text: >-
-      On 1 January 1877, at a vast [durbar](event:durbar-1877) outside Delhi, Viceroy
-      [Lytton](person:lytton) proclaimed Queen Victoria Empress of India before the assembled princes.
+      On 1 January 1877, at a vast [durbar](event:durbar-1877) outside Delhi, Viceroy [Lytton](person:lytton)
+      proclaimed Queen Victoria Empress of India before the assembled princes.
 
       At the same moment, the south and the Deccan were in the [Great Famine](event:great-famine). The monsoon
       had failed, but people died because they could not afford food. Grain was still being exported, prices
@@ -75,11 +75,12 @@ scenes:
 
       To Indian critics, the durbar and the famine side by side summed up British priorities.
     show:
-      events: [durbar-1877, great-famine]
-      places: [delhi, madras, bombay, hyderabad]
+      events: [ durbar-1877, great-famine ]
+      places: [ delhi, madras, bombay, hyderabad ]
+    chart: famine-deaths
   - id: ch7-ilbert
     t: "1883"
-    camera: { center: [88.3, 22.6], zoom: 6.6, pitch: 20 }
+    camera: { center: [ 88.3, 22.6 ], zoom: 6.6, pitch: 20 }
     title: Who may judge whom
     text: >-
       Under the Liberal Viceroy [Ripon](person:ripon), a bill proposed letting senior Indian judges try
@@ -89,11 +90,11 @@ scenes:
       Educated Indians learned two things: that the Raj's talk of equal law stopped at the colour line, and
       that a well-organised campaign could make the government give way. They organised.
     show:
-      events: [ilbert-bill]
-      places: [calcutta]
+      events: [ ilbert-bill ]
+      places: [ calcutta ]
   - id: ch7-burma
     t: "1885-11-28"
-    camera: { center: [95.0, 21.0], zoom: 4.8, pitch: 15 }
+    camera: { center: [ 95.0, 21.0 ], zoom: 4.8, pitch: 15 }
     title: Burma swallowed
     text: >-
       The Raj still expanded at its edges. In November 1885 a British-Indian force steamed up the Irrawaddy
@@ -103,12 +104,12 @@ scenes:
       Watch Upper Burma turn pink on 1 January 1886. Burma would be governed as a province of British India
       for half a century.
     show:
-      events: [burma-annexed]
-      places: [mandalay, rangoon]
-      polities: [kingdom-of-burma, burma]
+      events: [ burma-annexed ]
+      places: [ mandalay, rangoon ]
+      polities: [ kingdom-of-burma, burma ]
   - id: ch7-congress
     t: "1885-12-28"
-    camera: { center: [72.85, 18.95], zoom: 7.4, pitch: 30 }
+    camera: { center: [ 72.85, 18.95 ], zoom: 7.4, pitch: 30 }
     title: Seventy-two delegates
     text: >-
       A month later, 72 men met in Bombay: lawyers, journalists, teachers, products of Macaulay's English
@@ -120,11 +121,11 @@ scenes:
       For twenty years the Congress petitioned politely and got little. Its younger members began to ask
       whether politeness would ever work.
     show:
-      events: [inc-founded]
-      places: [bombay]
+      events: [ inc-founded ]
+      places: [ bombay ]
   - id: ch7-curzon
     t: "1899-09"
-    camera: { center: [77.0, 22.0], zoom: 4.6, pitch: 0 }
+    camera: { center: [ 77.0, 22.0 ], zoom: 4.6, pitch: 0 }
     title: Curzon and another famine
     text: >-
       In 1899 a new Viceroy arrived: [Lord Curzon](person:curzon), brilliant, tireless and certain the Raj
@@ -134,11 +135,12 @@ scenes:
       Curzon reorganised everything, creating the North-West Frontier Province in 1901. He disdained the
       Congress and expected it to wither.
     show:
-      events: [famine-1899]
-      places: [nagpur, bombay, calcutta, simla]
+      events: [ famine-1899 ]
+      places: [ nagpur, bombay, calcutta, simla ]
+    chart: famine-deaths
   - id: ch7-ulgulan
     t: "1899-12"
-    camera: { center: [85.3, 23.2], zoom: 7.0, pitch: 25 }
+    camera: { center: [ 85.3, 23.2 ], zoom: 7.0, pitch: 25 }
     title: The great tumult
     text: >-
       Not all resistance came from the educated classes. In the forests of Chotanagpur, Munda adivasis whose
@@ -150,5 +152,5 @@ scenes:
       Meanwhile Curzon was planning a reform he thought purely administrative: dividing Bengal. It would
       change Indian politics completely.
     show:
-      events: [ulgulan]
-      places: [ranchi]
+      events: [ ulgulan ]
+      places: [ ranchi ]

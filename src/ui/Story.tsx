@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { currentScene, useStore } from '../store'
 import { Prose } from './Prose'
 import { badgeUrl } from './icons'
+import { Chart } from './Chart'
 
 /** Landing: the story's chapters. */
 export function ChapterIndex() {
@@ -76,6 +77,7 @@ export function Reader() {
         <div className="scene-date">{scene.date.label}</div>
         <h2 className="scene-title">{scene.title}</h2>
         <Prose text={scene.text} className="scene-text" />
+        {scene.chart && <Chart id={scene.chart} />}
         {(evs.length > 0 || ppl.length > 0) && (
           <div className="scene-refs">
             <div className="refs-title">In this scene</div>
