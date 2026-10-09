@@ -62,7 +62,34 @@ export function polityAnchors(units: UnitIndex, assignment: Record<string, strin
     v.a += s.area
     acc.set(polity, v)
   }
+  // Scattered polities (groups of states, two-winged Pakistan) have centroids outside their own land;
+  // fall back to the centroid of their largest unit.
+  const largest = new Map<string, { c: LngLat; area: number }>()
+  for (const [unit, polity] of Object.entries(assignment)) {
+    const s = units.centroid.get(unit)
+    if (s && s.area > (largest.get(polity)?.area ?? 0)) largest.set(polity, s)
+  }
   return [...acc]
     .filter(([, v]) => v.a >= minArea)
-    .map(([polity, v]) => ({ polity, position: [v.x / v.a, v.y / v.a] as LngLat, area: v.a }))
+    .map(([polity, v]) => {
+      const c: LngLat = [v.x / v.a, v.y / v.a]
+      const inside = Object.entries(assignment).some(([u, p]) => p === polity && contains(units.byId.get(u), c))
+      return { polity, position: inside ? c : largest.get(polity)!.c, area: v.a }
+    })
+}
+
+function inRing(ring: number[][], [x, y]: LngLat) {
+  let hit = false
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const [xi, yi] = ring[i]
+    const [xj, yj] = ring[j]
+    if (yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) hit = !hit
+  }
+  return hit
+}
+
+function contains(f: UnitFeature | undefined, p: LngLat) {
+  if (!f) return false
+  const polys = f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates
+  return polys.some((poly) => inRing(poly[0], p) && !poly.slice(1).some((h) => inRing(h, p)))
 }

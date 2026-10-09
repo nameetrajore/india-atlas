@@ -1,0 +1,79 @@
+id: the-raj
+title: The Raj in twelve moments
+subtitle: From the revolt of 1857 to independence and Partition
+view: geopolitics
+steps:
+  - t: "1857-05-10"
+    camera: { center: [79.5, 27.5], zoom: 5.6, pitch: 20 }
+    select: { kind: event, id: meerut }
+    title: Meerut, 10 May 1857
+    text: >-
+      Sepoys at Meerut revolt over cartridges, faith and pay, and ride through the night to Delhi. Within
+      weeks the Ganges plain is aflame. Pink is Company territory; yellow is the princely states.
+  - t: "1858-06-18"
+    camera: { center: [79.2, 26.0], zoom: 6.4, pitch: 30 }
+    select: { kind: person, id: lakshmibai }
+    title: The Rani's last stand
+    text: >-
+      Follow Lakshmibai from Jhansi to Kalpi to Gwalior. By mid-1858 the revolt is crushed, with
+      reprisals that left deep scars.
+  - t: "1858-11-01"
+    camera: { center: [80.5, 23.0], zoom: 4.4, pitch: 0 }
+    select: { kind: event, id: crown-rule }
+    title: The Crown takes over
+    text: >-
+      The Company is abolished, and the Queen's proclamation promises an end to annexations. From now on
+      the map changes by reorganisation, not conquest, except at the edges.
+  - t: "1885-12-28"
+    camera: { center: [72.9, 19.0], zoom: 6.0, pitch: 25 }
+    select: { kind: event, id: inc-founded }
+    title: Seventy-two delegates
+    text: The Indian National Congress meets for the first time, in Bombay. It is a moderate, petitioning body for now.
+  - t: "1886-01-02"
+    camera: { center: [88.0, 21.0], zoom: 4.0, pitch: 0 }
+    title: Empire at the edges
+    text: >-
+      Upper Burma is annexed in 1885–86. Watch the Baluchistan frontier fill in too. On the scale below,
+      the second row shows each viceroy's term.
+  - t: "1905-10-16"
+    camera: { center: [89.0, 24.0], zoom: 5.4, pitch: 20 }
+    select: { kind: event, id: bengal-partition }
+    title: Bengal divided
+    text: >-
+      Curzon cuts Bengal in two. A new deep-pink province appears in the east, and Swadeshi boycotts
+      erupt. In 1911 the partition is reversed and the capital leaves Calcutta for Delhi.
+  - t: "1919-04-13"
+    camera: { center: [74.9, 31.6], zoom: 7.0, pitch: 35 }
+    select: { kind: event, id: jallianwala }
+    title: Jallianwala Bagh
+    text: >-
+      A walled garden in Amritsar becomes the place where moderate loyalty to the Raj ends. The official
+      death toll and the Congress estimate are still hundreds apart.
+  - t: "1930-03-12"
+    camera: { center: [72.8, 22.0], zoom: 6.8, pitch: 30 }
+    select: { kind: person, id: gandhi }
+    title: The Salt March
+    text: >-
+      Press play. Gandhi walks about 385 km from Sabarmati to Dandi in 24 days, and civil disobedience
+      follows across India.
+  - t: "1936-04-01"
+    camera: { center: [78.0, 22.5], zoom: 4.3, pitch: 0 }
+    title: New provinces
+    text: Orissa and Sind become provinces. Burma will leave British India in 1937.
+  - t: "1942-08-08"
+    camera: { center: [72.9, 19.0], zoom: 6.0, pitch: 20 }
+    select: { kind: event, id: quit-india }
+    title: Quit India
+    text: '"Do or die." The leadership is jailed overnight, and a leaderless rising follows.'
+  - t: "1943-07"
+    camera: { center: [89.0, 23.5], zoom: 5.8, pitch: 20 }
+    select: { kind: event, id: bengal-famine }
+    title: Famine in Bengal
+    text: Millions die in a man-made famine in the middle of the war.
+  - t: "1947-08-15"
+    camera: { center: [80.0, 24.0], zoom: 4.2, pitch: 0 }
+    select: { kind: event, id: independence }
+    title: Freedom, and Partition
+    text: >-
+      Two dominions, India and Pakistan. The princely states (still yellow) must choose. Partition
+      uproots between ten and twenty million people.

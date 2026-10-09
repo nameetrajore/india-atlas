@@ -145,6 +145,16 @@ export interface Content {
   stories: Story[]
   /** Display names of base units, by id. */
   unitNames: Record<string, string>
+  eras: Era[]
+}
+
+export interface Era {
+  id: string
+  kind: 'phase' | 'viceroy'
+  name: string
+  from: CDate
+  to: CDate
+  sources: string[]
 }
 
 export type SelectionKind = 'event' | 'place' | 'person' | 'polity' | 'unit'

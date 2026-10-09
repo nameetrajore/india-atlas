@@ -18,7 +18,7 @@ export const VIEWS: ViewDef[] = [
 
 export const LENS_NAMES: Record<LensId, string> = {
   polities: 'Polities & borders',
-  footholds: 'Colonial footholds',
+  footholds: 'French & Portuguese enclaves',
   events: 'Events',
   people: 'People',
   places: 'Places',

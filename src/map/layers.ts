@@ -1,4 +1,4 @@
-import { GeoJsonLayer, ScatterplotLayer, TextLayer, PathLayer } from '@deck.gl/layers'
+import { GeoJsonLayer, IconLayer, ScatterplotLayer, TextLayer, PathLayer } from '@deck.gl/layers'
 import { TripsLayer } from '@deck.gl/geo-layers'
 import { PathStyleExtension } from '@deck.gl/extensions'
 import type { Layer } from '@deck.gl/core'
@@ -10,31 +10,30 @@ import {
   personAt,
   personSegments,
   placeSignificance,
+  polityName,
   type PersonState,
   type Segment,
 } from '../lib/derive'
+import { badgeUrl, hexToRgb, kindDef } from '../ui/icons'
 import { polityAnchors, type UnitFeature, type UnitIndex } from './units'
 import { declutter, type LabelCandidate } from './declutter'
 
 type RGB = [number, number, number]
-const INK: RGB = [43, 33, 24]
-const PAPER: RGB = [243, 234, 215]
+const INK: RGB = [36, 27, 20]
+const PAPER: RGB = [246, 239, 222]
 const UNMAPPED: RGB = [214, 203, 178]
 /** Trail timestamps are stored relative to this, to keep float32 precision on the GPU. */
-export const T0 = 1700
+export const T0 = 1800
+/** Ripple duration for events the playhead just crossed (ms). */
+export const PULSE_MS = 1800
 
-const EVENT_COLORS: Record<string, RGB> = {
-  battle: [140, 36, 28],
-  treaty: [36, 64, 110],
-  political: [92, 60, 110],
-  campaign: [170, 110, 30],
-  atrocity: [30, 22, 18],
-  movement: [180, 70, 40],
-  famine: [110, 80, 40],
-  founding: [60, 90, 60],
+const PERSON_COLORS: Record<string, RGB> = {
+  gandhi: [150, 60, 20],
+  lakshmibai: [140, 30, 60],
+  'subhas-bose': [40, 80, 60],
+  'bhagat-singh': [170, 110, 20],
 }
-const PERSON_COLORS: Record<string, RGB> = { clive: [150, 40, 25], 'siraj-ud-daulah': [30, 90, 70] }
-const personColor = (id: string): RGB => PERSON_COLORS[id] ?? [60, 60, 90]
+export const personColor = (id: string): RGB => PERSON_COLORS[id] ?? [60, 60, 90]
 
 export interface LayerArgs {
   content: Content
@@ -45,11 +44,14 @@ export interface LayerArgs {
   selection: Selection | null
   zoom: number
   project: (p: LngLat) => [number, number]
+  pulses: { id: string; age: number }[]
   onPick: (s: Selection) => void
 }
 
 const isSel = (sel: Selection | null, kind: Selection['kind'], id: string) => sel?.kind === kind && sel.id === id
 const darken = (c: RGB, f: number, a: number) => [c[0] * f, c[1] * f, c[2] * f, a] as [number, number, number, number]
+/** Badge diameter in px by significance. */
+const badgeSize = (sig: number) => 16 + sig * 4
 
 /** Overlays draw in order, never depth-tested against each other (interleaved mode z-fights otherwise). */
 const FLAT = { parameters: { depthCompare: 'always', depthWriteEnabled: false } } as const
@@ -57,10 +59,11 @@ const FLAT = { parameters: { depthCompare: 'always', depthWriteEnabled: false } 
 const TEXT_BASE = {
   ...FLAT,
   sizeUnits: 'pixels',
-  fontSettings: { sdf: true, fontSize: 96, buffer: 10, radius: 16, cutoff: 0.22, smoothing: 0.12 },
+  fontSettings: { sdf: true, fontSize: 96, buffer: 12, radius: 18, cutoff: 0.2, smoothing: 0.1 },
   characterSet: 'auto',
-  outlineColor: [...PAPER, 230],
+  outlineColor: [...PAPER, 255],
 } as const
+const LABEL_FONT = '"Source Serif 4"'
 
 export function buildLayers(a: LayerArgs): Layer[] {
   const { content, units, t, lenses, selection } = a
@@ -91,41 +94,33 @@ export function buildLayers(a: LayerArgs): Layer[] {
         return s ? [{ p, s }] : []
       })
     : []
-  const anchors = lenses.has('polities') ? polityAnchors(units, assignment, 1.2) : []
+  const anchors = lenses.has('polities')
+    ? polityAnchors(units, assignment, 1.5).filter((an) => content.polities[an.polity].kind !== 'tribal')
+    : []
+  const nameOf = (id: string) => polityName(content.polities[id], t)
 
-  // ---- labels: one shared declutter pass so people > places > polities never overlap
+  // ---- labels: one shared declutter pass, people > selected > places > polities
   const cands: LabelCandidate[] = []
   for (const m of markers)
-    cands.push({ key: `person:${m.p.id}`, position: m.s.position, text: m.p.name, size: 13, priority: 1e6, offset: [12, 0], alts: [[12, 18], [12, -18], [24, 0], [24, 20], [24, -20], [12, 36], [12, -36]], anchor: 'start', baseline: 'center' })
-  // A place label sits just above the biggest marker drawn at that place.
+    cands.push({ key: `person:${m.p.id}`, position: m.s.position, text: m.p.name, size: 13.5, priority: 1e6, offset: [13, 0], alts: [[13, 18], [13, -18], [26, 0], [26, 20], [26, -20]], anchor: 'start', baseline: 'center' })
   const markerR = new Map<string, number>()
   for (const f of footholds) markerR.set(f.p.id, Math.max(markerR.get(f.p.id) ?? 0, 7))
-  for (const d of events) if (d.e.kind !== 'campaign') markerR.set(d.e.place, Math.max(markerR.get(d.e.place) ?? 0, 5 + d.e.significance * 2.2))
+  for (const d of events) markerR.set(d.e.place, Math.max(markerR.get(d.e.place) ?? 0, badgeSize(d.e.significance) / 2))
   const placeOffset = (id: string): [number, number] => [0, -((markerR.get(id) ?? 3) + 3)]
-  const placeSize = (id: string) => Math.max(12.5, Math.min(23, 11 + 3.2 * Math.sqrt(sig.get(id) ?? 0)))
+  const placeSize = (id: string) => Math.max(13, Math.min(22, 12 + 2.8 * Math.sqrt(sig.get(id) ?? 0)))
   const selEvent = selection?.kind === 'event' ? content.events.find((e) => e.id === selection.id) : undefined
   if (lenses.has('places'))
     for (const p of content.places) {
       const bonus = isSel(selection, 'place', p.id) || selEvent?.place === p.id ? 2e6 : 0
       cands.push({ key: `place:${p.id}`, position: p.coords, text: p.name, size: placeSize(p.id), priority: 1000 + (sig.get(p.id) ?? 0) * 10 + bonus, offset: placeOffset(p.id), alts: [[0, (markerR.get(p.id) ?? 3) + 3 + placeSize(p.id) * 1.1]], anchor: 'middle', baseline: 'bottom', force: bonus > 0 })
     }
-  const politySize = (area: number) => Math.min(17, 9 + Math.sqrt(area) * 1.6) * Math.min(1.3, Math.max(0.8, a.zoom / 5))
+  const politySize = (area: number) => Math.min(16, 10 + Math.sqrt(area) * 1.1) * Math.min(1.25, Math.max(0.85, a.zoom / 5))
   for (const an of anchors)
-    cands.push({
-      key: `polity:${an.polity}`,
-      position: an.position,
-      text: content.polities[an.polity].name.toUpperCase(),
-      size: politySize(an.area),
-      priority: an.area,
-      offset: [0, 0],
-      anchor: 'middle',
-      baseline: 'center',
-      wrap: 14,
-    })
+    cands.push({ key: `polity:${an.polity}`, position: an.position, text: nameOf(an.polity).toUpperCase(), size: politySize(an.area), priority: an.area, offset: [0, 0], anchor: 'middle', baseline: 'center', wrap: 16 })
   const obstacles: [LngLat, number][] = [
     ...markers.map((m): [LngLat, number] => [m.s.position, 8]),
     ...footholds.map((f): [LngLat, number] => [f.p.coords, 7]),
-    ...events.filter((d) => d.e.kind !== 'campaign').map((d): [LngLat, number] => [d.e.coords, 5 + d.e.significance * 2.2]),
+    ...events.map((d): [LngLat, number] => [d.e.coords, badgeSize(d.e.significance) / 2]),
   ]
   const shown = declutter(cands, a.project, obstacles)
 
@@ -143,13 +138,14 @@ export function buildLayers(a: LayerArgs): Layer[] {
         getFillColor: (f: { properties: { id: string } }) => {
           const p = assignment[f.properties.id]
           if (!p) return [...UNMAPPED, Math.round(alpha * 0.35)]
-          return [...content.polities[p].color, p === selectedPolity ? Math.min(255, alpha + 50) : alpha]
+          return [...content.polities[p].color, p === selectedPolity ? Math.min(255, alpha + 60) : alpha]
         },
+        // Unit borders stay faint; the eye should read polities, not districts.
         getLineColor: (f: { properties: { id: string } }) => {
           const p = assignment[f.properties.id]
-          return p ? darken(content.polities[p].color, 0.6, 80) : [150, 135, 110, 30]
+          return p ? darken(content.polities[p].color, 0.55, 55) : [150, 135, 110, 25]
         },
-        getLineWidth: 0.6,
+        getLineWidth: 0.5,
         lineWidthUnits: 'pixels',
         updateTriggers: { getFillColor: [ki, alpha, selectedPolity], getLineColor: [ki] },
         transitions: { getFillColor: { duration: 700 } },
@@ -167,23 +163,24 @@ export function buildLayers(a: LayerArgs): Layer[] {
         id: 'polity-labels',
         data: anchors.filter((an) => shown.has(`polity:${an.polity}`)),
         getPosition: (d: Anchor) => d.position,
-        getText: (d: Anchor) => content.polities[d.polity].name.toUpperCase(),
+        getText: (d: Anchor) => nameOf(d.polity).toUpperCase(),
         getSize: (d: Anchor) => politySize(d.area),
-        getColor: (d: Anchor) => darken(content.polities[d.polity].color, 0.42, 215),
-        fontFamily: 'Cormorant Garamond',
-        fontWeight: 700,
-        outlineWidth: 2,
-        maxWidth: 14 * 0.62,
+        getColor: (d: Anchor) => darken(content.polities[d.polity].color, 0.32, 255),
+        fontFamily: LABEL_FONT,
+        fontWeight: 600,
+        outlineWidth: 4,
+        outlineColor: [...PAPER, 200],
+        maxWidth: 16 * 0.62,
         wordBreak: 'break-word',
         lineHeight: 1.05,
         getTextAnchor: 'middle',
         getAlignmentBaseline: 'center',
-        updateTriggers: { getText: [ki], getColor: [ki], getSize: [a.zoom] },
+        updateTriggers: { getText: [ki, Math.floor(t)], getColor: [ki], getSize: [a.zoom] },
       } as never),
     )
   }
 
-  // ---- footholds
+  // ---- non-British enclaves
   if (footholds.length) {
     layers.push(
       new ScatterplotLayer<(typeof footholds)[number]>({
@@ -200,72 +197,69 @@ export function buildLayers(a: LayerArgs): Layer[] {
         getLineWidth: 2,
         stroked: true,
         updateTriggers: { getFillColor: [t], getRadius: [selection] },
-        transitions: { getFillColor: 500 },
         onClick: (info) => (info.object && a.onPick({ kind: 'place', id: info.object.p.id }), true),
       }),
     )
   }
 
-  // ---- events: regional campaigns as a wash, the rest as rings sized by significance
-  if (events.length) {
+  // ---- events: icon badges by kind; ripples for ones just crossed
+  if (lenses.has('events')) {
     type EV = { e: HistEvent; o: number }
-    const point = events.filter((d) => d.e.kind !== 'campaign')
-    const areas = events.filter((d) => d.e.kind === 'campaign')
+    const byId = new Map(content.events.map((e) => [e.id, e]))
+    const pulses = a.pulses.flatMap((p) => {
+      const e = byId.get(p.id)
+      return e ? [{ e, f: p.age / PULSE_MS }] : []
+    })
     layers.push(
-      new ScatterplotLayer<EV>({
+      new ScatterplotLayer<(typeof pulses)[number]>({
         ...FLAT,
-        id: 'campaigns',
-        data: areas,
-        pickable: true,
+        id: 'event-pulses',
+        data: pulses,
         getPosition: (d) => d.e.coords,
-        getRadius: 140_000,
-        radiusUnits: 'meters',
-        getFillColor: (d) => [...EVENT_COLORS.campaign, Math.round(45 * d.o)],
-        getLineColor: (d) => [...EVENT_COLORS.campaign, Math.round(160 * d.o)],
+        getRadius: (d) => badgeSize(d.e.significance) / 2 + d.f * (40 + d.e.significance * 14),
+        radiusUnits: 'pixels',
+        filled: false,
         stroked: true,
+        getLineColor: (d) => [...hexToRgb(kindDef(d.e.kind).color), Math.round(230 * (1 - d.f))],
+        getLineWidth: (d) => 3 * (1 - d.f) + 0.5,
         lineWidthUnits: 'pixels',
-        getLineWidth: (d) => (isSel(selection, 'event', d.e.id) ? 3 : 1.2),
-        updateTriggers: { getFillColor: [t], getLineColor: [t], getLineWidth: [selection] },
-        onClick: (info) => (info.object && a.onPick({ kind: 'event', id: info.object.e.id }), true),
+        updateTriggers: { getRadius: [a.pulses], getLineColor: [a.pulses], getLineWidth: [a.pulses] },
       }),
-      new ScatterplotLayer<EV>({
+      new IconLayer<EV>({
         ...FLAT,
         id: 'events',
-        data: point,
+        data: events,
         pickable: true,
         getPosition: (d) => d.e.coords,
-        getRadius: (d) => (5 + d.e.significance * 2.2) * (isSel(selection, 'event', d.e.id) ? 1.4 : 1),
-        radiusUnits: 'pixels',
-        getFillColor: (d) => [...(EVENT_COLORS[d.e.kind] ?? INK), Math.round(55 * d.o)],
-        getLineColor: (d) => [...(EVENT_COLORS[d.e.kind] ?? INK), Math.round(255 * d.o)],
-        stroked: true,
-        lineWidthUnits: 'pixels',
-        getLineWidth: (d) => (isSel(selection, 'event', d.e.id) ? 3 : 1.8),
-        updateTriggers: { getFillColor: [t], getLineColor: [t], getRadius: [selection], getLineWidth: [selection] },
+        getIcon: (d) => ({ url: badgeUrl(d.e.kind), id: d.e.kind, width: 64, height: 64 }),
+        getSize: (d) => badgeSize(d.e.significance) * (isSel(selection, 'event', d.e.id) ? 1.3 : 1),
+        sizeUnits: 'pixels',
+        getColor: (d) => [255, 255, 255, Math.round(255 * d.o)],
+        updateTriggers: { getSize: [selection], getColor: [t] },
         onClick: (info) => (info.object && a.onPick({ kind: 'event', id: info.object.e.id }), true),
       }),
     )
   }
 
-  // ---- place labels (above events so they stay legible)
+  // ---- place labels
   if (lenses.has('places')) {
     layers.push(
       new TextLayer<Place>({
         ...TEXT_BASE,
         id: 'place-labels',
-        data: content.places.filter((p: Place) => shown.has(`place:${p.id}`)),
+        data: content.places.filter((p) => shown.has(`place:${p.id}`)),
         pickable: true,
         getPosition: (p: Place) => p.coords,
         getText: (p: Place) => p.name,
         getSize: (p: Place) => placeSize(p.id),
-        getColor: (p: Place) => [...INK, isSel(selection, 'place', p.id) ? 255 : 225],
-        fontFamily: 'Cormorant Garamond',
-        fontWeight: 700,
-        outlineWidth: 3,
+        getColor: () => [...INK, 255],
+        fontFamily: LABEL_FONT,
+        fontWeight: 600,
+        outlineWidth: 5,
         getPixelOffset: (p: Place) => shown.get(`place:${p.id}`)?.offset ?? placeOffset(p.id),
         getTextAnchor: 'middle',
         getAlignmentBaseline: 'bottom',
-        updateTriggers: { getSize: [t], getColor: [selection], getPixelOffset: [shown] },
+        updateTriggers: { getSize: [t], getPixelOffset: [shown] },
         onClick: (info: { object?: Place }) => (info.object && a.onPick({ kind: 'place', id: info.object.id }), true),
       } as never),
     )
@@ -280,7 +274,7 @@ export function buildLayers(a: LayerArgs): Layer[] {
         id: 'people-route',
         data: segments,
         getPath: (d: Segment) => d.path,
-        getColor: (d: Segment) => [...personColor(d.person), 70],
+        getColor: (d: Segment) => [...personColor(d.person), 60],
         getWidth: 1.5,
         widthUnits: 'pixels',
         getDashArray: [4, 4],
@@ -326,12 +320,12 @@ export function buildLayers(a: LayerArgs): Layer[] {
         data: markers.filter((m) => shown.has(`person:${m.p.id}`)),
         getPosition: (d: M) => d.s.position,
         getText: (d: M) => d.p.name,
-        getSize: 13,
-        getColor: (d: M) => darken(personColor(d.p.id), 0.85, Math.round(255 * d.s.opacity)),
+        getSize: 13.5,
+        getColor: (d: M) => darken(personColor(d.p.id), 0.8, Math.round(255 * d.s.opacity)),
         fontFamily: 'Inter',
         fontWeight: 600,
-        outlineWidth: 3,
-        getPixelOffset: (d: M) => shown.get(`person:${d.p.id}`)?.offset ?? [12, 0],
+        outlineWidth: 5,
+        getPixelOffset: (d: M) => shown.get(`person:${d.p.id}`)?.offset ?? [13, 0],
         getTextAnchor: 'start',
         getAlignmentBaseline: 'center',
         updateTriggers: { getPosition: [t], getColor: [t], getPixelOffset: [shown] },

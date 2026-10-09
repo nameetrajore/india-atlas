@@ -4,6 +4,7 @@ import { Timeline } from './ui/Timeline'
 import { InfoCard } from './ui/InfoCard'
 import { LensDock } from './ui/LensDock'
 import { StoryMenu, StoryPlayer } from './ui/StoryPlayer'
+import { Toasts } from './ui/Toasts'
 import { useStore } from './store'
 import { readUrl, syncUrl } from './lib/url'
 import type { Content } from './types'
@@ -12,6 +13,7 @@ export default function App() {
   const [ready, setReady] = useState(false)
   const [menu, setMenu] = useState(false)
   const story = useStore((s) => s.story)
+  const content = useStore((s) => s.content)
 
   useEffect(() => {
     // deck.gl builds its glyph atlas on first use, so fonts must be loaded first.
@@ -20,6 +22,7 @@ export default function App() {
       document.fonts.load('700 16px "Cormorant Garamond"'),
       document.fonts.load('600 16px "Cormorant Garamond"'),
       document.fonts.load('600 13px "Inter"'),
+      document.fonts.load('600 16px "Source Serif 4"'),
     ]).then(([content]) => {
       useStore.getState().setContent(content)
       readUrl()
@@ -33,8 +36,8 @@ export default function App() {
       {ready && <MapView />}
       <header className="topbar">
         <div className="brand">
-          <span className="brand-name">India Atlas</span>
-          <span className="brand-sub">1740–1765 · preview</span>
+          <span className="brand-name">{content?.title ?? 'India Atlas'}</span>
+          <span className="brand-sub">{content?.subtitle} · preview</span>
         </div>
         <div className="topbar-actions">
           <button className="btn" disabled title="Grounded Q&A arrives once cards are reviewed (D12)">
@@ -51,6 +54,7 @@ export default function App() {
           <LensDock />
           <InfoCard />
           <StoryPlayer />
+          <Toasts />
           <Timeline />
         </>
       )}

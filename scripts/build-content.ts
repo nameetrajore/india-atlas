@@ -36,6 +36,9 @@ const Polity = z
     sources: cites,
   })
   .strict()
+const Era = z
+  .object({ id, kind: z.enum(['phase', 'viceroy']), name: z.string(), from: dateStr, to: dateStr, sources: cites })
+  .strict()
 const Meta = z.object({ title: z.string(), subtitle: z.string(), range: z.tuple([z.number(), z.number()]) }).strict()
 const KeyframeRaw = z
   .object({
@@ -170,6 +173,7 @@ const places = load('places.yaml', Place)
 const events = load('events.yaml', Event)
 const people = loadDir('people', Person)
 const stories = loadDir('stories', Story)
+const eras = load('eras.yaml', Era)
 
 for (const [k, v] of Object.entries({ sources, polities, places, events, people, stories })) uniqueIds(k, v)
 
@@ -346,6 +350,11 @@ const compiledStories = stories.map((s) => ({
   }),
 }))
 
+const compiledEras = eras.map((e) => {
+  checkCites(`eras.yaml[${e.id}]`, e.sources)
+  return { id: e.id, kind: e.kind, name: e.name, from: parseDate(e.from), to: parseDate(e.to), sources: e.sources }
+})
+
 if (errors.length) {
   console.error(`Content validation failed (${errors.length}):\n  ` + errors.join('\n  '))
   process.exit(1)
@@ -378,6 +387,7 @@ const content: Content = {
   people: compiledPeople,
   stories: compiledStories,
   unitNames: Object.fromEntries(units.map((u) => [u.id, u.name])),
+  eras: compiledEras,
 }
 mkdirSync(OUT, { recursive: true })
 writeFileSync(join(OUT, 'content.json'), JSON.stringify(content))

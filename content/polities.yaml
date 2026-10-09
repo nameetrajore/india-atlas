@@ -130,7 +130,7 @@
     - { from: "1905-10-16", name: Bengal (after partition) }
     - { from: "1912-04-01", name: Bengal Presidency }
   kind: province
-  color: "#e79a92"
+  color: "#e8968c"
   summary: >-
     The largest and oldest British province, governed from Calcutta. In 1857 it covered Bengal, Bihar,
     Orissa and, until 1874, Assam. It was split in 1905, reunited in 1912, and partitioned between India
@@ -139,7 +139,7 @@
 - id: madras-presidency
   name: Madras Presidency
   kind: province
-  color: "#eeb2a2"
+  color: "#f2bba0"
   summary: >-
     The southern presidency, governed from Madras (Fort St George). It was stable in extent through the
     Raj, apart from losing Ganjam and Koraput to Orissa in 1936.
@@ -147,7 +147,7 @@
 - id: bombay-presidency
   name: Bombay Presidency
   kind: province
-  color: "#dd8a8f"
+  color: "#d98aa3"
   summary: >-
     The western presidency, governed from Bombay. It included Sind until 1936, and many small princely
     states were attached to it.
@@ -160,7 +160,7 @@
     - { from: "1902-03-22", name: United Provinces of Agra and Oudh }
     - { from: "1937-04-01", name: United Provinces }
   kind: province
-  color: "#f2bfb2"
+  color: "#f0a98e"
   summary: >-
     The upper Ganges plain, a heartland of the 1857 revolt. It began as the North-Western Provinces,
     absorbed Oudh in 1877, and was renamed the United Provinces in 1902.
@@ -169,7 +169,7 @@
   name: Chief Commissionership of Oudh
   alt_names: [Awadh]
   kind: province
-  color: "#e7a3ad"
+  color: "#c98aa8"
   summary: >-
     Annexed by Dalhousie in February 1856 on grounds of "misgovernment". The annexation was a major
     grievance in 1857, when Lucknow was besieged. It was merged with the North-Western Provinces in 1877.
@@ -177,7 +177,7 @@
 - id: punjab
   name: Punjab
   kind: province
-  color: "#e3958a"
+  color: "#e07f73"
   summary: >-
     Annexed in 1849 after the Anglo-Sikh wars. It became a major recruiting ground for the Indian Army,
     and it was partitioned in 1947.
@@ -185,7 +185,7 @@
 - id: nagpur-province
   name: Nagpur Province
   kind: province
-  color: "#eaa59c"
+  color: "#eeb39c"
   summary: The Bhonsle kingdom of Nagpur, annexed by lapse in 1853. It was merged into the Central Provinces in 1861.
   sources: [wp-cp]
 - id: central-provinces
@@ -194,7 +194,7 @@
     - { from: "1861-11-02", name: Central Provinces }
     - { from: "1936", name: Central Provinces and Berar }
   kind: province
-  color: "#f0b7aa"
+  color: "#f4c6ae"
   summary: >-
     Formed in 1861 from Nagpur Province and the Saugor and Nerbudda Territories. Berar was attached in
     1903.
@@ -202,7 +202,7 @@
 - id: berar
   name: Berar (Hyderabad Assigned Districts)
   kind: province
-  color: "#e9ab9f"
+  color: "#e6a7b5"
   summary: >-
     Assigned by the Nizam of Hyderabad to the British in 1853 to pay for troops. It was formally still
     Hyderabad's, and from 1903 it was run as part of the Central Provinces.
@@ -210,7 +210,7 @@
 - id: assam
   name: Assam
   kind: province
-  color: "#e49aa2"
+  color: "#d7909f"
   summary: >-
     Separated from Bengal as a chief commissionership in 1874, with Sylhet attached. It was merged into
     Eastern Bengal and Assam from 1905 to 1912, and became a governor's province in 1921.
@@ -218,7 +218,7 @@
 - id: eastern-bengal-assam
   name: Eastern Bengal and Assam
   kind: province
-  color: "#d97f8a"
+  color: "#c9727f"
   summary: >-
     The province created by Curzon's partition of Bengal in 1905, with its capital at Dacca. It had a
     Muslim majority. Mass protest (the Swadeshi movement) forced the partition to be annulled in 1911.
@@ -229,7 +229,7 @@
     - { from: "1912-04-01", name: Bihar and Orissa }
     - { from: "1936-04-01", name: Bihar }
   kind: province
-  color: "#ecaf9b"
+  color: "#eeae84"
   summary: >-
     Carved out of Bengal in 1912 as Bihar and Orissa, with its capital at Patna. Orissa was separated
     in 1936.
@@ -237,7 +237,7 @@
 - id: orissa
   name: Orissa
   kind: province
-  color: "#f3c4b3"
+  color: "#f5c9a0"
   summary: >-
     The first Indian province drawn on linguistic lines (1936), formed from Bihar and Orissa and the
     Oriya-speaking districts of Madras.
@@ -245,13 +245,13 @@
 - id: sind
   name: Sind
   kind: province
-  color: "#e5a08c"
+  color: "#e39a7b"
   summary: Conquered in 1843 and governed as part of Bombay until it became a separate province in 1936.
   sources: [wp-sind-province]
 - id: nwfp
   name: North-West Frontier Province
   kind: province
-  color: "#d98c83"
+  color: "#cf7f86"
   summary: >-
     Separated from Punjab by Curzon in 1901 to manage the Afghan frontier. It was the base of Abdul
     Ghaffar Khan's Khudai Khidmatgar movement.
@@ -260,7 +260,7 @@
   name: British Baluchistan
   alt_names: [Baluchistan Agency]
   kind: province
-  color: "#e8b1a0"
+  color: "#e9b9a8"
   summary: >-
     Built up from the Quetta lease (1876) and the districts ceded by Afghanistan at Gandamak (1879).
     It was a chief commissioner's province from 1887.
@@ -273,7 +273,7 @@
     - { from: "1886-01-01", name: Province of Burma }
     - { from: "1937-04-01", name: Burma (separated from India) }
   kind: province
-  color: "#eab7c0"
+  color: "#dca2bd"
   summary: >-
     Conquered in three wars (1824–1885) and governed as a province of British India until 1937, when it
     became a separate colony.
@@ -281,7 +281,7 @@
 - id: delhi
   name: Delhi Province
   kind: province
-  color: "#c96f78"
+  color: "#b9606f"
   summary: >-
     Separated from Punjab in 1912 after the capital moved from Calcutta. New Delhi was inaugurated in
     1931.
@@ -289,13 +289,13 @@
 - id: ajmer-merwara
   name: Ajmer-Merwara
   kind: province
-  color: "#d6858b"
+  color: "#cf8a95"
   summary: A small British enclave among the Rajputana states, ceded by Sindhia in 1818.
   sources: [wp-ajmer-merwara]
 - id: coorg
   name: Coorg
   kind: province
-  color: "#e08f8f"
+  color: "#e4979a"
   summary: A small hill kingdom annexed in 1834 and governed as a chief commissioner's province.
   sources: [wp-coorg]
 - id: mysore-commission

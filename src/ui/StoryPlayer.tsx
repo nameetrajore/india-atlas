@@ -66,10 +66,7 @@ export function StoryMenu({ onClose }: { onClose: () => void }) {
           <span className="muted">{s.subtitle}</span>
         </button>
       ))}
-      <div className="menu-item disabled">
-        <span className="menu-title">The Salt March</span>
-        <span className="muted">1930 · coming in slice 2</span>
-      </div>
+
     </div>
   )
 }

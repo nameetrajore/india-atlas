@@ -1,10 +1,20 @@
 import type { ReactNode } from 'react'
 import { useStore } from '../store'
-import { controlAt, keyframeIndexAt, personAt, visitsToPlace } from '../lib/derive'
+import { controlAt, keyframeIndexAt, personAt, polityName, visitsToPlace } from '../lib/derive'
+import { kindDef } from './icons'
 import { formatT } from '../lib/time'
 import type { CDate, Content, Figure, Selection } from '../types'
 
 const rgb = (c: [number, number, number]) => `rgb(${c.join(',')})`
+const KIND_LABEL: Record<string, string> = {
+  province: 'British India · province',
+  state: 'Princely state',
+  power: 'European power',
+  polity: 'Polity',
+  tribal: 'Tribal territory',
+  foreign: 'Outside British India',
+  dominion: 'Independent dominion',
+}
 const fmt = (n: number) => n.toLocaleString('en-IN')
 
 function Link({ to, t, children }: { to: Selection; t?: number; children: ReactNode }) {
@@ -95,7 +105,7 @@ export function InfoCard() {
     const place = content.places.find((p) => p.id === e.place)
     const people = e.participants.map((id) => content.people.find((p) => p.id === id)!).filter(Boolean)
     return (
-      <Card kicker={e.kind} title={e.name} sub={<>{span(e.date, e.end)} · <Link to={{ kind: 'place', id: e.place }}>{place?.name}</Link></>}>
+      <Card kicker={kindDef(e.kind).label} title={e.name} sub={<>{span(e.date, e.end)} · <Link to={{ kind: 'place', id: e.place }}>{place?.name}</Link></>}>
         {e.altNames.length > 0 && <p className="alt">Also called {e.altNames.join(', ')}</p>}
         <p>{e.summary}</p>
         {e.why && (
@@ -147,7 +157,7 @@ export function InfoCard() {
                   <button className="link" onClick={() => useStore.getState().setT(c.date.t + 0.001)}>
                     {c.date.label}
                   </button>{' '}
-                  {content.polities[c.power].name}
+                  {polityName(content.polities[c.power], t)}
                   {c.note && <div className="muted">{c.note}</div>}
                 </li>
               ))}
@@ -271,13 +281,25 @@ export function InfoCard() {
   }
   return (
     <Card
-      kicker={polity.kind === 'power' ? 'European power' : 'Polity'}
-      title={polity.name}
+      kicker={KIND_LABEL[polity.kind]}
+      title={polityName(polity, t)}
       sub={unitName && <span>{unitName} (1941 unit) in {formatT(t, 'year')}</span>}
     >
       <div className="swatch-bar" style={{ background: rgb(polity.color) }} />
       {polity.altNames.length > 0 && <p className="alt">Also called {polity.altNames.join(', ')}</p>}
       <p>{polity.summary}</p>
+      {polity.names.length > 1 && (
+        <section>
+          <h4>Names</h4>
+          <ul className="plain timeline-list">
+            {polity.names.map((n) => (
+              <li key={n.date.t}>
+                <span className="date">{n.date.label}</span> {n.name}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
       {kf && sel.kind === 'unit' && (
         <p className="muted">
           Border certainty: {kf.certainty}. Borders are drawn from 1941 district units, so 18th-century frontiers are

@@ -1,5 +1,12 @@
 // Pure functions: what the world looks like at time t.
-import type { Content, Control, HistEvent, Keyframe, LngLat, Person, Place } from '../types'
+import type { Content, Control, HistEvent, Keyframe, LngLat, Person, Place, Polity } from '../types'
+
+/** A polity's official name at time t. */
+export function polityName(p: Polity, t: number): string {
+  let n = p.name
+  for (const x of p.names ?? []) if (x.date.t <= t) n = x.name
+  return n
+}
 
 /** Latest keyframe at or before t (index), or -1 before the first. */
 export function keyframeIndexAt(keyframes: Keyframe[], t: number): number {

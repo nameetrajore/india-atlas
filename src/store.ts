@@ -21,6 +21,9 @@ interface State {
   camera: Camera
   /** Fly-to request for the map; nonce makes repeated requests distinct. */
   flyTo: { camera: Camera; nonce: number } | null
+  /** Events the playhead just crossed: they ripple on the map and pop a toast. */
+  crossed: { id: string; at: number }[]
+  dockOpen: boolean
 
   setContent: (c: Content) => void
   setT: (t: number) => void
@@ -34,6 +37,8 @@ interface State {
   startStory: (id: string, step?: number) => void
   goStep: (step: number) => void
   stopStory: () => void
+  dismiss: (id: string) => void
+  setDockOpen: (o: boolean) => void
 }
 
 export const INITIAL_CAMERA: Camera = { center: [82.5, 22.5], zoom: 4.3, pitch: 0, bearing: 0 }
@@ -49,12 +54,21 @@ export const useStore = create<State>((set, get) => ({
   playing: false,
   camera: INITIAL_CAMERA,
   flyTo: null,
+  crossed: [],
+  dockOpen: true,
 
-  setContent: (content) => set({ content }),
+  setContent: (content) => set({ content, t: content.range[0] + 0.35 }),
   setT: (t) => {
-    const c = get().content
+    const { content: c, t: prev, crossed } = get()
     const [a, b] = c ? c.range : [-Infinity, Infinity]
-    set({ t: Math.min(b, Math.max(a, t)) })
+    const next = Math.min(b, Math.max(a, t))
+    // Only forward, continuous motion (playing or a short drag) announces events; jumps do not.
+    let fresh: { id: string; at: number }[] = []
+    if (c && next > prev && next - prev < 1.5) {
+      const now = performance.now()
+      fresh = c.events.filter((e) => e.date.t > prev && e.date.t <= next && e.significance >= 2).map((e) => ({ id: e.id, at: now }))
+    }
+    set({ t: next, ...(fresh.length ? { crossed: [...crossed, ...fresh].slice(-4) } : {}) })
   },
   setView: (view) => set({ view, hidden: new Set() }),
   toggleLens: (l) =>
@@ -85,6 +99,8 @@ export const useStore = create<State>((set, get) => ({
     get().requestFly(st.camera)
   },
   stopStory: () => set({ story: null }),
+  dismiss: (id) => set((s) => ({ crossed: s.crossed.filter((c) => c.id !== id) })),
+  setDockOpen: (dockOpen) => set({ dockOpen }),
 }))
 
 /** Lenses currently drawn. */

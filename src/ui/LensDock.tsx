@@ -1,6 +1,7 @@
 import { useStore } from '../store'
 import { LENSES_WITH_DATA, LENS_NAMES, VIEWS, viewById } from '../views'
 import type { LensId } from '../types'
+import { Legend } from './Legend'
 
 const ALL_LENSES = Object.keys(LENS_NAMES) as LensId[]
 
@@ -8,37 +9,48 @@ export function LensDock() {
   const view = useStore((s) => s.view)
   const hidden = useStore((s) => s.hidden)
   const advanced = useStore((s) => s.advanced)
-  const { setView, toggleLens, setAdvanced } = useStore.getState()
-  const lenses = advanced ? ALL_LENSES : viewById(view).lenses
+  const open = useStore((s) => s.dockOpen)
+  const { setView, toggleLens, setAdvanced, setDockOpen } = useStore.getState()
+  const lenses = (advanced ? ALL_LENSES : viewById(view).lenses).filter((l) => LENSES_WITH_DATA.has(l))
+  const coming = (advanced ? ALL_LENSES : viewById(view).lenses).filter((l) => !LENSES_WITH_DATA.has(l))
+
+  if (!open)
+    return (
+      <button className="dock-open btn" onClick={() => setDockOpen(true)}>
+        Key & layers
+      </button>
+    )
 
   return (
     <nav className="dock">
-      <div className="dock-title">View</div>
-      <div className="views">
-        {VIEWS.map((v) => (
-          <button key={v.id} className={`view-btn${v.id === view && !advanced ? ' on' : ''}`} onClick={() => (setAdvanced(false), setView(v.id))}>
-            {v.name}
-          </button>
-        ))}
+      <div className="dock-head">
+        <div className="views">
+          {VIEWS.map((v) => (
+            <button key={v.id} className={`view-btn${v.id === view && !advanced ? ' on' : ''}`} onClick={() => (setAdvanced(false), setView(v.id))}>
+              {v.name}
+            </button>
+          ))}
+        </div>
+        <button className="dock-close" onClick={() => setDockOpen(false)} aria-label="Hide panel">
+          ‹
+        </button>
       </div>
-      <div className="dock-title">Lenses</div>
-      <ul className="lenses">
-        {lenses.map((l) => {
-          const has = LENSES_WITH_DATA.has(l)
-          return (
+      <div className="dock-body">
+        <div className="dock-title">Layers</div>
+        <ul className="lenses">
+          {lenses.map((l) => (
             <li key={l}>
-              <label className={has ? '' : 'disabled'}>
-                <input type="checkbox" checked={has && !hidden.has(l)} disabled={!has} onChange={() => toggleLens(l)} />
+              <label>
+                <input type="checkbox" checked={!hidden.has(l)} onChange={() => toggleLens(l)} />
                 {LENS_NAMES[l]}
-                {!has && <span className="soon">coming</span>}
               </label>
             </li>
-          )
-        })}
-      </ul>
-      <label className="advanced">
-        <input type="checkbox" checked={advanced} onChange={(e) => setAdvanced(e.target.checked)} /> Mix all lenses
-      </label>
+          ))}
+        </ul>
+        {coming.length > 0 && <div className="coming">Coming: {coming.map((l) => LENS_NAMES[l]).join(', ')}</div>}
+        <div className="dock-title">Key</div>
+        <Legend />
+      </div>
     </nav>
   )
 }

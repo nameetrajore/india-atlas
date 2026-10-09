@@ -5,7 +5,7 @@ import { MapboxOverlay } from '@deck.gl/mapbox'
 import { activeLenses, useStore } from '../store'
 import { viewById } from '../views'
 import { baseStyle } from './style'
-import { buildLayers } from './layers'
+import { buildLayers, PULSE_MS } from './layers'
 import { loadUnits, type UnitIndex } from './units'
 
 export function MapView() {
@@ -24,6 +24,20 @@ export function MapView() {
   const flyTo = useStore((s) => s.flyTo)
   // Labels are decluttered in screen space, so they recompute when the camera settles.
   const camera = useStore((s) => s.camera)
+  const crossed = useStore((s) => s.crossed)
+  // Animation clock for ripples; runs only while a ripple is alive.
+  const [now, setNow] = useState(() => performance.now())
+  useEffect(() => {
+    if (!crossed.some((c) => performance.now() - c.at < PULSE_MS)) return
+    let raf = 0
+    const tick = () => {
+      const n = performance.now()
+      setNow(n)
+      if (crossed.some((c) => n - c.at < PULSE_MS)) raf = requestAnimationFrame(tick)
+    }
+    raf = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(raf)
+  }, [crossed])
 
   useEffect(() => {
     loadUnits().then(setUnits)
@@ -42,9 +56,8 @@ export function MapView() {
         [45, -8],
         [118, 46],
       ],
-      attributionControl: { compact: true },
+      attributionControl: false,
     })
-    m.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'bottom-right')
     const o = new MapboxOverlay({
       interleaved: true,
       layers: [],
@@ -81,6 +94,7 @@ export function MapView() {
         polityOpacity: viewById(view).polityOpacity,
         selection,
         zoom,
+        pulses: crossed.map((c) => ({ id: c.id, age: now - c.at })).filter((p) => p.age >= 0 && p.age < PULSE_MS),
         project: (p) => {
           const pt = map.current!.project(p)
           return [pt.x, pt.y]
@@ -88,7 +102,7 @@ export function MapView() {
         onPick: (s) => useStore.getState().select(s),
       }),
     })
-  }, [content, units, t, view, hidden, advanced, selection, zoom, camera])
+  }, [content, units, t, view, hidden, advanced, selection, zoom, camera, crossed, now])
 
   return (
     <div className="map">
