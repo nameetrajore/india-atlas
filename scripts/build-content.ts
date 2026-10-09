@@ -4,7 +4,7 @@
  *
  * Run: npm run content
  */
-import { readFileSync, readdirSync, writeFileSync, mkdirSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync, writeFileSync, mkdirSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { parse } from 'yaml'
@@ -152,6 +152,10 @@ const Show = z
     people: z.array(id).default([]),
     places: z.array(id).default([]),
     polities: z.array(id).default([]),
+    /** Trade routes from trade.yaml. */
+    trade: z.array(id).default([]),
+    /** Draw the railway network as it stood at the scene's date. */
+    railways: z.boolean().default(false),
   })
   .strict()
 const Scene = z
@@ -165,7 +169,7 @@ const Scene = z
     /** What the map shows in this scene; everything else is hidden (D25). */
     show: Show.default({}),
     /** Highlighted polities keep their own colour; the rest of the map shows blocs. */
-    select: z.object({ kind: z.enum(['event', 'place', 'person', 'polity', 'unit']), id }).optional(),
+    select: z.object({ kind: z.enum(['event', 'place', 'person', 'polity', 'unit', 'trade']), id }).optional(),
     /** Play time forward to this date while the scene is open (e.g. a march). */
     play_to: dateStr.optional(),
     /** A chart from charts.yaml shown under the text. */
@@ -194,6 +198,40 @@ const Methods = z
     sections: z.array(z.object({ title: z.string(), text: z.string() }).strict()),
     doubts: z.array(z.string()),
     gaps: z.array(z.string()),
+  })
+  .strict()
+
+/** A stretch of railway, drawn from its opening date (D27). */
+const Railway = z
+  .object({
+    id,
+    /** Company or line name, e.g. "Great Indian Peninsula Railway". */
+    line: z.string(),
+    opened: dateStr,
+    /** Waypoints along the route, [lng, lat]. */
+    path: z.array(lngLat).min(2),
+    note: z.string().optional(),
+    sources: cites,
+  })
+  .strict()
+/** A flow of goods or people, animated along its path while active (D27). */
+const Trade = z
+  .object({
+    id,
+    name: z.string(),
+    goods: z.string(),
+    /** export: out of India; import: into India; people: migration and indenture. */
+    flow: z.enum(['export', 'import', 'people']),
+    from: dateStr,
+    to: dateStr,
+    /** Sea or land waypoints from origin to destination or the map edge, [lng, lat]. */
+    path: z.array(lngLat).min(2),
+    /** Destination beyond the map edge, e.g. "London". */
+    beyond: z.string().optional(),
+    summary: z.string(),
+    context: z.string().optional(),
+    consequences: z.string().optional(),
+    sources: cites,
   })
   .strict()
 
@@ -247,6 +285,10 @@ const people = loadDir('people', Person)
 const chapters = loadDir('chapters', Chapter).sort((a, b) => a.number - b.number)
 const eras = loadDir('eras', Era)
 const methods = load('methods.yaml', Methods)[0]
+const railways = existsSync(join(CONTENT, 'railways.yaml')) ? load('railways.yaml', Railway) : []
+const trade = existsSync(join(CONTENT, 'trade.yaml')) ? load('trade.yaml', Trade) : []
+uniqueIds('railways', railways)
+uniqueIds('trade', trade)
 const glossary = load('glossary.yaml', Term)
 const charts = load('charts.yaml', Chart)
 
@@ -414,12 +456,15 @@ const compiledPeople = people.map((p) => {
 })
 
 // ---- stories
+for (const r of railways) checkCites(`railways.yaml[${r.id}]`, r.sources)
+for (const r of trade) checkCites(`trade.yaml[${r.id}]`, r.sources)
 const selectable: Record<string, Set<string>> = {
   event: eventIds,
   person: personIds,
   place: new Set(placeById.keys()),
   polity: polityIds,
   unit: unitIds,
+  trade: new Set(trade.map((r) => r.id)),
 }
 const compiledChapters = chapters.map((c) => {
   let prev = -Infinity
@@ -433,7 +478,7 @@ const compiledChapters = chapters.map((c) => {
       const where = `chapters[${c.id}].${sc.id}`
       if (sc.chart && !charts.some((c) => c.id === sc.chart)) fail(where, `unknown chart "${sc.chart}"`)
       if (sc.select && !selectable[sc.select.kind].has(sc.select.id)) fail(where, `unknown ${sc.select.kind} "${sc.select.id}"`)
-      for (const [kind, ids] of [['event', sc.show.events], ['person', sc.show.people], ['place', sc.show.places], ['polity', sc.show.polities]] as const)
+      for (const [kind, ids] of [['event', sc.show.events], ['person', sc.show.people], ['place', sc.show.places], ['polity', sc.show.polities], ['trade', sc.show.trade]] as const)
         for (const x of ids) if (!selectable[kind].has(x)) fail(where, `unknown ${kind} "${x}"`)
       const date = parseDate(sc.t)
       if (date.t < prev) fail(where, 'scenes must be in chronological order')
@@ -541,6 +586,8 @@ const content: Content = {
   eras: compiledEras,
   charts: compiledCharts,
   methods,
+  railways: railways.map((r) => ({ id: r.id, line: r.line, opened: parseDate(r.opened), path: r.path, note: r.note, sources: r.sources })),
+  trade: trade.map((r) => ({ ...r, from: parseDate(r.from), to: parseDate(r.to) })),
   glossary: glossary.map((g) => ({ id: g.id, term: g.term, aliases: g.aliases, definition: g.definition })),
 }
 mkdirSync(OUT, { recursive: true })

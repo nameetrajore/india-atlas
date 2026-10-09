@@ -128,7 +128,7 @@ export interface Scene {
   camera: Camera
   title: string
   text: string
-  show: { events: string[]; people: string[]; places: string[]; polities: string[] }
+  show: { events: string[]; people: string[]; places: string[]; polities: string[]; trade: string[]; railways: boolean }
   select?: Selection
   playTo?: CDate
   chart?: string
@@ -162,6 +162,8 @@ export interface Content {
   eras: Era[]
   glossary: Term[]
   charts: ChartData[]
+  railways: Railway[]
+  trade: TradeRoute[]
   methods: { sections: { title: string; text: string }[]; doubts: string[]; gaps: string[] }
 }
 
@@ -194,7 +196,7 @@ export interface Era {
   sources: string[]
 }
 
-export type SelectionKind = 'event' | 'place' | 'person' | 'polity' | 'unit'
+export type SelectionKind = 'event' | 'place' | 'person' | 'polity' | 'unit' | 'trade'
 export interface Selection {
   kind: SelectionKind
   id: string
@@ -213,3 +215,27 @@ export type LensId =
   | 'economy'
   | 'society'
   | 'partition'
+
+export interface Railway {
+  id: string
+  line: string
+  opened: CDate
+  path: LngLat[]
+  note?: string
+  sources: string[]
+}
+
+export interface TradeRoute {
+  id: string
+  name: string
+  goods: string
+  flow: 'export' | 'import' | 'people'
+  from: CDate
+  to: CDate
+  path: LngLat[]
+  beyond?: string
+  summary: string
+  context?: string
+  consequences?: string
+  sources: string[]
+}
