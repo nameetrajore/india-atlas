@@ -10,6 +10,7 @@
 - { id: g-cornwallis, kind: viceroy, name: Cornwallis, from: "1786-09", to: "1793-10", sources: [wp-viceroys] }
 - { id: g-shore, kind: viceroy, name: Shore, from: "1793-10", to: "1798-03", sources: [wp-viceroys] }
 - { id: g-wellesley, kind: viceroy, name: Wellesley, from: "1798-05", to: "1805-07", sources: [wp-viceroys] }
+- { id: g-cornwallis2, kind: viceroy, name: Cornwallis, from: "1805-07", to: "1805-10", sources: [wp-viceroys] }
 - { id: g-barlow, kind: viceroy, name: Barlow, from: "1805-10", to: "1807-07", sources: [wp-viceroys] }
 - { id: g-minto1, kind: viceroy, name: Minto, from: "1807-07", to: "1813-10", sources: [wp-viceroys] }
 - { id: g-moira, kind: viceroy, name: Hastings (Moira), from: "1813-10", to: "1823-01", sources: [wp-viceroys] }

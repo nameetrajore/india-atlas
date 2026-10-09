@@ -11,12 +11,12 @@ scenes:
     camera: { center: [ 88.35, 22.75 ], zoom: 8.0, pitch: 30 }
     title: A shot at Barrackpore
     text: >-
-      Through the early months of 1857, regiments near Calcutta refused the new cartridges, and the army
-      disbanded them. On 29 March, at the Barrackpore parade ground, a sepoy named [Mangal
+      Through the early months of 1857, sepoys near Calcutta resisted the new cartridges. In February one
+      regiment refused them outright, and the army ordered it disbanded. On 29 March, at the Barrackpore parade ground, a sepoy named [Mangal
       Pandey](person:mangal-pandey) [attacked his officers](event:mangal-pandey) and called on his comrades to
       rise.
 
-      They did not. He was hanged a week later. But word of the hanging spread along the chain of cantonments
+      They did not. He was hanged on 8 April. But word of the hanging spread along the chain of cantonments
       up the Ganges, where the Bengal Army's regiments were stationed among their own people.
     show:
       events: [ mangal-pandey ]
@@ -30,7 +30,7 @@ scenes:
       their uniforms in front of the garrison and shackled. The next evening their comrades [broke open the
       jail](event:meerut), killed British officers and civilians, and rode through the night to Delhi.
 
-      In Delhi the garrison joined them. They went to the Red Fort and asked the 82-year-old Mughal emperor,
+      In Delhi the garrison joined them. They went to the Red Fort and asked the 81-year-old Mughal emperor,
       [Bahadur Shah Zafar](person:bahadur-shah-zafar), to lead them. He [reluctantly
       agreed](event:delhi-seized).
 

@@ -120,7 +120,7 @@
   kind: power
   color: "#2f7a5f"
   summary: >-
-    The first European power in India. By the 18th century it held only Goa, Daman and Diu.
+    The first European power in India. After losing Bassein to the Marathas in 1739, it held only Goa, Daman and Diu.
   sources: [wp-portuguese-india]
 
 # ---- British Raj, 1857–1947 (D24)
@@ -264,7 +264,7 @@
   kind: province
   color: "#e9b9a8"
   summary: >-
-    Built up from the Quetta lease (1876) and the districts ceded by Afghanistan at Gandamak (1879).
+    Built up around Quetta (garrisoned from 1876, leased from Kalat in 1883) and the districts ceded by Afghanistan at Gandamak (1879).
     It was a chief commissioner's province from 1887.
   sources: [wp-baluchistan, wp-gandamak]
 - id: burma

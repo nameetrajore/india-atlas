@@ -24,5 +24,5 @@
 - { id: v-irwin, kind: viceroy, name: Irwin, from: "1926-04", to: "1931-04", sources: [wp-viceroys] }
 - { id: v-willingdon, kind: viceroy, name: Willingdon, from: "1931-04", to: "1936-04", sources: [wp-viceroys] }
 - { id: v-linlithgow, kind: viceroy, name: Linlithgow, from: "1936-04", to: "1943-10", sources: [wp-viceroys] }
-- { id: v-wavell, kind: viceroy, name: Wavell, from: "1943-10", to: "1947-02", sources: [wp-viceroys] }
-- { id: v-mountbatten, kind: viceroy, name: Mountbatten, from: "1947-02", to: "1947-08-15", sources: [wp-viceroys] }
+- { id: v-wavell, kind: viceroy, name: Wavell, from: "1943-10", to: "1947-03", sources: [wp-viceroys] }
+- { id: v-mountbatten, kind: viceroy, name: Mountbatten, from: "1947-03", to: "1947-08-15", sources: [wp-viceroys] }

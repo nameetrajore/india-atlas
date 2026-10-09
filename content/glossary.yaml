@@ -12,7 +12,7 @@
 - { id: permanent-settlement, term: Permanent Settlement, definition: "Cornwallis's 1793 settlement fixing Bengal's land revenue for ever with the zamindars, who became landowners.", sources: [bose-jalal] }
 - { id: jagir, term: jagir, definition: "A grant of the revenue of a piece of land, usually in return for service.", sources: [bose-jalal] }
 - { id: chauth, term: chauth, definition: "A Maratha levy of a quarter of a region's revenue, demanded in return for not raiding it.", sources: [wp-maratha] }
-- { id: peshwa, term: Peshwa, definition: "Chief minister of the Maratha kingdom. From the 1710s the Peshwas at Pune were its real rulers.", sources: [wp-maratha] }
+- { id: peshwa, term: Peshwa, definition: "Chief minister of the Maratha kingdom. From the 1720s the Peshwas, based at Pune, held its real power.", sources: [wp-maratha] }
 - { id: subsidiary-alliance, term: subsidiary alliance, aliases: [subsidiary alliances], definition: "A treaty under which an Indian ruler paid for British troops stationed in his state and handed over his foreign policy. Wellesley used it to turn rivals into dependants.", sources: [bose-jalal] }
 - { id: doctrine-of-lapse, term: doctrine of lapse, definition: "Dalhousie's policy of annexing a dependent state when its ruler died without a natural heir, refusing to recognise adopted sons.", sources: [isd-provinces] }
 - { id: paramountcy, term: paramountcy, definition: "British supremacy over the princely states, which kept their own rulers but not their independence.", sources: [wp-princely-states] }

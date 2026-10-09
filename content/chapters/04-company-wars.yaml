@@ -74,13 +74,13 @@ scenes:
     camera: { center: [ 84.0, 25.0 ], zoom: 5.4, pitch: 15 }
     title: Empire on trial
     text: >-
-      In Britain, the "nabobs" coming home with Indian fortunes were resented and mocked. In 1788 Parliament
-      [impeached Hastings](event:hastings-impeachment). [Edmund Burke](person:edmund-burke) accused him of
+      In Britain, the "nabobs" coming home with Indian fortunes were resented and mocked. In 1788 Hastings went on
+      [trial, impeached by Parliament](event:hastings-impeachment). [Edmund Burke](person:edmund-burke) accused him of
       extorting money from the Raja of [Benares](place:benares) and from the Begums of Awadh at
       [Faizabad](place:faizabad).
 
       The trial dragged on for seven years, and Hastings was acquitted. But it settled a principle: British
-      rule in India would be judged in Britain. From now on Governors-General were aristocrats sent from
+      rule in India would be judged in Britain. From 1786 most Governors-General were aristocrats sent from
       London, not Company men who had come out as clerks.
     show:
       events: [ hastings-impeachment ]
@@ -112,7 +112,7 @@ scenes:
     select: { kind: event, id: seringapatam-1799 }
     title: Napoleon's shadow
     text: >-
-      In 1798 Napoleon invaded Egypt and wrote to Tipu. The new Governor-General, [Richard
+      In 1798 Napoleon invaded Egypt, and early in 1799 he wrote to Tipu. The new Governor-General, [Richard
       Wellesley](person:richard-wellesley), used the threat of France to justify a programme of conquest.
 
       His tool was the [subsidiary alliance](event:subsidiary-alliance). An Indian ruler disbanded his own
@@ -120,7 +120,7 @@ scenes:
       accepted a British Resident at court. The Nizam of Hyderabad signed first.
 
       Tipu refused, and in May 1799 Company troops [stormed Seringapatam](event:seringapatam-1799). Tipu died
-      at the breach. A five-year-old Wodeyar prince was put on a reduced throne, under a subsidiary treaty.
+      at the breach. A four-year-old Wodeyar prince was put on a reduced throne, under a subsidiary treaty.
     show:
       events: [ subsidiary-alliance, seringapatam-1799 ]
       places: [ seringapatam, hyderabad, madras ]
@@ -140,8 +140,8 @@ scenes:
       to keep, and land was taken instead.
 
       In [1801](event:annexations-1801) Wellesley made Awadh give up half its territory, including Rohilkhand
-      and the lower Doab, and annexed the Carnatic outright. Watch the pink spread up the Ganges and along the
-      whole eastern coast.
+      and the lower Doab, and annexed the Carnatic outright. Watch the pink spread up the Ganges and along most
+      of the eastern coast.
     show:
       events: [ annexations-1801 ]
       places: [ lucknow, allahabad, madras ]
@@ -157,7 +157,7 @@ scenes:
 
       Scindia and the Bhonsle went to war. Arthur Wellesley, the future Duke of Wellington, beat them at
       [Assaye](event:assaye), and General Lake [took Delhi](event:delhi-1803). The blind Mughal emperor became
-      a British pensioner in the Red Fort, still the symbol of sovereignty, and he would be again in 1857.
+      a British pensioner in the Red Fort, still the symbol of sovereignty. In 1857 his grandson would be that symbol again.
     show:
       events: [ bassein, assaye, delhi-1803 ]
       places: [ bassein, assaye, delhi, poona ]

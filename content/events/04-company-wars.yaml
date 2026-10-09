@@ -19,7 +19,7 @@
 - id: first-mysore-war
   name: First Anglo-Mysore War
   date: "1767"
-  end: "1769-04"
+  end: "1769-03-29"
   place: madras
   kind: campaign
   significance: 3
@@ -112,10 +112,10 @@
     responsible for how India was governed in its name.
   consequences: >-
     Hastings was acquitted, but the trial established that British rule in India would be judged in
-    Britain. The next Governors-General were aristocrats sent from London, not Company men.
+    Britain. Most later Governors-General were aristocrats sent from London, not Company men.
   perspectives:
     - view: Burke
-      text: Company rule was "a government of plunder", and Hastings its chief.
+      text: Company rule under Hastings was a system of plunder and arbitrary power, and he was its chief.
     - view: Hastings' defenders
       text: He saved British India in a crisis and governed with skill and some respect for Indian learning.
   sources: [wp-hastings-impeachment, wp-warren-hastings]
@@ -188,7 +188,7 @@
     the breach, and the city is sacked.
   context: Wellesley used Tipu's letters to the French as the reason for war.
   consequences: >-
-    The Company annexed Kanara and Coimbatore and restored a five-year-old Wodeyar prince to a reduced
+    The Company annexed Kanara and Coimbatore and restored a four-year-old Wodeyar prince to a reduced
     Mysore under a subsidiary treaty. The last great power of the south was gone.
   sources: [wp-seringapatam-1799, wp-tipu]
 - id: annexations-1801

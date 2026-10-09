@@ -14,7 +14,7 @@ perspectives:
     text: His alliance with Nazi Germany and imperial Japan remains a point of serious criticism.
 sources: [wp-subhas-bose]
 itinerary:
-  - { date: "1938-02", coords: [73.29, 21.14], approx: true, note: Presides over the Haripura Congress }
+  - { date: "1938-02", coords: [73.21, 21.21], approx: true, note: Presides over the Haripura Congress }
   - { date: "1939-04", place: calcutta, note: Resigns as Congress president }
   - { date: "1940-07", place: calcutta, note: Arrested; later under house arrest }
   - { date: "1941-01-16", place: calcutta, note: Escapes in disguise }

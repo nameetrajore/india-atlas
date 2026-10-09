@@ -25,7 +25,7 @@
   causes: [revolt-1857]
   summary: >-
     A royal commission (the Peel Commission) recommends reshaping the army. The ratio of British to Indian
-    troops is raised to about one to two, artillery is kept in British hands, and regiments are mixed by
+    troops is raised to about one to two in Bengal and one to three elsewhere, artillery is kept in British hands, and regiments are mixed by
     caste and region.
   context: >-
     The Bengal Army, recruited largely from upper-caste Hindus of Awadh and Bihar, had led the revolt.
@@ -44,8 +44,8 @@
     The canal across Egypt opens. The voyage from Britain to Bombay falls from about three months round
     Africa to a few weeks.
   context: >-
-    Steamships and the telegraph were already shrinking distances. India was Britain's largest overseas
-    market and its most important strategic asset.
+    Steamships and the telegraph were already shrinking distances. India was the largest overseas
+    market for British cotton goods and Britain's most important strategic asset.
   consequences: >-
     India's raw cotton, jute, wheat and indigo flowed out faster, and British manufactures and officials
     flowed in. Protecting the route to India became a fixed aim of British foreign policy.
@@ -110,7 +110,7 @@
   why: Policy, not just drought, decided how many died.
   figures:
     - label: Deaths
-      min: 5500000
+      min: 5600000
       max: 10300000
       note: Estimates vary by method and region.
       sources: [wp-great-famine]
@@ -201,7 +201,7 @@
     The famine codes promised relief works, but relief was rationed tightly and many princely states had
     little capacity to help.
   consequences: >-
-    Mortality was high enough to bring a second Famine Commission (1901). It strengthened the nationalist
+    Mortality was high enough to bring another Famine Commission (1901). It strengthened the nationalist
     view that British rule was impoverishing India.
   figures:
     - label: Deaths
@@ -221,7 +221,7 @@
   summary: >-
     Munda adivasis (indigenous people) in Chotanagpur rise against landlords, moneylenders, missionaries
     and the colonial state, attacking police stations and churches. Birsa is captured and dies in Ranchi
-    jail in June 1900, aged 25.
+    jail in June 1900, aged 24.
   context: >-
     Colonial land law had turned the Mundas' collective land rights into private titles that outsiders
     could buy or seize. Birsa, a religious leader, promised the return of the land and a Munda raj.

@@ -46,7 +46,7 @@
   causes: [elections-1937, ministries-resign, iqbal-allahabad]
   summary: >-
     At Lahore the Muslim League demands that the Muslim-majority areas in the north-west and east be
-    grouped into "independent states" that are "autonomous and sovereign". Jinnah argues that Hindus and
+    grouped into "Independent States", in which the constituent units are "autonomous and sovereign". Jinnah argues that Hindus and
     Muslims are two nations.
   context: >-
     The League's experience of the 1937 Congress ministries, and fear of being a permanent minority under
@@ -153,8 +153,9 @@
     spending drove prices up, and traders hoarded. Food went to the army and the city, and both Bengal's
     ministry and the central government reacted too late.
   consequences: >-
-    Amartya Sen later showed that there was enough food in Bengal. People starved because they could not
-    afford it, which made it a famine of policy and prices. It deepened Indian bitterness towards the Raj.
+    Amartya Sen later argued that Bengal's food supply was not much lower than in earlier years without
+    famine. People starved because they could not
+    afford food, which made it a famine of policy and prices. It deepened Indian bitterness towards the Raj.
   why: The famine was made by war, policy and markets, not by a harvest failure alone.
   perspectives:
     - view: Critics of the War Cabinet
@@ -332,7 +333,7 @@
   participants: [mountbatten, nehru, jinnah, patel]
   causes: [direct-action, cabinet-mission]
   summary: >-
-    The last Viceroy announces that India will be partitioned and power transferred, and he brings the
+    The last Viceroy announces that India will be partitioned and power transferred. The next day he brings the
     date forward from June 1948 to 15 August 1947. Punjab and Bengal will be divided if their assemblies
     vote for it. Sylhet and NWFP will hold referendums.
   context: >-
@@ -340,7 +341,7 @@
     above all, accepted partition as the price of a strong central state. Gandhi opposed it but did not
     fight it.
   consequences: >-
-    The British left 72 days later. Punjab and Bengal, home to millions of Hindus, Muslims and Sikhs, would
+    The British left 72 days after he named the date. Punjab and Bengal, home to millions of Hindus, Muslims and Sikhs, would
     be cut in two by a boundary nobody had yet drawn.
   sources: [wp-partition-1947, khan-great-partition]
 - id: sylhet-referendum
@@ -406,14 +407,14 @@
   sources: [wp-radcliffe-line, khan-great-partition]
 - id: junagadh-crisis
   name: Junagadh crisis
-  date: "1947-09-15"
+  date: "1947-08-15"
   end: "1947-11-09"
   place: junagadh
   kind: political
   significance: 2
   causes: [independence]
   summary: >-
-    The Muslim Nawab of Hindu-majority Junagadh accedes to Pakistan. India blockades the state, the Nawab
+    The Muslim Nawab of Hindu-majority Junagadh accedes to Pakistan, which accepts in September. India blockades the state, the Nawab
     flees to Karachi, and Indian forces take over in November. A plebiscite in 1948 confirms the merger.
   context: Under the independence arrangements, rulers chose which dominion to join.
   consequences: India argued the will of the people should decide. It made the opposite case in Kashmir.

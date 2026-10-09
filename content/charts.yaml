@@ -4,7 +4,7 @@
 - id: world-gdp-share
   kind: line
   title: India's share of world output
-  subtitle: Per cent of world GDP, undivided India, by Angus Maddison's estimates
+  subtitle: "Per cent of world GDP, by Angus Maddison's estimates: undivided India to 1913, the Republic of India in 1950"
   unit: "%"
   points: [[1600, 22.4], [1700, 24.4], [1820, 16.0], [1870, 12.2], [1913, 7.6], [1950, 4.2]]
   note: Estimates for these centuries are rough reconstructions. The trend matters more than any one value.

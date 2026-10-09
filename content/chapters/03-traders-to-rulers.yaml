@@ -45,7 +45,7 @@ scenes:
     camera: { center: [ 84.5, 17.0 ], zoom: 4.5, pitch: 0 }
     title: No European rival left
     text: >-
-      Mir Jafar quietly invited the Dutch to balance the British. Their force was beaten at
+      Mir Jafar was suspected of inviting the Dutch to balance the British. Their force was beaten at
       [Chinsurah](event:chinsurah) in 1759.
 
       In the south, the Seven Years' War brought a final French attempt. Eyre Coote crushed it at
@@ -121,7 +121,7 @@ scenes:
       Orissa: the right to collect their land revenue. In return the emperor got a pension and two districts.
 
       The light pink is Bengal under "dual government". The Company took the money, while the Nawab's
-      officials still ran the administration. A London company had become the tax authority for perhaps 20
+      officials still ran the administration. A London company had become the tax authority for perhaps 20 to 30
       million people.
     show:
       events: [ allahabad ]

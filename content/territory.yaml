@@ -205,8 +205,7 @@
 - date: "1760-10"
   certainty: approximate
   note: >-
-    Mir Qasim takes the throne and pays the Company with Burdwan, Midnapore and Chittagong. Chittagong
-    is in present-day Bangladesh, and it is not yet in the base map.
+    Mir Qasim takes the throne and pays the Company with Burdwan, Midnapore and Chittagong.
   sources: [wp-mir-qasim, marshall-bengal]
   changes:
     eic: [bengal--burdwan, bengal--midnapore, division:BGD:Chittagong]
@@ -601,8 +600,8 @@
 - date: "1887-11"
   certainty: approximate
   note: >-
-    British Baluchistan is constituted. Quetta, leased from the Khan of Kalat since 1876, becomes its
-    seat.
+    British Baluchistan is constituted. Quetta, garrisoned since 1876 and leased from the Khan of Kalat in
+    1883, becomes its seat.
   sources: [wp-baluchistan, wp-kalat]
   changes:
     baluchistan: [pak--quetta]

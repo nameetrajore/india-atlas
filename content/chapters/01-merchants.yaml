@@ -13,7 +13,7 @@ scenes:
     text: >-
       In 1600 the richest place a European merchant could reach was India. The Mughal Empire under Akbar ruled
       from Kabul to Bengal, and by modern estimates South Asia produced something like a fifth to a quarter of
-      the world's goods. Its cotton cloth was dressing half of Asia.
+      the world's goods. Its cotton cloth was sold across Asia and East Africa.
 
       Europeans wanted those goods, above all pepper and spices, and later cloth. For a hundred years the sea
       route round Africa had been controlled by the **Portuguese** from [Goa](place:goa). In the 1590s the
@@ -80,7 +80,7 @@ scenes:
       The weavers of the Coromandel coast made painted and printed cottons (chintz and calico) that were
       lighter, cheaper and more colourful than anything Europe made. In 1639 the Company got land from a local
       ruler and built Fort St George. [Madras](event:madras-founded) grew up around it, with the Dutch at
-      [Pulicat](place:pulicat) and Negapatam not far away.
+      [Pulicat](place:pulicat) not far to the north.
 
       For the rest of the century the Company's profits came from Indian manufactures, paid for mostly in
       silver. It was a trade between equals, or one that favoured India.
@@ -89,7 +89,7 @@ scenes:
       places: [ madras, pulicat, negapatam, masulipatnam, tranquebar ]
     image:
       src: media/ch1-cloth.jpg
-      caption: Fort St George, Madras, as engraved by Jan Van Ryne in 1754, a century after it was built.
+      caption: Fort St George, Madras, as engraved by Jan Van Ryne in 1754, more than a century after it was built.
       credit: Jan Van Ryne (1712–60)
       license: Public domain
       source: https://commons.wikimedia.org/wiki/File:Fort_St._George,_Chennai.jpg
@@ -142,7 +142,7 @@ scenes:
       become the capital of British India.
 
       Meanwhile in London, the [Calico Act](event:calico-act) of 1700 banned printed Indian cloth to protect
-      English weavers. In 1700 Britain was protecting itself from Indian industry. Remember that.
+      English weavers. In 1700 England was protecting itself from Indian industry. Remember that.
     show:
       events: [ calcutta-founded, calico-act ]
       places: [ calcutta, hughli, chinsurah, chandernagore ]

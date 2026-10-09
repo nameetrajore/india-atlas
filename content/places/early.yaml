@@ -185,6 +185,9 @@
     - from: 1758-06
       power: french
       note: Captured and razed by Lally
+    - from: "1761"
+      power: eic
+      note: Back in British hands after the fall of Pondicherry
   sources:
     - wp-clive
 - id: tranquebar
