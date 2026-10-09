@@ -56,6 +56,45 @@
       - madras--north-arcot madras--south-arcot madras--nellore madras--cuddapah madras--kurnool madras--anantapur madras--bellary madras--chittoor
       - division:Central_Province_and_Berar|british -central-province-and-berar--akola -central-province-and-berar--amraoti -central-province-and-berar--buldana -central-province-and-berar--yeotmal
     maratha-peshwa: [bombay--poona, bombay--satara, bombay--ratnagiri, bombay--kolaba, bombay--thana]
+- date: "1717"
+  certainty: approximate
+  note: >-
+    Murshid Quli Khan, diwan and then governor of Bengal, runs the province with little reference to
+    Delhi. Bengal, Bihar and Orissa begin to act as a separate state under nawabs at Murshidabad.
+  sources: [schwartzberg, marshall-bengal]
+  changes:
+    bengal-nawabs:
+      - bengal--24-parganas bengal--bankura bengal--birbhum bengal--burdwan bengal--dinajpur bengal--hooghly
+      - bengal--howrah bengal--jalpaiguri bengal--malda bengal--midnapore bengal--murshidabad bengal--nadia
+      - division:Bihar orissa--balasore orissa--cuttack orissa--puri
+      - division:BGD:Barisal division:BGD:Dhaka division:BGD:Khulna division:BGD:Mymensingh division:BGD:Noakhali division:BGD:Rajshani division:BGD:Rangpur division:BGD:Sylhet division:BGD:Chittagong
+- date: "1722"
+  certainty: approximate
+  note: Saadat Khan becomes governor of Awadh and founds a hereditary line of nawabs.
+  sources: [wp-awadh]
+  changes:
+    awadh:
+      - united-province--lucknow united-province--unao united-province--rae-bareli united-province--sitapur
+      - united-province--hardoi united-province--kheri united-province--fyzabad united-province--gonda
+      - united-province--bahraich united-province--sultanpur united-province--partabgarh united-province--bara-banki
+- date: "1724-10"
+  certainty: approximate
+  note: >-
+    Nizam-ul-Mulk defeats the emperor's governor at Shakar Kheda and makes the Deccan his own, the
+    start of Hyderabad State.
+  sources: [wp-hyderabad]
+  changes:
+    hyderabad: [division:Hyderabad]
+- date: "1737"
+  certainty: approximate
+  note: >-
+    Under Peshwa Baji Rao I the Marathas take Malwa and much of Gujarat. In 1737 they raid the outskirts
+    of Delhi itself.
+  sources: [wp-maratha, schwartzberg]
+  changes:
+    maratha-peshwa:
+      - division:Central_India_Agency division:Gwalior bombay--east-khandesh bombay--west-khandesh
+      - bombay--nasik bombay--ahmednagar bombay--sholapur
 - date: "1740"
   certainty: approximate
   note: >-
