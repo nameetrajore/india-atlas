@@ -199,7 +199,11 @@ export function Timeline() {
           {playing ? '❚❚' : '▶'}
         </button>
         <div className="readout">{readout}</div>
-        {viceroyNow && <div className="now-viceroy">Viceroy: {viceroyNow.name}</div>}
+        {viceroyNow && (
+          <div className="now-viceroy">
+            {t < 1858.83 ? 'Governor-General' : 'Viceroy'}: {viceroyNow.name}
+          </div>
+        )}
         <div className="timeline-hint">scroll to zoom · drag the scale to pan · space to play</div>
       </div>
       <div ref={track} className="track">

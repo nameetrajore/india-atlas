@@ -22,7 +22,11 @@ export function NowCaption() {
     })
   return (
     <div className="now">
-      {ruler && <span>Governor-General: {ruler.name}</span>}
+      {ruler && (
+        <span>
+          {t < 1858.83 ? 'Governor-General' : 'Viceroy'}: {ruler.name}
+        </span>
+      )}
       {recent.map((e) => (
         <button key={e.id} className="now-item" onClick={() => select({ kind: 'event', id: e.id })}>
           {e.name}
