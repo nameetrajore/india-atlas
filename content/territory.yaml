@@ -1,0 +1,137 @@
+# Polity-per-year as sets of 1941 base units (D6).
+# The first keyframe assigns units in full. Each later keyframe lists only the changes, which carry forward.
+# Selectors: a unit id, or "division:<Admin Division>" for every unit in that division.
+# Units not assigned are rendered as "not yet mapped".
+# Every keyframe here is approximate: 1941 units only roughly match 18th-century borders.
+- date: "1740"
+  certainty: approximate
+  note: >-
+    Starting state. Alivardi Khan takes Bengal after Giria. The Bhonsles of Nagpur hold Nagpur and are
+    advancing into Chhattisgarh.
+  sources: [schwartzberg, marshall-bengal, isd-1941]
+  assign:
+    bengal-nawabs:
+      - bengal--24-parganas
+      - bengal--bankura
+      - bengal--birbhum
+      - bengal--burdwan
+      - bengal--dinajpur
+      - bengal--hooghly
+      - bengal--howrah
+      - bengal--jalpaiguri
+      - bengal--malda
+      - bengal--midnapore
+      - bengal--murshidabad
+      - bengal--nadia
+      - division:Bihar
+      - orissa--balasore
+      - orissa--cuttack
+      - orissa--puri
+    eic: [bengal--calcutta, madras--madras]
+    awadh:
+      - united-province--lucknow
+      - united-province--unao
+      - united-province--rae-bareli
+      - united-province--sitapur
+      - united-province--hardoi
+      - united-province--kheri
+      - united-province--fyzabad
+      - united-province--gonda
+      - united-province--bahraich
+      - united-province--sultanpur
+      - united-province--partabgarh
+      - united-province--bara-banki
+      - united-province--allahabad
+      - united-province--fatehpur
+      - united-province--jaunpur
+      - united-province--benares
+      - united-province--ghazipur
+      - united-province--ballia
+      - united-province--mirzapur
+      - united-province--gorakhpur
+      - united-province--basti
+      - united-province--azamgarh
+      - united-province--cawnpore
+    rohillas:
+      - united-province--bareilly
+      - united-province--moradabad
+      - united-province--budaun
+      - united-province--shahjahanpur
+      - united-province--pilibhit
+      - united-province--bijnor
+    mughal: [delhi--delhi, united-province--meerut, united-province--bulandshahr]
+    marathas-nagpur:
+      - central-province-and-berar--nagpur
+      - central-province-and-berar--wardha
+      - central-province-and-berar--bhandara
+      - central-province-and-berar--chanda
+      - central-province-and-berar--raipur
+      - central-province-and-berar--bilaspur
+      - central-province-and-berar--drug
+    maratha-peshwa:
+      - bombay--poona
+      - bombay--satara
+      - bombay--ahmednagar
+      - bombay--nasik
+      - bombay--sholapur
+      - bombay--east-khandesh
+      - bombay--west-khandesh
+      - bombay--thana
+      - bombay--ratnagiri
+    hyderabad: [division:Hyderabad]
+    mysore: [division:Mysore]
+    carnatic:
+      - madras--north-arcot
+      - madras--south-arcot
+      - madras--chingleput
+      - madras--chittoor
+      - madras--nellore
+      - madras--trichinopoly
+    travancore: [madras--travancore]
+    portuguese: [goa--goa, daman--daman, daman--daman-2]
+    french: [pondicherry--pondicherry, karikal--karikal, mahe--mahe]
+- date: "1751"
+  certainty: approximate
+  note: >-
+    After ten years of Maratha raids, Alivardi Khan cedes Orissa to the Bhonsles and agrees to pay
+    chauth (a tribute) for Bengal. Midnapore stays with Bengal.
+  sources: [wp-maratha-bengal, marshall-bengal]
+  changes:
+    marathas-nagpur: [orissa--balasore, orissa--cuttack, orissa--puri]
+- date: "1757-12"
+  certainty: approximate
+  note: >-
+    After Plassey, Mir Jafar grants the Company the zamindari (the right to hold land and collect its
+    revenue) of the 24 Parganas, south of Calcutta.
+  sources: [wp-24-parganas, wp-plassey]
+  changes:
+    eic: [bengal--24-parganas]
+- date: "1760-10"
+  certainty: approximate
+  note: >-
+    Mir Qasim takes the throne and pays the Company with Burdwan, Midnapore and Chittagong. Chittagong
+    is in present-day Bangladesh, and it is not yet in the base map.
+  sources: [wp-mir-qasim, marshall-bengal]
+  changes:
+    eic: [bengal--burdwan, bengal--midnapore]
+- date: "1765-08"
+  certainty: approximate
+  note: >-
+    Treaty of Allahabad. Shah Alam II grants the Company the diwani of Bengal, Bihar and Orissa. Awadh
+    gives Allahabad and Kora to the emperor. The Chingleput jagir is also shown, granted to the Company
+    by the Nawab of Arcot in 1763.
+  sources: [wp-allahabad, marshall-bengal]
+  changes:
+    eic-diwani:
+      - bengal--bankura
+      - bengal--birbhum
+      - bengal--murshidabad
+      - bengal--hooghly
+      - bengal--howrah
+      - bengal--nadia
+      - bengal--dinajpur
+      - bengal--malda
+      - bengal--jalpaiguri
+      - division:Bihar
+    mughal: [united-province--allahabad, united-province--fatehpur]
+    eic: [madras--chingleput]

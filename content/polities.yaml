@@ -1,0 +1,122 @@
+# Polities and colonial powers. `kind: power` = European company/crown (used for footholds).
+- id: eic
+  name: English East India Company
+  alt_names: [The Company, John Company, EIC]
+  kind: power
+  color: "#b5452f"
+  summary: >-
+    A London joint-stock company chartered in 1600 to trade in Asia. By 1765 it collected the land revenue
+    of Bengal and Bihar and kept its own army.
+  sources: [dalrymple-anarchy, marshall-bengal]
+- id: eic-diwani
+  name: Bengal under Company diwani
+  alt_names: [Dual government]
+  kind: polity
+  color: "#d98a6c"
+  summary: >-
+    After 1765 the Company held the diwani (the right to collect revenue) for Bengal, Bihar and Orissa.
+    The Nawab kept the nizamat (justice and policing) in name only. Historians call this arrangement the
+    "dual government".
+  sources: [wp-allahabad, marshall-bengal]
+- id: bengal-nawabs
+  name: Nawabs of Bengal
+  alt_names: [Bengal Subah, Nawabs of Murshidabad]
+  kind: polity
+  color: "#5f8f5a"
+  summary: >-
+    The Mughal province of Bengal, Bihar and Orissa. It was in practice independent under nawabs based at
+    Murshidabad, and it was the richest province of the empire.
+  sources: [wp-alivardi, marshall-bengal]
+- id: awadh
+  name: Nawabs of Awadh
+  alt_names: [Oudh]
+  kind: polity
+  color: "#4f8a8b"
+  summary: >-
+    A Mughal successor state in the middle Ganges plain. Shuja-ud-Daula ruled from 1754, and his
+    defeat at Buxar made Awadh a buffer state of the Company.
+  sources: [wp-awadh, wp-shuja]
+- id: mughal
+  name: Mughal Empire
+  kind: polity
+  color: "#7d5a8c"
+  summary: >-
+    By the 1740s the emperor in Delhi was sovereign in name, but his real power reached little beyond
+    the capital region. Provincial governors and rival powers held the rest.
+  sources: [wp-mughal, wp-shah-alam]
+- id: maratha-peshwa
+  name: Maratha Confederacy (Peshwa)
+  kind: polity
+  color: "#c27c1e"
+  summary: >-
+    A confederacy based at Pune under the Peshwas. In the 1750s it was the strongest power on the
+    subcontinent, until its defeat at Panipat in 1761.
+  sources: [wp-maratha, wp-panipat]
+- id: marathas-nagpur
+  name: Bhonsles of Nagpur
+  kind: polity
+  color: "#dba24a"
+  summary: >-
+    A Maratha house based at Nagpur. Its armies raided Bengal from 1741, and in 1751 it took Orissa from
+    the Nawab of Bengal.
+  sources: [wp-bhonsle, wp-maratha-bengal]
+- id: rohillas
+  name: Rohillas
+  kind: polity
+  color: "#8c6a4a"
+  summary: Afghan chiefs who took control of Rohilkhand, north-west of Awadh, in the 1740s.
+  sources: [wp-rohilkhand]
+- id: hyderabad
+  name: Nizams of Hyderabad
+  alt_names: [Asaf Jahi]
+  kind: polity
+  color: "#a39a4a"
+  summary: A Mughal successor state in the Deccan, independent in practice from 1724.
+  sources: [wp-hyderabad]
+- id: mysore
+  name: Kingdom of Mysore
+  kind: polity
+  color: "#4a6fa5"
+  summary: >-
+    A Wodeyar kingdom in the southern Deccan. From 1761 the commander Haidar Ali held real power.
+  sources: [wp-mysore]
+- id: carnatic
+  name: Nawabs of the Carnatic (Arcot)
+  kind: polity
+  color: "#6b7f6b"
+  summary: >-
+    A Mughal successor state on the Coromandel coast. Rival claimants backed by the British and the
+    French fought for it in the Carnatic Wars.
+  sources: [wp-carnatic, wp-arcot]
+- id: travancore
+  name: Travancore
+  kind: polity
+  color: "#7a8f9e"
+  summary: A kingdom in the far south-west, enlarged by Marthanda Varma in the 1740s.
+  sources: [wp-travancore]
+- id: french
+  name: French East India Company
+  alt_names: [Compagnie des Indes]
+  kind: power
+  color: "#2e5aa8"
+  summary: The main European rival of the British in the 1740s–1750s. Its headquarters was Pondicherry.
+  sources: [wp-french-india]
+- id: dutch
+  name: Dutch East India Company (VOC)
+  kind: power
+  color: "#e07b2a"
+  summary: The VOC, once the leading European trader in Asia. Its Bengal base was Chinsurah.
+  sources: [wp-dutch-india]
+- id: danish
+  name: Danish East India Company
+  kind: power
+  color: "#8a2f5a"
+  summary: A small Danish trading presence at Tranquebar (from 1620) and Serampore (from 1755).
+  sources: [wp-serampore]
+- id: portuguese
+  name: Portuguese Estado da Índia
+  kind: power
+  color: "#2f7a5f"
+  summary: >-
+    The first European power in India. By the 18th century it held only Goa, Daman and Diu.
+  sources: [wp-portuguese-india]

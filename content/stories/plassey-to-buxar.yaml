@@ -1,0 +1,73 @@
+id: plassey-to-buxar
+title: "Plassey to Buxar"
+subtitle: How a trading company took Bengal, 1740–1765
+view: geopolitics
+steps:
+  - t: "1740-06"
+    camera: { center: [84.5, 23.5], zoom: 4.6, pitch: 0 }
+    title: A province worth an empire
+    text: >-
+      In 1740 Bengal is the richest province of the Mughal Empire, in practice independent under its
+      Nawab at Murshidabad. Europeans trade along the Hooghly at its edge: English at Calcutta, Dutch at
+      Chinsurah, French at Chandernagore.
+  - t: "1745"
+    camera: { center: [87.5, 23.4], zoom: 6.2, pitch: 25 }
+    select: { kind: event, id: maratha-raids }
+    title: The bargis
+    text: >-
+      For a decade Maratha cavalry from Nagpur raid western Bengal. In 1751 Alivardi Khan buys peace by
+      giving up Orissa. Watch it change colour.
+  - t: "1751-06"
+    camera: { center: [86.0, 21.8], zoom: 5.8, pitch: 25 }
+    title: Orissa lost
+    text: >-
+      Orissa passes to the Bhonsles of Nagpur. Meanwhile, in the south, a young Company clerk named
+      Robert Clive has just held Arcot against a siege.
+  - t: "1756-06-20"
+    camera: { center: [88.35, 22.6], zoom: 8.6, pitch: 40, bearing: -10 }
+    select: { kind: event, id: fall-of-calcutta }
+    title: Alinagar
+    text: >-
+      The new Nawab, Siraj-ud-Daulah, objects to the Company fortifying Calcutta without his permission.
+      He marches south and takes the city. The night of the "Black Hole" follows, and its numbers are
+      still disputed.
+  - t: "1757-01-02"
+    camera: { center: [86.0, 18.0], zoom: 5.0, pitch: 20 }
+    select: { kind: person, id: clive }
+    title: The relief from Madras
+    text: Clive and Admiral Watson sail north from Madras and retake Calcutta in January 1757.
+  - t: "1757-06-23"
+    camera: { center: [88.25, 23.8], zoom: 9.0, pitch: 50, bearing: 15 }
+    select: { kind: event, id: plassey }
+    title: Plassey
+    text: >-
+      A mango grove on the Bhagirathi. The deal was struck before the battle: the commander Mir Jafar
+      stays out of the fight, and the Nawab's army breaks.
+  - t: "1757-12"
+    camera: { center: [88.3, 22.6], zoom: 7.5, pitch: 30 }
+    title: The first territory
+    text: >-
+      The Company's reward includes the zamindari of the 24 Parganas, its first block of territory in
+      Bengal. More follows in 1760 when Mir Qasim is made Nawab.
+  - t: "1761-01-15"
+    camera: { center: [80.5, 17.0], zoom: 4.6, pitch: 10 }
+    select: { kind: event, id: panipat }
+    title: Two decisive defeats
+    text: >-
+      In the same week the Marathas are crushed at Panipat and Pondicherry falls to the British. The
+      Company's two great rivals, the Marathas in the north and the French in the south, are both
+      checked.
+  - t: "1764-10-22"
+    camera: { center: [84.0, 25.6], zoom: 7.4, pitch: 45, bearing: -15 }
+    select: { kind: event, id: buxar }
+    title: Buxar
+    text: >-
+      Mir Qasim, the Nawab of Awadh and the Mughal emperor combine against the Company, and they lose.
+      Unlike Plassey, this is a real battle.
+  - t: "1765-08-12"
+    camera: { center: [84.5, 24.5], zoom: 5.4, pitch: 20 }
+    select: { kind: event, id: allahabad }
+    title: The diwani
+    text: >-
+      At Allahabad the emperor grants the Company the diwani, the right to collect the revenue of Bengal,
+      Bihar and Orissa. A trading company is now a government.

@@ -1,0 +1,37 @@
+id: siraj-ud-daulah
+name: Siraj-ud-Daulah
+tier: 1
+born: "1733"
+died: "1757-07-02"
+role: Nawab of Bengal, 1756–1757
+summary: >-
+  The last independent Nawab of Bengal. He moved quickly against the Company's unauthorised
+  fortification of Calcutta, but he alienated the bankers and nobles at his own court. They then
+  conspired with Clive.
+perspectives:
+  - view: Colonial accounts
+    text: >-
+      Portrayed as a cruel and reckless young tyrant, an image built largely on Holwell's Black Hole
+      narrative.
+  - view: Bengali and nationalist memory
+    text: >-
+      A patriot who defended Bengal's sovereignty and was betrayed by Mir Jafar. "Mir Jafar" became a
+      byword for traitor.
+  - view: Recent scholarship
+    text: >-
+      An inexperienced ruler with real grievances against the Company, undone by a court coalition of
+      bankers and generals who wanted him gone.
+sources: [wp-siraj, marshall-bengal]
+itinerary:
+  - { date: "1756-04", place: murshidabad, note: Succeeds Alivardi Khan }
+  - { date: "1756-06", place: kasimbazar, note: Seizes the English factory }
+  - { date: "1756-06-20", place: calcutta, note: Takes Fort William }
+  - { date: "1756-07", place: murshidabad, approx: true }
+  - { date: "1756-10", place: manihari, note: Defeats Shaukat Jang }
+  - { date: "1756-11", place: murshidabad, approx: true }
+  - { date: "1757-02-05", place: calcutta, note: Clash with Clive outside Calcutta }
+  - { date: "1757-02-09", place: calcutta, note: Treaty of Alinagar }
+  - { date: "1757-03", place: murshidabad, approx: true }
+  - { date: "1757-06-23", place: plassey, note: Battle of Plassey }
+  - { date: "1757-06-24", place: murshidabad, note: Flees to his capital }
+  - { date: "1757-07-02", place: murshidabad, note: Executed }

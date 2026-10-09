@@ -1,0 +1,39 @@
+id: clive
+name: Robert Clive
+tier: 1
+born: "1725-09-29"
+died: "1774-11-22"
+role: Company soldier and Governor of Bengal
+summary: >-
+  A Company clerk turned soldier. He made his name at Arcot, won Plassey through a planned defection,
+  and as governor obtained the diwani at Allahabad. He returned to Britain enormously rich, and
+  Parliament investigated him.
+perspectives:
+  - view: Imperial historiography
+    text: The founder of British India, a bold commander who saw a political opportunity and took it.
+  - view: Nationalist and critical historiography
+    text: >-
+      A man who conquered by bribery and coup, and whose regime in Bengal led to plunder and the famine
+      of 1770.
+sources: [wp-clive, dalrymple-anarchy]
+# Itinerary: dated locations. `away` = outside the map (marker hidden).
+itinerary:
+  - { date: "1744-06", place: madras, note: Arrives as a Company writer (clerk) }
+  - { date: "1747", place: fort-st-david, approx: true, note: Takes a commission in the Company army }
+  - { date: "1751-09", place: arcot, note: Seizes Arcot }
+  - { date: "1751-11", place: arcot, note: Siege lifted }
+  - { date: "1752", place: madras, approx: true }
+  - { date: "1753-03", away: true, note: Sails for Britain }
+  - { date: "1756-06", place: fort-st-david, approx: true, note: Returns as governor of Fort St David }
+  - { date: "1756-10", place: madras, note: Sails with Watson's fleet for Bengal }
+  - { date: "1756-12", place: fulta, note: Joins the Calcutta refugees }
+  - { date: "1757-01-02", place: calcutta, note: Retakes Fort William }
+  - { date: "1757-03-23", place: chandernagore, note: Captures the French settlement }
+  - { date: "1757-06-23", place: plassey, note: Battle of Plassey }
+  - { date: "1757-06-29", place: murshidabad, note: Installs Mir Jafar }
+  - { date: "1757-09", place: calcutta, approx: true }
+  - { date: "1760-02", away: true, note: Sails for Britain }
+  - { date: "1765-05-03", place: calcutta, note: Returns as governor }
+  - { date: "1765-08-12", place: allahabad, note: Treaty of Allahabad }
+  - { date: "1765-10", place: calcutta, approx: true }
+  - { date: "1767-01", away: true, note: Leaves India for the last time }

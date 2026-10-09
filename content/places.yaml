@@ -1,0 +1,309 @@
+# Places are first-class (D20). `name` = period name; `modern` = present-day name.
+# `control` turns a place into a colonial foothold: each entry starts a new controller (a power or
+# polity id) from `from` onwards.
+# coords = [lng, lat]. `approx: true` = location known only roughly.
+- id: calcutta
+  name: Calcutta
+  modern: Kolkata
+  coords: [88.3420, 22.5726]
+  tags: [port, fort, factory, capital]
+  why: >-
+    The Company's Bengal base. Siraj-ud-Daulah captured it in 1756 and renamed it Alinagar; Clive
+    retook it in 1757. It later became the capital of British India (until 1911).
+  control:
+    - { from: "1690", power: eic }
+    - { from: "1756-06-20", power: bengal-nawabs, note: "Captured by Siraj-ud-Daulah, renamed Alinagar" }
+    - { from: "1757-01-02", power: eic, note: Retaken by Clive and Watson }
+  sources: [wp-fort-william, wp-siege-calcutta]
+- id: murshidabad
+  name: Murshidabad
+  modern: Murshidabad
+  coords: [88.2700, 24.1800]
+  tags: [capital]
+  why: >-
+    Capital of the Nawabs of Bengal. Siraj-ud-Daulah was executed here, and Clive installed Mir Jafar
+    here.
+  sources: [marshall-bengal]
+- id: plassey
+  name: Plassey
+  modern: Palashi
+  coords: [88.2500, 23.8000]
+  tags: [battle]
+  why: >-
+    The site of the 1757 battle that gave the Company control over the Nawab of Bengal. It was decided
+    more by defection than by fighting.
+  sources: [wp-plassey]
+- id: kasimbazar
+  name: Kasimbazar
+  modern: Cossimbazar
+  coords: [88.2800, 24.1200]
+  tags: [factory]
+  why: >-
+    A silk-trade centre beside Murshidabad, with Company, Dutch and French factories. Siraj-ud-Daulah
+    seized the English factory in June 1756.
+  control:
+    - { from: "1658", power: eic }
+    - { from: "1756-06", power: bengal-nawabs, note: Seized by Siraj-ud-Daulah }
+    - { from: "1757-02", power: eic, note: Restored under the Treaty of Alinagar }
+  sources: [marshall-bengal, wp-siraj]
+- id: chandernagore
+  name: Chandernagore
+  modern: Chandannagar
+  coords: [88.3700, 22.8700]
+  tags: [port, factory]
+  why: The French base in Bengal, captured by Clive and Watson in March 1757.
+  control:
+    - { from: "1688", power: french }
+    - { from: "1757-03-23", power: eic, note: Captured by the British }
+    - { from: "1765", power: french, approx: true, note: Restored after the Treaty of Paris (1763) }
+  sources: [wp-chandannagar-town, wp-chandannagar]
+- id: chinsurah
+  name: Chinsurah
+  modern: Chinsurah
+  coords: [88.3900, 22.9000]
+  tags: [port, factory]
+  why: >-
+    The Dutch base in Bengal. The British defeated a Dutch force nearby at Chinsurah (Bedara) in 1759.
+  control:
+    - { from: "1656", power: dutch }
+  sources: [wp-chinsurah-town, wp-chinsurah]
+- id: serampore
+  name: Frederiksnagore
+  modern: Serampore
+  coords: [88.3400, 22.7500]
+  tags: [port, factory]
+  why: A Danish settlement on the Hooghly, founded in 1755.
+  control:
+    - { from: "1755", power: danish }
+  sources: [wp-serampore]
+- id: fulta
+  name: Fulta
+  modern: Falta
+  coords: [88.1100, 22.3000]
+  tags: [port]
+  approx: true
+  why: Where Company refugees from Calcutta sheltered on ships in 1756, until Clive arrived.
+  sources: [wp-siege-calcutta]
+- id: patna
+  name: Patna
+  modern: Patna
+  coords: [85.1400, 25.5900]
+  tags: [factory]
+  why: >-
+    The main city of Bihar and a centre of the saltpetre trade. Fighting between Mir Qasim and the
+    Company began here in 1763.
+  sources: [wp-mir-qasim]
+- id: giria
+  name: Giria
+  modern: Giria
+  coords: [88.0700, 24.4700]
+  tags: [battle]
+  approx: true
+  why: Where Alivardi Khan defeated Nawab Sarfaraz Khan and took Bengal in 1740.
+  sources: [wp-giria]
+- id: udhwa-nala
+  name: Udhwa Nala
+  modern: Udhwa
+  coords: [87.7500, 25.0000]
+  tags: [battle]
+  approx: true
+  why: Where the Company defeated Mir Qasim in 1763.
+  sources: [wp-udhwa-nala]
+- id: manihari
+  name: Manihari
+  modern: Manihari
+  coords: [87.6200, 25.3400]
+  tags: [battle]
+  approx: true
+  why: Where Siraj-ud-Daulah defeated his rival cousin Shaukat Jang of Purnea in 1756.
+  sources: [wp-siraj]
+- id: buxar
+  name: Buxar
+  modern: Buxar
+  coords: [83.9800, 25.5600]
+  tags: [battle]
+  why: >-
+    Site of the 1764 battle in which the Company defeated the combined armies of Mir Qasim, Awadh and
+    the Mughal emperor. Many historians rank it as more decisive than Plassey.
+  sources: [wp-buxar]
+- id: allahabad
+  name: Allahabad
+  modern: Prayagraj
+  coords: [81.8500, 25.4400]
+  tags: [fort]
+  why: Where Shah Alam II granted the Company the diwani in 1765.
+  sources: [wp-allahabad]
+- id: faizabad
+  name: Faizabad
+  modern: Ayodhya district
+  coords: [82.1300, 26.7800]
+  tags: [capital]
+  why: The capital of Awadh under Shuja-ud-Daula.
+  sources: [wp-shuja]
+- id: delhi
+  name: Shahjahanabad (Delhi)
+  modern: Delhi
+  coords: [77.2300, 28.6500]
+  tags: [capital]
+  why: The Mughal capital. Nadir Shah sacked it in 1739, the year before this period begins.
+  sources: [wp-mughal]
+- id: panipat
+  name: Panipat
+  modern: Panipat
+  coords: [76.9700, 29.3900]
+  tags: [battle]
+  why: >-
+    In 1761 Ahmad Shah Durrani crushed the Marathas here. The defeat left a power vacuum in the north
+    that the Company would later fill.
+  sources: [wp-panipat]
+- id: madras
+  name: Madras
+  modern: Chennai
+  coords: [80.2900, 13.0800]
+  tags: [port, fort, factory]
+  why: >-
+    Fort St George, the Company's Coromandel base. The French held it from 1746 to 1749.
+  control:
+    - { from: "1639", power: eic }
+    - { from: "1746-09", power: french, note: Captured by La Bourdonnais }
+    - { from: "1749-08", power: eic, note: Returned under the Treaty of Aix-la-Chapelle }
+  sources: [wp-fort-st-george]
+- id: fort-st-david
+  name: Fort St David
+  modern: Cuddalore
+  coords: [79.7700, 11.7500]
+  tags: [fort]
+  why: The Company's southern fort. Clive served here in the 1740s.
+  control:
+    - { from: "1690", power: eic }
+    - { from: "1758-06", power: french, note: Captured and razed by Lally }
+  sources: [wp-clive]
+- id: pondicherry
+  name: Pondicherry
+  modern: Puducherry
+  coords: [79.8300, 11.9300]
+  tags: [port, capital, factory]
+  why: Capital of French India. The British took it in 1761, and France got it back in 1765.
+  control:
+    - { from: "1674", power: french }
+    - { from: "1761-01-15", power: eic, note: Surrendered after siege }
+    - { from: "1765", power: french, approx: true, note: Returned after the Treaty of Paris (1763) }
+  sources: [wp-french-india]
+- id: karikal
+  name: Karikal
+  modern: Karaikal
+  coords: [79.8400, 10.9200]
+  tags: [port]
+  control:
+    - { from: "1739", power: french }
+  sources: [wp-french-india]
+- id: mahe
+  name: Mahé
+  modern: Mahe
+  coords: [75.5400, 11.7000]
+  tags: [port]
+  control:
+    - { from: "1721", power: french }
+  sources: [wp-french-india]
+- id: tranquebar
+  name: Tranquebar
+  modern: Tharangambadi
+  coords: [79.8500, 11.0300]
+  tags: [port, fort]
+  control:
+    - { from: "1620", power: danish }
+  sources: [wp-serampore]
+- id: negapatam
+  name: Negapatam
+  modern: Nagapattinam
+  coords: [79.8400, 10.7700]
+  tags: [port]
+  control:
+    - { from: "1658", power: dutch }
+  sources: [wp-dutch-india]
+- id: pulicat
+  name: Pulicat
+  modern: Pulicat
+  coords: [80.3200, 13.4200]
+  tags: [port, fort]
+  control:
+    - { from: "1610", power: dutch }
+  sources: [wp-dutch-india]
+- id: cochin
+  name: Cochin
+  modern: Kochi
+  coords: [76.2400, 9.9600]
+  tags: [port]
+  control:
+    - { from: "1663", power: dutch, note: Taken from the Portuguese }
+  sources: [wp-dutch-india]
+- id: goa
+  name: Goa
+  modern: Goa
+  coords: [73.9100, 15.5000]
+  tags: [port, capital]
+  why: Capital of the Portuguese Estado da Índia since 1510.
+  control:
+    - { from: "1510", power: portuguese }
+  sources: [wp-portuguese-india]
+- id: daman
+  name: Daman
+  modern: Daman
+  coords: [72.8300, 20.4100]
+  tags: [port]
+  control:
+    - { from: "1559", power: portuguese }
+  sources: [wp-portuguese-india]
+- id: diu
+  name: Diu
+  modern: Diu
+  coords: [70.9800, 20.7100]
+  tags: [port, fort]
+  control:
+    - { from: "1535", power: portuguese }
+  sources: [wp-portuguese-india]
+- id: bombay
+  name: Bombay
+  modern: Mumbai
+  coords: [72.8400, 18.9400]
+  tags: [port, fort]
+  why: Came to the Company in 1668 and became its western headquarters.
+  control:
+    - { from: "1668", power: eic }
+  sources: [wp-bombay-presidency]
+- id: surat
+  name: Surat
+  modern: Surat
+  coords: [72.8300, 21.1700]
+  tags: [port, factory]
+  why: The great Mughal port of the west coast. The English and Dutch had factories here.
+  control:
+    - { from: "1612", power: eic, note: English factory (trading post) }
+  sources: [wp-bombay-presidency]
+- id: masulipatnam
+  name: Masulipatnam
+  modern: Machilipatnam
+  coords: [81.1300, 16.1800]
+  tags: [port, factory]
+  why: A textile port on the Coromandel coast. The French held it in the 1750s, and Forde took it in 1759.
+  control:
+    - { from: "1611", power: eic, note: English factory (trading post) }
+    - { from: "1750", power: french, approx: true }
+    - { from: "1759-04", power: eic, note: Taken by Colonel Forde }
+  sources: [wp-french-india]
+- id: arcot
+  name: Arcot
+  modern: Arcot
+  coords: [79.3200, 12.9000]
+  tags: [capital, fort]
+  why: >-
+    Capital of the Nawabs of the Carnatic. Clive's defence of the fort in 1751 made his name.
+  sources: [wp-arcot]
+- id: wandiwash
+  name: Wandiwash
+  modern: Vandavasi
+  coords: [79.6200, 12.5000]
+  tags: [battle]
+  why: >-
+    Site of the 1760 battle that ended serious French hopes of an empire in India.
+  sources: [wp-wandiwash]

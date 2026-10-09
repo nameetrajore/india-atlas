@@ -1,0 +1,47 @@
+# Tier-2 people (D19): they appear at their dated events, with no itinerary.
+- id: alivardi-khan
+  name: Alivardi Khan
+  tier: 2
+  died: "1756-04"
+  role: Nawab of Bengal, 1740–1756
+  summary: >-
+    A soldier from Bihar who seized Bengal at Giria. He spent much of his reign fighting off Maratha
+    raids.
+  sources: [wp-alivardi]
+- id: mir-jafar
+  name: Mir Jafar
+  tier: 2
+  died: "1765-02"
+  role: Nawab of Bengal, 1757–1760 and 1763–1765
+  summary: >-
+    Siraj-ud-Daulah's commander. He held back his troops at Plassey and was made Nawab in return. The
+    Company deposed him in 1760 and restored him in 1763.
+  sources: [wp-mir-jafar]
+- id: mir-qasim
+  name: Mir Qasim
+  tier: 2
+  role: Nawab of Bengal, 1760–1763
+  summary: >-
+    An able administrator who reformed revenue and moved his capital to Monghyr. He went to war when he
+    tried to curb the Company's abuse of tax-free trade.
+  sources: [wp-mir-qasim]
+- id: shuja-ud-daula
+  name: Shuja-ud-Daula
+  tier: 2
+  role: Nawab of Awadh, 1754–1775
+  summary: Led the largest army at Buxar. After defeat, he kept Awadh in exchange for an indemnity.
+  sources: [wp-shuja]
+- id: shah-alam-ii
+  name: Shah Alam II
+  tier: 2
+  role: Mughal emperor, 1759–1806
+  summary: >-
+    An emperor without a capital in the 1760s. At Allahabad he granted the Company the diwani in return
+    for a pension.
+  sources: [wp-shah-alam]
+- id: hector-munro
+  name: Hector Munro
+  tier: 2
+  role: Company commander
+  summary: Commanded the Company army at Buxar.
+  sources: [wp-munro]

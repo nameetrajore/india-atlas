@@ -1,0 +1,89 @@
+"""Prepare base geography for the app.
+
+Inputs (data/raw/):
+  India-State-Districts-1941.parquet  CC0, via yashveeeeeeer/india-geodata (India State Story)
+  ne_10m_land / rivers / lakes .geojson  Natural Earth, public domain (see scripts/fetch_raw.sh)
+
+Outputs (public/data/base/):
+  units-1941.geojson  admin units with stable ids
+  land.geojson, rivers.geojson, lakes.geojson  clipped to South Asia
+
+Run: uvx --with pyarrow --with shapely python -I scripts/prep_base.py
+"""
+import json
+import re
+from pathlib import Path
+
+import pyarrow.parquet as pq
+from shapely import wkb
+from shapely.geometry import box, mapping, shape
+from shapely.validation import make_valid
+
+ROOT = Path(__file__).resolve().parent.parent
+RAW = ROOT / "data" / "raw"
+OUT = ROOT / "public" / "data" / "base"
+BBOX = box(60, 4, 101, 40)
+PRECISION = 4
+
+
+def slug(s: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+
+
+def rounded(geom):
+    def r(c):
+        if isinstance(c, (list, tuple)) and c and isinstance(c[0], (int, float)):
+            return [round(c[0], PRECISION), round(c[1], PRECISION)]
+        return [r(x) for x in c]
+
+    m = mapping(geom)
+    return {"type": m["type"], "coordinates": r(m["coordinates"])}
+
+
+def write(name, features):
+    OUT.mkdir(parents=True, exist_ok=True)
+    path = OUT / name
+    path.write_text(json.dumps({"type": "FeatureCollection", "features": features}, separators=(",", ":")))
+    print(f"{name}: {len(features)} features, {path.stat().st_size // 1024} KB")
+
+
+def units():
+    rows = pq.read_table(RAW / "India-State-Districts-1941.parquet").to_pylist()
+    seen: dict[str, int] = {}
+    feats = []
+    for r in rows:
+        div = (r["Admin Divi"] or "unknown").strip()
+        name = (r["Districts"] or div).strip()
+        base = f"{slug(div)}--{slug(name)}"
+        seen[base] = seen.get(base, 0) + 1
+        uid = base if seen[base] == 1 else f"{base}-{seen[base]}"
+        g = make_valid(wkb.loads(r["geometry"])).simplify(0.005, preserve_topology=True)
+        feats.append({
+            "type": "Feature",
+            "properties": {"id": uid, "name": name, "division": div, "type": r["Type"]},
+            "geometry": rounded(g),
+        })
+    write("units-1941.geojson", feats)
+
+
+def clipped(src, name, keep=lambda p: True, tol=0.01):
+    data = json.loads((RAW / src).read_text())
+    feats = []
+    for f in data["features"]:
+        if not keep(f["properties"]):
+            continue
+        g = make_valid(shape(f["geometry"])).intersection(BBOX)
+        if g.is_empty:
+            continue
+        g = g.simplify(tol, preserve_topology=True)
+        props = {k: f["properties"].get(k) for k in ("name", "scalerank") if k in f["properties"]}
+        feats.append({"type": "Feature", "properties": props, "geometry": rounded(g)})
+    write(name, feats)
+
+
+if __name__ == "__main__":
+    units()
+    clipped("ne_10m_land.geojson", "land.geojson")
+    clipped("ne_10m_rivers_lake_centerlines.geojson", "rivers.geojson",
+            keep=lambda p: (p.get("scalerank") or 99) <= 7)
+    clipped("ne_10m_lakes.geojson", "lakes.geojson", keep=lambda p: (p.get("scalerank") or 99) <= 6)
