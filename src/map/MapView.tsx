@@ -3,7 +3,10 @@ import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import { MapboxOverlay } from '@deck.gl/mapbox'
 import { currentScene, useStore } from '../store'
-import { useToday } from './today'
+import { useToday, whereToday } from './today'
+import { keyframeIndexAt, polityName } from '../lib/derive'
+import { formatT } from '../lib/time'
+import { BLOC_NAMES } from './layers'
 import { baseStyle } from './style'
 import { buildLayers, PULSE_MS } from './layers'
 import { loadUnits, type UnitIndex } from './units'
@@ -103,7 +106,29 @@ export function MapView() {
 
   useEffect(() => {
     if (!content || !units || !overlay.current) return
+    const esc = (x: string) => x.replace(/&/g, '&amp;').replace(/</g, '&lt;')
+    // Hover: who ruled here at this date, and what it is today. Touch screens skip hover (tap opens cards).
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any -- picked objects differ per layer
+    const getTooltip = ({ object, layer }: { object?: any; layer?: { id: string } | null }) => {
+      if (!object || !layer || matchMedia('(hover: none)').matches) return null
+      let html = ''
+      if (layer.id === 'polities') {
+        const kf = content.keyframes[keyframeIndexAt(content.keyframes, t)]
+        const pid = kf?.units[object.properties.id]
+        const p = pid ? content.polities[pid] : undefined
+        const who = p ? polityName(p, t) : BLOC_NAMES.indian
+        const c = units.centroid.get(object.properties.id)?.c
+        const now = todayIdx && c ? whereToday(todayIdx, c) : undefined
+        html = `<div class="tt-title">${esc(who)}</div><div class="tt-sub">${esc(content.unitNames[object.properties.id] ?? '')} · ${formatT(t, 'year')}</div>${now ? `<div class="tt-today">Today: ${esc(now)}</div>` : ''}`
+      } else if (layer.id === 'events') html = `<div class="tt-title">${esc(object.e.name)}</div><div class="tt-sub">${esc(object.e.date.label)}</div>`
+      else if (layer.id === 'people') html = `<div class="tt-title">${esc(object.p.name)}</div><div class="tt-sub">${esc(object.p.role)}</div>`
+      else if (layer.id === 'footholds') html = `<div class="tt-title">${esc(object.p.name)}</div><div class="tt-sub">${esc(polityName(content.polities[object.c.power], t))}</div>`
+      else if (layer.id === 'place-labels') html = `<div class="tt-title">${esc(object.name)}</div>${object.modern && object.modern !== object.name ? `<div class="tt-sub">now ${esc(object.modern)}</div>` : ''}`
+      else return null
+      return { html, className: 'map-tooltip', style: { background: 'none', padding: '0' } }
+    }
     overlay.current.setProps({
+      getTooltip: getTooltip as never,
       layers: buildLayers({
         content,
         units,

@@ -23,6 +23,8 @@ interface State {
   crossed: { id: string; at: number }[]
   /** Phone: reader sheet collapsed to show the map. */
   sheetDown: boolean
+  /** Documentary mode: scenes advance by themselves. */
+  autoplay: boolean
 
   setContent: (c: Content) => void
   setT: (t: number, opts?: { announce?: boolean }) => void
@@ -37,6 +39,7 @@ interface State {
   requestFly: (c: Camera) => void
   dismiss: (id: string) => void
   setSheetDown: (d: boolean) => void
+  setAutoplay: (a: boolean) => void
 }
 
 export const INITIAL_CAMERA: Camera = { center: [80.5, 22.5], zoom: 4.2, pitch: 0, bearing: 0 }
@@ -55,6 +58,7 @@ export const useStore = create<State>((set, get) => ({
   flyTo: null,
   crossed: [],
   sheetDown: false,
+  autoplay: false,
 
   setContent: (content) => set({ content, t: content.range[0] }),
   setT: (t, opts) => {
@@ -71,7 +75,7 @@ export const useStore = create<State>((set, get) => ({
   },
   setMode: (mode) => set({ mode, playing: false, crossed: [], ...(mode === 'story' ? {} : { selection: null }) }),
   openChapter: (chapter, scene = 0) => {
-    set({ chapter, scene, mode: 'story', playing: false, crossed: [] })
+    set({ chapter, scene, mode: 'story', playing: false, crossed: [], ...(chapter === null ? { autoplay: false } : {}) })
     if (chapter !== null) enterScene(get, set)
     else set({ selection: null })
   },
@@ -96,6 +100,7 @@ export const useStore = create<State>((set, get) => ({
   requestFly: (camera) => set({ flyTo: { camera, nonce: Math.random() } }),
   dismiss: (id) => set((s) => ({ crossed: s.crossed.filter((c) => c.id !== id) })),
   setSheetDown: (sheetDown) => set({ sheetDown }),
+  setAutoplay: (autoplay) => set({ autoplay }),
 }))
 
 export function currentScene(s: Pick<State, 'content' | 'chapter' | 'scene' | 'mode'>): Scene | null {

@@ -39,6 +39,12 @@ export function ChapterIndex() {
   )
 }
 
+/** How long documentary mode stays on a scene: camera, any animation, then reading time (~215 wpm). */
+function sceneDwell(sc: NonNullable<ReturnType<typeof currentScene>>) {
+  const words = sc.text.split(/\s+/).length
+  return Math.min(45000, Math.max(9000, 2500 + (sc.playTo ? 9600 : 0) + words * 280))
+}
+
 const TIP_KEY = 'india-atlas:tip-dismissed'
 const readTip = () => {
   try {
@@ -79,7 +85,31 @@ export function Reader() {
   const sceneIdx = useStore((s) => s.scene)
   const scene = useStore((s) => currentScene(s))
   const sheetDown = useStore((s) => s.sheetDown)
-  const { goScene, openChapter, select, setSheetDown } = useStore.getState()
+  const autoplay = useStore((s) => s.autoplay)
+  const { goScene, openChapter, select, setSheetDown, setAutoplay } = useStore.getState()
+  const dwell = scene ? sceneDwell(scene) : 0
+
+  // Documentary mode: move on once the scene has had time to play and be read.
+  useEffect(() => {
+    if (!autoplay || !scene) return
+    const id = window.setTimeout(() => {
+      const s = useStore.getState()
+      const ch = s.content!.chapters[s.chapter!]
+      const last = s.chapter === s.content!.chapters.length - 1 && s.scene === ch.scenes.length - 1
+      if (last) setAutoplay(false)
+      else goScene(1)
+    }, dwell)
+    // Touching the map or the text means the reader wants to look: pause.
+    const pause = (e: PointerEvent) => {
+      const el = e.target as HTMLElement
+      if (el.closest('.map, .reader-body, .card')) setAutoplay(false)
+    }
+    window.addEventListener('pointerdown', pause)
+    return () => {
+      clearTimeout(id)
+      window.removeEventListener('pointerdown', pause)
+    }
+  }, [autoplay, scene, dwell, goScene, setAutoplay])
   const [tipGone, setTipGone] = useState(readTip)
   const dismissTip = () => {
     setTipGone(true)
@@ -162,11 +192,15 @@ export function Reader() {
         <button onClick={() => goScene(-1)} disabled={chapterIdx === 0 && sceneIdx === 0}>
           ← Back
         </button>
+        <button className={`play-story${autoplay ? ' on' : ''}`} onClick={() => setAutoplay(!autoplay)} aria-label={autoplay ? 'Pause story' : 'Play story'}>
+          {autoplay ? '❚❚ Pause' : '▶ Play'}
+        </button>
         <span className="reader-count">
           {sceneIdx + 1} / {ch.scenes.length}
         </span>
-        <button className="primary" onClick={() => (isLast ? openChapter(null) : goScene(1))}>
-          {isLast ? 'The end' : sceneIdx === ch.scenes.length - 1 ? `Chapter ${ch.number + 1} →` : 'Next →'}
+        <button className="primary next-btn" onClick={() => (isLast ? openChapter(null) : goScene(1))}>
+          {autoplay && !isLast && <span key={`${chapterIdx}-${sceneIdx}`} className="autoplay-bar" style={{ animationDuration: `${dwell}ms` }} />}
+          <span className="next-label">{isLast ? 'The end' : sceneIdx === ch.scenes.length - 1 ? `Chapter ${ch.number + 1} →` : 'Next →'}</span>
         </button>
       </div>
     </aside>
