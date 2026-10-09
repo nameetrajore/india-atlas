@@ -2,7 +2,8 @@ import { GeoJsonLayer, IconLayer, ScatterplotLayer, TextLayer, PathLayer } from 
 import { TripsLayer } from '@deck.gl/geo-layers'
 import { PathStyleExtension } from '@deck.gl/extensions'
 import type { Layer } from '@deck.gl/core'
-import type { Content, HistEvent, LensId, LngLat, Person, Place, Selection } from '../types'
+import type { Bloc, Content, HistEvent, LngLat, Person, Place, Scene, Selection } from '../types'
+import type { TodayIndex } from './today'
 import {
   controlAt,
   eventOpacity,
@@ -21,7 +22,6 @@ import { declutter, type LabelCandidate } from './declutter'
 type RGB = [number, number, number]
 const INK: RGB = [36, 27, 20]
 const PAPER: RGB = [246, 239, 222]
-const UNMAPPED: RGB = [214, 203, 178]
 /** Trail timestamps are stored relative to this, to keep float32 precision on the GPU. */
 export const T0 = 1800
 /** Ripple duration for events the playhead just crossed (ms). */
@@ -35,12 +35,32 @@ const PERSON_COLORS: Record<string, RGB> = {
 }
 export const personColor = (id: string): RGB => PERSON_COLORS[id] ?? [60, 60, 90]
 
+/** Simple-map colours (D25): one per bloc; the atlas convention of pink for British, yellow for Indian. */
+export const BLOC_COLORS: Record<Bloc, RGB> = {
+  british: [228, 146, 138],
+  indian: [236, 214, 146],
+  european: [120, 140, 190],
+  india: [227, 163, 95],
+  pakistan: [127, 165, 122],
+  other: [205, 197, 176],
+}
+export const BLOC_NAMES: Record<Bloc, string> = {
+  british: 'British (Company, then Crown)',
+  indian: 'Indian rulers',
+  european: 'Other Europeans',
+  india: 'India (1947)',
+  pakistan: 'Pakistan (1947)',
+  other: 'Beyond British India',
+}
+
 export interface LayerArgs {
   content: Content
   units: UnitIndex
   t: number
-  lenses: Set<LensId>
-  polityOpacity: number
+  /** Story scene: when set, only what it references is drawn. */
+  scene: Scene | null
+  detail: boolean
+  today: TodayIndex | null
   selection: Selection | null
   zoom: number
   project: (p: LngLat) => [number, number]
@@ -66,38 +86,49 @@ const TEXT_BASE = {
 const LABEL_FONT = '"Source Serif 4"'
 
 export function buildLayers(a: LayerArgs): Layer[] {
-  const { content, units, t, lenses, selection } = a
+  const { content, units, t, scene, selection } = a
   const layers: Layer[] = []
   const ki = keyframeIndexAt(content.keyframes, t)
   const assignment = ki >= 0 ? content.keyframes[ki].units : {}
   const selectedPolity =
     selection?.kind === 'polity' ? selection.id : selection?.kind === 'unit' ? assignment[selection.id] : undefined
+  const highlight = new Set([...(scene?.show.polities ?? []), ...(selectedPolity ? [selectedPolity] : [])])
+  const colorOf = (polity: string | undefined): RGB => {
+    if (!polity) return BLOC_COLORS.indian
+    const p = content.polities[polity]
+    return a.detail || highlight.has(polity) ? p.color : BLOC_COLORS[p.bloc]
+  }
 
-  // ---- derived state at t
-  const footholds = lenses.has('footholds')
-    ? content.places.flatMap((p) => {
-        const c = controlAt(p, t)
-        return c ? [{ p, c }] : []
-      })
-    : []
+  // ---- what to draw: the scene's things, or the most important things near t (D25)
+  const scenePlaces = new Set(scene?.show.places ?? [])
+  const footholds = content.places.flatMap((p) => {
+    if (scene && !scenePlaces.has(p.id)) return []
+    const c = controlAt(p, t)
+    return c && content.polities[c.power].bloc !== 'british' ? [{ p, c }] : []
+  })
   const sig = placeSignificance(content, t)
-  const events = lenses.has('events')
-    ? content.events.flatMap((e) => {
-        const o = eventOpacity(e, t)
-        return o > 0.02 ? [{ e, o }] : []
-      })
-    : []
-  const tier1 = content.people.filter((p) => p.itinerary.length)
-  const markers = lenses.has('people')
-    ? tier1.flatMap((p) => {
-        const s = personAt(p, t)
-        return s ? [{ p, s }] : []
-      })
-    : []
-  const anchors = lenses.has('polities')
-    ? polityAnchors(units, assignment, 1.5).filter((an) => content.polities[an.polity].kind !== 'tribal')
-    : []
+  const selEventId = selection?.kind === 'event' ? selection.id : undefined
+  const events = scene
+    ? content.events.filter((e) => scene.show.events.includes(e.id) || e.id === selEventId).map((e) => ({ e, o: e.date.t <= t + 0.01 ? 1 : 0.45 }))
+    : content.events
+        .flatMap((e) => {
+          const o = eventOpacity(e, t)
+          return o > 0.05 || e.id === selEventId ? [{ e, o: Math.max(o, e.id === selEventId ? 1 : 0) }] : []
+        })
+        .sort((x, y) => y.e.significance * y.o - x.e.significance * x.o)
+        .slice(0, 6)
+  const tier1 = content.people.filter((p) => p.itinerary.length && (!scene || scene.show.people.includes(p.id)))
+  const markers = tier1.flatMap((p) => {
+    const s = personAt(p, t)
+    return s ? [{ p, s }] : []
+  })
+  const labelledPolities = a.detail ? null : highlight
+  const anchors = polityAnchors(units, assignment, 1.5).filter(
+    (an) => content.polities[an.polity].kind !== 'tribal' && (!labelledPolities || labelledPolities.has(an.polity)),
+  )
   const nameOf = (id: string) => polityName(content.polities[id], t)
+  const placeVisible = (p: Place) =>
+    scene ? scenePlaces.has(p.id) || events.some((d) => d.e.place === p.id) : (sig.get(p.id) ?? 0) > 1.2 || events.some((d) => d.e.place === p.id)
 
   // ---- labels: one shared declutter pass, people > selected > places > polities
   const cands: LabelCandidate[] = []
@@ -109,11 +140,14 @@ export function buildLayers(a: LayerArgs): Layer[] {
   const placeOffset = (id: string): [number, number] => [0, -((markerR.get(id) ?? 3) + 3)]
   const placeSize = (id: string) => Math.max(13, Math.min(22, 12 + 2.8 * Math.sqrt(sig.get(id) ?? 0)))
   const selEvent = selection?.kind === 'event' ? content.events.find((e) => e.id === selection.id) : undefined
-  if (lenses.has('places'))
-    for (const p of content.places) {
+  for (const p of content.places) {
+      if (!placeVisible(p)) continue
       const bonus = isSel(selection, 'place', p.id) || selEvent?.place === p.id ? 2e6 : 0
       cands.push({ key: `place:${p.id}`, position: p.coords, text: p.name, size: placeSize(p.id), priority: 1000 + (sig.get(p.id) ?? 0) * 10 + bonus, offset: placeOffset(p.id), alts: [[0, (markerR.get(p.id) ?? 3) + 3 + placeSize(p.id) * 1.1]], anchor: 'middle', baseline: 'bottom', force: bonus > 0 })
     }
+  if (a.today)
+    for (const an of a.today.anchors)
+      cands.push({ key: `today:${an.name}`, position: an.position, text: an.name, size: 11.5, priority: 100 + an.area, offset: [0, 0], anchor: 'middle', baseline: 'center' })
   const politySize = (area: number) => Math.min(16, 10 + Math.sqrt(area) * 1.1) * Math.min(1.25, Math.max(0.85, a.zoom / 5))
   for (const an of anchors)
     cands.push({ key: `polity:${an.polity}`, position: an.position, text: nameOf(an.polity).toUpperCase(), size: politySize(an.area), priority: an.area, offset: [0, 0], anchor: 'middle', baseline: 'center', wrap: 16 })
@@ -125,8 +159,8 @@ export function buildLayers(a: LayerArgs): Layer[] {
   const shown = declutter(cands, a.project, obstacles)
 
   // ---- polities
-  if (lenses.has('polities')) {
-    const alpha = Math.round(a.polityOpacity * 255)
+  {
+    const alpha = Math.round(0.62 * 255)
     layers.push(
       new GeoJsonLayer({
         id: 'polities',
@@ -137,17 +171,13 @@ export function buildLayers(a: LayerArgs): Layer[] {
         filled: true,
         getFillColor: (f: { properties: { id: string } }) => {
           const p = assignment[f.properties.id]
-          if (!p) return [...UNMAPPED, Math.round(alpha * 0.35)]
-          return [...content.polities[p].color, p === selectedPolity ? Math.min(255, alpha + 60) : alpha]
+          return [...colorOf(p), p && p === selectedPolity ? Math.min(255, alpha + 60) : alpha]
         },
         // Unit borders stay faint; the eye should read polities, not districts.
-        getLineColor: (f: { properties: { id: string } }) => {
-          const p = assignment[f.properties.id]
-          return p ? darken(content.polities[p].color, 0.55, 55) : [150, 135, 110, 25]
-        },
+        getLineColor: (f: { properties: { id: string } }) => darken(colorOf(assignment[f.properties.id]), 0.55, a.detail ? 55 : 22),
         getLineWidth: 0.5,
         lineWidthUnits: 'pixels',
-        updateTriggers: { getFillColor: [ki, alpha, selectedPolity], getLineColor: [ki] },
+        updateTriggers: { getFillColor: [ki, selectedPolity, a.detail, scene], getLineColor: [ki, a.detail, scene] },
         transitions: { getFillColor: { duration: 700 } },
         onClick: (info) => {
           const f = info.object as UnitFeature | undefined
@@ -165,7 +195,7 @@ export function buildLayers(a: LayerArgs): Layer[] {
         getPosition: (d: Anchor) => d.position,
         getText: (d: Anchor) => nameOf(d.polity).toUpperCase(),
         getSize: (d: Anchor) => politySize(d.area),
-        getColor: (d: Anchor) => darken(content.polities[d.polity].color, 0.32, 255),
+        getColor: (d: Anchor) => darken(colorOf(d.polity), 0.32, 255),
         fontFamily: LABEL_FONT,
         fontWeight: 600,
         outlineWidth: 4,
@@ -175,12 +205,45 @@ export function buildLayers(a: LayerArgs): Layer[] {
         lineHeight: 1.05,
         getTextAnchor: 'middle',
         getAlignmentBaseline: 'center',
-        updateTriggers: { getText: [ki, Math.floor(t)], getColor: [ki], getSize: [a.zoom] },
+        updateTriggers: { getText: [ki, Math.floor(t)], getColor: [ki, a.detail, scene], getSize: [a.zoom] },
       } as never),
     )
   }
 
-  // ---- non-British enclaves
+  // ---- present-day boundaries (compare with today)
+  if (a.today) {
+    layers.push(
+      new GeoJsonLayer({
+        ...FLAT,
+        id: 'today',
+        data: a.today.features as never,
+        filled: false,
+        stroked: true,
+        getLineColor: [30, 55, 95, 210],
+        getLineWidth: 1.4,
+        lineWidthUnits: 'pixels',
+        getDashArray: [5, 3],
+        dashJustified: true,
+        extensions: [new PathStyleExtension({ dash: true })],
+      } as never),
+      new TextLayer({
+        ...TEXT_BASE,
+        id: 'today-labels',
+        data: a.today.anchors.filter((an) => shown.has(`today:${an.name}`)),
+        getPosition: (d: { position: LngLat }) => d.position,
+        getText: (d: { name: string }) => d.name,
+        getSize: 11.5,
+        getColor: [30, 55, 95, 255],
+        fontFamily: 'Inter',
+        fontWeight: 600,
+        outlineWidth: 4,
+        getTextAnchor: 'middle',
+        getAlignmentBaseline: 'center',
+      } as never),
+    )
+  }
+
+  // ---- non-British European enclaves
   if (footholds.length) {
     layers.push(
       new ScatterplotLayer<(typeof footholds)[number]>({
@@ -203,7 +266,7 @@ export function buildLayers(a: LayerArgs): Layer[] {
   }
 
   // ---- events: icon badges by kind; ripples for ones just crossed
-  if (lenses.has('events')) {
+  {
     type EV = { e: HistEvent; o: number }
     const byId = new Map(content.events.map((e) => [e.id, e]))
     const pulses = a.pulses.flatMap((p) => {
@@ -242,7 +305,7 @@ export function buildLayers(a: LayerArgs): Layer[] {
   }
 
   // ---- place labels
-  if (lenses.has('places')) {
+  {
     layers.push(
       new TextLayer<Place>({
         ...TEXT_BASE,
@@ -266,7 +329,7 @@ export function buildLayers(a: LayerArgs): Layer[] {
   }
 
   // ---- people: dashed known route, fading trail, marker, name
-  if (lenses.has('people')) {
+  {
     const segments: Segment[] = tier1.flatMap((p) => personSegments(p, T0))
     layers.push(
       new PathLayer<Segment>({

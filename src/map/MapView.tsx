@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import { MapboxOverlay } from '@deck.gl/mapbox'
-import { activeLenses, useStore } from '../store'
-import { viewById } from '../views'
+import { currentScene, useStore } from '../store'
+import { useToday } from './today'
 import { baseStyle } from './style'
 import { buildLayers, PULSE_MS } from './layers'
 import { loadUnits, type UnitIndex } from './units'
@@ -17,9 +17,10 @@ export function MapView() {
 
   const content = useStore((s) => s.content)
   const t = useStore((s) => s.t)
-  const view = useStore((s) => s.view)
-  const hidden = useStore((s) => s.hidden)
-  const advanced = useStore((s) => s.advanced)
+  const scene = useStore((s) => currentScene(s))
+  const detail = useStore((s) => s.detail)
+  const showToday = useStore((s) => s.today)
+  const todayIdx = useToday()
   const selection = useStore((s) => s.selection)
   const flyTo = useStore((s) => s.flyTo)
   // Labels are decluttered in screen space, so they recompute when the camera settles.
@@ -90,8 +91,9 @@ export function MapView() {
         content,
         units,
         t,
-        lenses: activeLenses({ view, hidden, advanced }),
-        polityOpacity: viewById(view).polityOpacity,
+        scene,
+        detail,
+        today: showToday ? todayIdx : null,
         selection,
         zoom,
         pulses: crossed.map((c) => ({ id: c.id, age: now - c.at })).filter((p) => p.age >= 0 && p.age < PULSE_MS),
@@ -102,7 +104,7 @@ export function MapView() {
         onPick: (s) => useStore.getState().select(s),
       }),
     })
-  }, [content, units, t, view, hidden, advanced, selection, zoom, camera, crossed, now])
+  }, [content, units, t, scene, detail, showToday, todayIdx, selection, zoom, camera, crossed, now])
 
   return (
     <div className="map">

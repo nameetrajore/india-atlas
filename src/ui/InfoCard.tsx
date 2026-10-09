@@ -1,34 +1,49 @@
-import type { ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 import { useStore } from '../store'
 import { controlAt, keyframeIndexAt, personAt, polityName, visitsToPlace } from '../lib/derive'
-import { kindDef } from './icons'
 import { formatT } from '../lib/time'
-import type { CDate, Content, Figure, Selection } from '../types'
+import type { Content, Figure, HistEvent, LngLat, Selection } from '../types'
+import { badgeUrl, kindDef } from './icons'
+import { Prose } from './Prose'
+import { useToday, whereToday } from '../map/today'
 
 const rgb = (c: [number, number, number]) => `rgb(${c.join(',')})`
+const fmt = (n: number) => n.toLocaleString('en-IN')
 const KIND_LABEL: Record<string, string> = {
   province: 'British India · province',
   state: 'Princely state',
-  power: 'European power',
-  polity: 'Polity',
+  power: 'European company',
+  polity: 'Indian power',
   tribal: 'Tribal territory',
   foreign: 'Outside British India',
   dominion: 'Independent dominion',
 }
-const fmt = (n: number) => n.toLocaleString('en-IN')
 
 function Link({ to, t, children }: { to: Selection; t?: number; children: ReactNode }) {
-  const { select, setT } = useStore.getState()
+  const { select, setT, mode } = useStore.getState()
   return (
     <button
       className="link"
       onClick={() => {
-        if (t !== undefined) setT(t)
+        if (t !== undefined && mode === 'explore') setT(t, { announce: false })
         select(to)
       }}
     >
       {children}
     </button>
+  )
+}
+
+function EventChip({ e }: { e: HistEvent }) {
+  return (
+    <Link to={{ kind: 'event', id: e.id }} t={e.date.t}>
+      <span className="ev-chip">
+        <img src={badgeUrl(e.kind)} width={15} height={15} alt="" />
+        <span>
+          {e.name} <span className="muted">· {e.date.label}</span>
+        </span>
+      </span>
+    </Link>
   )
 }
 
@@ -74,9 +89,26 @@ function Figures({ figures }: { figures: Figure[] }) {
   )
 }
 
-const span = (a?: CDate, b?: CDate) => [a?.label, b?.label].filter(Boolean).join(' – ')
+function More({ children }: { children: ReactNode }) {
+  const [open, setOpen] = useState(false)
+  return (
+    <div className="more">
+      <button className="more-btn" onClick={() => setOpen(!open)}>
+        {open ? 'Less' : 'More: figures, perspectives, sources'}
+      </button>
+      {open && <div className="more-body">{children}</div>}
+    </div>
+  )
+}
 
-function Card({ kicker, title, sub, children }: { kicker: string; title: string; sub?: ReactNode; children: ReactNode }) {
+function Today({ at }: { at?: LngLat }) {
+  const idx = useToday()
+  if (!idx || !at) return null
+  const where = whereToday(idx, at)
+  return where ? <div className="today-line">Today: {where}</div> : null
+}
+
+function Card({ kicker, title, sub, children }: { kicker: ReactNode; title: string; sub?: ReactNode; children: ReactNode }) {
   const select = useStore((s) => s.select)
   return (
     <aside className="card">
@@ -93,28 +125,66 @@ function Card({ kicker, title, sub, children }: { kicker: string; title: string;
   )
 }
 
+const Section = ({ title, text }: { title: string; text?: string }) =>
+  text ? (
+    <section>
+      <h4>{title}</h4>
+      <Prose text={text} />
+    </section>
+  ) : null
+
 export function InfoCard() {
   const content = useStore((s) => s.content)
   const sel = useStore((s) => s.selection)
   const t = useStore((s) => s.t)
   if (!content || !sel) return null
+  const evById = (id: string) => content.events.find((e) => e.id === id)
 
   if (sel.kind === 'event') {
-    const e = content.events.find((x) => x.id === sel.id)
+    const e = evById(sel.id)
     if (!e) return null
     const place = content.places.find((p) => p.id === e.place)
     const people = e.participants.map((id) => content.people.find((p) => p.id === id)!).filter(Boolean)
+    const causes = e.causes.map(evById).filter(Boolean) as HistEvent[]
+    const ledTo = e.ledTo.map(evById).filter(Boolean) as HistEvent[]
+    const d = kindDef(e.kind)
     return (
-      <Card kicker={kindDef(e.kind).label} title={e.name} sub={<>{span(e.date, e.end)} · <Link to={{ kind: 'place', id: e.place }}>{place?.name}</Link></>}>
+      <Card
+        kicker={<span style={{ color: d.color }}>{d.label}</span>}
+        title={e.name}
+        sub={
+          <>
+            {e.date.label}
+            {e.end ? ` – ${e.end.label}` : ''} · <Link to={{ kind: 'place', id: e.place }}>{place?.name}</Link>
+          </>
+        }
+      >
+        <Today at={place?.coords} />
         {e.altNames.length > 0 && <p className="alt">Also called {e.altNames.join(', ')}</p>}
-        <p>{e.summary}</p>
-        {e.why && (
-          <section>
-            <h4>Why it matters</h4>
-            <p>{e.why}</p>
+        {e.why && <p className="why-line">{e.why}</p>}
+        <Section title="Why it happened" text={e.context} />
+        <Section title="What happened" text={e.summary} />
+        <Section title="What it changed" text={e.consequences} />
+        {(causes.length > 0 || ledTo.length > 0) && (
+          <section className="chain">
+            {causes.length > 0 && (
+              <div>
+                <h4>Because of</h4>
+                {causes.map((c) => (
+                  <EventChip key={c.id} e={c} />
+                ))}
+              </div>
+            )}
+            {ledTo.length > 0 && (
+              <div>
+                <h4>Led to</h4>
+                {ledTo.map((c) => (
+                  <EventChip key={c.id} e={c} />
+                ))}
+              </div>
+            )}
           </section>
         )}
-        <Figures figures={e.figures} />
         {people.length > 0 && (
           <section>
             <h4>People</h4>
@@ -127,7 +197,21 @@ export function InfoCard() {
             </ul>
           </section>
         )}
-        <Sources ids={e.sources} content={content} />
+        <More>
+          <Figures figures={e.figures} />
+          {e.perspectives.length > 0 && (
+            <section>
+              <h4>Perspectives</h4>
+              {e.perspectives.map((v) => (
+                <div key={v.view} className="perspective">
+                  <div className="perspective-view">{v.view}</div>
+                  <p>{v.text}</p>
+                </div>
+              ))}
+            </section>
+          )}
+          <Sources ids={e.sources} content={content} />
+        </More>
       </Card>
     )
   }
@@ -139,14 +223,10 @@ export function InfoCard() {
     const visits = visitsToPlace(content, p.id)
     const now = controlAt(p, t)
     return (
-      <Card kicker={p.tags.join(' · ')} title={p.name} sub={p.modern && p.modern !== p.name ? `today ${p.modern}` : undefined}>
+      <Card kicker={p.tags.join(' · ')} title={p.name} sub={p.modern && p.modern !== p.name ? `now ${p.modern}` : undefined}>
+        <Today at={p.coords} />
         {p.approx && <p className="muted">Location approximate.</p>}
-        {p.why && (
-          <section>
-            <h4>Why it matters</h4>
-            <p>{p.why}</p>
-          </section>
-        )}
+        {p.why && <Prose text={p.why} />}
         {p.control.length > 0 && (
           <section>
             <h4>Held by</h4>
@@ -154,10 +234,7 @@ export function InfoCard() {
               {p.control.map((c) => (
                 <li key={c.date.t} className={c === now ? 'current' : ''}>
                   <span className="swatch" style={{ background: rgb(content.polities[c.power].color) }} />
-                  <button className="link" onClick={() => useStore.getState().setT(c.date.t + 0.001)}>
-                    {c.date.label}
-                  </button>{' '}
-                  {polityName(content.polities[c.power], t)}
+                  <span className="date">{c.date.label}</span> {polityName(content.polities[c.power], c.date.t)}
                   {c.note && <div className="muted">{c.note}</div>}
                 </li>
               ))}
@@ -166,16 +243,15 @@ export function InfoCard() {
         )}
         {(events.length > 0 || visits.length > 0) && (
           <section>
-            <h4>Timeline</h4>
+            <h4>What happened here</h4>
             <ul className="plain timeline-list">
               {[
-                ...events.map((e) => ({ t: e.date.t, label: e.date.label, node: <Link to={{ kind: 'event', id: e.id }} t={e.date.t}>{e.name}</Link> })),
+                ...events.map((e) => ({ t: e.date.t, node: <EventChip e={e} /> })),
                 ...visits.map((v) => ({
                   t: v.date.t,
-                  label: v.date.label,
                   node: (
                     <>
-                      <Link to={{ kind: 'person', id: v.person.id }} t={v.date.t}>{v.person.name}</Link>
+                      <span className="date">{v.date.label}</span> <Link to={{ kind: 'person', id: v.person.id }}>{v.person.name}</Link>
                       {v.note && <span className="muted">: {v.note}</span>}
                     </>
                   ),
@@ -183,14 +259,14 @@ export function InfoCard() {
               ]
                 .sort((a, b) => a.t - b.t)
                 .map((row, i) => (
-                  <li key={i}>
-                    <span className="date">{row.label}</span> {row.node}
-                  </li>
+                  <li key={i}>{row.node}</li>
                 ))}
             </ul>
           </section>
         )}
-        <Sources ids={p.sources} content={content} />
+        <More>
+          <Sources ids={p.sources} content={content} />
+        </More>
       </Card>
     )
   }
@@ -203,60 +279,63 @@ export function InfoCard() {
     const last = state ? p.itinerary[state.lastStop] : undefined
     const lastPlace = last?.place ? content.places.find((x) => x.id === last.place) : undefined
     return (
-      <Card kicker={`${p.role}`} title={p.name} sub={span(p.born, p.died)}>
+      <Card kicker={p.role} title={p.name} sub={[p.born?.label, p.died?.label].filter(Boolean).join(' – ')}>
         {p.itinerary.length > 0 && (
           <p className="whereabouts">
-            {state && state.opacity >= 0.99
-              ? <>In {formatT(t, 'month')}: {lastPlace?.name ?? 'travelling'}{state.moving ? ' (travelling)' : ''}</>
-              : last
-                ? <>Location unknown. Last recorded at {lastPlace?.name ?? 'an unmapped place'}, {last.date.label}.</>
-                : <>Not on the map at this date.</>}
+            {state && state.opacity >= 0.99 ? (
+              <>
+                {formatT(t, 'month')}: {lastPlace?.name ?? 'travelling'}
+                {last?.note ? `: ${last.note}` : ''}
+              </>
+            ) : last ? (
+              <>
+                Location unknown. Last recorded at {lastPlace?.name ?? 'an unmapped place'}, {last.date.label}.
+              </>
+            ) : (
+              <>Not on the map at this date.</>
+            )}
           </p>
         )}
-        <p>{p.summary}</p>
-        {p.perspectives.length > 0 && (
+        <Prose text={p.summary} />
+        {events.length > 0 && (
           <section>
-            <h4>Perspectives</h4>
-            {p.perspectives.map((v) => (
-              <div key={v.view} className="perspective">
-                <div className="perspective-view">{v.view}</div>
-                <p>{v.text}</p>
-              </div>
+            <h4>In the story</h4>
+            {events.map((e) => (
+              <EventChip key={e.id} e={e} />
             ))}
           </section>
         )}
-        {p.itinerary.length > 0 && (
-          <section>
-            <h4>Itinerary</h4>
-            <ul className="plain timeline-list">
-              {p.itinerary.map((s, i) => {
-                const pl = s.place ? content.places.find((x) => x.id === s.place) : undefined
-                return (
-                  <li key={i}>
-                    <button className="link date" onClick={() => useStore.getState().setT(s.date.t + 0.001)}>
-                      {s.date.label}
-                    </button>{' '}
-                    {s.away ? <span className="muted">off the map</span> : pl ? <Link to={{ kind: 'place', id: pl.id }}>{pl.name}</Link> : null}
-                    {s.note && <span className="muted">: {s.note}</span>}
-                  </li>
-                )
-              })}
-            </ul>
-          </section>
-        )}
-        {events.length > 0 && (
-          <section>
-            <h4>Events</h4>
-            <ul className="plain timeline-list">
-              {events.map((e) => (
-                <li key={e.id}>
-                  <span className="date">{e.date.label}</span> <Link to={{ kind: 'event', id: e.id }} t={e.date.t}>{e.name}</Link>
-                </li>
+        <More>
+          {p.perspectives.length > 0 && (
+            <section>
+              <h4>Perspectives</h4>
+              {p.perspectives.map((v) => (
+                <div key={v.view} className="perspective">
+                  <div className="perspective-view">{v.view}</div>
+                  <p>{v.text}</p>
+                </div>
               ))}
-            </ul>
-          </section>
-        )}
-        <Sources ids={p.sources} content={content} />
+            </section>
+          )}
+          {p.itinerary.length > 0 && (
+            <section>
+              <h4>Itinerary</h4>
+              <ul className="plain timeline-list">
+                {p.itinerary.map((s, i) => {
+                  const pl = s.place ? content.places.find((x) => x.id === s.place) : undefined
+                  return (
+                    <li key={i}>
+                      <span className="date">{s.date.label}</span>{' '}
+                      {s.away ? <span className="muted">off the map</span> : pl ? <Link to={{ kind: 'place', id: pl.id }}>{pl.name}</Link> : null}
+                      {s.note && <span className="muted">: {s.note}</span>}
+                    </li>
+                  )
+                })}
+              </ul>
+            </section>
+          )}
+          <Sources ids={p.sources} content={content} />
+        </More>
       </Card>
     )
   }
@@ -266,62 +345,61 @@ export function InfoCard() {
   const kf = ki >= 0 ? content.keyframes[ki] : undefined
   const polityId = sel.kind === 'polity' ? sel.id : kf?.units[sel.id]
   const polity = polityId ? content.polities[polityId] : undefined
-  const unitName = sel.kind === 'unit' ? content.unitNames?.[sel.id] ?? sel.id.split('--')[1]?.replace(/-/g, ' ') : undefined
+  const unitName = sel.kind === 'unit' ? content.unitNames[sel.id] : undefined
   const changes = content.keyframes.filter((k, i) => {
     const prev = content.keyframes[i - 1]?.units ?? {}
-    return Object.entries(k.units).some(([u, p]) => p === polityId && prev[u] !== p) ||
+    return (
+      Object.entries(k.units).some(([u, p]) => p === polityId && prev[u] !== p) ||
       Object.entries(prev).some(([u, p]) => p === polityId && k.units[u] !== p)
+    )
   })
   if (!polity) {
     return (
-      <Card kicker="Territory" title="Not yet mapped" sub={unitName && <span>{unitName} (1941 unit)</span>}>
-        <p>Who controlled this area in {formatT(t, 'year')} is not yet in the dataset. It is left blank rather than guessed.</p>
+      <Card kicker="Indian rulers" title={unitName ?? 'Indian-ruled territory'} sub={formatT(t, 'year')}>
+        <p>
+          In {formatT(t, 'year')} this area was ruled by Indian powers, not the British. The atlas does not yet name the
+          specific ruler here.
+        </p>
       </Card>
     )
   }
   return (
-    <Card
-      kicker={KIND_LABEL[polity.kind]}
-      title={polityName(polity, t)}
-      sub={unitName && <span>{unitName} (1941 unit) in {formatT(t, 'year')}</span>}
-    >
+    <Card kicker={KIND_LABEL[polity.kind]} title={polityName(polity, t)} sub={unitName && `${unitName} district, ${formatT(t, 'year')}`}>
       <div className="swatch-bar" style={{ background: rgb(polity.color) }} />
       {polity.altNames.length > 0 && <p className="alt">Also called {polity.altNames.join(', ')}</p>}
-      <p>{polity.summary}</p>
-      {polity.names.length > 1 && (
-        <section>
-          <h4>Names</h4>
-          <ul className="plain timeline-list">
-            {polity.names.map((n) => (
-              <li key={n.date.t}>
-                <span className="date">{n.date.label}</span> {n.name}
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
-      {kf && sel.kind === 'unit' && (
-        <p className="muted">
-          Border certainty: {kf.certainty}. Borders are drawn from 1941 district units, so 18th-century frontiers are
-          approximate.
-        </p>
-      )}
+      <Prose text={polity.summary} />
       {changes.length > 0 && (
         <section>
-          <h4>Territorial changes</h4>
+          <h4>How its borders changed</h4>
           <ul className="plain timeline-list">
-            {changes.map((k) => (
+            {changes.slice(-6).map((k) => (
               <li key={k.date.t}>
-                <button className="link date" onClick={() => useStore.getState().setT(k.date.t + 0.001)}>
-                  {k.date.label}
-                </button>{' '}
-                {k.note}
+                <span className="date">{k.date.label}</span> {k.note}
               </li>
             ))}
           </ul>
         </section>
       )}
-      <Sources ids={[...new Set([...polity.sources, ...(kf && sel.kind === 'unit' ? kf.sources : [])])]} content={content} />
+      <More>
+        {polity.names.length > 1 && (
+          <section>
+            <h4>Names</h4>
+            <ul className="plain timeline-list">
+              {polity.names.map((n) => (
+                <li key={n.date.t}>
+                  <span className="date">{n.date.label}</span> {n.name}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+        {kf && sel.kind === 'unit' && (
+          <p className="muted">
+            Border certainty: {kf.certainty}. Borders are drawn from 1941 districts, so earlier frontiers are approximate.
+          </p>
+        )}
+        <Sources ids={[...new Set([...polity.sources, ...(kf && sel.kind === 'unit' ? kf.sources : [])])]} content={content} />
+      </More>
     </Card>
   )
 }

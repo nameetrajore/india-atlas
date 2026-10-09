@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react'
 import { MapView } from './map/MapView'
 import { Timeline } from './ui/Timeline'
 import { InfoCard } from './ui/InfoCard'
-import { LensDock } from './ui/LensDock'
-import { StoryMenu, StoryPlayer } from './ui/StoryPlayer'
+import { ChapterBar, ChapterIndex, Reader } from './ui/Story'
+import { Legend, MapToggles } from './ui/Legend'
+import { NowCaption } from './ui/NowCaption'
 import { Toasts } from './ui/Toasts'
 import { useStore } from './store'
 import { readUrl, syncUrl } from './lib/url'
@@ -11,53 +12,66 @@ import type { Content } from './types'
 
 export default function App() {
   const [ready, setReady] = useState(false)
-  const [menu, setMenu] = useState(false)
-  const story = useStore((s) => s.story)
   const content = useStore((s) => s.content)
+  const mode = useStore((s) => s.mode)
+  const chapter = useStore((s) => s.chapter)
+  const { setMode, openChapter } = useStore.getState()
 
   useEffect(() => {
     // deck.gl builds its glyph atlas on first use, so fonts must be loaded first.
     Promise.all([
       fetch(`${import.meta.env.BASE_URL}data/content.json`).then((r) => r.json() as Promise<Content>),
-      document.fonts.load('700 16px "Cormorant Garamond"'),
-      document.fonts.load('600 16px "Cormorant Garamond"'),
       document.fonts.load('600 13px "Inter"'),
       document.fonts.load('600 16px "Source Serif 4"'),
-    ]).then(([content]) => {
-      useStore.getState().setContent(content)
+    ]).then(([c]) => {
+      useStore.getState().setContent(c)
       readUrl()
       setReady(true)
     })
     return syncUrl()
   }, [])
 
+  const story = mode === 'story'
   return (
-    <div className="app">
+    <div className={`app ${story ? 'is-story' : 'is-explore'}${story && chapter === null ? ' is-index' : ''}`}>
       {ready && <MapView />}
       <header className="topbar">
-        <div className="brand">
+        <button className="brand" onClick={() => openChapter(null)}>
           <span className="brand-name">{content?.title ?? 'India Atlas'}</span>
-          <span className="brand-sub">{content?.subtitle} · preview</span>
-        </div>
+          <span className="brand-sub">{content?.subtitle}</span>
+        </button>
         <div className="topbar-actions">
-          <button className="btn" disabled title="Grounded Q&A arrives once cards are reviewed (D12)">
-            Ask
-          </button>
-          <button className={`btn${menu || story ? ' on' : ''}`} onClick={() => setMenu(!menu)}>
-            Stories
-          </button>
+          <div className="segmented">
+            <button className={story ? 'on' : ''} onClick={() => (story ? openChapter(null) : setMode('story'))}>
+              Story
+            </button>
+            <button className={!story ? 'on' : ''} onClick={() => setMode('explore')}>
+              Explore
+            </button>
+          </div>
         </div>
-        {menu && <StoryMenu onClose={() => setMenu(false)} />}
       </header>
-      {ready && (
+      {ready && story && chapter === null && <ChapterIndex />}
+      {ready && story && chapter !== null && (
         <>
-          <LensDock />
-          <InfoCard />
-          <StoryPlayer />
+          <Reader />
+          <ChapterBar />
+        </>
+      )}
+      {ready && !(story && chapter === null) && (
+        <div className="map-key">
+          <MapToggles />
+          <Legend />
+        </div>
+      )}
+      {ready && !story && (
+        <>
+          <NowCaption />
           <Toasts />
           <Timeline />
         </>
       )}
+      {ready && <InfoCard />}
       {!ready && <div className="loading">Unrolling the map…</div>}
     </div>
   )
